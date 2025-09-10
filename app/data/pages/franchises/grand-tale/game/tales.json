@@ -1,0 +1,157 @@
+{
+  "id": "01JY7916SZ0KMMFJC1KCZZ1JHY",
+  "slug": "franchises/grand-tale/game/tales",
+  "type": "Default",
+  "title": "Tales",
+  "categories": [
+    "Uncategorized"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "01JY79JKWGN4SCRY7CXCA7M88R",
+      "type": "section",
+      "attrs": {
+        "title": "Tale M"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JY79HMA03MVWS6ECBPB4EYVK",
+      "type": "section",
+      "attrs": {
+        "title": "Heartbringer"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "01JY7AWBQ298FJJQEG8GJ0XVH1",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": ""
+                }
+              ]
+            },
+            "slots": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "01JY79JAANEQR1B7QEA1QC7R46",
+      "type": "section",
+      "attrs": {
+        "title": "Tale C"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JY79JFCFFMYJ2J1AJSJ5YVW9",
+      "type": "section",
+      "attrs": {
+        "title": "Tale C"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JY7AG4JA1W1T4R6ZVBT04P55",
+      "type": "section",
+      "attrs": {
+        "title": "Tale Chess"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JY7AFYDJ0GSANGM4QB71Y6DA",
+      "type": "section",
+      "attrs": {
+        "title": "Tale Defense"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JY7AFN8PG5Z0J88TVAZ51TXZ",
+      "type": "section",
+      "attrs": {
+        "title": "Tale Platform"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JY7AFD1QEKGD7CG9ADHGVRD7",
+      "type": "section",
+      "attrs": {
+        "title": "Tale R"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JY79RE0FRPSPAVA6E910A4Z5",
+      "type": "section",
+      "attrs": {
+        "title": "Tale Rogue"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JY79R6VTV1G3KPC0MRS82TJ8",
+      "type": "section",
+      "attrs": {
+        "title": "Tale Swarm"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "01JY7AVMVSE9XP084HXC9M58H4",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "Upgrades are only Rarity, no Levels - like Entropy Effect # Mechanics ---\n## Heroes --- named characters --- Defeating enemies grants Experience.\nDamage Types Damage Types - Physical - Magical - Chaos - Fire - Ice -\nLightning - Void - Necro/Death - Blood? - Spiritual (summon) ## Cards ---\nNo card levels, just rarity. # Modes --- ## --- Objective based Eliminate\nx amount of enemies to advance to the next challenge. Fixed arena",
+                  "marks": []
+                },
+                {
+                  "type": "text",
+                  "text": ""
+                }
+              ]
+            },
+            "slots": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "01JY7AF75W1V6Z3GNRPGMVX05J",
+      "type": "section",
+      "attrs": {
+        "title": "Tale Tasks"
+      },
+      "slots": {
+        "default": []
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.111Z"
+}

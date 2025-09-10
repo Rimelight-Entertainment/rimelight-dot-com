@@ -1,0 +1,43 @@
+{
+  "id": "01JYCG0J3RG1HJP3WS9S4G379Q",
+  "slug": "franchises/grand-tale/game/tales/tale-chess",
+  "type": "Default",
+  "title": "Tale Chess",
+  "categories": [
+    "Tale"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "01JYCG0XJS9ATDNJ8S6F3M5M9X",
+      "type": "paragraph",
+      "attrs": {
+        "text": [
+          {
+            "type": "text",
+            "text": "Autochess Heroes have Traits which are possibly used in other games\nInstead of buying heroes to level them up and them occupying space, you\ninvest and grow their Experience. Instead of a single hero you upgrade\n(auto gladiators) or many different ones that work independently (auto\nchess) you have a team of heroes which work collectively as one You add\nheroes to your team Pawn Knight Bishop Rook Ruler peao 1 torre 5 cavalo\nbispo 3 rainha 9 Choose an Ascendant Lightsprite Rimesprite 1 Ability 4\nPawns 2 Knights 2 Bishops 2 Rooks Lightsprite Rimesprite Ascendant Aspects\n- Tales - Love - Hate - Pawn Traits Light Rime Warrior Rogue Sorcerer\nShield Injury Poison Fury",
+            "marks": []
+          },
+          {
+            "type": "text",
+            "text": ""
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "01JYCH8HQYD81BP9P2QV0GTDTC",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true,
+      "slots": {
+        "default": []
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.088Z"
+}

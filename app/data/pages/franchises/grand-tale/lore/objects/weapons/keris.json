@@ -1,0 +1,22 @@
+{
+  "id": "01JY4XMSYX6NSY857RE0B3NS6W",
+  "slug": "franchises/grand-tale/lore/objects/weapons/keris",
+  "type": "Default",
+  "title": "Keris",
+  "categories": [
+    "Object"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "01JYA74VD9498GWRJYMM48FCAW",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.238Z"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "01JY4SXEA6F7JCNM2E3FP7QFXX",
+  "slug": "franchises/grand-tale/lore/objects/elder-tools/crown",
+  "type": "Default",
+  "title": "Crown",
+  "categories": [
+    "Object"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "01JYA97ZKJ6Q288BDA4M07EZXZ",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.207Z"
+}

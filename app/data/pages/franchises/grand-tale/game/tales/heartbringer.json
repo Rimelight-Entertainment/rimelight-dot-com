@@ -1,0 +1,677 @@
+{
+  "id": "01JY7AYR6EDNC09A8GB5SXBNP7",
+  "slug": "franchises/grand-tale/game/tales/heartbringer",
+  "type": "Default",
+  "title": "Heartbringer",
+  "categories": [
+    "Uncategorized"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "01JY7B0M9R7RJ99205JQPJGS6H",
+      "type": "section",
+      "attrs": {
+        "title": "Modes"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "01JY7B0S129XYC3V3D03PNHFHT",
+            "type": "section",
+            "attrs": {
+              "title": "Siege"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "01JY7B37S48T4C6ZD2ARMR4JAK",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Lanes, Legions, Gain level alongside a team. Lanes describe the\npath along which allied Creeps march toward the enemy Ancient.\nCreeps start marching from the Barracks that spawn them, and there\nare three defensive Towers placed along the path leaving each\nBase. Top Lane runs along ther North and West edge of the Map. Mid\nLane runs diagonally through the map, and Bottom Lane runs along\nthe South and East edges of the Mpap",
+                        "marks": []
+                      },
+                      {
+                        "type": "text",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "01JY7B0TNKF6NRFCK1YYSAMKEX",
+            "type": "section",
+            "attrs": {
+              "title": "Arena"
+            },
+            "slots": {
+              "default": []
+            }
+          },
+          {
+            "id": "01JY7B1CH3AB6XSP6R6ZBNWA0H",
+            "type": "section",
+            "attrs": {
+              "title": "Royale"
+            },
+            "slots": {
+              "default": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "01JY7B0W5Q8TQHRZ2A4Z3HEVCT",
+      "type": "section",
+      "attrs": {
+        "title": "Mechanics"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "01JY7B0YJQNA4KJ0NM1EEH0NNM",
+            "type": "section",
+            "attrs": {
+              "title": "Innate Abilities"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "01JY7B3GGY97Z3BW4EFE4DXA06",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Innate Abilities are Abilities available by default on all\nChampions in an Encounter.",
+                        "marks": []
+                      },
+                      {
+                        "type": "text",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "01JY7B3QNCG9VV7NYYKF7YPG54",
+            "type": "section",
+            "attrs": {
+              "title": "Team Abilities"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "01JY7B3QNCRFHGZMJBQDYG66CQ",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Team Abilities are Abilities available to all Teams in an\nEncounter. Any team member may utilize the Ability, placing it\nunder a shared cooldown.",
+                        "marks": []
+                      },
+                      {
+                        "type": "text",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "01JY7B4BMPBM7VTT7A0JC6TA4F",
+            "type": "section",
+            "attrs": {
+              "title": "Vision"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "01JY7B6PF9AVVQAWH8J65EJYN5",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Pawn Target abilities require vision over the target, whereas other\ntargeting types may still affect invisible pawns.,",
+                        "marks": []
+                      },
+                      {
+                        "type": "text",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "01JY7B4JBH0AG1Y3NE0HZ5K0CT",
+                  "type": "section",
+                  "attrs": {
+                    "title": "Fog of War"
+                  },
+                  "slots": {
+                    "default": [
+                      {
+                        "id": "01JY7B4V8GJVXYNH0FNQ9048HN",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "All areas not within an allied pawn’s field of vision are hidden\nby Fog of War. Enemy pawns are not visible in fog. Obstructed\nvision is blocked by terrain",
+                              "marks": []
+                            },
+                            {
+                              "type": "text",
+                              "text": ""
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "01JY7B5ZH5JNH74XC97AJ60A0K",
+                  "type": "section",
+                  "attrs": {
+                    "title": "Invisibility"
+                  },
+                  "slots": {
+                    "default": [
+                      {
+                        "id": "01JY7B65S5J4NR6BQXWJ35TEVE",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "Invisible pawns are not revealed even when within allied field of\nview, but have a distinctive refractive appearance that may be\nseen with a keen eye.",
+                              "marks": []
+                            },
+                            {
+                              "type": "text",
+                              "text": ""
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "01JY7B74BRVVW3XNTQK96GKV22",
+            "type": "section",
+            "attrs": {
+              "title": "Boons"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "01JY7B7MBE4QAWQN349AVWHVMC",
+                  "type": "callout",
+                  "attrs": {
+                    "variant": "ideation",
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Rename these relics? blessings?",
+                        "marks": []
+                      },
+                      {
+                        "type": "text",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "01JY7B8D7Y7PYWJ7GCTAJFB8XT",
+      "type": "section",
+      "attrs": {
+        "title": "Design"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "01JY7BAVYHHZWTMXHNDGX8DQT4",
+            "type": "section",
+            "attrs": {
+              "title": "Genre Divergences"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "01JY7B8RQWEV64HEBFA58XC5VC",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Heartbringer is based on an established game genre, the ",
+                        "marks": []
+                      },
+                      {
+                        "type": "text",
+                        "text": "MOBA",
+                        "marks": [
+                          {
+                            "type": "link",
+                            "attrs": {
+                              "url": "https://en.wikipedia.org/wiki/Multiplayer_online_battle_arena"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": ". As with all that branches from an existing format, Heartbringer has many similarities and divergences to the common concept, and this section gives some explanations for these choices.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "01JY7BB7S8WSAS3V7TDCBGS4SR",
+                  "type": "callout",
+                  "attrs": {
+                    "variant": "commentaryExternal",
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Many traditional mechanics in the genre were simply maintained from its roots as a mod for another game of a completely different genre, and therefore weren't ever designed specifically with the new genre's objectives in mind. Heartbringer aims to break free from these legacies and make choices that objectively work best for its intended experience.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "01JY7BF2Q4DSMSJQV8M3K3N0TG",
+                  "type": "section",
+                  "attrs": {
+                    "title": "Mana"
+                  },
+                  "slots": {
+                    "default": [
+                      {
+                        "id": "01JY7BFA23NK9A0N1G2HJBGYA8",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "limit how long you can stay out on the map without returning to\nbase - why? the fun of the game is doing things, not going back to\nheal. its a small break of pace, but that can be done during\nrotations etc hard to balance different champions, some will have\nit worse and be forced by design to build certain items just to\nplay comfortably, which is boring",
+                              "marks": []
+                            },
+                            {
+                              "type": "text",
+                              "text": ""
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "01JY7BFH8PWRWJJ8F0CK8XWK8E",
+                  "type": "section",
+                  "attrs": {
+                    "title": "Last Hitting"
+                  },
+                  "slots": {
+                    "default": [
+                      {
+                        "id": "01JY7BFSAWQJ2A19FX1Q3J1R04",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "“Last Hitting\" is the concept of landing the killing blow on an enemy to gain an increased bounty of resources and experience (or often any bounty at all). Properly and continuously landing these last hits is typically crucial for the progression of a character during a match.",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "01JY7BHJ7BQV43G1Y9DX0R0D3W",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "It's essentially a menial mechanical chore with no significant skill expression other than timing (which gets more and more lenient as the game progresses), yet with an immense and disproportionate impact in the game's results.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "01JY7BJ40AVTNC4ZMN02CPMFNT",
+                  "type": "callout",
+                  "attrs": {
+                    "variant": "commentaryExternal",
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Dota 2",
+                        "marks": [
+                          {
+                            "type": "link",
+                            "attrs": {
+                              "url": "https://en.wikipedia.org/wiki/Dota_2"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": " additionally possesses the mechanic of last hitting your own allies to deny the resources to the enemy, adding another layer of micromanagement (which loses relevance as the game progresses just as much).\n\n",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "01JY7BTNV44R93J20E9BS353VP",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "This system introduces an unhealthy competition amongst teammates, which must either strategically agree on the funnelling of resources to a specific ally (and trusting said ally is capable of claiming the forfeited last hits) or fight amongst themselves to claim the last hit bounty, which creates the notion of \"kill stealing\".",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "01JY7C08X5435V09C9S0R28MPZ",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "This system introduces an unhealthy competition amongst teammates, which must either strategically agree on the funnelling of resources to a specific ally (and trusting said ally is capable of claiming the forfeited last hits) or fight amongst themselves to claim the last hit bounty, which creates the notion of \"kill stealing\".",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "01JY7C0P5WNRE1PNKK0XMA9BJC",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "The notion of \"when\" and \"if\" a last hit should be taken is extremely counterintuitive to the stated game objectives - defeat enemies and their structures - which makes the new player experience confusing, often leading to bad interactions with other players when new players don’t follow the optimal expected behaviour.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "01JY7C1570TB74DTPQWXKRS0F3",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "In addition to these issues, the bounty mechanic rewards typically only apply to players within a certain range of the defeated enemy (a team's NPC units do not count for this requirement). This means any enemies defeated away from a physical player presence do not contribute to the opposing team's progress, and makes it harder for players to see their allied NPC units as part of a team sharing the same objective.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "01JY7C1X9FV4KV3X8JXK0KR0KH",
+                  "type": "callout",
+                  "attrs": {
+                    "variant": "commentaryExternal",
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Heroes of the Storm",
+                        "marks": [
+                          {
+                            "type": "link",
+                            "attrs": {
+                              "url": "https://en.wikipedia.org/wiki/Heroes_of_the_Storm"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": " removed resource bounties but their experience system remained tied to this same mechanic, leading to the concept of \"Experience Soaking\", a non-interactive gameplay responsibility disliked by many players.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "01JY7C440FAVM211K9VPF0G6MQ",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Heartbringer gets rid of this mechanic entirely - loot bounties are automatically awarded to the opposing team regardless of proximity or who struck the killing blow (this includes NPC allied units). These bounty resources are additionally shared amongst the entire team, making it unnecessary to prioritize funnelling resources to any given teammate and allowing players to focus on the game’s core objectives instead.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "01JY7C57DHJGP3RCMD3PWR3BKS",
+                  "type": "section",
+                  "attrs": {
+                    "title": "Terrain Elevation"
+                  },
+                  "slots": {
+                    "default": [
+                      {
+                        "id": "01JY7C5MNW767TWRH62HAMNBGC",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "Unlike ",
+                              "marks": []
+                            },
+                            {
+                              "type": "text",
+                              "text": "Dota 2",
+                              "marks": [
+                                {
+                                  "type": "link",
+                                  "attrs": {
+                                    "url": "https://en.wikipedia.org/wiki/Dota_2"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "text": ", Heartbringer makes no use of terrain elevation.",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "01JY7C68FTBS8DK0J7VNYNPPSA",
+                  "type": "section",
+                  "attrs": {
+                    "title": "Time of Day"
+                  },
+                  "slots": {
+                    "default": [
+                      {
+                        "id": "01JY7C6HKQKWPHWTW675ATGNM2",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "While Heartbringer employs Grand Tale's global synchronized time of day system, it doesn't have any gameplay impacts.",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "01JY7C7NT9JSFPEG9EE1SNWRAB",
+                  "type": "section",
+                  "attrs": {
+                    "title": "Team Abilities"
+                  },
+                  "slots": {
+                    "default": [
+                      {
+                        "id": "01JY7C7XYDYSKTYV0PTA54M656",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "Heartbringer’s Team Ability system was specifically designed to encompass and adapt mechanics present in other games that weren’t properly part of a unified system, but many of these reference mechanics were actually discarded due to not aligning with our game’s objectives.",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "01JY7C95MFTCV3SPMF8V2E6PRV",
+                  "type": "section",
+                  "attrs": {
+                    "title": "Boots"
+                  },
+                  "slots": {
+                    "default": [
+                      {
+                        "id": "01JY7C9FJ4KYYBGCHXV57XJ4VW",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "A “boot” was initially part of Heartbringer’s development in the form of “Wings” instead, but the concept was eventually dropped as the game’s design took shape and the mechanic was dropped as a whole.",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "01JY7C9XHBZWBQCXY7S6NA0YBF",
+                  "type": "section",
+                  "attrs": {
+                    "title": "Jungle"
+                  },
+                  "slots": {
+                    "default": [
+                      {
+                        "id": "01JY7CA1BW4NKRHVBDNRS8KWFX",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "removing the concept of leashing jungle monsters, perhaps a shield\nof sorts that prevents damage by anyone other than the one\ncarrying the jungle trinket actually id rather rework the entire\njungle concept as a whole",
+                              "marks": []
+                            },
+                            {
+                              "type": "text",
+                              "text": ""
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "01JYCH6F086HX1VEB78GMJ628S",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true,
+      "slots": {
+        "default": []
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:18:59.941Z"
+}

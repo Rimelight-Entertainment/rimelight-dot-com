@@ -1,0 +1,43 @@
+{
+  "id": "01JY4ZACQQ5NN47ZZ7ETTJSRGM",
+  "slug": "franchises/grand-tale/lore/groups/ordo",
+  "type": "Default",
+  "title": "Ordo",
+  "categories": [
+    "Group"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "fcc20d19-f5cf-4a97-86fe-ceaebd84be1c",
+      "type": "section",
+      "attrs": {
+        "title": ""
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "5dbbd364-41dd-4340-84ea-dd1a59356411",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": ""
+                },
+                {
+                  "type": "text",
+                  "text": "Secret society style organization, few but very powerful members. perhaps\nthey have minions not technically evil, more like a group of\nanti-heroes/anti-villains sort of agree to disagree a magneto vs xavier\nconflict given these artifacts are difficult to obtain, they use them for\nthe time being to help in gathering the rest. only when theyre all\ngathered together will they be destroyed. its also not easy to destroy\nthem Their objective is collecting all the Elder Artifacts - to prevent\nthe enemies from getting them while such immense power exists, the\nuniverse will never be free think beyond good and evil Ultimately both\ngroups have the same goal, to get the artifacts out of the picture, but\nthe Kinship wants them protected, while the Kindred wants them destroyed.\nOne group argues its a matter of proper use, while the other believes\nthey're better off without them existing at all. Perhaps the kinship sees\ntheres more to them than just being tools that theyre there for a purpose,\nto be learned from, which is why they host the convergence",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          }
+        ]
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.199Z"
+}

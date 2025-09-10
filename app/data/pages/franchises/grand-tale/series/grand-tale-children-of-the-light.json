@@ -1,0 +1,223 @@
+{
+  "id": "01JXWZX9VKDBT775ZQQG2WJ8YP",
+  "slug": "franchises/grand-tale/series/grand-tale-children-of-the-light",
+  "type": "Default",
+  "title": "New Page",
+  "categories": [
+    "Uncategorized"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "type": "section",
+      "attrs": {
+        "title": "Overview",
+        "level": 1
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://tvtropes.org/pmwiki/pmwiki.php/Main/EstablishingSeriesMoment",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer nofollow",
+                    "class": null
+                  }
+                }
+              ],
+              "text": "https://tvtropes.org/pmwiki/pmwiki.php/Main/EstablishingSeriesMoment"
+            }
+          ]
+        },
+        {
+          "type": "codeBlock",
+          "attrs": {
+            "language": null
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Call\nHerald\nAnswer: Acceptance, Resignation, Refusal\nAid\nInciting Incident\nFirst Threshold:\nConfrontation\n\nTrials\nTemptation:\nAtonement:\nDeath & Rebirth\nDarkest Hour\nTemptation\nBrightest Hour\nResolution\nBreather\n\nClimax\nApotheosis\nFinal Confrontation\nUltimate Boon\nFinal Temptation\nQuestion\nPondering\nAnswer\nReturn\nFreedom"
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "attrs": {
+            "title": "Narrative Structure",
+            "level": 2
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Grand Tale: Children of the Light is based on traditional narrative structures such as the "
+                },
+                {
+                  "type": "text",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "https://tvtropes.org/pmwiki/pmwiki.php/Main/TheHerosJourney",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer nofollow",
+                        "class": null
+                      }
+                    }
+                  ],
+                  "text": "Hero's Journey"
+                },
+                {
+                  "type": "text",
+                  "text": " and the "
+                },
+                {
+                  "type": "text",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "https://tvtropes.org/pmwiki/pmwiki.php/Main/ThreeActStructure",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer nofollow",
+                        "class": null
+                      }
+                    }
+                  ],
+                  "text": "Three-Act Structure"
+                },
+                {
+                  "type": "text",
+                  "text": "."
+                }
+              ]
+            },
+            {
+              "type": "section",
+              "attrs": {
+                "title": "Season Structure",
+                "level": 3
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Each season of Grand Tale: Children of the Light follows a Three-Act Structure."
+                    }
+                  ]
+                },
+                {
+                  "type": "section",
+                  "attrs": {
+                    "title": "Act 1",
+                    "level": 4
+                  },
+                  "content": [
+                    {
+                      "type": "paragraph"
+                    },
+                    {
+                      "type": "section",
+                      "attrs": {
+                        "title": "Act 2",
+                        "level": 4
+                      },
+                      "content": [
+                        {
+                          "type": "paragraph"
+                        },
+                        {
+                          "type": "section",
+                          "attrs": {
+                            "title": "Act 3",
+                            "level": 4
+                          },
+                          "content": [
+                            {
+                              "type": "paragraph"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "section",
+                  "attrs": {
+                    "title": "Episode Structure",
+                    "level": 3
+                  },
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Each episode of Grand Tale: Children of the Light also follows a Three-Act Structure, nested within its season's act structure."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "section",
+                      "attrs": {
+                        "title": "Plots",
+                        "level": 4
+                      },
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "The standard Grand Tale: Children of the Light episode encompasses three plotlines following the traditional "
+                            },
+                            {
+                              "type": "text",
+                              "marks": [
+                                {
+                                  "type": "link",
+                                  "attrs": {
+                                    "href": "https://tvtropes.org/pmwiki/pmwiki.php/Main/PlotThreads",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer nofollow",
+                                    "class": null
+                                  }
+                                }
+                              ],
+                              "text": "Plot Threads"
+                            },
+                            {
+                              "type": "text",
+                              "text": " framework."
+                            }
+                          ]
+                        },
+                        {
+                          "type": "paragraph"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.712Z"
+}

@@ -1,0 +1,141 @@
+{
+  "id": "01JYCGB8YY16CWTQTXARRA9QWW",
+  "slug": "franchises/grand-tale/game/tales/tale-c/card",
+  "type": "Default",
+  "title": "Card",
+  "categories": [
+    "Uncategorized"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "01JYCGSHGY98BQFXA9XJ2RK8R7",
+      "type": "paragraph",
+      "attrs": {
+        "text": [
+          {
+            "type": "text",
+            "text": "Cards are the main playing piece in Tale C.",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "01JYCGSX8E5SQPKPBVT4ZW3KE4",
+      "type": "section",
+      "attrs": {
+        "title": "Narrative"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "01JYCGT2HC2QR7RCV4AM3J6ZBX",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "Cards are all canonically designed and drawn by Leah Lightbringer, and represent the many personalities and events the Grand Tale comes across.",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "01JYCGTMQM0KQ5Q69J4YM0FWXB",
+      "type": "section",
+      "attrs": {
+        "title": "Gameplay"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "01JYCGTSGEXTNQG16GF6HCVZWV",
+            "type": "section",
+            "attrs": {
+              "title": "Properties"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "01JYCGTZQXCCHB6JXVXJZRX95G",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Cards share many properties, with some being specific to a given Card Type.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "01JYCGV8XMVKMYX2ZPS58KWQ82",
+                  "type": "section",
+                  "attrs": {
+                    "title": "Alignment",
+                    "mainArticleSlug": "franchises/grand-tale/game/tales/tale-c/card/alignment"
+                  },
+                  "slots": {
+                    "default": [
+                      {
+                        "id": "01JYCGVRY09807MYTPM7MJD551",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "A Card may have from one to two Alignments, and may only be placed in a deck alongside a Hero which contains it's alignment.",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "01JYCGVMY7192HRXAV1T79S112",
+                  "type": "section",
+                  "attrs": {
+                    "title": "Type",
+                    "mainArticleSlug": "franchises/grand-tale/game/tales/tale-c/card/type"
+                  },
+                  "slots": {
+                    "default": [
+                      {
+                        "id": "01JYCGW5XRAVCYHBPTZ7NA7916",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "A Card's Type determines how it's used in gameplay. A Card may only be of a single type, out of the following:",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.067Z"
+}

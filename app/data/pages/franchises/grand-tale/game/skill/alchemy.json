@@ -1,0 +1,22 @@
+{
+  "id": "01JYCKS6G6CFWS7T3PTZMVYKJR",
+  "slug": "franchises/grand-tale/game/skill/alchemy",
+  "type": "Default",
+  "title": "Alchemy",
+  "categories": [
+    "Skill"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "01JYCKRHB1RX62252AQTNT643M",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true
+    }
+  ],
+  "lastModified": "2025-06-22T20:18:59.921Z"
+}

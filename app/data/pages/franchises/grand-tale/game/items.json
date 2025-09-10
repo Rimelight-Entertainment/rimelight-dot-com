@@ -1,0 +1,75 @@
+{
+  "id": "01JY73STC5831HEQM4BASK7AN0",
+  "slug": "franchises/grand-tale/game/items",
+  "type": "Default",
+  "title": "New Page",
+  "categories": [
+    "Uncategorized"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "01JY764W0ZW1A1HZQPGVC4EX2T",
+      "type": "section",
+      "attrs": {
+        "title": "Properties"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JY765E58S2JDY1XRKAZ46XX5",
+      "type": "section",
+      "attrs": {
+        "title": "Mechanics"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "01JY76APK1GCFMNH51W2XHK83T",
+            "type": "callout",
+            "attrs": {
+              "variant": "note",
+              "text": [
+                {
+                  "type": "text",
+                  "text": "Unlike many games, Grand Tale does not utilise the concepts of \"dropping\" or \"equipping\" items.",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "01JY765N0CRPJH3M04NCVTSG3G",
+      "type": "section",
+      "attrs": {
+        "title": "Stacking"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "01JY76CFM12P9KVDG69KR80KEZ",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "Other than floating point code limitations, items have no stack limit.",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          }
+        ]
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:18:59.880Z"
+}

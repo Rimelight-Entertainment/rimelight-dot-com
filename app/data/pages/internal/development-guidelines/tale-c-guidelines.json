@@ -1,0 +1,237 @@
+{
+  "id": "01JXZEPV1AJVFH8E0HMTJ0DR53",
+  "slug": "internal/development-guidelines/tale-c-guidelines",
+  "type": "Default",
+  "title": "Tale C Guidelines",
+  "categories": [
+    "Uncategorized"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "01JXZEQ5PHX7BRYF9RE5CHYF5G",
+      "type": "section",
+      "attrs": {
+        "title": "Alignments"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "01JXZEQF5VFY5VFB5C66JVQ50Q",
+            "type": "section",
+            "attrs": {
+              "title": "Alignment Identity"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "01JXZEQJ9ZDVQ6VD095V1TNM4G",
+                  "type": "section",
+                  "attrs": {
+                    "title": "Chaos"
+                  },
+                  "slots": {
+                    "default": [
+                      {
+                        "id": "01JXZESC0V1TZP5FH3VRF71HPW",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "Properties exclusive to Chaos cards include:",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      },
+                      {
+                        "id": "01JXZETEF14WMTBZMPX8KQS026",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "Actions exclusive to Chaos cards include:",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      },
+                      {
+                        "id": "01JXZEW66PM1WT4JX615THGFWP",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "Properties prohibited on Chaos cards include:",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      },
+                      {
+                        "id": "01JXZEW7W6CS9T1KV3M3RYKEDT",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "Actions prohibited on Chaos cards include:",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "01JXZEQP6HJPD27CPK4Q0A0ZZW",
+                  "type": "section",
+                  "attrs": {
+                    "title": "Balance"
+                  },
+                  "slots": {
+                    "default": [
+                      {
+                        "id": "01JXZESP19TPG826G22YQVT6A4",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "Properties exclusive to Balance cards include:\n",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      },
+                      {
+                        "id": "01JXZETS5Z5WV1F8SZJKQ6AM51",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "Actions exclusive to Balance cards include:\n",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      },
+                      {
+                        "id": "01JXZEV2BAKEKHCKP3RMR7AB0W",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "Properties prohibited on Balance cards include:\n",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      },
+                      {
+                        "id": "01JXZEVAAXEHX4HNRBPXPM1HFV",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "Actions prohibited on Balance cards include:\n",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "01JXZEQMMRC9M4GPQD42K4BX6S",
+                  "type": "section",
+                  "attrs": {
+                    "title": "Order"
+                  },
+                  "slots": {
+                    "default": [
+                      {
+                        "id": "01JXZESX76Y8XSN68DJ5CJWT68",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "Properties exclusive to Order cards include:\n",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      },
+                      {
+                        "id": "01JXZEVGX4C55JGW08FK6VB3VY",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "Actions exclusive to Order cards include:\n",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      },
+                      {
+                        "id": "01JXZEVRN072N6Q8FQ1MVQJ46X",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "Properties prohibited on Order cards include:\n",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      },
+                      {
+                        "id": "01JXZEW00V59BZSZ1FFMV5XF6A",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "Actions prohibited on Order cards include:\n",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.724Z"
+}

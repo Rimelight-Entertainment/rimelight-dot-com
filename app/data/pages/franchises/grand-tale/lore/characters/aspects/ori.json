@@ -1,0 +1,216 @@
+{
+  "id": "01JY4T1DJZXC1S8PK0XF5VA6CF",
+  "slug": "franchises/grand-tale/lore/characters/aspects/ori",
+  "type": "Default",
+  "title": "Ori",
+  "categories": [
+    "Character"
+  ],
+  "tags": [
+    "character"
+  ],
+  "properties": {
+    "name": "Ori",
+    "title": "Aspect of Tales",
+    "aliases": [],
+    "flavourText": "",
+    "species": [
+      {
+        "type": "text",
+        "text": "Aspect",
+        "marks": [
+          {
+            "type": "mention",
+            "attrs": {
+              "pageId": "2c5aed66-3ffe-42c3-9caa-20a20caee248",
+              "pageSlug": "franchises/grand-tale/lore/species/sprita/aspect",
+              "pageTitle": "Aspect"
+            }
+          }
+        ]
+      }
+    ],
+    "sex": [
+      {
+        "type": "text",
+        "text": "None",
+        "marks": []
+      }
+    ],
+    "pronouns": "They / Them",
+    "height": [
+      {
+        "type": "text",
+        "text": "90",
+        "marks": []
+      }
+    ],
+    "weight": 0,
+    "dateOfBirth": [
+      {
+        "type": "text",
+        "text": "30/04/5015",
+        "marks": []
+      }
+    ],
+    "dateOfDeath": "",
+    "placeOfBirth": [
+      {
+        "type": "text",
+        "text": "Lightbringer Household",
+        "marks": []
+      }
+    ],
+    "placeOfDeath": [
+      {
+        "type": "text",
+        "text": ""
+      }
+    ],
+    "formerAffiliations": [],
+    "currentAffiliations": [
+      [
+        {
+          "type": "text",
+          "text": "Grand Tale",
+          "marks": [
+            {
+              "type": "mention",
+              "attrs": {
+                "pageId": "da33b767-177b-4740-87f0-baec41948420",
+                "pageSlug": "franchises/grand-tale/lore/groups/grand-tale",
+                "pageTitle": "Grand Tale"
+              }
+            }
+          ]
+        }
+      ]
+    ],
+    "equipment": [],
+    "pets": [],
+    "mounts": [],
+    "favouriteFood": ""
+  },
+  "blocks": [
+    {
+      "id": "916aa84c-20a0-44b4-b6b7-3a535e333c6a",
+      "type": "paragraph",
+      "attrs": {
+        "text": [
+          {
+            "type": "text",
+            "text": ""
+          },
+          {
+            "type": "text",
+            "text": "Ori is the Aspect of Tales Ori is a form of\nhttps://tvtropes.org/pmwiki/pmwiki.php/Main/Tulpa, a physical\nmanifestation of Aleph-Lightbringer.topic 's will and dream, created\nby his wish upon \"The-Ohrn.topic\" during the events of Episode-01\nhttps://tvtropes.org/pmwiki/pmwiki.php/Main/TagalongChronicler",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "04366364-6fd0-4208-b580-804d37a6e725",
+      "type": "section",
+      "attrs": {
+        "title": "Appearance"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "205d83c5-97a0-4c74-9947-efa5a1821c80",
+      "type": "section",
+      "attrs": {
+        "title": "Personality"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "7c640390-3eb5-4c6c-abb8-ba1610d55f11",
+      "type": "section",
+      "attrs": {
+        "title": "Abilities"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "63152186-79cc-4e82-a888-8c3c4786c493",
+      "type": "section",
+      "attrs": {
+        "title": "Biography"
+      },
+      "isTemplated": true,
+      "slots": {
+        "default": [
+          {
+            "id": "88f144f5-b6b8-492f-9492-51a27be0a697",
+            "type": "section",
+            "attrs": {
+              "title": "Birth"
+            },
+            "slots": {
+              "default": []
+            }
+          },
+          {
+            "id": "7d140de8-6b62-49b6-9d49-e3738998de7f",
+            "type": "section",
+            "attrs": {
+              "title": "Early Life"
+            },
+            "slots": {
+              "default": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "21a13580-8f09-4e92-a7db-fd6cc0e8da11",
+      "type": "section",
+      "attrs": {
+        "title": "Relationships"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "abd757cd-dcad-40b9-9d8a-4971c57735b8",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true,
+      "slots": {
+        "default": [
+          {
+            "id": "5e4370af-4cdc-4a32-941a-72e6eabd67c7",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": ""
+                },
+                {
+                  "type": "text",
+                  "text": "https://en.wikipedia.org/wiki/Ori_(Hebrew)",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "url": "https://en.wikipedia.org/wiki/Ori_(Hebrew)"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "slots": {}
+          }
+        ]
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.142Z"
+}

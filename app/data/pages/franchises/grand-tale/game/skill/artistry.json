@@ -1,0 +1,22 @@
+{
+  "id": "01JYCN0EPBEXRATTX72922SH44",
+  "slug": "franchises/grand-tale/game/skill/artistry",
+  "type": "Skill",
+  "title": "Artistry",
+  "categories": [
+    "Skill"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "01JYCN0EKS6PEM4DV3HAXF0JNX",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true
+    }
+  ],
+  "lastModified": "2025-06-22T20:24:21.451Z"
+}

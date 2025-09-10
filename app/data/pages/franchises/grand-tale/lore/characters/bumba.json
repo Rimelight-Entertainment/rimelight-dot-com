@@ -1,0 +1,84 @@
+{
+  "id": "01JY4T1DJ665Y533XKWJG3QZDY",
+  "slug": "franchises/grand-tale/lore/characters/bumba",
+  "type": "Default",
+  "title": "Bumba",
+  "categories": [
+    "Character"
+  ],
+  "tags": [
+    "character"
+  ],
+  "properties": {
+    "name": "",
+    "title": "",
+    "aliases": [],
+    "flavourText": "",
+    "species": "",
+    "sex": "",
+    "pronouns": "",
+    "height": "",
+    "weight": 0,
+    "dateOfBirth": "",
+    "dateOfDeath": "",
+    "placeOfBirth": "",
+    "placeOfDeath": "",
+    "formerAffiliations": [],
+    "currentAffiliations": [],
+    "equipment": [],
+    "pets": [],
+    "mounts": [],
+    "favouriteFood": ""
+  },
+  "blocks": [
+    {
+      "id": "224a58ed-4bdb-4bc8-9571-df50e8e1a724",
+      "type": "section",
+      "attrs": {
+        "title": "Appearance"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "35f27aab-9fb2-4d88-8fb9-18f5f865b718",
+      "type": "section",
+      "attrs": {
+        "title": "Personality"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "a663e315-a0b1-42e8-bc2f-26447c932f6e",
+      "type": "section",
+      "attrs": {
+        "title": "Abilities"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "bfa39fb9-df9b-474e-9df8-08f3a1b766c4",
+      "type": "section",
+      "attrs": {
+        "title": "Biography"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "43b045f6-852b-4a71-849b-c014190dec2b",
+      "type": "section",
+      "attrs": {
+        "title": "Relationships"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "246043df-b69b-49c4-b85f-515ab8fa987a",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.146Z"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "01JY4SXEA3M89B9YE78BHKS0C1",
+  "slug": "franchises/grand-tale/lore/objects/elder-tools/arrow",
+  "type": "Default",
+  "title": "Arrow",
+  "categories": [
+    "Object"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "01JYA94TR8TEDG5ZT1HWHNSQ0Q",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.205Z"
+}

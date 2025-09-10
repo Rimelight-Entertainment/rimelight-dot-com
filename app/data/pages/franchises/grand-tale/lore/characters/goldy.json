@@ -1,0 +1,160 @@
+{
+  "id": "01JY4T1DJFBY4TCNBRMF0Y624M",
+  "slug": "franchises/grand-tale/lore/characters/goldy",
+  "type": "Default",
+  "title": "Goldy",
+  "categories": [
+    "Character"
+  ],
+  "tags": [
+    "character"
+  ],
+  "properties": {
+    "name": [
+      {
+        "type": "text",
+        "text": "Goldy",
+        "marks": []
+      }
+    ],
+    "title": [
+      {
+        "type": "text",
+        "text": "Best Pet",
+        "marks": []
+      }
+    ],
+    "aliases": [],
+    "flavourText": [
+      {
+        "type": "text",
+        "text": "Might die if left without attention for too long.",
+        "marks": []
+      }
+    ],
+    "species": [
+      {
+        "type": "text",
+        "text": "Octallion",
+        "marks": [
+          {
+            "type": "mention",
+            "attrs": {
+              "pageId": "8e119829-8e7c-408e-99f1-19bb139e2d3b",
+              "pageSlug": "franchises/grand-tale/lore/species/fauna/octallion",
+              "pageTitle": "Octallion"
+            }
+          }
+        ]
+      }
+    ],
+    "sex": [
+      {
+        "type": "text",
+        "text": "Male",
+        "marks": []
+      }
+    ],
+    "pronouns": [
+      {
+        "type": "text",
+        "text": "He / Him",
+        "marks": []
+      }
+    ],
+    "height": [
+      {
+        "type": "text",
+        "text": "50",
+        "marks": []
+      }
+    ],
+    "weight": 0,
+    "dateOfBirth": "",
+    "dateOfDeath": "",
+    "placeOfBirth": "",
+    "placeOfDeath": "",
+    "formerAffiliations": [],
+    "currentAffiliations": [],
+    "equipment": [],
+    "pets": [],
+    "mounts": [],
+    "favouriteFood": ""
+  },
+  "blocks": [
+    {
+      "id": "26c398d2-611d-47b6-b8e9-2d4893d5adc3",
+      "type": "paragraph",
+      "attrs": {
+        "text": [
+          {
+            "type": "text",
+            "text": ""
+          },
+          {
+            "type": "text",
+            "text": "https://tvtropes.org/pmwiki/pmwiki.php/Main/CowardlyLion<",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "url": "https://tvtropes.org/pmwiki/pmwiki.php/Main/CowardlyLion<"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "224a58ed-4bdb-4bc8-9571-df50e8e1a724",
+      "type": "section",
+      "attrs": {
+        "title": "Appearance"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "35f27aab-9fb2-4d88-8fb9-18f5f865b718",
+      "type": "section",
+      "attrs": {
+        "title": "Personality"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "a663e315-a0b1-42e8-bc2f-26447c932f6e",
+      "type": "section",
+      "attrs": {
+        "title": "Abilities"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "bfa39fb9-df9b-474e-9df8-08f3a1b766c4",
+      "type": "section",
+      "attrs": {
+        "title": "Biography"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "43b045f6-852b-4a71-849b-c014190dec2b",
+      "type": "section",
+      "attrs": {
+        "title": "Relationships"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "246043df-b69b-49c4-b85f-515ab8fa987a",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.166Z"
+}

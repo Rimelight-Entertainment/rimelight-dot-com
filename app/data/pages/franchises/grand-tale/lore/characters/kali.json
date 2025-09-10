@@ -1,0 +1,102 @@
+{
+  "id": "01JY4T1DJJX3A51B5P5M11RR3C",
+  "slug": "franchises/grand-tale/lore/characters/kali",
+  "type": "Default",
+  "title": "Kali",
+  "categories": [
+    "Character"
+  ],
+  "tags": [
+    "character"
+  ],
+  "properties": {
+    "name": "",
+    "title": "",
+    "aliases": [],
+    "flavourText": "",
+    "species": "",
+    "sex": "",
+    "pronouns": "",
+    "height": "",
+    "weight": 0,
+    "dateOfBirth": "",
+    "dateOfDeath": "",
+    "placeOfBirth": "",
+    "placeOfDeath": "",
+    "formerAffiliations": [],
+    "currentAffiliations": [],
+    "equipment": [],
+    "pets": [],
+    "mounts": [],
+    "favouriteFood": ""
+  },
+  "blocks": [
+    {
+      "id": "6674fabf-d3d2-4e01-a82a-127bb5476e96",
+      "type": "paragraph",
+      "attrs": {
+        "text": [
+          {
+            "type": "text",
+            "text": ""
+          },
+          {
+            "type": "text",
+            "text": "Despite being a [Multiple Head\nCase](https://tvtropes.org/pmwiki/pmwiki.php/Main/MultipleHeadCase) Head\nCase, Kali view itself as a single being. While each head may think for\nitself, they are rarely in disagreement. one poison per head, harmless on\nits own, petrifies flesh if you get both [Snakes Are\nSinister](https://tvtropes.org/pmwiki/pmwiki.php/Main/SnakesAreSinister)\nhttps://tvtropes.org/pmwiki/pmwiki.php/Main/SssssnakeTalk Kali is named\nafter both the Hindu goddess Kali, associated with time and death, and\nSaint Sara-la-Kâli, the Romani patron saint.",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "224a58ed-4bdb-4bc8-9571-df50e8e1a724",
+      "type": "section",
+      "attrs": {
+        "title": "Appearance"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "35f27aab-9fb2-4d88-8fb9-18f5f865b718",
+      "type": "section",
+      "attrs": {
+        "title": "Personality"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "a663e315-a0b1-42e8-bc2f-26447c932f6e",
+      "type": "section",
+      "attrs": {
+        "title": "Abilities"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "bfa39fb9-df9b-474e-9df8-08f3a1b766c4",
+      "type": "section",
+      "attrs": {
+        "title": "Biography"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "43b045f6-852b-4a71-849b-c014190dec2b",
+      "type": "section",
+      "attrs": {
+        "title": "Relationships"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "246043df-b69b-49c4-b85f-515ab8fa987a",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.169Z"
+}

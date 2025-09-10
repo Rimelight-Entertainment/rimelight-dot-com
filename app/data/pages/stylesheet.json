@@ -1,0 +1,393 @@
+{
+  "id": "01JY4SQQJGDAKA4Y9TNQ3RNFSE",
+  "slug": "stylesheet",
+  "type": "Default",
+  "title": "Stylesheet",
+  "categories": [
+    "Uncategorized"
+  ],
+  "tags": [],
+  "properties": {
+    "name": "Name",
+    "title": "Title",
+    "aliases": [
+      "Alias",
+      "Alias"
+    ],
+    "flavourText": "Flavour Text",
+    "species": "Species",
+    "sex": "Sex",
+    "pronouns": "Pronouns",
+    "height": "Height",
+    "weight": 0,
+    "dateOfBirth": "Date of Birth",
+    "dateOfDeath": "Date of Death",
+    "placeOfBirth": "Place of Birth",
+    "placeOfDeath": "Place of Death",
+    "formerAffiliations": [
+      "Former",
+      "Affiliations"
+    ],
+    "currentAffiliations": [
+      "Current",
+      "Affiliatoins"
+    ],
+    "equipment": [
+      "Equipment"
+    ],
+    "pets": [
+      "Pet"
+    ],
+    "mounts": [
+      "Mount"
+    ],
+    "favouriteFood": "Favourite Food",
+    "pageName": ""
+  },
+  "blocks": [
+    {
+      "id": "670381bd-3566-4b57-8851-c740acfc0adc",
+      "type": "paragraph",
+      "attrs": {
+        "text": [
+          {
+            "type": "text",
+            "text": "testing links by the way ",
+            "marks": []
+          },
+          {
+            "type": "text",
+            "text": "Aleph Lightbringer",
+            "marks": [
+              {
+                "type": "mention",
+                "attrs": {
+                  "pageSlug": "franchises/grand-tale/lore/characters/aleph-lightbringer",
+                  "pageTitle": "Aleph Lightbringer"
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": " neato ",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "c65ffa90-79df-456b-b763-b24886cb50e5",
+      "type": "section",
+      "attrs": {
+        "title": "Section"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "1cd2a48a-6077-42ef-9851-8841bfb2014c",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie felis eget tellus gravida, ut tincidunt risus faucibus. Donec ullamcorper erat maximus, viverra orci sed, egestas velit.\n",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "d8421767-a6ef-409f-b52a-9d1b1ab9bcd4",
+            "type": "section",
+            "attrs": {
+              "title": "Section"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "84afbd75-36ff-4184-bffb-a7d32826dd0c",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "192a6653-457d-4f46-8a27-4377e14aa886",
+                  "type": "section",
+                  "attrs": {
+                    "title": "Section"
+                  },
+                  "slots": {
+                    "default": []
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "a4ea0ae0-9403-4590-81ec-a0c1e0e86419",
+      "type": "callout",
+      "attrs": {
+        "variant": "note",
+        "text": [
+          {
+            "type": "text",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie felis eget tellus gravida, ut tincidunt risus faucibus. Donec ullamcorper erat maximus, viverra orci sed, egestas velit.\n\n",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "a46fbe34-9c9a-40f8-9391-31ceb52320e2",
+      "type": "callout",
+      "attrs": {
+        "variant": "tip",
+        "text": [
+          {
+            "type": "text",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie felis eget tellus gravida, ut tincidunt risus faucibus. Donec ullamcorper erat maximus, viverra orci sed, egestas velit.\n",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "a7b7d780-2d7a-4624-b8aa-de742a0b5fcd",
+      "type": "callout",
+      "attrs": {
+        "variant": "warning",
+        "text": [
+          {
+            "type": "text",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie felis eget tellus gravida, ut tincidunt risus faucibus. Donec ullamcorper erat maximus, viverra orci sed, egestas velit.\n",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "f8b69eed-dd06-4812-b514-c4d42230fc33",
+      "type": "callout",
+      "attrs": {
+        "variant": "danger",
+        "text": [
+          {
+            "type": "text",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie felis eget tellus gravida, ut tincidunt risus faucibus. Donec ullamcorper erat maximus, viverra orci sed, egestas velit.\n",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "6ca6cf1b-eb8c-4738-b7f1-c5bf003f0323",
+      "type": "callout",
+      "attrs": {
+        "variant": "commentaryInternal",
+        "text": [
+          {
+            "type": "text",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie felis eget tellus gravida, ut tincidunt risus faucibus. Donec ullamcorper erat maximus, viverra orci sed, egestas velit.\n",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "bb3495c7-ad31-4011-bba9-0533e0284c75",
+      "type": "callout",
+      "attrs": {
+        "variant": "commentaryExternal",
+        "text": [
+          {
+            "type": "text",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie felis eget tellus gravida, ut tincidunt ",
+            "marks": []
+          },
+          {
+            "type": "text",
+            "text": "risus",
+            "marks": []
+          },
+          {
+            "type": "text",
+            "text": " faucibus. Donec ullamcorper erat maximus, viverra orci sed, egestas velit.\n",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "68f00575-0ece-4248-a091-084d7be7218c",
+      "type": "callout",
+      "attrs": {
+        "variant": "ideation",
+        "text": [
+          {
+            "type": "text",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie felis eget tellus gravida, ut tincidunt risus faucibus. Donec ullamcorper erat maximus, viverra orci sed, egestas velit.\n",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "0b011690-b337-4aa8-afbf-81fe31e3a403",
+      "type": "callout",
+      "attrs": {
+        "variant": "creatorInternal",
+        "text": [
+          {
+            "type": "text",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie felis eget tellus gravida, ut tincidunt risus faucibus. Donec ullamcorper erat maximus, viverra orci sed, egestas velit.\n",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "74bd9833-7ec7-4e46-8008-4647cadf76bc",
+      "type": "callout",
+      "attrs": {
+        "variant": "creatorExternal",
+        "text": [
+          {
+            "type": "text",
+            "text": "Lorem ipsum ",
+            "marks": []
+          },
+          {
+            "type": "text",
+            "text": "dolor",
+            "marks": []
+          },
+          {
+            "type": "text",
+            "text": " sit amet, consectetur adipiscing elit. Sed molestie felis eget tellus gravida, ut tincidunt risus faucibus. Donec ullamcorper erat maximus, viverra orci sed, egestas velit.\n",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "aa68e72e-2163-4414-9458-de74ee8d4ad4",
+      "type": "script",
+      "attrs": {
+        "characters": [
+          "Test Character"
+        ],
+        "aPlot": [
+          {
+            "type": "text",
+            "text": ""
+          }
+        ],
+        "bPlot": [
+          {
+            "type": "text",
+            "text": ""
+          }
+        ],
+        "cPlot": [
+          {
+            "type": "text",
+            "text": ""
+          }
+        ],
+        "stinger": [
+          {
+            "type": "text",
+            "text": ""
+          }
+        ],
+        "title": [
+          {
+            "type": "text",
+            "text": ""
+          }
+        ],
+        "synopsis": [
+          {
+            "type": "text",
+            "text": ""
+          }
+        ]
+      },
+      "slots": {
+        "act1": [
+          {
+            "id": "c815e9e0-f16b-4513-9e1f-5250e65ea16b",
+            "type": "scene",
+            "attrs": {
+              "location": "",
+              "timeOfDay": "MORNING",
+              "setting": "INTERIOR",
+              "transition": "CUT_TO_SCENE",
+              "description": ""
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "8b546ec7-adf1-4d64-a4fc-7d474651e416",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Test Character",
+                    "parenthetical": "(parenthetical)",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Line",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          }
+        ],
+        "act2": [],
+        "act3": [
+          {
+            "id": "4622a692-77f5-4338-8027-17a5a8ce3a29",
+            "type": "scene",
+            "attrs": {
+              "location": "",
+              "timeOfDay": "MORNING",
+              "setting": "EXTERIOR",
+              "transition": "CUT_TO_SCENE",
+              "description": ""
+            },
+            "slots": {
+              "default": []
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.760Z"
+}

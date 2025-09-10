@@ -1,0 +1,374 @@
+{
+  "id": "01JYCFAHA4YT1VBY1C84VGRVN5",
+  "slug": "franchises/grand-tale/game/tales/tale-m",
+  "type": "Default",
+  "title": "Tale M",
+  "categories": [
+    "Tale"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "01JYCFB6NSXGD270J3R9148P6D",
+      "type": "section",
+      "attrs": {
+        "title": ""
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "01JYCFC06PAHTH68EHEFD5XN69",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "# Loot [Loot\nFilter](https://www.notion.so/Loot-Filter-1d7ca919d4d381249a5dcac4c333bdc9?pvs=21)\n# Equipment Growth --- ## Attuning --- ## Enchantment --- ## Inscription\n--- Runestones ## Engraving --- ## Imbuing --- ## Aging --- ## Honing ---\nthe \"buff\" action bar (for things like potions) is collapsed and opened by\na hotkey, instead of having to be permanently open on screen like i was\ndoing equipment blueprints/billets must be unlocked before you can craft\nit corepunk dialogue wheel system corepunk Fog of War and camera system #\nEconomy ---",
+                  "marks": []
+                },
+                {
+                  "type": "text",
+                  "text": ""
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "01JYCFBD4KRMNB1BNT3XCFM1MD",
+            "type": "callout",
+            "attrs": {
+              "variant": "ideation",
+              "text": [
+                {
+                  "type": "text",
+                  "text": "Gold injection is primarily through bounties.",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "01JYCFC961NDKXC2R4A2MX61QA",
+            "type": "callout",
+            "attrs": {
+              "variant": "ideation",
+              "text": [
+                {
+                  "type": "text",
+                  "text": "Points Of Interest in Zone are displayed in the UI, with an Autopath\nfunction, like in Undecember unify mobility around a system in mmo, like\nrs agility no \"levels\", unlock ability points/talent points instead?\nAutotarget mode like Undecember, use for moba too. toggle on and off,\nperhaps have a Configuration menu where you can config for abilities to\nbe used too, like rs revolution mode/macros get rid of levels? have just\npoints/etc that you gradually use to increase a character's strength?\nsimilar to Fract",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "01JYCFCFN2H6XGJ9C52J4A7CMF",
+            "type": "callout",
+            "attrs": {
+              "variant": "ideation",
+              "text": [
+                {
+                  "type": "text",
+                  "text": "abilities are unlocked through choice? instead of automatically by level?\nperhaps they might have differing \"costs\"",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "01JYCFCPXEHVFTEGEDHS7VNKBJ",
+            "type": "callout",
+            "attrs": {
+              "variant": "ideation",
+              "text": [
+                {
+                  "type": "text",
+                  "text": "No concept of item selling, or trading. May be disassembled into\ncomponents.",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "01JYCFDDQ3TS97SDV5MAFR307Q",
+            "type": "callout",
+            "attrs": {
+              "variant": "ideation",
+              "text": [
+                {
+                  "type": "text",
+                  "text": "Feature Ideas - Target Cycling - Utility to highlight NPC names on\nminimap, names above head, outline, etc like RuneLite",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "01JYCFE51S6SMY8QFEF0EKKE3G",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "toggle skills \"seal\" mana additively sheathed stance when not in combat,\nautomatically handles cities because you cant use abilities in them thus\nnever being in combat Take the role of a group of adventurers making a\nliving in a fantasy world, racking up fame and helping out its population.\nOpportunities and systems to track their performance and statistics and\ncompare them with others. Highly competitive encounters and hard-earned\nvictories. Opportunities and systems to display their achievements to\nothers. Opportunities and systems to track their progression in the game\nand unlock rewards. Varied array of content types to play through and\nmaster. Opportunities and systems to form friendships and social groups\nwith shared interests. Opportunities and systems to help others around the\ngame. Opportunities and systems to express their personality through chat,\nemotes, and cosmetics. Opportunities and systems to roleplay and feel as\nif they were part of the world. Opportunities and systems to get to know\n",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "01JYCFFM7PGVTMV8NRPKV4WX9B",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "the world's history and characters. Fast paced and responsive. Sensation\nof owning a prestigious collection. Stamina resource, for mobility\nabilities. max value, regen, etc. dexterity/agility attribute could be\nused for both generic all-class abilities, as well as specific abilities\nof each hero that involve mobility (like priston's RES) could have a\nparallel system for artisans talents are generic effects for any class,\nlike d3 legendary gems etc? what about class-specific effects like d3\nlegendary items, are they only from ability runes? The World Map can be\nopened through a button next to the Minimap and displays a complete view\nof the game world. This view is segmented in its various continents,\nregions, and zones, and allows displaying of multiple floors in a zone,\nmarking functionalities, and displays points of interest and NPCs. The\nOverlay Map displays an extended format of the Minimap displaying the\nentire Zone the player is in. This overlay is slightly transparent and is\nplaced on the central part ",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "01JYCFG2WHMD95K2GD6XYDN3EG",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "of the screen. The game world cycles between\nday and night every 15 minutes, altering lighting of outdoor areas. This\ncycle is synchronised server wide. Days begin at 6:00 AM Game Time, and\nend at 6:00 PM Game Time. Nights begin at 6:00 PM Game Time and end at\n6:00 AM Game Time. Certain NPCs, creatures, events, or resources may spawn\nonly during either day or night. Overworld Street Signs, interactable\nobjects like doors, benches, etc. Scale, verticality, large world feeling.\nIslands. Environment hazards like traps?Divided into CONTINENTS, which is\nthen further divided into Regions. Regions are divided into the playable\nZones, and each Zone is divided into Areas with seamless transitions\nbetween them, naming is just for navigation purposes.. Each Continent has\nits Area BossZones may be instanced for a single player, for a group of\nplayers in case of activities, or not instanced.arena type dimension for\ntesting equipment, Abilities, creatures, everything, dps dummies etc The\nserver counts days, weeks and month",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "01JYCFGDV48YM7H4KBD04HXV2Q",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "for timing or gating specific\ncontents. Daily Resets occur at 0:00 AM every day. Weekly Resets occur at\n0:00 AM on every Monday. Monthly Resets occur at 0:00 AM on the 1st of\nevery month.Game updates are made on Mondays at 6:00 AM Server Time. The\ngame chat follows the same system across all games. It is divided into\ntabs which display specific types of chat, from friends, communities,\nclans, and the game itself. Players may toggle on or off tabs, or view\nexclusively the dialogue in a specific tab.Players can tag items into chat\nby holding Shift and clicking it while having the chat on. This allows\nother players to view the item by clicking its tagged name in the chat\nbox.Player and NPC dialogue is shown in chat bubbles above their model,\nalongside the chat box.Players can type emoticons by opening the Emoticon\ninterface or by typing the emoticon’s name between colons\n(:emoticon:).Players may say Statements through the Statements interface,\nwhich contains general premade phrases. These phrases may also contai",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "01JYCFGV3C3GQ5ZR81RZZPCPH4",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "account related variables which allows players to state their\naccomplishments to other, i.e.: “I have killed X goblins.” Parties can be\nformed by sending an invitation to another player, with the player who\nfirst sent the invitation being deemed Party Leader. The Party Leader can\npromote another player to Leader, kick party members, and invite other\nplayers. The other members in a party can appoint invites to the Leader\nand request kicks. Players outside of the party can request to be invited\nby the Leader. All these requests last for 15 seconds on a player’s screen\nif not dismissed or accepted.Parties can have a maximum of 4 players.\nParties can only be formed by players within 15 levels of each\nother.Instead of directly granted to the player credited with the kill,\nexperience from killing creatures is instead equally split amongst the\nParty members.Parties are used for a variety of content matchmaking,\nletting players experience the content in a premade group or having one\narranged or filled up by the match",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "01JYCFJWZN7EG207WSG794BT7Q",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "making system. Inspect option on players\ncan open profilePlayers can set their own Flavour Text, which will be\nshown to other players when their profile is inspected. Other player’s\nsummons and ability effects are highly transparent. They may be disabled\nentirely, or have the transparency removed through the game settings.\nEnemies in PVP situations will not have transparent abilities for\nclarity.Every game location has its specific weather and skybox, with no\ngameplay effects. This is not dynamic or customizable by the player. There\nare two types, Cutscenes, which are rendered in game and Cinematics, which\nare pre-rendered videos. Both can be skipped by pressing the ESC key. Both\ntypes of cutscenes have subtitles on by default, which can be turned off\nthrough the game settings. The game has an opening cinematic, which plays\nupon creating a character and displays that character’s backstory? The\ncamera is by default locked to a fixed isometric angle view. Scrolling the\nmouse wheel can zoom the camera in or out,",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "01JYCFK86B365HZNNX4XPDTF30",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": " up to a minimum and maximum\ndistance. The Page Up and Page Down keys automatically set the camera zoom\nto its maximum or default values. It is possible to disable zooming in the\ngame’s settings.Camera grip with the mouse wheel allows dragging the\ncamera view up to a fixed distance away, making it possible to view an\narea ahead of you. Releasing the grip automatically snaps the camera back\nto its default position.Free camera mode Drops",
+                  "marks": []
+                },
+                {
+                  "type": "text",
+                  "text": ""
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "01JYCFKG7CJ0D8SFGHF3GNXCYE",
+            "type": "callout",
+            "attrs": {
+              "variant": "ideation",
+              "text": [
+                {
+                  "type": "text",
+                  "text": "Group Ironman mode was discarded. The gameplay experience is similar to\nsurvival rpgs which might just be part of a tale or gamemode inside this\ntale, the target audience for a full version of the game is too narrow.\nPlayers only play for a short while with their friends, some stop, etc\nalternatively can be part of Pathways system",
+                  "marks": []
+                },
+                {
+                  "type": "text",
+                  "text": ""
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "01JYCFKV9J2NB6873TF6XFXDVX",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "# Death --- Upon the death of a Hero, the player respawns at their\n[Estate](https://www.notion.so/Estate-1d7ca919d4d381eabb47c8bb0e91511e?pvs=21)\nrevived by the\n[Ohrn](https://www.notion.so/Ohrn-1d7ca919d4d381ac965ff85f38e67a99?pvs=21).\nres system like fractured in which you can res on spot but get\nprogressively weaker until you return to a proper town etc?",
+                  "marks": []
+                },
+                {
+                  "type": "text",
+                  "text": ""
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "01JYCFM1GGPQPTQ65MBVR0NCTH",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "References - Project F4E - Albion Online - Lost Ark - RuneScape -\nPriston Tale - Corepunk",
+                  "marks": []
+                },
+                {
+                  "type": "text",
+                  "text": ""
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "01JYCFMB8RAKHH537RPVDFS0BZ",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "## Raid --- Raids - dungeoneering, liberation of mazcab, elite dugngeons,\ntheatre of blood \"dungeon\" as a type of content, with mechanics like\nsophanem chest, corruption, stalker dungeon, slayer tower, chaos tunnels;\nboss encounter at end, solo? Gauntlet - dominion tower, bellatra,\nshattered worlds, greater rifts, wave things ligke troll invasion/fight\ncaves/rush of blood/fight cauldren/fight kiln ## Headhunting --- Bounty\nHunting/SOul Reaper/Headhunting Contracts ``` regular slayer \"Bounty\nCreatures\", special category of monsters that can be assigned as a bounty\ntarget and are tracked as a statistic/drop log rare drops from these have\n4x the drop rate when killed on contract Perhaps a \"unlock\" system for\neach creature similar to ushabti, ability to toggle each individual\ncreature on task list, minimum of 20-30 monsters Kill 500 of a creature to\nunlock it as a bounty? Doesn't make sense at the start, perhaps the\nopposite - kill 500 to unlock the ability to toggle it theme: you collect\ntheir \"head\" after some ",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "01JYCFMYTXRB90X1HAR599ZZ0V",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "amount of kills like a ushabti, then the person\ngiving out contracts no longer needs it, thus allowing you to turn it off,\nbut can still assign them if you want creatures are not individually\nassigned by name, clusters only. a list of considered mosters is provided\non the interface Bounty Contracts Beginner Contract - 50-100 kills 5 Death\nMarks Amateur Contract - 10 Death Marks Experienced Contract - 15 Death\nMarks Seasoned Contract - 20 Death Marks Expert Contract - 300-500 kills?\n25 Death Marks amount of kills based on task tier or creature cluster?\nEach is tracked as a statistic, amount of contracts completed Every 10th\ntask completed of each type awards 5x the marks thing to help you find\nyour contract target? listing locations on the interface, contract tiers\nhave level requirement? ex: Kill 50 Demons above level 150. 1 free reroll\nper day to avoid getting stuck contracts have equal chance - no weighting\nie, 40 monsters means 2.5% of any given being assigned listing the\ncontract chance % on the interface",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "01JYCFNK5ZH2Q98P1SZ9KHFBV8",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "prefer list adds more of the monster to\nthe \"list\" thats being rolled on unlock more prefer and block slots with\nmarks, progressively more expensive Tiers of prefer list Achievement for\ncompleting 500 of each type of contract, rewards are titles, requires\nprevious tier: Beginner Slayer Amateur Slayer Experienced Slayer Seasoned\nSlayer Expert Slayer _ harvester/reaper, boss slayer Facility - Dungeon\nExpedition - _ rewards some marks Perks Perk 10-15% chance to pick\ncontract - 700 Marks Perk Damage bonus to bounty targets (multiple tiers?\n5% per) - _ Marks Perk Combat Experience bonus when killing bounty targets\n- _ Marks Perk Chance/ability of choosing between min or max assigned\nnumber Rewards Unlocks Unlock Amateur Contracts - 150 Marks Unlock\nExperienced Contracts - 300 Marks Unlock Seasoned Contracts - 600 Marks\nUnlock Expert Contracts - 1200 Marks Consumables Scroll of Resurrection -\nSign of life/ring of life/ring of death/priston ressu effect - 65 Death\nMarks Scroll of Persuasion - Allows you to discard ",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "01JYCFP2A82WZHTX38TM7R16D0",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "your current contract\nand get a new one - 30 Death Marks ``` ## PVP --- Colosseum - staked\nduels, tournaments, bounty hunter, fist of guthix ``` albion arena Team\nwars/siege - clan wars, castle wars, bless castle, stealing creation, soul\nwars Normalized competitive PVP ``` concept of a \"loot pile\" or \"drop\"\n(maybe some term that includes non-combat drop talbes), usually one per\ndrop but certain monsters can roll multiple Creature drops are credited to\nwhichever player deals the most amount of damage to the creature,\npercentage wise.Item drops: microdose items, gem dust, gems, microdoses of\nabilities(vital spark), secondary ingredients for potions, crystals,\neffigies, treasure maps, geodes, items for boss access (key to the\ncrossing), triskellions, remains, items that aid skilling (stone spirits,\nsummoning focus), items that affect the boss/reset enrages etc\n(pheromone), microdoses of equipment (sirenic scales, leg pieces, papyrus,\netc), seeds, eggs?, runes?, Sheltons/trinkets Loot Design Sharded Items -\n",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "01JYCFPF73KVX517Q96TK6PYX5",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "Instead of dropping a full item, fraction items may be dropped which then\nget combined through a skill or system. Like Onyx & Onyx Dust in\nRuneScape. ``` Loot filter, item pickupers? Button to loot around\nyou?Items occupy 1 slot. Most are stackable. Inventory has 64 slots; stash\nhas 640 and is account wide.Hovering over an item and pressing Shift\ncompares it with equipped supplies don't drop from pvm, only from skilling\ndedicated material inventory loot colors, for common/uncommon/rare etc\n(based on value? or rarity) These tables are all rolled for at the same\ntime. This means it is possible to land a hit on all of them, gaining\nmultiple drops simultaneously pseudo-random rare drops from mobs, plays\nalong to how our psychology perceives random change, as well as avoiding\nlong streaks and frustration in players while maintaining the same average\namount of drops in-game, plus adds to the feeling of reward for doing\nmultiple kills of a boss Rates x / 1024, etc All loot has a chance of\nbeing dropped that is",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "01JYCFPXQFM4PGX01M8WRRHQJY",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "expressible as anumber, their Rate. Luck factor\nwhich is considered in chance to roll the Unique and Universal tables\nBounties 100% reward for killing something Guaranteed Tables all drops on\nthis table will always drop. there is no rolling Standard Tables\nguaranteed to be rolled on every kill Unique Tables drops unique to this\nmonster or group of monsters has a chance to be rolled on chance to roll\nthis table is affected by Luck through the formula _ works through Pseudo\nRandom Distribution (per individual drop? per roll on the table?)\nUniversal Tables can be accessed by anything that has loot has a chance to\nbe rolled on chance to roll this table is affected by Luck through the\nformula _ Distribution who gets the drop most dmg? first to tag? what\nabout parties? what about \"one-off\"drops like lore books or pets? boss\nloot, loot chests, floor drops, direct to inv, how long things stay on\nfloor, who can see & take representation of item on floor, loot beam? ```\nLost ark & last epoch loot filter",
+                  "marks": []
+                },
+                {
+                  "type": "text",
+                  "text": ""
+                }
+              ]
+            },
+            "slots": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "01JYCH9350R0YQNRZGPSRX94XP",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true,
+      "slots": {
+        "default": []
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.097Z"
+}

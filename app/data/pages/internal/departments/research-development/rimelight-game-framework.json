@@ -1,0 +1,39 @@
+{
+  "id": "01JXZEKPVTFFWRKKFDP0MB7BVH",
+  "slug": "internal/departments/research-development/rimelight-game-framework",
+  "type": "Default",
+  "title": "Rimelight Game Framework",
+  "categories": [
+    "Uncategorized"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "01JXZEKXQJ9N8TWK45C7606QWB",
+      "type": "section",
+      "attrs": {
+        "title": "Overview"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "01JXZEM08KCGM0J76VC8NR3HRQ",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "https://github.com/StudioSyndiCatCaius/OmegaGameFramework ‍ Overview The\nRimelight Game Framework is an Unreal Engine Plugin designed to contain\nmajor core functionality for the development of games. It follows a\nseries of internal design patterns and methodologies, and is highly\nmodular Although primarily developed for internal use within the company\nit’s built as highly generic and modular, allowing for external\ndistribution through a public Git repository. Modules RGF is divided\ninto two Modules, an editor and a runtime module.\nRimelightFrameworkEditor , and is not packaged with the game builds.\nRimelightFrameworkRuntime , and is packaged with game builds. ‍ Warning\nAll Framework classes are declared as Abstract, and are meant to be\nsubclassed by each game. RimelightFrameworkEditor Asset Import & Export\nData Validation RGF utilizes the Data Validation plugin to ensure assets\nhave been properly configured once imported. RimelightFrameworkRuntime\nSaving & Loading Settings Keybinds Enhanced Input System Input",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          }
+        ]
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.718Z"
+}

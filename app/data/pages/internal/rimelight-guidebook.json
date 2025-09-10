@@ -1,0 +1,354 @@
+{
+  "id": "01JY4ZACSKDZJR1RJMS7YXY2R8",
+  "slug": "internal/rimelight-guidebook",
+  "type": "Default",
+  "title": "Rimelight Guidebook",
+  "categories": [],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "8d57c741-dfb1-4c97-86f6-428d5ee7874f",
+      "type": "callout",
+      "attrs": {
+        "variant": "note",
+        "text": [
+          {
+            "type": "text",
+            "text": "This handbook is publicly available at ",
+            "marks": []
+          },
+          {
+            "type": "text",
+            "text": "https://rimelight.com/careers/rimelight-guidebook",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "url": "https://rimelight.com/careers/rimelight-guidebook"
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ". For Rimelight employees it's also available in our internal tools, where they help us maintain and improve it.",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "7aa7d6ed-fa97-4573-a6a4-6c1fe9ccc0cf",
+      "type": "callout",
+      "attrs": {
+        "variant": "warning",
+        "text": [
+          {
+            "type": "text",
+            "text": "All employees are mandated to read this document during our onboarding process, and are expected to act according to the norms listed within.",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "b59d041c-4446-41c6-8ffa-618309bbd154",
+      "type": "callout",
+      "attrs": {
+        "variant": "danger",
+        "text": [
+          {
+            "type": "text",
+            "text": "Rimelight Entertainment reserves the right to change any rules herein at will and without notice.\n",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "ad03fc64-9ab6-4b55-986b-279944dd66e0",
+      "type": "callout",
+      "attrs": {
+        "variant": "danger",
+        "text": [
+          {
+            "type": "text",
+            "text": "This handbook does not constitute a legally binding contract.",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "4f0e03a9-3723-4d9d-8478-a56c360038a8",
+      "type": "callout",
+      "attrs": {
+        "variant": "tip",
+        "text": [
+          {
+            "type": "text",
+            "text": "We have various other guidelines and similar documents for more specific areas within the company. They may be found within their respective parts of our internal documentation, but some are also\npublicly available at _.",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "c84d81bf-9762-4620-b3bb-e6b58877dfc7",
+      "type": "section",
+      "attrs": {
+        "title": "Welcome to Rimelight Entertainment"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "8873de9b-b4de-4ba7-a365-e769a9eaa9b5",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "Hello! My name is Daniel Marchi, and I am the creator of Rimelight Entertainment. While the entirety of this handbook has been created through the contribution of multiple people, this first section has been singlehandedly written by me, undergoing only a legal proofreading to ensure non-lawyer me doesn't create any unwanted issues. No employee has authorization to alter this section in any way, _. Whilst this document is publicly available for anybody to read, if you're reading it there's a high chance today is your first day of work at Rimelight Entertainment - congratulations on the position! Therefore, I'm now personally delivering your first two assignments: 1. Read this handbook in its entirety at least once. 2. Engage with our products - play games, watch videos, read comics, you choose! That's it! Your first day here is entirely dedicated to these two activities.",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "516df635-891f-4e20-bc52-8731ee6ed48b",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": ""
+                },
+                {
+                  "type": "text",
+                  "text": "we can't represent the opinion of every employee, we're not a\npolitical party and nobody voted anybody in we have general\nideologies, by working here or using our products you're by\nextension being tolerant of such views. if you don't like that you\nare always free to disassociate with our brand. What we understand\nyou to want and try to provide you with as much as possible: -\nIncome. - A physically and psychologically safe work environment. -\nInexistant negative impact in your life outside of working hours. -\nOpportunities to do meaningful things. create an environment where\nplayers and developers can create and share meaningful experiences.",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "9a2f6e03-e707-4d80-90c1-236971694b51",
+            "type": "callout",
+            "attrs": {
+              "variant": "creatorExternal",
+              "text": [
+                {
+                  "type": "text",
+                  "text": "Throughout this document and the rest of our website, direct commentary from me is contained within Callouts like this one.",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "a512bbc9-b020-4191-a71f-77e600e9b1b2",
+      "type": "section",
+      "attrs": {
+        "title": "Branding"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "d07e0deb-a088-4003-809e-fecc83b0b133",
+            "type": "section",
+            "attrs": {
+              "title": "Name"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "50db2280-2e57-4b94-9a22-f5584935097b",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "The name \"Rimelight\" is composed of a portmanteau between “rime” and “light”, concepts present in our intellectual properties. They represent the existential struggle between nihilist and existentialist philosophy, and how we live the story of our lives.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "ba16fa96-1b74-4db3-a901-1ad33f488216",
+            "type": "section",
+            "attrs": {
+              "title": "Logo"
+            },
+            "slots": {
+              "default": []
+            }
+          },
+          {
+            "id": "00b17223-8a05-4c1e-b5de-7c147c38deac",
+            "type": "section",
+            "attrs": {
+              "title": "Mascot"
+            },
+            "slots": {
+              "default": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "a3fa1b0e-ab15-4d62-8909-84e01a77783e",
+      "type": "section",
+      "attrs": {
+        "title": "Strategy"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "121bbc9b-9187-4916-b91c-446c6712093f",
+            "type": "section",
+            "attrs": {
+              "title": "Transparency & Accountability"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "52fbdbfa-8b0e-49b0-bef4-18e7faebfb56",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": ""
+                      },
+                      {
+                        "type": "text",
+                        "text": "Our customers should have a general knowledge of where their money\ngoes, how our time gets spent and how decisions are made. -\nPublicly available financial reports. - Publicly available\ninternal documents and guidelines. - Publicly available\ndevelopment roadmaps and issue trackers. salary ranges,\ncompensation policies",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "251942c4-3875-40b2-9047-b340236e2938",
+            "type": "section",
+            "attrs": {
+              "title": "Integrity &"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "08042480-dc39-4a43-ab3c-5ce61221cc90",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": ""
+                      },
+                      {
+                        "type": "text",
+                        "text": "- Uncompromising penalties for cheats, exploits, harassment, or\nany other form of rule breaking from any member of our community\nand staff. - _ - Sponsorship and partnership contracts with\ncompanies and creators who align with our values.Security &\nPrivacy Using any of our products involves trusting us with your\ntime, money, and information, therefore these should be handled\nwith care and respect. - Regular third-party audits and rigid\nincentives towards regulatory compliance. - Clear descriptions\nprovided on what data we collect and how it gets used, as well as\nwhere it might end up. - Tools for autonomous and parental control\nas well as guidance material to promote healthy and secure usage\nof our products.first-party is best party *What about money? Isn't\nthis a large capitalist corporation?* Yes, it is - and it\ndefinitely requires money to keep running. However, generating\nrevenue has never been a focus and never will be. It is an\nimportant part of the system and certainly a key point involved in\ndecision making, but _. We are more than confident in the ability\nof our products generating enough revenue to sustain themselves\nwithout exploitative efforts toward that. , and keeping our\ncompany independent is a very important _ for that. Rimelight\nEntertainment is completely owned by me and has very loose\nfinancial ties to our publisher _. What truly matters in here is\nwhat matters to me, and buying yachts and private jets is not in\nmy bucket list.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "459c2150-95fb-4a76-840b-1c0d75a2258e",
+      "type": "section",
+      "attrs": {
+        "title": "History"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "228c8265-20a6-4d6f-8374-262dd7ffeb03",
+      "type": "section",
+      "attrs": {
+        "title": "Values"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "788fd0c5-a8dc-455e-9385-6f913770c24b",
+      "type": "paragraph",
+      "attrs": {
+        "text": [
+          {
+            "type": "text",
+            "text": ""
+          },
+          {
+            "type": "text",
+            "text": "Careers - Analytics & Research - Art, Animation, & Sound - Corporate\nOperations - Community, Marketing, & Communications - Game Design -\nEngineering & Technology - ESports, Events, & Broadcast Media -\nProduction & Project Management - Quality Assurance, Localization, &\nCustomer Service - User Experience & Visual Design",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "e16ada0c-7f02-4ffc-a9c8-5105ada35e8d",
+      "type": "section",
+      "attrs": {
+        "title": "Relevant Facts"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "dd4742c5-e8e7-4aad-a0b5-ce76d6ebbbbc",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": ""
+                },
+                {
+                  "type": "text",
+                  "text": "A collection of useful things to know about Rimelight Entertainment.\n- I am the sole legal owner of Rimelight Entertainment. - Rimelight\nEntertainment is the legal owner of all intellectual property that\nit uses. We aim to achieve the highest salaries in the industry, and\nfor compensation bonuses to scale relative to the company's\nperformance.",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          }
+        ]
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.755Z"
+}

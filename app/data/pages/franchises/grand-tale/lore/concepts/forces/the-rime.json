@@ -1,0 +1,32 @@
+{
+  "id": "01JY4SY81N04T05HM570MK1BAN",
+  "slug": "franchises/grand-tale/lore/concepts/forces/the-rime",
+  "type": "Default",
+  "title": "New Page",
+  "categories": [
+    "Uncategorized"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "6ba4464e-1da9-4fec-9835-09c38c23613d",
+      "type": "paragraph",
+      "attrs": {
+        "text": [
+          {
+            "type": "text",
+            "text": ""
+          },
+          {
+            "type": "text",
+            "text": "The Rime is a cosmic force and the antithesis of The Light.It representa\nconcepts of Eschatology and is inspired by the Heat Death of the\nUniverse, endless winters such as fimbulwinter, the void, andRimesprites\nare living emanations of the Rime",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.189Z"
+}

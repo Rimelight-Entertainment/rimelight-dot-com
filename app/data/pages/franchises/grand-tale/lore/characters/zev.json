@@ -1,0 +1,182 @@
+{
+  "id": "01JY4T1DJXGVS2KHATF0ADSTZK",
+  "slug": "franchises/grand-tale/lore/characters/zev",
+  "type": "Default",
+  "title": "Zev Lightbringer",
+  "categories": [
+    "Character"
+  ],
+  "tags": [
+    "character"
+  ],
+  "properties": {
+    "name": "",
+    "title": "",
+    "aliases": [],
+    "flavourText": "",
+    "species": "",
+    "sex": "",
+    "pronouns": "",
+    "height": "",
+    "weight": 0,
+    "dateOfBirth": "",
+    "dateOfDeath": "",
+    "placeOfBirth": "",
+    "placeOfDeath": "",
+    "formerAffiliations": [],
+    "currentAffiliations": [],
+    "equipment": [],
+    "pets": [],
+    "mounts": [],
+    "favouriteFood": ""
+  },
+  "blocks": [
+    {
+      "id": "c26f9a77-c9ab-4075-8d0a-3b2e423a7582",
+      "type": "paragraph",
+      "attrs": {
+        "text": [
+          {
+            "type": "text",
+            "text": ""
+          },
+          {
+            "type": "text",
+            "text": "Animal Motif is a\nwolf.https://tvtropes.org/pmwiki/pmwiki.php/Main/NobleWolf‍\nhttps://tvtropes.org/pmwiki/pmwiki.php/Main/RaisedByWolves‍\nhttps://tvtropes.org/pmwiki/pmwiki.php/Main/IWorkAlone",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "2c19764c-2b4e-4b83-88ca-1d5d142ad480",
+      "type": "section",
+      "attrs": {
+        "title": "Appearance"
+      },
+      "isTemplated": true,
+      "slots": {
+        "default": [
+          {
+            "id": "bf8e7168-44f0-4139-9abf-54b9bc4a3644",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": ""
+                },
+                {
+                  "type": "text",
+                  "text": "possesses a tattoo of a _ on the left side of his neck, and a tattoo of\na _ across his right shoulder and upper arm.He wears a golden armlet on\nhis left upper arm, in the shape of an Ouroboros.",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "c24d4224-1e29-42ea-9cbe-da293e789a79",
+      "type": "section",
+      "attrs": {
+        "title": "Personality"
+      },
+      "isTemplated": true,
+      "slots": {
+        "default": [
+          {
+            "id": "e977f0cb-3895-49d8-a5f8-91b7bd2144d0",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "Desperately Looking for a Purpose in Life",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "7ba505e4-89d4-4784-855a-08b92d6fbb78",
+      "type": "section",
+      "attrs": {
+        "title": "Abilities"
+      },
+      "isTemplated": true,
+      "slots": {
+        "default": [
+          {
+            "id": "e825ba2e-246a-4a97-9c70-11ca668cd4e5",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": ""
+                },
+                {
+                  "type": "text",
+                  "text": "Never Learned to Read",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "68eb84d6-b5f1-4f12-9266-e41d1e0e5971",
+      "type": "section",
+      "attrs": {
+        "title": "Biography"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "ba4eb8ec-e3f1-468d-bc1f-cd8e5427b757",
+      "type": "section",
+      "attrs": {
+        "title": "Relationships"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "afb05564-ae18-4d0b-af0d-6954fe28060e",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true,
+      "slots": {
+        "default": [
+          {
+            "id": "19200298-ff22-4c57-a3b7-0b134572d4dd",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "Zev was designed as a representative of the Romani people.\n\n  A snake was chosen as Zev’s pet due to it’s symbolic relationship to\n  Grand Tale’s theme of life, such as the Serpent of Immortality and the\n  Ouroboros.\n  The Kris was chosen as Zev’s weapon due to its and shape aligning with\n  his visual language, as well as the existence of the Romani court by\n  the same name.\n",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          }
+        ]
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.184Z"
+}

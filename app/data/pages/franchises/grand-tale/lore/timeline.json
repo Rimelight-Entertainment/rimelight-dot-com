@@ -1,0 +1,117 @@
+{
+  "id": "01JY4SXE9V569JB5R0TVDKF1NM",
+  "slug": "franchises/grand-tale/lore/timeline",
+  "type": "Default",
+  "title": "Timeline",
+  "categories": [
+    "Uncategorized"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "51ebb55f-c67a-4a8f-afbb-5c3650a90373",
+      "type": "section",
+      "attrs": {
+        "title": "Timeline"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "156c61b2-566a-4e72-a775-bbbef5a16174",
+            "type": "section",
+            "attrs": {
+              "title": "Eras"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "6c3ef046-fb14-4bfb-ab02-97e9e2f982f5",
+                  "type": "section",
+                  "attrs": {
+                    "title": "Cosmogony Era"
+                  },
+                  "slots": {
+                    "default": [
+                      {
+                        "id": "3deaad5c-7322-4c7e-a7c4-9517606203f4",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "The Cosmogony era is when the universe of Grand Tale begins. Save for fourth wall breaks, nothing canonically exists prior to this point. Glooey placed an egg, which hatched into the Taleverse.",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "204ae3c6-49b1-46e8-8970-90f63323e09b",
+                  "type": "section",
+                  "attrs": {
+                    "title": "The Emergence"
+                  },
+                  "slots": {
+                    "default": []
+                  }
+                },
+                {
+                  "id": "1fe3bcd5-ba80-423d-8d19-c64ae02ece18",
+                  "type": "section",
+                  "attrs": {
+                    "title": "Grand Era"
+                  },
+                  "slots": {
+                    "default": [
+                      {
+                        "id": "27729cf2-fd32-437f-8ec1-3da4cda32d6c",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "The Grand Era is marked by the founding of the Grand Tale, and it\nemcompasses all current events.",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      },
+                      {
+                        "id": "0634aa0b-c033-4cee-bba4-d39e0d154140",
+                        "type": "section",
+                        "attrs": {
+                          "title": "Children of the Light"
+                        },
+                        "slots": {
+                          "default": [
+                            {
+                              "id": "e423fea1-7d3f-4304-97f1-814226b60382",
+                              "type": "section",
+                              "attrs": {
+                                "title": "Founding of the Grand Tale"
+                              },
+                              "slots": {
+                                "default": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.530Z"
+}

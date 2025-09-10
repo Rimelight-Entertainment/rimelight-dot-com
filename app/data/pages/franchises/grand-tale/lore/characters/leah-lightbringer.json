@@ -1,0 +1,102 @@
+{
+  "id": "01JY4T1DJKK9YJV324HMR6HHJ9",
+  "slug": "franchises/grand-tale/lore/characters/leah-lightbringer",
+  "type": "Default",
+  "title": "Leah Lightbringer",
+  "categories": [
+    "Character"
+  ],
+  "tags": [
+    "character"
+  ],
+  "properties": {
+    "name": "",
+    "title": "",
+    "aliases": [],
+    "flavourText": "",
+    "species": "",
+    "sex": "",
+    "pronouns": "",
+    "height": "",
+    "weight": 0,
+    "dateOfBirth": "",
+    "dateOfDeath": "",
+    "placeOfBirth": "",
+    "placeOfDeath": "",
+    "formerAffiliations": [],
+    "currentAffiliations": [],
+    "equipment": [],
+    "pets": [],
+    "mounts": [],
+    "favouriteFood": ""
+  },
+  "blocks": [
+    {
+      "id": "593c9913-d0ec-4511-9062-91acedd40d8b",
+      "type": "paragraph",
+      "attrs": {
+        "text": [
+          {
+            "type": "text",
+            "text": ""
+          },
+          {
+            "type": "text",
+            "text": "<StandardComponents.Paragraph>\n  Animal Motif is a ram. intended as Sweet Sheep, never as Mindless Sheep\n  https://tvtropes.org/pmwiki/pmwiki.php/Main/TheOwlKnowingOne‍\n  https://tvtropes.org/pmwiki/pmwiki.php/Main/BluebirdOfHappiness\n</StandardComponents.Paragraph>\n<StandardComponents.Paragraph>\n  https://tvtropes.org/pmwiki/pmwiki.php/Main/TheMedic\n  https://tvtropes.org/pmwiki/pmwiki.php/Main/BadassBookworm",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "91adea39-b9e9-45fc-b432-235aeda72404",
+      "type": "section",
+      "attrs": {
+        "title": "Appearance"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "d4b6d305-2f8a-4abe-a2b1-d004869f1a8c",
+      "type": "section",
+      "attrs": {
+        "title": "Personality"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "0c938d9e-e932-43f0-a496-a9315ad352df",
+      "type": "section",
+      "attrs": {
+        "title": "Abilities"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "7a54e5ab-ae6f-439d-b13c-a79667874f8e",
+      "type": "section",
+      "attrs": {
+        "title": "Biography"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "42b1ba45-88b1-44e3-975d-682dac235177",
+      "type": "section",
+      "attrs": {
+        "title": "Relationships"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "de0d3606-6fa4-45f3-ab87-44a987c4e5db",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.172Z"
+}

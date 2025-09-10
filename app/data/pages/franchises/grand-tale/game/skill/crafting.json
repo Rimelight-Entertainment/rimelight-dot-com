@@ -1,0 +1,22 @@
+{
+  "id": "01JYCN4GZ5CFA1BVK9XSYS4NX8",
+  "slug": "franchises/grand-tale/game/skill/crafting",
+  "type": "Skill",
+  "title": "Crafting",
+  "categories": [
+    "Skill"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "01JYCN0EKS6PEM4DV3HAXF0JNX",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true
+    }
+  ],
+  "lastModified": "2025-06-22T20:26:34.853Z"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "01JY4XMSYTQJ7G25YZ7B54V9R8",
+  "slug": "franchises/grand-tale/lore/objects/weapons/eden-rings",
+  "type": "Default",
+  "title": "Eden Rings",
+  "categories": [
+    "Object"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "01JYA74VD9498GWRJYMM48FCAW",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.232Z"
+}

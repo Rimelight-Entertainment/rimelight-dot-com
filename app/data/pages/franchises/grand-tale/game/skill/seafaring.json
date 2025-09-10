@@ -1,0 +1,36 @@
+{
+  "id": "01JYCNXE1H6N8K1BKC9DG2YFFR",
+  "slug": "franchises/grand-tale/game/skill/seafaring",
+  "type": "Skill",
+  "title": "Seafaring",
+  "categories": [
+    "Skill"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "01JYCPP81HE7HHZH4QZ5MC77GV",
+      "type": "paragraph",
+      "attrs": {
+        "text": [
+          {
+            "type": "text",
+            "text": "Ship Parts/Equipment\nSextant\nCompass\nFigurehead\nSail\nRudder\n\nVoyage Expedition",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "01JYCNN0ENRJAJP35HX7XPNGYP",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true
+    }
+  ],
+  "lastModified": "2025-06-22T20:40:11.057Z"
+}

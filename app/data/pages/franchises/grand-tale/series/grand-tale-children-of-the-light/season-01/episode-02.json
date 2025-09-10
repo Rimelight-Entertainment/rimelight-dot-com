@@ -1,0 +1,384 @@
+{
+  "id": "01JY4RM764KR30GNTQ5QR9TKEJ",
+  "slug": "franchises/grand-tale/series/grand-tale-children-of-the-light/season-01/episode-02",
+  "type": "Default",
+  "title": "Episode 02",
+  "categories": [
+    "Uncategorized"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "a35ee67f-97ee-4862-8510-25f19c1a4e94",
+      "type": "script",
+      "attrs": {
+        "characters": [
+          "Aleph Lightbringer",
+          "Chief",
+          "Leah Lightbringer",
+          "Zev Lightbringer"
+        ],
+        "aPlot": [
+          {
+            "type": "text",
+            "text": ""
+          }
+        ],
+        "bPlot": [
+          {
+            "type": "text",
+            "text": ""
+          }
+        ],
+        "cPlot": [
+          {
+            "type": "text",
+            "text": ""
+          }
+        ],
+        "stinger": [
+          {
+            "type": "text",
+            "text": ""
+          }
+        ],
+        "title": [
+          {
+            "type": "text",
+            "text": ""
+          }
+        ],
+        "synopsis": [
+          {
+            "type": "text",
+            "text": ""
+          }
+        ]
+      },
+      "slots": {
+        "act1": [
+          {
+            "id": "d4f899bd-5b48-4b85-92be-d6a53ccd3725",
+            "type": "scene",
+            "attrs": {
+              "location": "",
+              "timeOfDay": "MORNING",
+              "setting": "INTERIOR",
+              "transition": "CUT_TO_SCENE",
+              "description": ""
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "2859cd0d-ec61-4b51-b137-589ff1a0c25b",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "If I'm right, she'll be fine... but if I'm wrong, we're having chicken for dinner.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "8509717f-a4b4-4d59-be00-912ae66f5d97",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Aleph places the chicken inside the glowing magical area.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "90f598f2-2dbe-47b2-8b40-ee532a2c2785",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Alright, kill it Zee.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "58740e41-e06b-41f1-b840-12ed112e0b7f",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Zev looks at Leah, who has an apprehensive look on her face. He shrugs, and promptly throws a knife at the chicken, swiftly beheading it.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "72753747-2260-4bc4-8a91-dc4e4f2beae5",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "The group stares for a moment at the headless, lifeless chicken as\nits body falls to the ground.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "356a5678-f5bb-4f4f-9904-a556131ba3a9",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Oh crap...",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "39e832c5-e4f7-4662-b71e-7e9fb2c3c39a",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "The chicken's body begins to glow, and dissolves into golden\nparticles which gather nearby and reconstruct the chicken, now alive\nonce more.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "8ec05463-6b8c-4fd5-86f8-79dba88f5936",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "excited",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Yes! It worked! I present to you... the Grand Tale's cashcow!",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "2753c7f8-cf1b-4167-883a-56319eb0ff05",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Aleph excitedly presents the chicken.\n",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "7ff9a1ef-5da2-458b-b5c7-f6c361c79c24",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Leah Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "An immortal chicken?",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "dd86fb45-6f8a-4865-a6c3-f50350bf423b",
+            "type": "scene",
+            "attrs": {
+              "location": "",
+              "timeOfDay": "MORNING",
+              "setting": "INTERIOR",
+              "transition": "CUT_TO_SCENE",
+              "description": ""
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "77510beb-efc9-4ea6-9fd3-655643df6748",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Go ahead. Stab me.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "f8e107be-f722-4aac-90e4-10e24a0137d3",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Aleph lifts up his shirt exposing his abdomen. The guard looks\ntowards his supervisor with a reluctant look, but promptly stabs\nAleph in the gut.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "945ac41a-8aca-4feb-be71-b427fda4baad",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Aleph grunts in pain, and falls to the ground clasping his abdomen.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "0bcdbb18-2113-42f3-80ed-f1babe7df351",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "agonizing",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Be aware, you still feel all the pain.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "c96c8588-e77e-4d46-b548-68b245c4f240",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Aleph follows the same process as the chicken did, turning into\ngolden particles and being revived...",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "7dd6ef8c-217e-42c6-acc2-40b6b3aacdc0",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Ta-da!",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "77f83529-9692-447e-95ce-bebccf8c90be",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Chief",
+                    "parenthetical": "dumfounded",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "What in the heavens... This magic, its revolutionary! With this, we could become much stronger.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "ad303403-383d-4fd7-a86b-ba5e5de4262e",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "cheekily",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "We can turn any grounds into a deathless zone... for a fee.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "b5881df6-6733-454c-bb79-5ba9cd96cddf",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "With how much theyre paying us, I'm almost tempted to offer this to\nthe armies of all the other great nations. One of them questions if it\nwould be a betrayal on their nation to do that, but then they get\nreminded the grand tale is beyond borders, and they must learn to move\npast their nationality. We either help everybody , or we help nobody",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          }
+        ],
+        "act2": [],
+        "act3": []
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.707Z"
+}

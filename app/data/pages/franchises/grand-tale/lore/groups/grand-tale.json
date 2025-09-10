@@ -1,0 +1,264 @@
+{
+  "id": "01JY4ZACQ7NCX6XF7WNEVNTAJP",
+  "slug": "franchises/grand-tale/lore/groups/grand-tale",
+  "type": "Default",
+  "title": "Grand Tale",
+  "categories": [
+    "Group"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "3ebcb7c3-cea8-4c11-a9c5-8cedf6050f93",
+      "type": "section",
+      "attrs": {
+        "title": "Overview"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "f1e0c966-121e-410e-a735-a65da6ad2f6d",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": ""
+                },
+                {
+                  "type": "text",
+                  "text": "and is considered a sovereign state.",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "12871997-d793-4768-bafe-d3e980492f24",
+      "type": "section",
+      "attrs": {
+        "title": "History"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "ab52fc79-f22c-4f04-8b02-2084b86ee596",
+      "type": "section",
+      "attrs": {
+        "title": "Founding"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "030f2421-8115-4142-85d4-867ec70c296e",
+      "type": "section",
+      "attrs": {
+        "title": "Leadership"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "f44dee9a-b6c1-4abf-9357-58e78990c769",
+      "type": "section",
+      "attrs": {
+        "title": "Structure"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "d0f2c045-5141-4441-8b39-5d4951546a58",
+      "type": "section",
+      "attrs": {
+        "title": "Divisions"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "07af04d7-a1a6-407f-811a-fc37427fd598",
+            "type": "section",
+            "attrs": {
+              "title": "Management"
+            },
+            "slots": {
+              "default": []
+            }
+          },
+          {
+            "id": "ba8f2621-889d-4b5c-aeee-acecae3004fb",
+            "type": "section",
+            "attrs": {
+              "title": "Labour"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "26bacb61-60bd-4a94-9efe-24391b285ecd",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Operating the kingdom and estate, cleaning, maintenance, food, construction, etc",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "ba34f031-ab0f-4854-9bbf-9670e7dda88f",
+            "type": "section",
+            "attrs": {
+              "title": "Crafting"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "bf79c8e7-a66a-496f-95e8-a907d4fb85b3",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": ""
+                      },
+                      {
+                        "type": "text",
+                        "text": "printing and distributing the ccg",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "3289075d-d7f8-431f-bed9-4531a8085713",
+            "type": "section",
+            "attrs": {
+              "title": "Operations"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "824b1d98-b019-4545-8851-082319384937",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": ""
+                      },
+                      {
+                        "type": "text",
+                        "text": "Resolves quests around the world and operations which require\nspecialized personnel. Strongest members in the Kinship, aside from the\nleaders.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "4e5758e2-b848-4f91-b3e2-0c15c6c55e1c",
+            "type": "section",
+            "attrs": {
+              "title": "Intelligence"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "9a3e578c-d4dd-42b6-924d-42a03f6ff878",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "15a666ff-83c7-4323-a7dc-b38d743914d2",
+            "type": "section",
+            "attrs": {
+              "title": "Logistics"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "52da66dd-5efc-4770-bfcf-0fc663ff62c8",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "64ca62d5-f6eb-4638-aa5a-84fe4e2f1669",
+            "type": "section",
+            "attrs": {
+              "title": "Military"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "da717149-6bf8-446e-94cd-69aae5f047dd",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": ""
+                      },
+                      {
+                        "type": "text",
+                        "text": "Resolving large scale conflicts.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.196Z"
+}

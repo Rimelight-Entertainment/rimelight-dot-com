@@ -1,0 +1,1380 @@
+{
+  "id": "01JXWZVCP5B60R7SBNGXK18ZR1",
+  "slug": "franchises/grand-tale/series/grand-tale-children-of-the-light/season-01/episode-01",
+  "type": "Default",
+  "title": "Episode 01",
+  "categories": [
+    "Uncategorized"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "261b66c0-e988-40c6-8897-02eb0cb0dea4",
+      "type": "script",
+      "attrs": {
+        "characters": [
+          "Aleph Lightbringer",
+          "Gea",
+          "Leah Lightbringer",
+          "Ma Lightbringer",
+          "Zev Lightbringer"
+        ],
+        "title": [
+          {
+            "type": "text",
+            "text": "Aleph's Dream",
+            "marks": []
+          }
+        ],
+        "synopsis": [
+          {
+            "type": "text",
+            "text": "During a hike to celeb​​rate his birt​h​day, Aleph and his group encounter a powerful relic that will shape the​ir future. Meanwhile, a dangerous enemy escapes, now aware of the artifact's existence.​\n",
+            "marks": []
+          }
+        ],
+        "aPlot": [
+          {
+            "type": "text",
+            "text": "Aleph, Zev, and Leah go hiking to celebrate Aleph's birthday, where they find the Ohrn.\n",
+            "marks": []
+          }
+        ],
+        "bPlot": [
+          {
+            "type": "text",
+            "text": "_ Senses the awakening of the Ohrn and escape from her imprisonment and begins seeking her old allies.\n",
+            "marks": []
+          }
+        ],
+        "cPlot": [
+          {
+            "type": "text",
+            "text": "Ma struggles with gardening as her flowers have died from an incurable disease.\n",
+            "marks": []
+          }
+        ],
+        "stinger": [
+          {
+            "type": "text",
+            "text": "During the night while everyone in the house is asleep, Ori is born.\n",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {
+        "act1": [
+          {
+            "id": "526cf2e8-6b43-496d-9089-cb5583616bc0",
+            "type": "scene",
+            "attrs": {
+              "location": "Lightbringer household, Aleph & Zev's room",
+              "timeOfDay": "MORNING",
+              "setting": "INTERIOR",
+              "transition": "CUT_TO_SCENE",
+              "description": "The scene's perspective is from within Aleph's mind as he dreams. There are intense quick flashes and cuts of various scenes, ending with a scene of Aleph and the Ohrn floating in space in front of a massive Glooey. The camera cuts to Aleph's room, viewing him from above in his bed as the sound of the Ohrn being blown abruptly wakes him up, dazed and confused by how the sound lingers even after his waking.",
+              "environment": "OTHER"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "0461b9b1-bec6-4ee7-be7d-b3db178fd1e0",
+                  "type": "callout",
+                  "attrs": {
+                    "variant": "commentaryInternal",
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "https://tvtropes.org/pmwiki/pmwiki.php/Main/LastDayOfNormalcy",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "d9f1be1f-cdca-4920-a6f7-e911435b4782",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Zee, did you hear that?",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "e3b46bd2-c20d-4763-ba38-b46bd39b6961",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "The camera cuts to Zev, profoundly asleep lying on his abdomen and facing towards Aleph's side of the room, slightly drooling.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "6c78d752-6ca1-4dd7-8325-724dc0535f5a",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Come on, get up! I don't want us to waste any time today!",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "70739e3a-e867-4f75-b264-18f549150033",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Zev Lightbringer",
+                    "parenthetical": "Sleepily",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "[Unnintelligible grunt]",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "67aae773-6230-4cc3-8ebe-178283e30320",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Zev wakes up and reluctantly gets up. ",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "b0c9168d-19ca-46ad-b7bc-959044e4d1b4",
+            "type": "scene",
+            "attrs": {
+              "location": "Lightbringer Household, garden",
+              "timeOfDay": "MORNING",
+              "setting": "EXTERIOR",
+              "transition": "CUT_TO_SCENE",
+              "description": ""
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "975d00ef-1d69-4765-bff5-e4154624f661",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "Excited",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Good morning mom!",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "b257baed-08c8-4af7-8839-41cb8f30ca58",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Ma Lightbringer",
+                    "parenthetical": "Lovingly",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Good morning sweetheart.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "c01bd46f-8d73-43cc-91e7-64de4c2b484b",
+                  "type": "callout",
+                  "attrs": {
+                    "variant": "ideation",
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "She comments about how flowers are dead, will uproot them tomorrow",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "1c302427-86a8-4462-8dff-c86e569e5a27",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "Disappointed",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Aw, they were so beautiful, I wish there was something I could do.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "fa165f4a-8d0f-4b2c-9d74-7eaaba86ed97",
+                  "type": "callout",
+                  "attrs": {
+                    "variant": "ideation",
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "She comments about the natural cycle of life etc. This is meant to deepen the impact of when it gets subverted by the plants being revived later.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "0da211dd-35fe-4248-bd7b-c18865d36bcd",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Leah and Zev come outside to greet Ma, with backpacks on their backs.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "2a5fd889-a994-42cf-8502-1d0ceb242829",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Ma Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Where are you going all packed like that?",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "b728ec8f-9c5e-4b4c-897c-ee4620e74e80",
+                  "type": "callout",
+                  "attrs": {
+                    "variant": "ideation",
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Just like Zev's above, this is the first time the main characters are named. Should we use the nickname (makes sense they'd call eachother that way in this context) or stick to full name for exposition? Might seem jarring.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "961afb5c-5731-40cc-97fe-e6456af8e433",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Leah Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "We promised Al we'd go hiking today so he could stargaze.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "17bbc504-4591-42a8-9489-191fc4e23563",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Zev Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Don't worry, we'll be back in time for dinner to celebrate together.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "24be6e50-169f-47a2-9b21-adebbf99e848",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Ma Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Alright, be careful out there.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "dde1d624-ec77-4010-b439-9b079fbfe59c",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "The trio head out the garden's gate.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "2fd40669-61ce-401c-9fbd-3f890def9962",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "Waving back goodbye",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Will do!",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "43f3d54d-3834-49d6-8619-b29bd308f1fc",
+            "type": "scene",
+            "attrs": {
+              "location": "Grassy hill in the neighbouring area of the Lightbringer household",
+              "timeOfDay": "MORNING",
+              "setting": "EXTERIOR",
+              "transition": "CUT_TO_SCENE",
+              "description": "The trio make a stop to decide where to take their trip."
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "d0824a49-5ca3-4915-ae9f-379681055305",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Zev Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "So which one are we going to today?",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "01a3a82d-46e8-4b18-9f55-b412d146094b",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Hmm... We've been to that one, and that one, and that one... but we've never been to THAT one!",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "8c7f4398-5e70-4187-9c49-c89ab70fb700",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Aleph points at an otherwise unassuming mountain a bit further in the distance.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "7a199856-8d54-4c0c-995f-97680d6418e9",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Leah Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "That one it is, then!",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "8569e4ba-83fa-45e9-ab4e-02688ae75aa3",
+            "type": "scene",
+            "attrs": {
+              "location": "",
+              "timeOfDay": "NOON",
+              "setting": "EXTERIOR",
+              "transition": "CUT_TO_SCENE",
+              "description": "Walking to and up the mountain montage"
+            },
+            "slots": {
+              "default": []
+            }
+          },
+          {
+            "id": "2770caef-b2a8-4f37-bf40-e2d052f0f5ff",
+            "type": "scene",
+            "attrs": {
+              "location": "Atop the mountain",
+              "timeOfDay": "AFTERNOON",
+              "setting": "EXTERIOR",
+              "transition": "CUT_TO_SCENE",
+              "description": "A short montage of different activities the trio perform atop the hill as the day progressed."
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "d029f112-dc82-4ae6-9571-8c5571370be8",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "The scene cuts to Leah lying on her stomach in the grass, reading a book. Meanwhile, the two boys play with a ball.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "d600a8e2-25e2-4c05-a9d8-2a926b25cadd",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Zev displays his projectile controlling abilities as he magically swirls the ball around his hand in preparation for a throw. Aleph firms his grip on a sturdy log he picked up nearby.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "13615803-2241-4914-aae2-988574fb420b",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Zev throws the ball at Aleph, who deftly strikes it towards the air, showcasing his melee weapon handling abilities. The ball flies toward a flying familiar summoned by Leah, which catches the ball and returns it to Zev.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "1c1ed39c-2027-4b8e-bab1-2698772f7a35",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Zev Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Nice one, better than the last. Let's see if you can hit this one though...",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "8625301c-0f15-48e9-ac9d-0569b6690217",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Bring it on!",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "75229dd9-c8bf-4dc5-a74b-21e4eb93a1cc",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "The boys exchange challenging looks, and another round is played. As the ball gets powerfully deflected into the air the familiar attempts to catch it, but misses in its effort and watches as the ball falls down along the mountainside. It then looks towards the two boys with an embarrassed expression.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "c47a7cd6-082e-4595-81cb-468545f10377",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Leah Lightbringer",
+                    "parenthetical": "Still focused on her book",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "My familiars can't get that far from me, you'll have to go get it.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "583b3f61-7fa6-4283-86f9-8034cb632c4b",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Alright, I'll go.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "2d914c6a-63a1-41f5-bd2f-bc88c1dabb90",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Zev approaches Leah as Aleph heads down the mountainside in search of the ball.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "f93ae5fd-0b11-490c-899f-5b243f844e5c",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Guys, I don't see it anywhere...",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "d591c156-be93-4df6-89fd-fdacda2c8a7b",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Zev looks down over at Aleph, just in time to witness as the ground beneath him caves in and he drops into a chasm below.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "5ced71f5-8c92-4ccb-b460-01c68318352e",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "Surprised",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Ah!",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "b8fccedf-e45e-47a9-995d-da5025d9c1ec",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Leah Lightbringer",
+                    "parenthetical": "",
+                    "line": []
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "9ac01f19-b361-4c30-a360-b12b21e0444f",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Zev Lightbringer",
+                    "parenthetical": "Worried",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Uh oh.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "e911ca00-6a57-48c1-aeae-5ef6b62fa4ee",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Aleph slides into the cavern, and after a moment of recomposure notices the ball right near his landing spot.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "2cb9621f-264b-48a6-b651-23767b59dc9e",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Ah, there it is!",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "79f9c342-c855-42b3-af7f-07d11ffe7a00",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "As he picks up the ball he better notices his surroundings.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "42691bbe-b664-4356-abf7-d88c9b4dcf7c",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Woah, so beautiful!",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "9bb309c5-d708-4fd4-9fb6-c11f83505bfc",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "At the center of the cave he sees a large shining object alluring him. As he approaches the object and touches it, he experiences flashing visions of his dream earlier that morning.\n",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "97188d37-fac3-43dc-a4af-f665c71438b4",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "As the visions subside and he comes to his senses, he notices a small blue creature sitting on top of the object, which promptly vanishes in a blink of his eyes. He looks around, but sees nothing of the creature and chalks it off to his dazed state.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "7064e71a-8cee-43e1-8107-dc9674fe4567",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "What a weird day...",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "5cd8858a-9f57-49be-b9f4-6ff0695c79eb",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "He hears his friends shouting his name in the distance, from above the cavern.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "efda021a-91f8-4c1a-be78-5c5cedf34722",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "I'm down here! Come check this out!",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "1cff0846-ac66-4a81-a456-da799b796cfc",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "The other two enter the cavern, reacting in awe to its splendor. They approach Aleph and the artefact.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "6ec531a3-5ae6-41b3-9d1f-cd0bf5b1e00f",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Leah Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "What is that?",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "ba815f50-334e-4ef2-b3cd-24585dcc1dc0",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "I don't know, I just found it here.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "b9b0fc0c-1239-4108-98be-de5c09580df7",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Leah Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "It looks... powerful. What should we do with it?",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "2b4eb0ab-927a-4c92-95ea-ebd153651836",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Zev Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Maybe we should leave it here...",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "72db2d43-d03f-40a6-8ea5-1d9b9f23e672",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Aleph looks over at the artifact and feels an alluring aura.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "e76b9110-8017-4f5c-a12b-a682d74df0d2",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "I have this feeling... I think it wants me to take it. I'm not sure how to explain...",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "ba26060b-9bc5-4929-b8a9-ecf9537aa408",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Zev Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Are you sure about this?",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "f0ea2f8b-bd5b-473c-9555-89da3b599268",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Come on, worst case scenario we can just put it back, right?",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "5ee80777-687b-4772-a4dd-cf583dcf50ab",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Zev Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "I guess...",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "f16e8ed1-ee02-4830-b6df-723a3da09f93",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Leah Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Alright then, take it and let's head back up, it's getting dark already",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "d57154c2-4162-4412-9e3e-09de7a04b5ed",
+            "type": "scene",
+            "attrs": {
+              "location": "Atop the mountain, grassy hillside",
+              "timeOfDay": "EVENING",
+              "setting": "EXTERIOR",
+              "transition": "CUT_TO_SCENE",
+              "description": "The scene cuts to the group lying on the ground by a small\ncampfire, with the artifact on the grass near them. The three gaze\nupon the starry night sky."
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "7ee90602-c779-4d6c-bf86-c37a6db9b16b",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "The group rest and stargaze, with the magical artifact sat on the grass next to them.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "bb32ded4-c6e8-496b-a44e-60ed7a85b0b3",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "What do you think is out there?",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "db019ee9-1b66-445c-b548-cbd7c5883bf9",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Leah Lightbringer",
+                    "parenthetical": "",
+                    "line": []
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "05af4253-b4cf-4caf-ae7c-cef509e5a08f",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Zev Lightbringer",
+                    "parenthetical": "",
+                    "line": []
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "809c210e-9aa3-44ee-bf47-0a0082551a26",
+                  "type": "callout",
+                  "attrs": {
+                    "variant": "ideation",
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Use this part to expose Aleph's goals and world view.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "e371054f-bb25-4a2b-a0c9-f4570b9bbc19",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Leah Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Okay, let's head home.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "605b3281-f1d2-496f-bac6-df0859e7a29f",
+            "type": "scene",
+            "attrs": {
+              "location": "Lightbringer household, living room",
+              "timeOfDay": "NIGHT",
+              "setting": "INTERIOR",
+              "transition": "CUT_TO_SCENE",
+              "description": ""
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "912b0e6f-4bd5-46b7-88dc-0ad084314efd",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Aleph places the heavy object on the table, prompting a strange look from Zev.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "ab2622e5-bdc4-46d8-8986-bb012cbd9743",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Zev Lightbringer",
+                    "parenthetical": "surprised",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Aren't you tired after carrying that all this way?",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "b7e41f04-a0d8-4137-b66f-f3bb2b7d3302",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Huh. Coming to think of it, not really. If anything, I feel quite refreshed!",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "612b56d7-5d18-43fd-8d40-1bcd6e8e0122",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Ma Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "I'm sorry it couldn't be more _, things have been rough lately.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "415da0cc-c337-47f3-a220-be7776bfe22c",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "The shot cuts to a view of the table, decorated humbly and with a bramberry pie in the center.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "e3d07d7d-21df-4d59-b8fc-f1c249f0b544",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "What if I blow that thing instead? It's an instrument, right? Let's see the sound it makes, and i get to make a wish!",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "b285f835-c4fb-49c9-8497-d33fd1b83a01",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Aleph blows the horn, and a mystical aura emanates throughout the household and expands into the cosmos. ",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "9a3c9bc5-466f-4633-ba4d-d84dedcf9739",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Leah Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "This thing might be dangerous. Let's leave it be for now, and tomorrow we can take it to _ for him to take a look.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "7a6a2644-b1de-42f1-ae2a-c6df6c51dc4c",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Ma Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Come here, little one, I've got something for you.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "c9d2db2a-f968-44ed-81fd-08ed0e09adfc",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Ma reaveals from behind her back a large leather saddle.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "b21e5494-2de6-40d3-8dc0-3f8e65017e86",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "ecstatic",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "A saddle! So I can ride Bumba! Awesome, thank you Ma!",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "30fceee5-31a4-4e6d-8886-9c1756390bc8",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Zev Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": ""
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "2eaa66b8-4e2b-4856-9675-6e045d987ed3",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "his brooch",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "00e4238d-dec2-4ac9-8b52-a68ddf5aa372",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Leah Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "I've also got something to give you... but it's gonna have to wait a bit. I'm still missing some inspiration...",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "73ee2b59-d102-426a-9d0f-9bb21b26c1da",
+                  "type": "dialogue",
+                  "attrs": {
+                    "character": "Aleph Lightbringer",
+                    "parenthetical": "",
+                    "line": [
+                      {
+                        "type": "text",
+                        "text": "Aw, it's alright. I love you guys!",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "35047000-b50c-4f00-8710-2ae0c5253588",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Aleph gathers the group for a hug.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          }
+        ],
+        "act2": [],
+        "act3": []
+      }
+    },
+    {
+      "id": "0aa3bbb8-3044-49d5-949c-180feae63122",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "slots": {
+        "default": []
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.678Z"
+}

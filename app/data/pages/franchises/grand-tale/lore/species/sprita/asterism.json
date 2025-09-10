@@ -1,0 +1,43 @@
+{
+  "id": "01JY4SY74EZ96NDPJFX3JTRJST",
+  "slug": "franchises/grand-tale/lore/species/sprita/asterism",
+  "type": "Default",
+  "title": "Asterism",
+  "categories": [
+    "Species"
+  ],
+  "tags": [],
+  "properties": {
+    "name": "",
+    "averageLifespan": "Years",
+    "averageWeight": 0,
+    "diet": ""
+  },
+  "blocks": [
+    {
+      "id": "01JYCCEVRH0GQPB926QTYBBTBJ",
+      "type": "section",
+      "attrs": {
+        "title": "Physiology"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "01JYCCEVRH52D2J6XMAXN19X17",
+      "type": "section",
+      "attrs": {
+        "title": "Culture"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "01JYCCEVRHEJ1EGACT8NWRV9VW",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.523Z"
+}

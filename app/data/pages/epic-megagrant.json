@@ -1,0 +1,1140 @@
+{
+  "id": "01JY4SQQCAB8ZDQWB38A4P2WWR",
+  "slug": "epic-megagrant",
+  "type": "Default",
+  "title": "Epic MegaGrant Application",
+  "categories": [],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "ec400111-f1ee-4c41-8a4d-6c49af64b1a4",
+      "type": "section",
+      "attrs": {
+        "title": "Applicant Information"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "5f7ea094-e5eb-4246-8a45-11b554aba875",
+            "type": "section",
+            "attrs": {
+              "title": "Who is applying?"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "2e643ba0-a9ec-41f1-adfe-4b43f252486a",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "I am applying in behalf of a company/team.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "5c4da28c-84f3-4558-874c-3cc47a4eef85",
+            "type": "section",
+            "attrs": {
+              "title": "How did you hear about Epic MegaGrants?"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "4d7d0cf5-a1dc-4d87-a66f-e679201c9341",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "We heard of the Epic MegaGrants program through the official Epic Games\nYouTube Channel.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "189ece56-1aed-4a4d-ac2a-224c7d053656",
+            "type": "section",
+            "attrs": {
+              "title": "Company/Contact Information"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "16032fc3-9a40-4074-b2b4-fe7d83c73c3f",
+                  "type": "section",
+                  "attrs": {
+                    "title": "Country"
+                  },
+                  "slots": {
+                    "default": [
+                      {
+                        "id": "c58db51d-b734-4139-8219-ea8f716d2638",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "Brazil",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "c750452a-5caa-4c6f-ad6b-9ccb97319328",
+                  "type": "section",
+                  "attrs": {
+                    "title": "Phone Number + Country Code"
+                  },
+                  "slots": {
+                    "default": [
+                      {
+                        "id": "0a3d90d4-cc2e-4a08-bb51-a65b45412db6",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "+55 41 99973 5987",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "626b0840-55ff-4f4a-b81a-b857707a2f7f",
+                  "type": "section",
+                  "attrs": {
+                    "title": "Relevant Social Media"
+                  },
+                  "slots": {
+                    "default": [
+                      {
+                        "id": "5ce0bc2e-68fa-4999-9d23-848fbac103ab",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "https://instagram.com/",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "bc8d22e5-7bbf-4b43-a765-4b91a2e0dbde",
+                  "type": "section",
+                  "attrs": {
+                    "title": "Team Size"
+                  },
+                  "slots": {
+                    "default": [
+                      {
+                        "id": "d0cd50b3-d7d9-4bf0-bb89-f5463bca53c3",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "5 - 20",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "1eeff791-f4ef-4f4a-b59e-b8b7e683c46b",
+                  "type": "section",
+                  "attrs": {
+                    "title": "Company/Institution Name"
+                  },
+                  "slots": {
+                    "default": [
+                      {
+                        "id": "8b47e801-4035-4101-aa91-cd947e3070a7",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "Rimelight Entertainment",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "c4b0173c-880b-4695-b59c-a11b73407437",
+                  "type": "section",
+                  "attrs": {
+                    "title": "Company Website"
+                  },
+                  "slots": {
+                    "default": [
+                      {
+                        "id": "591d25b8-50e2-4ec8-ac6b-f0ef267ef951",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "rimelight.com",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "5e8d4f48-7440-4982-aeef-b5b324db35d1",
+                  "type": "section",
+                  "attrs": {
+                    "title": "Alternative Contact Name"
+                  },
+                  "slots": {
+                    "default": [
+                      {
+                        "id": "84bf4f7f-41cc-43b3-93f0-8144ca0f94a2",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "Lucas Gustavo Schermak Alves",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "de137c9d-626d-48f8-8cbf-88b27a16b4da",
+                  "type": "section",
+                  "attrs": {
+                    "title": "Alternative Contact Email"
+                  },
+                  "slots": {
+                    "default": [
+                      {
+                        "id": "3ad9f899-1330-4eee-819f-b8f73e2e5332",
+                        "type": "paragraph",
+                        "attrs": {
+                          "text": [
+                            {
+                              "type": "text",
+                              "text": "lgschermak@gmail.com",
+                              "marks": []
+                            }
+                          ]
+                        },
+                        "slots": {}
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "51c1535c-4506-4282-b53a-b95203045b3c",
+      "type": "section",
+      "attrs": {
+        "title": "Project Information"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "dd4779ff-97aa-4f98-8d78-e46e12446a29",
+            "type": "section",
+            "attrs": {
+              "title": "Project Name"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "aa7f2367-e3ce-4d3a-b4f4-01d26677f90d",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Grand Tale",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "b54adcda-2258-4866-a6a0-7947990554c3",
+            "type": "section",
+            "attrs": {
+              "title": "Project Type"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "08c4c3c2-fc53-4329-aabd-36a798ea8f6d",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Games",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "98c5c46c-adf3-49fc-9db9-f845c54e1f0a",
+            "type": "section",
+            "attrs": {
+              "title": "Project Type Subcategory"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "5f793173-c1f1-4eb8-93c5-fdf9a95b4fbf",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Role-playing",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "214d6c01-2f2d-4d1c-9bdc-674c65e08550",
+            "type": "section",
+            "attrs": {
+              "title": "Project Video Link"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "d61ae68b-29d8-4d86-80bf-e4ed1b3296fc",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "https://\n",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "6959b281-e4d7-4411-928a-6d52c9a0e0a9",
+            "type": "section",
+            "attrs": {
+              "title": "Project Build Link"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "28d43c4c-c3ef-41e8-8e7e-369203504e89",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "https://",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "6a6ca718-cf95-4c24-bdc6-ae8ac052ad8d",
+            "type": "section",
+            "attrs": {
+              "title": "Project Website"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "59ab8a52-283e-46b0-8ef5-1cb5a130916a",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "rimelight.com/franchises/grand-tale",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "d33bc6d1-8670-400b-89df-d1221d936f96",
+            "type": "section",
+            "attrs": {
+              "title": "What phase is your project in?"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "e3e6c109-cbbf-4d27-86b0-0cbf60fd7ff5",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Concept",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "5a49bb2e-20e4-4447-88ba-b113e93f9bf0",
+            "type": "section",
+            "attrs": {
+              "title": "Is your project currently in Unreal Engine or Unreal Editor for Fortnite?"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "1eef7359-ab18-4d88-a87e-1c2e3e24c5fc",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Unreal Engine",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "3e3767ab-b24b-4636-8059-e838f29fc7c0",
+            "type": "section",
+            "attrs": {
+              "title": "Is your project open source and/or does it give back to the 3D community? "
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "d125ba9b-1771-49dc-85b2-2004133e0218",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "My project is open source AND gives back to the 3D community.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "63c9aabd-17fd-4602-9ae4-b50519a98884",
+            "type": "section",
+            "attrs": {
+              "title": "Please explain."
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "2e4d22ed-598c-4a2b-86af-fbed1b8f6fe9",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "While the game itself is closed source for security reasons, most of our\ncore infrastructure is encapsulated within a plugin which we aim to\nrelease and keep up to date as free and source-available in the Fab\nMarketplace for any developer to use.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "9b809291-f0d8-4bf7-bdf9-07c1be1b9949",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "It's highly generic in its implementation and can be used to easily\ncreate many different types of games, as is required by our game's model\n(see below).",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "07966afb-2b5b-4996-9828-072887d99ca8",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "More can be read about it at the link: https://",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "d4895b2c-5e73-47ee-8659-75df44fe3b18",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "We also aim to publicly publish our development guidelines and, within\nlegal liability limits, our graphics and audio assets for other\ndevelopers to view and learn from our processes (part of these efforts\nmay already be seen in the game's website).",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "42b4495d-dfc8-4c3f-ad74-979d665e61db",
+            "type": "section",
+            "attrs": {
+              "title": "Project Elevator Pitch"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "7150d190-1210-468e-9a91-c36b514a4db1",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Club Penguin + Stardew Valley as a launcher for subgames - a third-person isometric social life-sim with idle and building mechanics, through which palyers can play various other sub-games set within the same high fantasy IP.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "efbc654f-4d61-480c-b8f2-080114451e31",
+            "type": "section",
+            "attrs": {
+              "title": "Full Project Details"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "a35c8f6b-544d-46a4-9258-26a085982afe",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Grand Tale is a very large and ambitious project which aims to make full use of Unreal cutting edge technologies at scale.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "c1623fc1-d92c-48d2-985f-9ac8344ae0fc",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "The player controls a character called “Ori”, a member of the “Grand Tale” - an adventurer organization with aims to revolutionize the world. In order to tackle this grand task, Ori must aid in recruiting allies, gathering resources, upgrading their estate, and learning about the world around them.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "66273bed-6587-4c4e-81e2-fa6cffd31337",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Upon entering the world players are able to customize Ori and the Grand Estate, an island which may be visited by other players and upgraded by spending resources. They may then engage in either resource gathering in an outside overworld, idle activities such as sending workers on expeditions or researching upgrades, or simply socializing with others.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "b40622f0-d598-4772-b596-f97467bdb0e9",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "That’s Grand Tale’s core experience, which is also a base for the game's most important feature - Tales.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "214d188f-9171-4609-adea-d9c5f731358f",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Tales are self-contained complete sub-games within Grand Tale with matchmaking and individual progression, and may be of various other game genres (MOBA, RTS, Roguelite, Autobattler, etc).",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "b8b055c5-5868-47a4-a80a-eeedb2652043",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "From within Grand Tale’s base experience players may choose to engage in any of these Tales, which then plug in to the base experience’s systems (i.e. a different type of Expedition or Research which is themed around a given Tale).",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "4da0823d-4e89-481b-9b76-192f5142ef01",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "With the grant we aim to finalize a vertical slice of the base experience, which would showcase how the game is meant to work regarding launching other Tales and their interconnectivity.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "fb1fcf7f-a7b1-4cbc-a9a9-4bf2336fc42b",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "While we have the game design for multiple Tales in the works, we do not aim to use this grant for building any of them just yet. These are some of the Tales currently in development:",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "1ca42fb4-f791-4ba6-802f-8f178eacb55b",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Tale M is an isometric MMORPG taking place in the same overworld as the base game. Players may enter the world as one of many Heroes to slay monsters and complete quests in name of the Grand Tale.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "8f77a75e-6dd0-42ba-bb83-33d709311de4",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Heartbringer is an isometric match-based MOBA, taking place in various arenas. Players may face each other as one of many Champions in competitive team confrontations in sporting events hosted by the Grand Tale.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "2c3c3dad-0e83-48de-93d5-79008f584254",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Tale C is a digital tabletop CCG, taking place within the taverns of various kingdoms. Players may match against each other and use cards representing the personalities and stories of the world.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "f1ba0f8a-64a9-44ff-b11f-80ea0137655d",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "A summary of what’s currently in the works may be found at the link:\nhttps://",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "ffbfcdaa-2a88-4904-92c2-f514c898e7a5",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "The project is accompanied by plans for a future television series set within the franchise, showing the origins of the Grand Tale and its main cast. The prototype storyboard for the pilot episode may be found at the link: https://",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "f61fb5d1-d334-4792-a305-95fecb926e8d",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "The game is meant to be released on both PC and Mobile platforms, with the base experience being cross playable between platforms, but with certain Tales having adapted versions to better fit each platform.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "52a0c116-59b4-414f-ba96-d8dc6480b90c",
+            "type": "section",
+            "attrs": {
+              "title": "Please tell us about some of the unique features of your project"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "9b0dfa6e-ad44-4cc2-b310-45b6a1d4f910",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Grand Tale's key selling point is the existence of Tales, the sub-games which can be launched within it.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "41056ce1-0c48-44fe-b365-3b44ccf9526f",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Although multiple game genres taking place within the same franchise is nothing new (i.e. the League of Legends IP), what sets Grand Tale apart is the integration. Due to being  inside the same game and being designed this way from start the degree of interconnectivity Grand Tale provides allows for opportunities not traditionally available.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "cce3a9f8-49df-4545-bf9d-2271fe17108d",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "While players may engage with a single Tale (or even solely the base social game) and still have a complete experience, they are highly incentivised to play multiple and add further  depth to their involvement with the franchise.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "285410c3-285b-4509-ba3e-7e3c812915b9",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "The game’s design aims to modernize many traditional game mechanics to better integrate them with the shared Grand Tale connectivity, with some auxiliary systems including:",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "0dac5b7c-7701-4a12-9666-22715bd4bb59",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Grand Codex - An in-game compendium of the franchise’s lore and narrative.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "f45eb000-bb47-499b-8058-2be50c4c4e31",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Grand Pass - A unified monetization and narrative system which seasonally themes the game’s cosmetic releases.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "c1de9ea7-3ae3-4337-9e9a-01982f0c4272",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Pathways - A meta progression system which allows players to tailor\nrewards to the content they prefer engaging with.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "fa073b43-971f-4f90-bc5c-0e9075dfffa7",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Grand Package - An automated compensation system for time gated, recurrent, and limited time-availability content.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "9ded13ec-9a52-4833-bc20-217bb5280ee2",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Grand Assistant - An integrated set of tools for tutorials, match analysis, learning content, and statistics.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "a394da35-c460-4e8e-9101-83f99d8d5e0c",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Some of these systems may be read about at the link: https://",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "3beeef95-bcfe-4b4f-a428-74f614cb6ddb",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Grand Tale’s high fantasy narrative tackles existential themes such as the meaning and finality of life, and the stories we live and tell throughout it. Through this lens, our slew of social features aim to bring people together and foster a healthier community than its competitors.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "d20398be-1b95-4b74-97c8-9f2447a4f6fb",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Additionally, it’s intended to have a custom game editor similar to games such as Fortnite or Dota 2, allowing for players to create their own Tales within the game utilising our assets.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "72aea24a-5739-4402-947c-b8abf29ef237",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "All of these points have extensive documentation, as well as the game design and vision for each individual Tale - further information may be provided upon request.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "291a96d7-e5b0-4c6c-8eae-fc55a4c969ed",
+      "type": "section",
+      "attrs": {
+        "title": "Funding"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "583cc25d-0aef-4df8-8883-dd0dd37afb90",
+            "type": "section",
+            "attrs": {
+              "title": "What funding range are you requesting for this project (US Dolla"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "521a8db4-c90d-493b-aea4-3ef0b8e55766",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "$25,000 - $50,000",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "db9e6bda-d9c6-4e17-b60a-12a65be186ad",
+            "type": "section",
+            "attrs": {
+              "title": "How do you plan to use the funds for the project?"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "f7fc8dab-f3e8-4b3e-b83a-c6897afbe25b",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "The grand would allow us to move the project towards a more polished vertical slice, bringing us closer to pitching for our next goal - a direct partnership with Epic Games through its publishing initiative.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "442bdaa3-3075-4863-be1b-25e57fd3e1b5",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "All funds will be stored in a bank account specifically for this project, and will mostly be spent on high quality freelance hires for the creation of specific assets.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "f8e036ca-fcd9-4353-bd25-939fa2f6d4a5",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "In this interest, funds will be allocated roughly in the following distribution:",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                },
+                {
+                  "id": "6e1b310e-2d13-41d1-9ffd-6907d76e7d77",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "$5,000 - Concept Art & 2D Assets\n$12,500 - 3D Assets\n$5,000 - Animation\n$2,500 - Environment Art\n$2,500 - Audio Assets\n$2,500 - Game Design\n$10,000 - Programming\n$5,000 - Software Licenses & Hardware\n$2,500 - Legal & Registrations\n$2,500 - Accounting & Other\n",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "71f86957-ac70-4694-b4fd-1d6e5845ce1f",
+            "type": "section",
+            "attrs": {
+              "title": "Have you secured additional funding for this project?"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "195ef766-010c-4e25-9aa8-1f5a847f863e",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "No",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:18:59.853Z"
+}

@@ -1,0 +1,374 @@
+{
+  "id": "01JY4SY812P39H2YVXMH9GQXQX",
+  "slug": "franchises/grand-tale/lore/concepts/magic",
+  "type": "Default",
+  "title": "Magic",
+  "categories": [
+    "Concept"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "1e90aec6-8c3a-4d58-9cd8-eb8151260bb7",
+      "type": "section",
+      "attrs": {
+        "title": "Mana"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "8b2d2a49-a086-4b3b-8a07-7a670c3b89e3",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": ""
+                },
+                {
+                  "type": "text",
+                  "text": "Mana came directly from Glooey. It created lots of it. Then used it to\ncreate the Tools. They then created everything. Glooey added a little\n\"oomph\" in the mix, to destabilize symmetry and make interesting things\nhappen.There is nothing mana can't do.maximum manamana regenerationmana\ncostpresent in every living creaturealso present in\nobjectsMagicaptitudehas to be\nlearnedhttps://tvtropes.org/pmwiki/pmwiki.php/Main/MusclesAreMeaningless",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "fcb028fb-f520-4fce-9ce2-439a0894dbed",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": ""
+                },
+                {
+                  "type": "text",
+                  "text": "Mana is like dark energy/the forceit permeates the entire universe, and\ncan be concentrated within objects, living beings, locations, etcwhile\nit is generally \"everywhere\", it is not uniformly distributed. the\n\"main\" planet of our story happens to be a place with particularly high\nconcentration.Magic is the \"burning\"/manipulation (should it be\nconsumed?) of mana to release energy, which can be used for various\nprocesses.Upon being consumed through the use of magic, beings and\nobjects can slowly replenish their depleted reserves.all mana in the\nuniverse was created during the emergence, and in time will inevitably\nbe depleted as it gets used as magical fuel.Living beings can accumulate\nstores of mana inside them, serving as a stockpile for later use. Once\nconsumed, these stores can slowly replenish by the passive absorption of\nmana from the environment, much like osmosis. The total amount a being\ncan store, as well as how fast they can replenish their reserves can be\nimproved with training.how much mana a being has stored usually\ncorresponds to how powerful they areTypes of MagicRunesSpellsthe actual\nabilities characters and creatures use, usually\nnamedEnchantments\"Chakrasmithing\"/forgingAgingImbuingSealing (could also\nseal creatures like priston crystals, or naruto summons etc,\nspirits)blood/lifeforceCrystalsmana concentrates on them, and their\ncrystallized formations can be used to channel and amplify magic through\nthemelderelder magic is the only strong enough to actually create or\ndestroy things. everything else merely manipulates it. it is found only\non glooey and on the elder tools",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "920334d9-0141-41a3-987a-89c14fb0ae90",
+            "type": "section",
+            "attrs": {
+              "title": "Manametal"
+            },
+            "slots": {
+              "default": []
+            }
+          },
+          {
+            "id": "4342f10b-150b-459f-b8da-1731c0de8661",
+            "type": "section",
+            "attrs": {
+              "title": "Manasmithing"
+            },
+            "slots": {
+              "default": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "336ebeb7-e639-4f85-a9b9-5134f5f1bd9b",
+      "type": "section",
+      "attrs": {
+        "title": "Branches of Magic"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "16ebf847-1119-4815-bc2c-adfa80b7f99b",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "While each branch is associated to a specific set of abilities, it is possible to create spells which employ aspects of more than a single branch of magic.",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "fb217853-5d0b-400f-bbdf-145aa548d7aa",
+            "type": "section",
+            "attrs": {
+              "title": "Abjuration"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "a06cf516-2a2a-49bf-936a-a509459cb7c0",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": ""
+                      },
+                      {
+                        "type": "text",
+                        "text": "auras?bonds/links, connection magicInfusion Voodoo idols totems",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "de0a23cb-63e0-49f0-bdfb-1d13dc239a10",
+            "type": "section",
+            "attrs": {
+              "title": "Animation"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "d43b00c3-16aa-4576-8eb4-1001f84c4cd6",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": ""
+                      },
+                      {
+                        "type": "text",
+                        "text": "breathes a pseudo-life into inanimate objects. under the control of the\nanimator, but can be set free or break\nfreeGolemManagamiElementals?Reanimation/Necromancy Managami - Animate\nfoldings created out of Manapaper, can move on their own. Harry Potter\nvibes. Definitely a cute/funny archetype of cards in ccg.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "883dc189-e694-41db-aab4-d2588e6f8204",
+            "type": "section",
+            "attrs": {
+              "title": "Augmentation"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "bcba4003-c199-4a6a-85c9-f7d8cf15acac",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": ""
+                      },
+                      {
+                        "type": "text",
+                        "text": "Augmentationbodily enhancements like super strength/resiliencemost\ncommon typeis the justification for gameplay in which characters dont\nhave mana and use another resource, theyre investing their mana into\naugmentating their basic attributes",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "35aee5d8-f31a-4850-a9a7-361363344003",
+            "type": "section",
+            "attrs": {
+              "title": "Creation"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "c7c4b48a-7870-4c04-9684-0a880cda7d0f",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": ""
+                      },
+                      {
+                        "type": "text",
+                        "text": "Eldritchthe magic used by the elder tools, basically limitless, can do\nwhateververy difficult to access, usually comes with very high costs or\nrestrictions",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "79838028-cc76-48e1-b082-690030afe89c",
+            "type": "section",
+            "attrs": {
+              "title": "Conjuration"
+            },
+            "slots": {
+              "default": []
+            }
+          },
+          {
+            "id": "82fc3927-f472-45a5-945c-d5ae2a252455",
+            "type": "section",
+            "attrs": {
+              "title": "Divination"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "b5d68fbd-4155-4c89-94dd-930a614a1fba",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": ""
+                      },
+                      {
+                        "type": "text",
+                        "text": "PerceptionDetectionPrecognitionMental Probing",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "4d5e111a-0aa8-4189-8ba8-5a5bfa5c5962",
+            "type": "section",
+            "attrs": {
+              "title": "Evocation"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "0fd38174-1ffa-44c7-a6f5-ff6d58a68c3c",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "Spirits, Djinns",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "e123015f-3a71-49a9-89f7-7065ce09f8c1",
+            "type": "section",
+            "attrs": {
+              "title": "Illusion"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "f6f8b53f-4d49-4ba0-b6d8-e28b8ca5f476",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": ""
+                      },
+                      {
+                        "type": "text",
+                        "text": "DoppelgangersInvisibility/sense tricksCharms, mind control",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "c4a959eb-9822-4f45-a79c-f164dc21afa1",
+            "type": "section",
+            "attrs": {
+              "title": "Incantation"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "375a0dbb-861e-45bd-99a5-b1ee86e767aa",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": "R",
+                        "marks": []
+                      },
+                      {
+                        "type": "text",
+                        "text": "unecrafting, Enchantments, Blessing, Cursing",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "b39f1f7f-b23d-4892-bd7b-e93ee6c37b52",
+            "type": "section",
+            "attrs": {
+              "title": "Transmutation"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "8e315aa1-3683-4fc7-bba4-80adc41604f8",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": ""
+                      },
+                      {
+                        "type": "text",
+                        "text": "Shapeshifting, transmuting the self can be detected by other magic\nusers. scale, form",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.191Z"
+}

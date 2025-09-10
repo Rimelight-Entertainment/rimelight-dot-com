@@ -1,0 +1,22 @@
+{
+  "id": "01JYCM00YS1022NAXA1KW6GW9C",
+  "slug": "franchises/grand-tale/game/skill/archaeology",
+  "type": "Default",
+  "title": "Archaeology",
+  "categories": [
+    "Skill"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "01JYCKRHB1RX62252AQTNT643M",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true
+    }
+  ],
+  "lastModified": "2025-06-22T20:18:59.927Z"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "01JYCFXVSAGR2MADMYA955SD8R",
+  "slug": "franchises/grand-tale/game/tales/tale-defense",
+  "type": "Default",
+  "title": "Tale Defense",
+  "categories": [
+    "Tale"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "01JYCH8TDXMSX7JYT7G802WWVP",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true,
+      "slots": {
+        "default": []
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.094Z"
+}

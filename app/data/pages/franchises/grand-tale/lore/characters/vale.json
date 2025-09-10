@@ -1,0 +1,231 @@
+{
+  "id": "01JY4T1DJPPTN1THMXB0RS3YY8",
+  "slug": "franchises/grand-tale/lore/characters/vale",
+  "type": "Default",
+  "title": "Vale",
+  "categories": [
+    "Character"
+  ],
+  "tags": [
+    "character"
+  ],
+  "properties": {
+    "name": [
+      {
+        "type": "text",
+        "text": "Vale",
+        "marks": []
+      }
+    ],
+    "title": [
+      {
+        "type": "text",
+        "text": "The Arrow of Time",
+        "marks": []
+      }
+    ],
+    "aliases": [],
+    "flavourText": [
+      {
+        "type": "text",
+        "text": "Time flies like an arrow.",
+        "marks": []
+      }
+    ],
+    "species": [
+      {
+        "type": "text",
+        "text": "Human",
+        "marks": [
+          {
+            "type": "mention",
+            "attrs": {
+              "pageId": "9fd0373f-c9cd-463a-a815-b0d5baf81f04",
+              "pageSlug": "franchises/grand-tale/lore/species/fauna/human",
+              "pageTitle": "Human"
+            }
+          }
+        ]
+      }
+    ],
+    "sex": [
+      {
+        "type": "text",
+        "text": "Male",
+        "marks": []
+      }
+    ],
+    "pronouns": [
+      {
+        "type": "text",
+        "text": "He / Him",
+        "marks": []
+      }
+    ],
+    "height": [
+      {
+        "type": "text",
+        "text": "180",
+        "marks": []
+      }
+    ],
+    "weight": 0,
+    "dateOfBirth": "",
+    "dateOfDeath": "",
+    "placeOfBirth": "",
+    "placeOfDeath": "",
+    "formerAffiliations": [],
+    "currentAffiliations": [],
+    "equipment": [],
+    "pets": [],
+    "mounts": [],
+    "favouriteFood": ""
+  },
+  "blocks": [
+    {
+      "id": "21d7689b-be88-4acc-9a9c-1be1ac9f84c6",
+      "type": "section",
+      "attrs": {
+        "title": "Appearance"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "95f435b6-b7b3-46f5-936e-5a28c492962c",
+      "type": "section",
+      "attrs": {
+        "title": "Personality"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "967e02e9-98ad-43b8-bec8-46ce27c70b0a",
+      "type": "section",
+      "attrs": {
+        "title": "Abilities"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "fd209641-52e2-4333-af6c-7afb838251b0",
+      "type": "section",
+      "attrs": {
+        "title": "Biography"
+      },
+      "isTemplated": true,
+      "slots": {
+        "default": [
+          {
+            "id": "c5d68aee-07f1-4996-ab1f-cc825a57eff6",
+            "type": "section",
+            "attrs": {
+              "title": "Birth"
+            },
+            "slots": {
+              "default": []
+            }
+          },
+          {
+            "id": "725dd8ea-0862-4339-a396-325b11a44e1e",
+            "type": "section",
+            "attrs": {
+              "title": "Early Life"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "aa9d11a5-bbcf-4e8c-a97b-35bf977ee0ce",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": ""
+                      },
+                      {
+                        "type": "text",
+                        "text": "Born in the city of _, Vale was the son of an esteemed scholar\nverging a breakthrough in time science through the construction of\nthe Eden Rings, magical contraptions connecting the present to the\npast. Although close at childhood, Vale grew distant from his father\nand resented his studies, viewing them as pointless efforts for\nnothing but a dream - reuniting with Eden, Vale’s mother. During one\nof his father’s experiments a catastrophic accident snapped one of\nthe rings, absorbing him into a time rift and leaving no trace\nbehind. Blaming his own absence for the fate of his father, Vale\nspent the next years of his life studying what was left of the rings\nand perfecting them, seeking to locate and rescue his father from\nthe valleys between time itself.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "a69f2841-6e69-4e10-af80-e5c297d5e045",
+      "type": "section",
+      "attrs": {
+        "title": "Relationships"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "06ddbb42-4236-4a7c-9cc0-43fbc88b13c5",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true,
+      "slots": {
+        "default": [
+          {
+            "id": "0b2bf09a-efaf-4b10-8f7a-63c788cd3074",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "Vale's thematic is based on the concept of the ",
+                  "marks": []
+                },
+                {
+                  "type": "text",
+                  "text": "Arrow of Time",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "url": "https://en.wikipedia.org/wiki/Arrow_of_time"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": ".",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "c33092f0-d200-4940-a6c4-1fcfb1758544",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": ""
+                },
+                {
+                  "type": "text",
+                  "text": "The name \"Vale\" loosely means \"of the valley\".",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          }
+        ]
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.179Z"
+}

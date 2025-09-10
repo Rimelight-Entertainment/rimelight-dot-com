@@ -1,0 +1,333 @@
+{
+  "id": "01JXT8WB1V7MT430XRPBK8YSWQ",
+  "slug": "franchises/grand-tale/lore/characters/aleph-lightbringer",
+  "type": "Default",
+  "title": "Aleph Lightbringer",
+  "categories": [
+    "Character"
+  ],
+  "tags": [
+    "character"
+  ],
+  "properties": {
+    "name": "Aleph Lightbringer",
+    "title": "Founder of the Grand Tale",
+    "aliases": [
+      "Al",
+      "Lightbearer"
+    ],
+    "flavourText": [
+      {
+        "type": "text",
+        "text": "May his story never end!",
+        "marks": []
+      }
+    ],
+    "species": "franchises/grand-tale/lore/species/fauna/centaur",
+    "sex": "Male",
+    "pronouns": "He / Him",
+    "height": "170",
+    "weight": 0,
+    "dateOfBirth": "30/04/4997",
+    "dateOfDeath": "",
+    "placeOfBirth": "",
+    "placeOfDeath": "",
+    "formerAffiliations": [],
+    "currentAffiliations": [
+      [
+        {
+          "type": "text",
+          "text": "Grand Tale",
+          "marks": [
+            {
+              "type": "mention",
+              "attrs": {
+                "pageId": "da33b767-177b-4740-87f0-baec41948420",
+                "pageSlug": "franchises/grand-tale/lore/groups/grand-tale",
+                "pageTitle": "Grand Tale"
+              }
+            }
+          ]
+        }
+      ]
+    ],
+    "equipment": [
+      [
+        {
+          "type": "text",
+          "text": "Aurochs",
+          "marks": [
+            {
+              "type": "mention",
+              "attrs": {
+                "pageId": "c712d160-9472-4568-9095-b6003fda24dd",
+                "pageSlug": "franchises/grand-tale/lore/objects/weapons/aurochs",
+                "pageTitle": "Aurochs"
+              }
+            }
+          ]
+        }
+      ]
+    ],
+    "pets": [
+      "franchises/grand-tale/lore/characters/goldy",
+      "franchises/grand-tale/lore/characters/aleph-lightbringer"
+    ],
+    "mounts": [
+      [
+        {
+          "type": "text",
+          "text": "Bumba",
+          "marks": [
+            {
+              "type": "mention",
+              "attrs": {
+                "pageId": "a7bda5b5-b485-48f3-a279-7f9de015a63d",
+                "pageSlug": "franchises/grand-tale/lore/characters/bumba",
+                "pageTitle": "Bumba"
+              }
+            }
+          ]
+        }
+      ]
+    ],
+    "favouriteFood": "",
+    "pageName": ""
+  },
+  "blocks": [
+    {
+      "id": "50aca4f9-1b67-420d-8b68-711e106d231d",
+      "type": "section",
+      "attrs": {
+        "title": "Appearance"
+      },
+      "isTemplated": true,
+      "slots": {
+        "default": [
+          {
+            "id": "9b494732-6d8c-4e89-bb07-4ff60013570d",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "His main thematic colours are red (see Red Is Heroic), white, and\ngold.He has a light skin tone and Y",
+                  "marks": []
+                },
+                {
+                  "type": "text",
+                  "text": "outhful F",
+                  "marks": []
+                },
+                {
+                  "type": "text",
+                  "text": "reckles.He is of average\nstature, and possesses a slender but fit physique.",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "ddf8a1c6-f7a2-410f-abec-11087795f886",
+      "type": "section",
+      "attrs": {
+        "title": "Personality"
+      },
+      "isTemplated": true,
+      "slots": {
+        "default": [
+          {
+            "id": "781e1c00-fefc-45d9-8039-b618e299179d",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": ""
+                },
+                {
+                  "type": "text",
+                  "text": "Aleph has a bright and cheerful personality.Aleph is a vegetarian.He\nis written to represent a gifted individual, with particular\nemphasis on the concept of overexcitabilities.",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "caa94586-7d74-449c-bc03-b143e27dd22d",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": ""
+                },
+                {
+                  "type": "text",
+                  "text": "While Aleph is certainly clever, that is never to be the focus in\nany narrative involving him.",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "3a82ac60-5c7d-4c0c-b277-ef9370034207",
+      "type": "section",
+      "attrs": {
+        "title": "Abilities"
+      },
+      "isTemplated": true,
+      "slots": {
+        "default": [
+          {
+            "id": "fda13f50-833c-4c92-9c62-fe65cfe155c1",
+            "type": "section",
+            "attrs": {
+              "title": "Magic"
+            },
+            "slots": {
+              "default": [
+                {
+                  "id": "09668343-c3b0-4f22-97ab-da68ee35f67c",
+                  "type": "paragraph",
+                  "attrs": {
+                    "text": [
+                      {
+                        "type": "text",
+                        "text": ""
+                      },
+                      {
+                        "type": "text",
+                        "text": "Aleph is adept at Augmentation, Conjuration, and Incantation.",
+                        "marks": []
+                      }
+                    ]
+                  },
+                  "slots": {}
+                }
+              ]
+            }
+          },
+          {
+            "id": "696a9eb1-a5ee-4a11-b0f6-4ab7071daaf5",
+            "type": "section",
+            "attrs": {
+              "title": "Swordsmanship"
+            },
+            "slots": {
+              "default": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "85062350-0763-4d56-af4e-fe18741b9db2",
+      "type": "section",
+      "attrs": {
+        "title": "Biography"
+      },
+      "isTemplated": true,
+      "slots": {
+        "default": [
+          {
+            "id": "58eb55ca-d589-4fed-b9fa-7e97b2fa8ac7",
+            "type": "section",
+            "attrs": {
+              "title": "Birth"
+            },
+            "slots": {
+              "default": []
+            }
+          },
+          {
+            "id": "886abb9a-cc7a-4bb2-97a1-b85e6be27f23",
+            "type": "section",
+            "attrs": {
+              "title": "Early Life"
+            },
+            "slots": {
+              "default": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "e5f3aa87-ea8a-4e18-9081-c4bfd9801298",
+      "type": "section",
+      "attrs": {
+        "title": "Relationships"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "224db210-1751-40c3-b650-e212fddc9aef",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true,
+      "slots": {
+        "default": [
+          {
+            "id": "f2d652ef-1081-465c-9e0d-9eb8e0c15587",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": ""
+                },
+                {
+                  "type": "text",
+                  "text": "Light unto the ",
+                  "marks": []
+                },
+                {
+                  "type": "text",
+                  "text": "nation",
+                  "marks": []
+                },
+                {
+                  "type": "text",
+                  "text": "s\n",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "b101a678-1d5f-4563-9f54-af70c563db36",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": ""
+                },
+                {
+                  "type": "text",
+                  "text": "Moses Archetype, wonder child, moses in the bulrushes, doorstop baby\n",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          }
+        ]
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.125Z"
+}

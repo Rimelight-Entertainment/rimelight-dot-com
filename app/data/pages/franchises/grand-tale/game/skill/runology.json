@@ -1,0 +1,54 @@
+{
+  "id": "01JYCNPD67NJZBYWFFE5Y9EQEZ",
+  "slug": "franchises/grand-tale/game/skill/runology",
+  "type": "Skill",
+  "title": "Runology",
+  "categories": [
+    "Skill"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "01JYD27BH33VZVK8C3KWEKD02N",
+      "type": "paragraph",
+      "attrs": {
+        "text": [
+          {
+            "type": "text",
+            "text": "Dropped from monsters and other sources. Used as materials to create\nRunestones, used as materials for Aging, may be broken down to create\nRunic Essence which is used to sustain usage of inscriptions.Item",
+            "marks": []
+          },
+          {
+            "type": "text",
+            "text": ""
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "01JYD27H92QNX3EYS4G2QMSM8D",
+      "type": "paragraph",
+      "attrs": {
+        "text": [
+          {
+            "type": "text",
+            "text": "InscribingRunestonesrunestones can be used to unlock Inscriptions. It\nmay then be selected on the corresponding slot in the loadout interface.\nTo unlock an elder runestone the corresponding younger one must also be\nunlocked.tradableunlocked for entire kinship so you'll always have\naccess to selecting them once you've crafted them once, still uses\nessence while in combat/in skillingInscriptionseach hero/artisan may\nequip three inscriptions, one for each kind. each inscription has three\nrunestone slots.Younger/Lesser Inscriptions occupy one slot, while\nElder/Greater Inscriptions occupy two slots.Elder/Greater counterpart\nhas higher numbers, same effect. Higher cost, twice as much?Each\ninscription has an upkeep cost , using them drains Runic Essence each\nminute/second while in combat or skilling. they will stop having effect\nif runic essence runs out.MarkOffense related.Deal more damage if enemy\nis Healthy.Deal more damage if enemy is Injured.Deal more damage if\nenemy is Crowd Controlled.Mark of Corruption - Enemies damaged are\nafflicted by Corruption, taking % damage every X seconds.Mark of\nExtermination - Increases damage dealt against bounty targets by\n15%.SealDefense and resource related.InsightInspirationTranscensenceTriumphTenacityMana cost of\nabilities is reducedAttacks restore manaAttacks restore healthdamage is\nincreased by block %damage is increased but so are mana costsElder Seal\nof ResurrectionPrevents death, has a cooldown.Elder Seal of\nPreservationWhen casting an ability there’s a 15% chance it won’t enter\ncooldown. 15 Second CooldownElder Seal of ConservationWhen casting an\nability there’s a chance it won’t cost any resources.GlyphPositioning\nand utility\nrelated.MobilityImmunityMomentumImmobilityAlacrityDualityGain bonus for\nevery second stationary.Deal more damage against isolated targets.Deal\nmore damage if there are no enemies near.SigilImprintAgingEach tier\nthematically ages 100 years.Slot instead of item based.",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "01JYCNN0ENRJAJP35HX7XPNGYP",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true
+    }
+  ],
+  "lastModified": "2025-06-22T20:36:20.807Z"
+}

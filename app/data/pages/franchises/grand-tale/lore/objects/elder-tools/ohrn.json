@@ -1,0 +1,135 @@
+{
+  "id": "01JY4SXEANB439K13BYVBRB1TX",
+  "slug": "franchises/grand-tale/lore/objects/elder-tools/ohrn",
+  "type": "Default",
+  "title": "Ohrn",
+  "categories": [
+    "Object"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "f554b0c9-0aa5-4a79-98ad-4e899407f645",
+      "type": "paragraph",
+      "attrs": {
+        "text": [
+          {
+            "type": "text",
+            "text": ""
+          },
+          {
+            "type": "text",
+            "text": "The horn landed on the planet millenia ago, crashing into the side of a\nmountain creating a huge crater. Its presence in the planet is what\nexplains the large concentration of phenomena happening specifically there\nthroughout the story. Trivia The idea of a horn being involved in the game\nstems from the original Defense of the Ancients custom map for Warcraft 3,\nwhich has the sound of a horn play at the start of a match. This same\nelement was preserved in the mod's sequel, Dota 2. The Arhus is partially\ninspired by Heimdall in Norse mythology, who wielded the Gjallarhorn and\nblew it to warn the gods of the start of Ragnarok, much like how the Arhus\nis sounded at the start of a match. An interpretation of the name\n\"Gjallarhorn\" is to mean \"horn of the river Gjöll\". In Norse mythology,\nGjöll is the river that separates the living from the dead, much like how\nthe Arhus has powers over life. Other than a musical instrument, horns\nwere historically also used as a drinking vessel, relating to . Heimdall\nuses the Gjallarhorn to drink from the Mímisbrunnr to gain wisdom. Blowing\nthe Arhus is akin to drinking the waters of life. The name \"Arhus\" comes\nfrom the river Aarhus in Jutland (Denmark), and roughly means \"river\nmouth\". fountain of youth, water of life olifant/oliphant instrument The\nOhrn is a cosmogonic relic of insurmountable power which acts as the\ntournament’s “artefact of attraction”. With its stalwart metal body and\nelegant curves it guides the design of most of the game’s visual elements,\nfrom architecture to interfaces. Its magic is divine in nature and\nmanifests as golden beams of energy, representing the vital energy that\nflows through every living being. Sound can be heard across the universe.\nInscription ``` Flavour Text \"While you live, sound - have all grief be\nthrough, for the end exists avowed and such demands its due.\" -\nInscription on the Ohrn Also known as the Cradle ``` reduced for is a\nnecklace ``` The Ohrn's name is based on the Kabbalistic concept of the",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "7a17eeb9-84a1-4906-bc11-6b5c45f5f3c4",
+      "type": "paragraph",
+      "attrs": {
+        "text": [
+          {
+            "type": "text",
+            "text": "Ohr",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "url": "https://en.wikipedia.org/wiki/Ohr"
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ", as well as a pun on the misspelling of \"horn\".",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "e24e466d-cd30-486b-8465-b804d60cdfa2",
+      "type": "paragraph",
+      "attrs": {
+        "text": [
+          {
+            "type": "text",
+            "text": "Shofar",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "url": "https://en.wikipedia.org/wiki/Shofar"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "978a2a36-0b51-4f9d-8b92-bf51b74abf89",
+      "type": "paragraph",
+      "attrs": {
+        "text": [
+          {
+            "type": "text",
+            "text": "The inscription on the Ohrn is inspired by the ",
+            "marks": []
+          },
+          {
+            "type": "text",
+            "text": "One Ring",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "url": "https://en.wikipedia.org/wiki/One_Ring"
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ", and the inscription itself was written based on the ",
+            "marks": []
+          },
+          {
+            "type": "text",
+            "text": "Seikilos Epitaph",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "url": "https://en.wikipedia.org/wiki/Seikilos_epitaph"
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "text": ", considered to be the oldest complete musical composition every found and from which the Grand Tale Theme motif is also derived from.",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "01JYA74VD9498GWRJYMM48FCAW",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.215Z"
+}

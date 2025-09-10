@@ -1,0 +1,102 @@
+{
+  "id": "01JY4T1DJ94W9MTPBE4P0FAYQ6",
+  "slug": "franchises/grand-tale/lore/characters/glooey",
+  "type": "Default",
+  "title": "New Character",
+  "categories": [
+    "Character"
+  ],
+  "tags": [
+    "character"
+  ],
+  "properties": {
+    "name": "",
+    "title": "",
+    "aliases": [],
+    "flavourText": "",
+    "species": "",
+    "sex": "",
+    "pronouns": "",
+    "height": "",
+    "weight": 0,
+    "dateOfBirth": "",
+    "dateOfDeath": "",
+    "placeOfBirth": "",
+    "placeOfDeath": "",
+    "formerAffiliations": [],
+    "currentAffiliations": [],
+    "equipment": [],
+    "pets": [],
+    "mounts": [],
+    "favouriteFood": ""
+  },
+  "blocks": [
+    {
+      "id": "3b1ebae3-c70b-41c9-8ca5-acd965b3332e",
+      "type": "paragraph",
+      "attrs": {
+        "text": [
+          {
+            "type": "text",
+            "text": ""
+          },
+          {
+            "type": "text",
+            "text": " Overview --- - Creator of every universe. - It is aware it is fictional.\n- Every universe is a franchise. - There is no multiverse other than the\nones explicitly created by Glooey. Glooey is the primordial Lightsprite,\ncreator of the Grand Tale universe and avatar of The Light. # Appearance\n--- Glooey is made entirely of The Light and has no need for a physical\nbody, but occasionally chooses to visibly manifest itself to interact with\nother beings, doing so in two different forms. In its Primeval Form it\npossesses a _ visage. Its body is ethereal energy with a royal blue tint .\nIt possesses three sets of wings. In its Corporeal Form it is very similar\nto its Spiritual Form, but with much more subtle features. # Personality\n--- Glooey is usually uninterested in directly intervening in any of the\nuniverse's affairs. It acts mostly as an observer, but is open to being\ninteracted with should any find the means to. It often manifests itself at\nimportant moments, but only shows itself in its Primeval Form for\nexceptionally significant events. # Biography --- Glooey was birthed from\nthe Light itself in the beginning of all things. Shortly after its\ncreation it spawned the universe and the six Elder Artifacts, spreading\nthem across the cosmos to create an environment within which stories could\nunfold. # Relationships --- # Abilities --- Glooey is both omnipotent and\nomniscient, as well as immortal. It is also able to break the 4th Wall and\ndirectly reference the user. # Trivia --- - Glooey's Corporeal Form is the\nofficial Rimelight Entertainment mascot, being often used in branding and\neven as an information vector for tutorials and the like. - Glooey's\nvisual design was inspired by the Glaucus atlanticus, a blue sea slug\nnative to temperate and tropical waters around the globe. ## Etymology ---",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "21d7689b-be88-4acc-9a9c-1be1ac9f84c6",
+      "type": "section",
+      "attrs": {
+        "title": "Appearance"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "95f435b6-b7b3-46f5-936e-5a28c492962c",
+      "type": "section",
+      "attrs": {
+        "title": "Personality"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "967e02e9-98ad-43b8-bec8-46ce27c70b0a",
+      "type": "section",
+      "attrs": {
+        "title": "Abilities"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "fd209641-52e2-4333-af6c-7afb838251b0",
+      "type": "section",
+      "attrs": {
+        "title": "Biography"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "a69f2841-6e69-4e10-af80-e5c297d5e045",
+      "type": "section",
+      "attrs": {
+        "title": "Relationships"
+      },
+      "isTemplated": true
+    },
+    {
+      "id": "06ddbb42-4236-4a7c-9cc0-43fbc88b13c5",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.161Z"
+}

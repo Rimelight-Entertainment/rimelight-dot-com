@@ -1,0 +1,69 @@
+{
+  "id": "01JYCJQ4S6NQXN2J0YX16A8BGP",
+  "slug": "franchises/grand-tale/game/tales/tale-c/card/alignment",
+  "type": "Default",
+  "title": "Alignment",
+  "categories": [
+    "Uncategorized"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "01JYCK3VCHAKGRRT4D27FTGY2P",
+      "type": "section",
+      "attrs": {
+        "title": "Chaos",
+        "mainArticleSlug": "franchises/grand-tale/game/tales/tale-c/card/alignment/chaos"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JYCK42BFSZGRHKCTM294MC6E",
+      "type": "section",
+      "attrs": {
+        "title": "Balance",
+        "mainArticleSlug": "franchises/grand-tale/game/tales/tale-c/card/alignment/balance"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JYCK413B4MTEYN4PY39JFAXN",
+      "type": "section",
+      "attrs": {
+        "title": "Order",
+        "mainArticleSlug": "franchises/grand-tale/game/tales/tale-c/card/alignment/order"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JYCK40172GYSWTBE8S6K1WNA",
+      "type": "section",
+      "attrs": {
+        "title": "Light",
+        "mainArticleSlug": "franchises/grand-tale/game/tales/tale-c/card/alignment/light"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JYCK3Z1VD50CMVZQ9ZV8SZPC",
+      "type": "section",
+      "attrs": {
+        "title": "Rime",
+        "mainArticleSlug": "franchises/grand-tale/game/tales/tale-c/card/alignment/rime"
+      },
+      "slots": {
+        "default": []
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:18:59.994Z"
+}

@@ -1,0 +1,75 @@
+{
+  "id": "01JY4T08VW39BS4QFW2HWXFM35",
+  "slug": "internal/directories/policy-directory/compensation-benefits-policy",
+  "type": "Default",
+  "title": "Compensation & Benefits Policy",
+  "categories": [],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "01JYAEFR5VQYEZ11GASC05X010",
+      "type": "script",
+      "attrs": {
+        "characters": [],
+        "aPlot": [
+          {
+            "type": "text",
+            "text": ""
+          }
+        ],
+        "bPlot": [
+          {
+            "type": "text",
+            "text": ""
+          }
+        ],
+        "cPlot": [
+          {
+            "type": "text",
+            "text": ""
+          }
+        ],
+        "stinger": [
+          {
+            "type": "text",
+            "text": ""
+          }
+        ],
+        "title": [
+          {
+            "type": "text",
+            "text": ""
+          }
+        ],
+        "synopsis": [
+          {
+            "type": "text",
+            "text": ""
+          }
+        ]
+      },
+      "slots": {
+        "act1": [
+          {
+            "id": "01JYAEFTD5BATP0K4Y92KGE2DG",
+            "type": "scene",
+            "attrs": {
+              "location": "",
+              "timeOfDay": "MORNING",
+              "setting": "INTERIOR",
+              "transition": "CUT_TO_SCENE",
+              "description": ""
+            },
+            "slots": {
+              "default": []
+            }
+          }
+        ],
+        "act2": [],
+        "act3": []
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.737Z"
+}

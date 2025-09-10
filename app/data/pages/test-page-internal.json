@@ -1,0 +1,101 @@
+{
+  "id": "01JY4T2ZWDPH7PAV6A0D64G0AD",
+  "slug": "test-page-internal",
+  "type": "Default",
+  "title": "Test Page Internal",
+  "categories": [
+    "Species"
+  ],
+  "tags": [],
+  "properties": {
+    "name": [
+      {
+        "type": "text",
+        "text": "Test",
+        "marks": []
+      }
+    ],
+    "averageLifespan": "Minutes",
+    "averageWeight": 0,
+    "diet": "Carnivorous",
+    "status": "Extant"
+  },
+  "blocks": [
+    {
+      "id": "01JYD9HRVJ8DMQ8580CQ6R19Q9",
+      "type": "section",
+      "attrs": {
+        "title": "",
+        "mainArticleSlug": "franchises/grand-tale/game/skill/alchemy"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JY71B2W9SKXM1JKQNTT7D6GM",
+      "type": "section",
+      "attrs": {
+        "title": "Physiology",
+        "mainArticleSlug": null
+      },
+      "isTemplated": true,
+      "slots": {
+        "default": [
+          {
+            "id": "01JYD7CDVHTDA0WW2VA3XC2J4X",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": ""
+                }
+              ]
+            },
+            "slots": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "01JYD8Y2G1XAX5AA45BQXB4S2W",
+      "type": "image",
+      "attrs": {
+        "url": "",
+        "fileName": ""
+      }
+    },
+    {
+      "id": "01JYD96RNTFPNT9CFZXEYDXW0Y",
+      "type": "section",
+      "attrs": {
+        "title": "",
+        "mainArticleSlug": "franchises/grand-tale/about"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JY71B2WA8PM0K7Y151YZ1S0B",
+      "type": "section",
+      "attrs": {
+        "title": "Culture"
+      },
+      "isTemplated": true,
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JY71B2WANKGG3PJJGHHSGNB4",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.764Z"
+}

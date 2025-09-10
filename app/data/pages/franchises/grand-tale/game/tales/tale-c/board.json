@@ -1,0 +1,133 @@
+{
+  "id": "01JYCG3A3PY81VJXT4VS34HCW0",
+  "slug": "franchises/grand-tale/game/tales/tale-c/board",
+  "type": "Default",
+  "title": "Board",
+  "categories": [
+    "Uncategorized"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "01JYCG5ZB8WJY8NCTAJENC0W07",
+      "type": "paragraph",
+      "attrs": {
+        "text": [
+          {
+            "type": "text",
+            "text": "The Board is the playable zone in a Tale C match, and where the various Card Zones are located.",
+            "marks": []
+          }
+        ]
+      },
+      "slots": {}
+    },
+    {
+      "id": "01JYCG5V21W0B4QTY58YHSD1R9",
+      "type": "section",
+      "attrs": {
+        "title": "Zones"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "01JYCG6MR84CTA8DRDHTWB1BF7",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "The board is divided into various Zones, in which specific card types are placed.",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "01JYCG75YFH3F7VZFZDDPEGEFW",
+            "type": "section",
+            "attrs": {
+              "title": "Deck"
+            },
+            "slots": {
+              "default": []
+            }
+          },
+          {
+            "id": "01JYCG79CFKCHHNQT92G818Y25",
+            "type": "section",
+            "attrs": {
+              "title": "Side Deck"
+            },
+            "slots": {
+              "default": []
+            }
+          },
+          {
+            "id": "01JYCG7BEZ2X3BM40F16BMHAEQ",
+            "type": "section",
+            "attrs": {
+              "title": "Hand"
+            },
+            "slots": {
+              "default": []
+            }
+          },
+          {
+            "id": "01JYCG7FAYDYYPEHV1HRWB5P81",
+            "type": "section",
+            "attrs": {
+              "title": "Battlefield"
+            },
+            "slots": {
+              "default": []
+            }
+          },
+          {
+            "id": "01JYCG7EB8VVPA36K4DDAT73FQ",
+            "type": "section",
+            "attrs": {
+              "title": "Reliquary"
+            },
+            "slots": {
+              "default": []
+            }
+          },
+          {
+            "id": "01JYCG7D4HGECXS8JBYGZZG167",
+            "type": "section",
+            "attrs": {
+              "title": "Aureum"
+            },
+            "slots": {
+              "default": []
+            }
+          },
+          {
+            "id": "01JYCG8KX2EGSF07FW9WG71T72",
+            "type": "section",
+            "attrs": {
+              "title": "Graveyard"
+            },
+            "slots": {
+              "default": []
+            }
+          },
+          {
+            "id": "01JYCG8RZZSEGW9RPE3HF29PMA",
+            "type": "section",
+            "attrs": {
+              "title": "Void"
+            },
+            "slots": {
+              "default": []
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:18:59.945Z"
+}

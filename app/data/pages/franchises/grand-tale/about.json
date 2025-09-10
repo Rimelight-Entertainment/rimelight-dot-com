@@ -1,0 +1,78 @@
+{
+  "id": "01JY4SQQKEQ0H71HT63MV6QFHK",
+  "slug": "franchises/grand-tale/about",
+  "type": "Default",
+  "title": "About",
+  "categories": [
+    "Uncategorized"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "7ec8aa7c-413b-4c76-9649-8669d71ef1c2",
+      "type": "section",
+      "attrs": {
+        "title": "What is Grand Tale?"
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "5a36c869-9dde-4aff-9c89-9f46fea25547",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "Grand Tale is a high-fantasy entertainment media franchise centred\naround a social life-simulation game, which hosts sub-games of multiple\ngenres.",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          },
+          {
+            "id": "81c19d6b-a7f2-4afa-b32e-4ac58a8cc134",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "In the game, players control a character called “Ori”, with which they\nmust gather resources, upgrade their estate, learn about the world\naround them, and optionally engage in various Tales, which are sub-games\nhosted within Grand Tale's world and plug in to the various systems of\nthe base experience.",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "86bc8245-7b0c-475c-9d4d-93cfd9561de3",
+      "type": "section",
+      "attrs": {
+        "title": "The story so far..."
+      },
+      "slots": {
+        "default": [
+          {
+            "id": "2ae571a3-d03f-41d7-a769-747757d782e5",
+            "type": "paragraph",
+            "attrs": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": "On Aleph's birthday, the trio of Aleph, Leah, and Zev encounter a\npowerful magical artifact called the \"Ohrn\" whilst on a hike. Upon its\ndiscovery, the object manifested Ori, the Aspect of Tales, and unleashed\na surge of lifeforce across the universe with yet unknown consequences.\nTogether, the four form an organization known as the \"Grand Tale\", and\nmust now gather allies, resources, and knowledge to accomplish Aleph's\ngrand aspirations of changing the world.",
+                  "marks": []
+                }
+              ]
+            },
+            "slots": {}
+          }
+        ]
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:18:59.858Z"
+}

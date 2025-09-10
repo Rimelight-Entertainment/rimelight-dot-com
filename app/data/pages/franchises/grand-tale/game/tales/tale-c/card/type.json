@@ -1,0 +1,80 @@
+{
+  "id": "01JYCJSR9PSWFWJMXW4863ZYG4",
+  "slug": "franchises/grand-tale/game/tales/tale-c/card/type",
+  "type": "Default",
+  "title": "Type",
+  "categories": [
+    "Uncategorized"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "01JYCK9HQHFFXRX7SS9RSAV7TY",
+      "type": "section",
+      "attrs": {
+        "title": "Hero",
+        "mainArticleSlug": "franchises/grand-tale/game/tales/tale-c/card/type/hero"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JYCK9S8PN3DAAWPHNNXX2FK8",
+      "type": "section",
+      "attrs": {
+        "title": "Landmark",
+        "mainArticleSlug": "franchises/grand-tale/game/tales/tale-c/card/type/landmark"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JYCK9RBZXM8DYRM3K0XP1876",
+      "type": "section",
+      "attrs": {
+        "title": "Saga",
+        "mainArticleSlug": "franchises/grand-tale/game/tales/tale-c/card/type/saga"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JYCK9QG1F2QXFW8TQ9SC34W2",
+      "type": "section",
+      "attrs": {
+        "title": "Creature",
+        "mainArticleSlug": "franchises/grand-tale/game/tales/tale-c/card/type/creature"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JYCK9PQSMQEFDNRH6Z39X8MS",
+      "type": "section",
+      "attrs": {
+        "title": "Spell",
+        "mainArticleSlug": "franchises/grand-tale/game/tales/tale-c/card/type/spell"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JYCK9NWXE6MA6CTQXV2XX2CF",
+      "type": "section",
+      "attrs": {
+        "title": "Equipment",
+        "mainArticleSlug": "franchises/grand-tale/game/tales/tale-c/card/type/equipment"
+      },
+      "slots": {
+        "default": []
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:19:00.064Z"
+}

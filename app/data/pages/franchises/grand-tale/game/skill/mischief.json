@@ -1,0 +1,22 @@
+{
+  "id": "01JYCNN0GG408BJNXYHMZVT1RZ",
+  "slug": "franchises/grand-tale/game/skill/mischief",
+  "type": "Skill",
+  "title": "Mischief",
+  "categories": [
+    "Skill"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "01JYCNN0ENRJAJP35HX7XPNGYP",
+      "type": "section",
+      "attrs": {
+        "title": "Trivia"
+      },
+      "isTemplated": true
+    }
+  ],
+  "lastModified": "2025-06-22T20:35:35.056Z"
+}

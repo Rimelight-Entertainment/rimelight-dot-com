@@ -1,0 +1,102 @@
+{
+  "id": "01JYCKRHHC4DWJTM83KKDDGST2",
+  "slug": "franchises/grand-tale/game/skill",
+  "type": "Default",
+  "title": "Skill",
+  "categories": [
+    "Uncategorized"
+  ],
+  "tags": [],
+  "properties": {},
+  "blocks": [
+    {
+      "id": "01JYD2FY7W04DNXRJTC212Y6QR",
+      "type": "section",
+      "attrs": {
+        "title": "Alchemy",
+        "mainArticleSlug": "franchises/grand-tale/game/skill/alchemy"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JYD2G321XVWV42FDBS0H1ZEJ",
+      "type": "section",
+      "attrs": {
+        "title": "Archaeology",
+        "mainArticleSlug": "franchises/grand-tale/game/skill/archaeology"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JYD2G26EEJDMP99D423SPPE6",
+      "type": "section",
+      "attrs": {
+        "title": "Artistry",
+        "mainArticleSlug": "franchises/grand-tale/game/skill/artistry"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JYD2G1CSN0H88A9XJN98HZB5",
+      "type": "section",
+      "attrs": {
+        "title": "Crafting",
+        "mainArticleSlug": "franchises/grand-tale/game/skill/crafting"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JYD2G0HAR71P10XJ2D6BFD18",
+      "type": "section",
+      "attrs": {
+        "title": "Cultivation",
+        "mainArticleSlug": "franchises/grand-tale/game/skill/cultivation"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JYD2FZJQFGKQWGN187PPSM91",
+      "type": "section",
+      "attrs": {
+        "title": "Foraging",
+        "mainArticleSlug": "franchises/grand-tale/game/skill/foraging"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JYD2YH1Z2M4C35GVNG6Q67JP",
+      "type": "section",
+      "attrs": {
+        "title": "Mischief",
+        "mainArticleSlug": "franchises/grand-tale/game/skill/mischief"
+      },
+      "slots": {
+        "default": []
+      }
+    },
+    {
+      "id": "01JYD28K7VNREY5F2MVS7D8B2Q",
+      "type": "section",
+      "attrs": {
+        "title": "Runology",
+        "mainArticleSlug": "franchises/grand-tale/game/skill/runology"
+      },
+      "slots": {
+        "default": []
+      }
+    }
+  ],
+  "lastModified": "2025-06-22T20:18:59.933Z"
+}
