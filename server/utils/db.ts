@@ -1,11 +1,18 @@
-import { drizzle } from 'drizzle-orm/libsql';
-import * as schema from '../database/schema'
+import { drizzle, type NeonClient } from 'drizzle-orm/neon-serverless'
+import { neon } from '@neondatabase/serverless'
+import postgres from 'postgres'
+import { schema } from '~~/server/database/schema'
 
-export const db = drizzle('file:database.sqlite', {
-  schema
-})
-export const tables = schema
-export { and, eq, or, } from 'drizzle-orm'
-export function useDB() {
-  return drizzle(hubDatabase(), { schema })
+export function useDb() {
+  const url = process.env.NUXT_POSTGRES_URL
+  if (!url) {
+    throw createError('Missing `NUXT_POSTGRES_URL` environment variable')
+  }
+
+  const client = neon(url) as unknown as NeonClient
+  const db = drizzle(client, { schema })
+
+  const raw = postgres(url, { ssl: 'require' })
+
+  return { db, raw }
 }

@@ -12,7 +12,7 @@
     "migrations:push": "drizzle-kit migrate"
   },
   "dependencies": {
-    "@libsql/client": "^0.15.15",
+    "@neondatabase/serverless": "^1.0.1",
     "@nuxt/content": "^3.6.3",
     "@nuxt/image": "^1.11.0",
     "@nuxt/scripts": "0.11.13",
@@ -33,6 +33,7 @@
     "nuxt": "^4.1.0",
     "nuxt-auth-utils": "^0.5.24",
     "nuxt-og-image": "^5.1.9",
+    "pg": "^8.16.3",
     "postgres": "^3.4.7",
     "sharp": "^0.34.3",
     "typescript": "^5.9.2",

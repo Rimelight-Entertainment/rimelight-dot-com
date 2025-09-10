@@ -115,8 +115,6 @@ export default defineNuxtConfig({
     turnstile: {
       secretKey: process.env.NUXT_TURNSTILE_SECRET_KEY,
     },
-    databaseUrl: process.env.DATABASE_URL,
-    authSecret: process.env.AUTH_SECRET,
   },
   routeRules: {
     '/api/**': {

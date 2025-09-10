@@ -1,24 +1,25 @@
 import { z } from 'zod'
-import { db, tables } from '~~/server/utils/db'
+import { defineEventHandler, readValidatedBody, createError } from 'h3'
+import { useDb } from '~~/server/utils/db'
+import { users } from '~~/server/database/schema'
 
-export const signUpSchema = z
-  .object({
-    firstName: z.string().min(2).max(24).optional(),
-    lastName: z.string().min(2).max(24).optional(),
-    username: z.string().min(2).max(24),
-    email: z.string().email(),
-    password: z.string().min(8).max(24),
-  })
-// No need for a refine here – the client already stripped the confirmation
+export const signUpSchema = z.object({
+  firstName: z.string().min(2).max(24).optional(),
+  lastName: z.string().min(2).max(24).optional(),
+  username: z.string().min(2).max(24),
+  email: z.string().email(),
+  password: z.string().min(8).max(24),
+})
 
 export default defineEventHandler(async (event) => {
-  // Throws 400 if validation fails
   const body = await readValidatedBody(event, signUpSchema.parse)
 
   const hashedPassword = await hashPassword(body.password)
 
+  const { db } = useDb()
+
   const [user] = await db
-    .insert(tables.users)
+    .insert(users)
     .values({
       email: body.email,
       username: body.username,
@@ -26,16 +27,16 @@ export default defineEventHandler(async (event) => {
       firstName: body.firstName ?? null,
       lastName: body.lastName ?? null,
     })
-    .returning()
+    .returning() // returns the inserted row(s)
 
   if (!user) {
-    throw new Error('Failed to retrieve newly created user');
+    throw createError({ statusCode: 500, statusMessage: 'Failed to create user' })
   }
 
   await setUserSession(event, {
     user: { id: user.id, username: user.username },
     lastLoggedIn: new Date(),
-  });
+  })
 
   return { success: true }
 })

@@ -1,16 +1,20 @@
+// server/plugins/migrations.ts
 import { consola } from 'consola'
-import { migrate } from 'drizzle-orm/d1/migrator'
+import { migrate } from 'drizzle-orm/neon-serverless/migrator' // ← Neon migrator
+import { useDb } from '~~/server/utils/db'
 
-export default defineNitroPlugin(async () => {
+export default defineNitroPlugin(() => {
   if (!import.meta.dev) return
 
   onHubReady(async () => {
-    await migrate(useDB(), { migrationsFolder: 'server/database/drizzle' })
-      .then(() => {
-        consola.success('Database migrations done')
+    try {
+      const { db } = useDb()
+      await migrate(db, {
+        migrationsFolder: 'server/database/drizzle',
       })
-      .catch((err) => {
-        consola.error('Database migrations failed', err)
-      })
+      consola.success('✅ Database migrations completed')
+    } catch (err) {
+      consola.error('❌ Database migrations failed', err)
+    }
   })
 })

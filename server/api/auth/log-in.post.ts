@@ -1,5 +1,8 @@
 import { z } from 'zod'
-import { db, tables } from '~~/server/utils/db'
+import { defineEventHandler, readValidatedBody, createError } from 'h3'
+import { eq } from 'drizzle-orm'
+import { useDb } from '~~/server/utils/db'
+import { users } from '~~/server/database/schema'
 
 export const loginSchema = z.object({
   email: z.string().email(),
@@ -9,10 +12,12 @@ export const loginSchema = z.object({
 export default defineEventHandler(async (event) => {
   const body = await readValidatedBody(event, loginSchema.parse)
 
+  const { db } = useDb()
+
   const user = await db
     .select()
-    .from(tables.users)
-    .where(eq(tables.users.email, body.email))
+    .from(users)
+    .where(eq(users.email, body.email))
     .limit(1)
     .then((rows) => rows[0])
 
