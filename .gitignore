@@ -26,5 +26,4 @@ database.sqlite
 
 # Drizzle‑Kit
 server/database/drizzle/*.json
-server/database/drizzle/journal.json
- server/database/drizzle/*_draft.sql
+server/database/drizzle/*_draft.sql

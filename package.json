@@ -8,8 +8,11 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "migrations:make": "drizzle-kit generate",
-    "migrations:push": "drizzle-kit migrate"
+    "db:introspect": "drizzle-kit introspect:pg",
+    "db:baseline": "drizzle-kit generate:pg --baseline",
+    "db:generate": "drizzle-kit generate:pg",
+    "db:migrate": "drizzle-kit migrate",
+    "db:reset": "drizzle-kit migrate:reset"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.0.1",
