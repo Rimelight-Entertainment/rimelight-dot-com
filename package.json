@@ -9,8 +9,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "db:introspect": "drizzle-kit introspect:pg",
-    "db:baseline": "drizzle-kit generate:pg --baseline",
-    "db:generate": "drizzle-kit generate:pg",
+    "db:baseline": "drizzle-kit generate --baseline",
+    "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:reset": "drizzle-kit migrate:reset"
   },
