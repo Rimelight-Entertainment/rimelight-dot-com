@@ -1,42 +1,86 @@
 import { z } from 'zod'
-import { defineEventHandler, readValidatedBody, createError } from 'h3'
+import { H3Event, defineEventHandler, createError } from 'h3'
 import { useDb } from '~~/server/utils/db'
-import { users } from '~~/server/database/schema'
+import { users, userRole } from '~~/server/database/schema'
 
-export const signUpSchema = z.object({
-  firstName: z.string().min(2).max(24).optional(),
-  lastName: z.string().min(2).max(24).optional(),
+const signUpSchema = z.object({
+  first_name: z.string().min(2).max(24),
+  last_name: z.string().min(2).max(24),
   username: z.string().min(2).max(24),
   email: z.string().email(),
   password: z.string().min(8).max(24),
-})
+  password_confirmation: z.string().min(8).max(24),
+}).refine(d => d.password === d.password_confirmation, {
+  message: 'Passwords do not match',
+  path: ['password_confirmation'],
+});
+
+async function getRequestBody(event: H3Event) {
+  const body = await readBody(event)
+  return signUpSchema.parse(body)
+}
 
 export default defineEventHandler(async (event) => {
-  const body = await readValidatedBody(event, signUpSchema.parse)
+  try {
+    const body = await getRequestBody(event)
+    const hashedPassword = await hashPassword(body.password)
 
-  const hashedPassword = await hashPassword(body.password)
+    const { db } = useDb()
 
-  const { db } = useDb()
+    const userRole: UserRole = body.email.endsWith('@rimelight.com')
+      ? 'employee'
+      : 'user';
 
-  const [user] = await db
-    .insert(users)
-    .values({
-      email: body.email,
-      username: body.username,
-      passwordHash: hashedPassword,
-      firstName: body.firstName ?? null,
-      lastName: body.lastName ?? null,
+    const [user] = await db
+      .insert(users)
+      .values({
+        first_name: body.first_name,
+        last_name: body.last_name,
+        email: body.email,
+        username: body.username,
+        password_hash: hashedPassword,
+        role: userRole
+      })
+      .returning()
+
+    if (!user) {
+      throw createError({ statusCode: 500, statusMessage: 'Failed to create user' })
+    }
+
+    await setUserSession(event, {
+      user: {
+        id: user.id,
+        username: user.username,
+        role: user.role,
+      },
+      lastLoggedIn: new Date(),
     })
-    .returning() // returns the inserted row(s)
 
-  if (!user) {
-    throw createError({ statusCode: 500, statusMessage: 'Failed to create user' })
+    return { success: true }
+  } catch (error: any) {
+    if (error.code === '23505') {
+      if (error.constraint === 'users_email_unique') {
+        throw createError({ statusCode: 409, statusMessage: 'Email already in use' })
+      }
+      if (error.constraint === 'users_username_unique') {
+        throw createError({ statusCode: 409, statusMessage: 'Username already taken' })
+      }
+      throw createError({ statusCode: 409, statusMessage: 'Duplicate value' })
+    }
+
+    // If it's a Zod error, return validation error
+    if (error.errors) {
+      throw createError({
+        statusCode: 400,
+        statusMessage: 'Validation failed',
+        data: error.errors
+      })
+    }
+
+    console.error('Sign‑up error:', error)
+    throw createError({
+      statusCode: 500,
+      statusMessage: 'An unexpected error occurred',
+    })
   }
-
-  await setUserSession(event, {
-    user: { id: user.id, username: user.username },
-    lastLoggedIn: new Date(),
-  })
-
-  return { success: true }
 })

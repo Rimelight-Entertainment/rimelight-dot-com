@@ -2,6 +2,8 @@
 import type { NavigationMenuItem } from '@nuxt/ui'
 import type { DropdownMenuItem } from '@nuxt/ui'
 
+const { loggedIn, user, session } = useUserSession()
+
 const route = useRoute()
 
 const items = computed<NavigationMenuItem[]>(() => [
@@ -148,18 +150,14 @@ const accountMenuItems = ref<DropdownMenuItem[][]>([
       icon: 'lucide:log-out',
       kbds: ['shift', 'meta', 'q'],
       click: async () => {
+        clear()
         close()
-        await logOut()
+        await session.clear()
+        await navigateTo('/auth/log-in')
       }
     }
   ]
 ])
-
-const session = useUserSession()
-async function logOut() {
-  await session.clear()
-  await navigateTo('/auth/log-in')
-}
 
 defineShortcuts(extractShortcuts(accountMenuItems.value))
 </script>
@@ -197,18 +195,18 @@ defineShortcuts(extractShortcuts(accountMenuItems.value))
         direction="horizontal"
         gap="sm"
       >
-        <AuthState>
-          <template #default="{ loggedIn, clear }">
+        <AuthState v-slot="{ loggedIn, clear }">
+          <template v-if="loggedIn">
             <UDropdownMenu :items="accountMenuItems" :ui="{ content: 'w-48' }">
-              <UButton variant="link" color="neutral" :label="session.user.value!.username"/>
+              <UButton variant="link" color="neutral" :label="user?.username" />
             </UDropdownMenu>
           </template>
+
+          <template v-else>
+            <UButton variant="solid"   color="primary" label="Log In"    to="/auth/log-in" />
+            <UButton variant="outline" color="primary" label="Sign Up"   to="/auth/sign-up" />
+          </template>
         </AuthState>
-
-
-
-          <UButton variant="solid" color="primary" label="Log In" />
-          <UButton variant="outline" color="primary" label="Sign Up" />
       </RLLayoutBox>
     </template>
   </UHeader>

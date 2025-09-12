@@ -1,4 +1,3 @@
-// server/plugins/migrations.ts
 import { consola } from 'consola'
 import { migrate } from 'drizzle-orm/neon-serverless/migrator' // ← Neon migrator
 import { useDb } from '~~/server/utils/db'

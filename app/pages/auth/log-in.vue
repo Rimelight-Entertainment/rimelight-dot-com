@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { reactive } from 'vue'
 import * as z from 'zod'
 import type { FormSubmitEvent } from '@nuxt/ui'
 
@@ -28,11 +27,6 @@ const schema = z.object({
 })
 
 type Schema = z.output<typeof schema>
-
-const state = reactive({
-  email: '',
-  password: '',
-})
 
 async function onSubmit(payload: FormSubmitEvent<Schema>) {
   try {
@@ -71,10 +65,13 @@ async function onSubmit(payload: FormSubmitEvent<Schema>) {
       <UPageCard class="w-full max-w-md">
         <UAuthForm
           :schema="schema"
-          title="Login"
+          title="Log In"
           description="Enter your credentials to access your account."
           icon="lucide:user"
           :fields="fields"
+          :submit="{
+            label: 'Log In',
+          }"
           @submit="onSubmit"
         >
           <template #description>

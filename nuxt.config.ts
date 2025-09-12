@@ -17,6 +17,16 @@ export default defineNuxtConfig({
       blob: true,
       database: true,
     },
+    eslint: {
+      config: {
+        stylistic: {
+          indent: 'space',
+          indentSize: 2,
+          quotes: 'double',
+          semi: false,
+        }
+      }
+    },
     i18n: {
         defaultLocale: 'en',
         locales: [
