@@ -11,7 +11,8 @@ export default defineNuxtConfig({
       '@nuxthub/core',
       '@nuxt/scripts',
       '@nuxtjs/turnstile',
-      'nuxt-auth-utils'
+      'nuxt-auth-utils',
+      '@nuxtjs/sitemap'
     ],
     hub: {
       blob: true,
@@ -99,7 +100,11 @@ export default defineNuxtConfig({
       pageTransition: { name: 'page', mode: 'out-in' },
       layoutTransition: { name: 'layout', mode: 'out-in' },
     },
-    css: ["./app/assets/css/main.css"],
+  site: {
+    url: 'https://rimelight.com',
+    name: 'Rimelight Entertainment'
+  },
+  css: ["./app/assets/css/main.css"],
     nitro: {
         prerender: {
             crawlLinks: true,
