@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { defineEventHandler, readValidatedBody, createError } from 'h3'
 import { eq } from 'drizzle-orm'
-import { useDb } from '~~/server/utils/db'
+import { useDb } from '~~/server/utils/drizzle'
 import { users } from '~~/server/database/schema'
 
 export const loginSchema = z.object({

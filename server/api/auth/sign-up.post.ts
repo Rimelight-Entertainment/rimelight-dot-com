@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { H3Event, defineEventHandler, createError } from 'h3'
-import { useDb } from '~~/server/utils/db'
+import { useDb } from '~~/server/utils/drizzle'
 import { users, userRole } from '~~/server/database/schema'
 
 const signUpSchema = z.object({
