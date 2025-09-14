@@ -22,9 +22,11 @@ logs
 .env
 .env.*
 !.env.example
-database.sqlite
 
 # Drizzle‑Kit
 /server/database/drizzle/*.json
 /server/database/drizzle/_journal.json
 /server/database/drizzle/*_draft.sql
+
+# Cloudflare files
+.wrangler
