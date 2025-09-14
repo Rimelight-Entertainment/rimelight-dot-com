@@ -143,6 +143,10 @@
   /* endregion */
 }
 
+:root {
+  --ui-container: 90rem;
+}
+
 /* region Scrollbar */
 body::-webkit-scrollbar,
 html::-webkit-scrollbar {
