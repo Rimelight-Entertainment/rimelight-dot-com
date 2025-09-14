@@ -8,11 +8,11 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "db:introspect": "drizzle-kit introspect:pg",
-    "db:baseline": "drizzle-kit generate --baseline",
-    "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate",
-    "db:reset": "drizzle-kit migrate:reset"
+    "db:neon:generate": "drizzle-kit generate:pg --config=./server/database/drizzle.neon.config.ts",
+    "db:neon:push": "drizzle-kit push:pg --config=./server/database/drizzle.neon.config.ts",
+    "db:d1:generate": "drizzle-kit generate:sqlite --config=./server/database/drizzle.d1.config.ts",
+    "db:d1:push": "drizzle-kit push:sqlite --config=./server/database/drizzle.d1.config.ts",
+    "db:all:migrate": "pnpm run db:neon:generate && pnpm run db:neon:push && pnpm run db:d1:generate && pnpm run db:d1:push"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.0.1",
@@ -23,6 +23,7 @@
     "@nuxt/ui": "4.0.0-alpha.1",
     "@nuxthub/core": "^0.9.0",
     "@nuxtjs/i18n": "^10.0.6",
+    "@nuxtjs/robots": "^5.5.1",
     "@nuxtjs/sitemap": "^7.4.3",
     "@nuxtjs/turnstile": "1.1.0",
     "@types/uuid": "^10.0.0",

@@ -1,5 +1,5 @@
 import { defineEventHandler } from 'h3'
-import { useDb } from '~~/server/utils/db'
+import { useDb } from '~~/server/utils/drizzle'
 
 export default defineEventHandler(async (event) => {
   const session = await getUserSession(event)
