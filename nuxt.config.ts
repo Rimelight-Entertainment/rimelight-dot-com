@@ -12,21 +12,12 @@ export default defineNuxtConfig({
       '@nuxt/scripts',
       '@nuxtjs/turnstile',
       'nuxt-auth-utils',
-      '@nuxtjs/sitemap'
+      '@nuxtjs/sitemap',
+      '@nuxtjs/robots'
     ],
     hub: {
       blob: true,
       database: true,
-    },
-    eslint: {
-      config: {
-        stylistic: {
-          indent: 'space',
-          indentSize: 2,
-          quotes: 'double',
-          semi: false,
-        }
-      }
     },
     i18n: {
         defaultLocale: 'en',
