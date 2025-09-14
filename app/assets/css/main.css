@@ -160,9 +160,14 @@ html::-webkit-scrollbar-thumb {
 }
 /* endregion */
 
-/* region Text Selection */
+/* region Focus & Selection */
+*:focus {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
 ::selection {
-  background-color: var(--color-primary-500);   /* highlight colour */
-  color: var(--text-color-highlighted);              /* text colour while selected */
+  background-color: var(--color-primary-500);
+  color: var(--text-color-highlighted);
 }
 /* endregion */
