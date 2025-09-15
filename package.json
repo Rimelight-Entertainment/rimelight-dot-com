@@ -8,10 +8,10 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "db:neon:generate": "drizzle-kit generate:pg --config=./server/database/drizzle.neon.config.ts",
-    "db:neon:push": "drizzle-kit push:pg --config=./server/database/drizzle.neon.config.ts",
-    "db:d1:generate": "drizzle-kit generate:sqlite --config=./server/database/drizzle.d1.config.ts",
-    "db:d1:push": "drizzle-kit push:sqlite --config=./server/database/drizzle.d1.config.ts",
+    "db:neon:generate": "drizzle-kit generate --config=./server/database/drizzle.neon.config.ts",
+    "db:neon:push": "drizzle-kit push --config=./server/database/drizzle.neon.config.ts",
+    "db:d1:generate": "drizzle-kit generate --config=./server/database/drizzle.d1.config.ts",
+    "db:d1:push": "drizzle-kit push --config=./server/database/drizzle.d1.config.ts",
     "db:all:migrate": "pnpm run db:neon:generate && pnpm run db:neon:push && pnpm run db:d1:generate && pnpm run db:d1:push"
   },
   "dependencies": {
