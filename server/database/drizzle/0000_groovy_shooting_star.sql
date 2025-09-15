@@ -1,3 +1,4 @@
+
 CREATE TABLE "articles" (
 	"id" uuid PRIMARY KEY NOT NULL,
 	"slug" text NOT NULL,

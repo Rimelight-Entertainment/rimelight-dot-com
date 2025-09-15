@@ -5,15 +5,8 @@
     {
       "idx": 0,
       "version": "7",
-      "when": 1757943160686,
-      "tag": "0000_ordinary_inertia",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "7",
-      "when": 1757948291343,
-      "tag": "0001_military_gravity",
+      "when": 1757948695497,
+      "tag": "0000_groovy_shooting_star",
       "breakpoints": true
     }
   ]
