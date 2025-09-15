@@ -2,83 +2,105 @@
 import type { NavigationMenuItem } from '@nuxt/ui'
 import type { DropdownMenuItem } from '@nuxt/ui'
 
-const { loggedIn, user, session } = useUserSession()
+const { loggedIn  } = useUserSession()
 
 const route = useRoute()
 
-const items = computed<NavigationMenuItem[]>(() => [
+const { data: apiUser, pending, error } = await useAsyncData(
+  'api-user',
+  () => $fetch('/api/user'),
   {
-    label: 'Franchises',
-    active: route.path.startsWith('/franchises'),
-    slot: 'franchises' as const,
-    children: [
-      {
-        label: 'Overview',
-        description: 'You have nothing to do, @nuxt/icon will handle it automatically.'
-      },
-      {
-        label: 'Characters',
-        description: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
-      },
-      {
-        label: 'Tales',
-        description: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
-      }
-    ]
-  },
-  {
-    label: 'Forums',
-    to: '/forums',
-    active: route.path.startsWith('/forums')
-  },
-  {
-    label: 'Events',
-    to: '/events',
-    active: route.path.startsWith('/events')
-  },
-  {
-    label: 'Store',
-    to: '/store',
-    active: route.path.startsWith('/store')
-  },
-  {
-    label: 'Company',
-    to: '/company',
-    active: route.path.startsWith('/company'),
-    children: [
-      {
-        label: 'History',
-        icon: 'lucide:book',
-        description: 'Learn about our beginnings and our mission.',
-        to: '/company/history',
-      },
-      {
-        label: 'Jobs',
-        icon: 'lucide:briefcase',
-        description: 'Check out our currently open positions and their requirements.!',
-        to: '/company/jobs',
-      },
-      {
-        label: 'Studios',
-        icon: 'lucide:building-2',
-        description: 'Take a tour of our facilities.',
-        to: '/company/studios',
-      },
-      {
-        label: 'Benefits',
-        icon: 'lucide:hand-heart',
-        description: 'Discover what benefits and compensations are available to our employees.',
-        to: '/company/benefits',
-      },
-    ]
-  },
-  {
-    label: 'Internal',
-    to: '/internal',
-    active: route.path.startsWith('/internal')
+    lazy: true,
+    server: false,
+    immediate: loggedIn.value
   }
-])
+)
 
+watch(loggedIn, (newVal) => {
+  if (newVal) {
+    refreshNuxtData('api-user')
+  }
+})
+
+const items = computed<NavigationMenuItem[]>(() => {
+  const baseItems: NavigationMenuItem[] = [
+    {
+      label: 'Franchises',
+      active: route.path.startsWith('/franchises'),
+      slot: 'franchises' as const,
+      children: [
+        {
+          label: 'Overview',
+          description: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+        },
+        {
+          label: 'Characters',
+          description: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+        },
+        {
+          label: 'Tales',
+          description: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
+        }
+      ]
+    },
+    {
+      label: 'Forums',
+      to: '/forums',
+      active: route.path.startsWith('/forums')
+    },
+    {
+      label: 'Events',
+      to: '/events',
+      active: route.path.startsWith('/events')
+    },
+    {
+      label: 'Store',
+      to: '/store',
+      active: route.path.startsWith('/store')
+    },
+    {
+      label: 'Company',
+      to: '/company',
+      active: route.path.startsWith('/company'),
+      children: [
+        {
+          label: 'History',
+          icon: 'lucide:book',
+          description: 'Learn about our beginnings and our mission.',
+          to: '/company/history',
+        },
+        {
+          label: 'Jobs',
+          icon: 'lucide:briefcase',
+          description: 'Check out our currently open positions and their requirements.!',
+          to: '/company/jobs',
+        },
+        {
+          label: 'Studios',
+          icon: 'lucide:building-2',
+          description: 'Take a tour of our facilities.',
+          to: '/company/studios',
+        },
+        {
+          label: 'Benefits',
+          icon: 'lucide:hand-heart',
+          description: 'Discover what benefits and compensations are available to our employees.',
+          to: '/company/benefits',
+        },
+      ]
+    }
+  ]
+
+  if (apiUser.value?.role === 'employee')  {
+    baseItems.push({
+      label: 'Internal',
+      to: '/internal',
+      active: route.path.startsWith('/internal')
+    })
+  }
+
+  return baseItems
+})
 const accountMenuItems = ref<DropdownMenuItem[][]>([
   [
     {
@@ -150,10 +172,10 @@ const accountMenuItems = ref<DropdownMenuItem[][]>([
       icon: 'lucide:log-out',
       kbds: ['shift', 'meta', 'q'],
       click: async () => {
-        clear()
-        close()
-        await session.clear()
-        await navigateTo('/auth/log-in')
+        await $fetch('/api/logout', {
+          method: 'POST',
+        })
+        await navigateTo('/')
       }
     }
   ]
@@ -198,7 +220,7 @@ defineShortcuts(extractShortcuts(accountMenuItems.value))
         <AuthState v-slot="{ loggedIn, clear }">
           <template v-if="loggedIn">
             <UDropdownMenu :items="accountMenuItems" :ui="{ content: 'w-48' }">
-              <UButton variant="link" color="neutral" :label="user?.username" />
+              <UButton variant="link" color="neutral" :label="apiUser?.username" />
             </UDropdownMenu>
           </template>
 

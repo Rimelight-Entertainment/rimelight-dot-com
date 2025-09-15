@@ -1,8 +1,8 @@
 
-import { pgEnum, pgTable, serial, varchar, text, timestamp, boolean, uuid } from 'drizzle-orm/pg-core'
+import { pgEnum, pgTable, serial, uuid, varchar, text, timestamp, jsonb } from 'drizzle-orm/pg-core'
 
 export const userRoleEnum = pgEnum('user_role', ['user', 'employee'] as const);
-export type UserRole = typeof userRoleEnum.enumValues[number];
+
 
 export const users = pgTable('users', {
   id: serial('id').primaryKey(),
@@ -15,4 +15,12 @@ export const users = pgTable('users', {
   created_at: timestamp('created_at').defaultNow().notNull(),
 })
 
-export const schema = { users }
+export const articles = pgTable('articles', {
+  id: uuid('id').primaryKey().notNull(),
+  slug: text('slug').unique().notNull(),
+  content: jsonb('content').notNull(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+});
+
+export const schema = { users, articles }

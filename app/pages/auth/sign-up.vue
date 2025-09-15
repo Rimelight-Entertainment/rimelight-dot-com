@@ -64,6 +64,8 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     if (!response.success) {
       throw new Error('Signup failed.')
     }
+    const userSession = useUserSession();
+    await userSession.fetch();
     toast.add({ title: 'Success', description: 'The form has been submitted.', color: 'success'})
     await navigateTo('/')
   }

@@ -1,5 +1,5 @@
 {
-  "id": "71a594fd-8a43-48d4-9304-9cf0c70ef0be",
+  "id": "37469dbd-0632-4764-b92f-a48991b21ace",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -13,6 +13,18 @@
           "type": "serial",
           "primaryKey": true,
           "notNull": true
+        },
+        "first_name": {
+          "name": "first_name",
+          "type": "varchar(24)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "last_name": {
+          "name": "last_name",
+          "type": "varchar(24)",
+          "primaryKey": false,
+          "notNull": false
         },
         "email": {
           "name": "email",
@@ -32,17 +44,13 @@
           "primaryKey": false,
           "notNull": true
         },
-        "first_name": {
-          "name": "first_name",
-          "type": "varchar(24)",
+        "role": {
+          "name": "role",
+          "type": "user_role",
+          "typeSchema": "public",
           "primaryKey": false,
-          "notNull": false
-        },
-        "last_name": {
-          "name": "last_name",
-          "type": "varchar(24)",
-          "primaryKey": false,
-          "notNull": false
+          "notNull": true,
+          "default": "'user'"
         },
         "created_at": {
           "name": "created_at",
@@ -76,7 +84,16 @@
       "isRLSEnabled": false
     }
   },
-  "enums": {},
+  "enums": {
+    "public.user_role": {
+      "name": "user_role",
+      "schema": "public",
+      "values": [
+        "user",
+        "employee"
+      ]
+    }
+  },
   "schemas": {},
   "sequences": {},
   "roles": {},

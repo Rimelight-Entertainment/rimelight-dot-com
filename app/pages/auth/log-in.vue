@@ -40,6 +40,8 @@ async function onSubmit(payload: FormSubmitEvent<Schema>) {
     if (!response.success) {
       throw new Error('Login failed.')
     }
+    const userSession = useUserSession();
+    await userSession.fetch();
     await navigateTo('/')
   }
   catch {

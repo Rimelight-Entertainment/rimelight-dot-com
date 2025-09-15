@@ -42,153 +42,155 @@ const lastModified = useDateFormat(page.lastModified, 'DD/MM/YYYY')
 </script>
 
 <template>
-  <AppHeader/>
-  <UMain>
-    <UPage v-if="page">
-      <UFieldGroup>
-        <UButton label="View Entry" />
-        <UModal
-          title="Browse Entries"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        >
-          <UButton label="Browse Entries" />
-          <template #body>
-            <RLPlaceholder class="h-48 m-4" />
-          </template>
-          <template #footer="{ close }">
-            <UButton label="Cancel" color="neutral" variant="outline" @click="close" />
-            <UButton label="Submit" color="neutral" />
-          </template>
-        </UModal>
-
-        <UModal
-          title="Move Entry"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        >
-          <UButton label="Move Entry" />
-          <template #body>
-            <RLPlaceholder class="h-48 m-4" />
-          </template>
-          <template #footer="{ close }">
-            <UButton label="Cancel" color="neutral" variant="outline" @click="close" />
-            <UButton label="Submit" color="neutral" />
-          </template>
-        </UModal>
-
-        <UModal
-          title="Convert Entry"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        >
-          <UButton label="Convert Entry" />
-          <template #body>
-            <RLPlaceholder class="h-48 m-4" />
-          </template>
-          <template #footer="{ close }">
-            <UButton label="Cancel" color="neutral" variant="outline" @click="close" />
-            <UButton label="Submit" color="neutral" />
-          </template>
-        </UModal>
-
-        <UModal
-          title="New Entry"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        >
-          <UButton label="New Entry" />
-          <template #body>
-            <RLPlaceholder class="h-48 m-4" />
-          </template>
-          <template #footer="{ close }">
-            <UButton label="Cancel" color="neutral" variant="outline" @click="close" />
-            <UButton label="Submit" color="neutral" />
-          </template>
-        </UModal>
-
-        <UModal
-          title="Edit Categories"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        >
-          <UButton label="Edit Categories" />
-          <template #body>
-            <RLPlaceholder class="h-48 m-4" />
-          </template>
-          <template #footer="{ close }">
-            <UButton label="Cancel" color="neutral" variant="outline" @click="close" />
-            <UButton label="Submit" color="neutral" />
-          </template>
-        </UModal>
-
-        <UModal
-          title="Place Block"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        >
-          <UButton label="Place Block" />
-          <template #body>
-            <RLPlaceholder class="h-48 m-4" />
-          </template>
-          <template #footer="{ close }">
-            <UButton label="Cancel" color="neutral" variant="outline" @click="close" />
-            <UButton label="Submit" color="neutral" />
-          </template>
-        </UModal>
-      </UFieldGroup>
-      <UFieldGroup>
-
-      </UFieldGroup>
-
-      <template #left>
-
-      </template>
-      <UBreadcrumb :items="items">
-        <template #separator>
-          <span class="mx-2 text-muted">/</span>
-        </template>
-      </UBreadcrumb>
-      <UPageBody>
-        <RLLayoutBox
-          direction="vertical"
-          gap="md"
-        >
-          <UPageHeader
-            :title="page.title"
-            :description="page.description"
-            :headline="page.type"
-            :links="page.links"
-          />
-          <RLLayoutBox
-            direction="horizontal"
-            gap="sm"
+  <div>
+    <AppHeader/>
+    <UMain>
+      <UPage v-if="page">
+        <UFieldGroup>
+          <UButton label="View Entry" />
+          <UModal
+            title="Browse Entries"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
           >
-            <UBadge v-for="tag in page.tags" :key="tag" variant="soft" :label="tag" />
-            <UModal
-              title="Edit Tags"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            >
-              <UButton variant="ghost" icon="lucide:plus" />
-              <template #body>
-                <RLPlaceholder class="h-48 m-4" />
-              </template>
-              <template #footer="{ close }">
-                <UButton label="Cancel" color="neutral" variant="outline" @click="close" />
-                <UButton label="Submit" color="neutral" />
-              </template>
-            </UModal>
-          </RLLayoutBox>
+            <UButton label="Browse Entries" />
+            <template #body>
+              <RLPlaceholder class="h-48 m-4" />
+            </template>
+            <template #footer="{ close }">
+              <UButton label="Cancel" color="neutral" variant="outline" @click="close" />
+              <UButton label="Submit" color="neutral" />
+            </template>
+          </UModal>
 
-          <span>Last modified: {{ page.lastModified }}</span>
-        </RLLayoutBox>
-        <ContentRenderer
-          v-if="page.body"
-          :value="page"
-        />
-        <USeparator v-if="surround?.length" />
-        <UContentSurround :surround="surround" />
-      </UPageBody>
-      <template v-if="page?.body?.toc?.links?.length" #right>
-        <UContentToc title="Table of Contents" :links="page.body.toc.links" highlight />
-      </template>
-    </UPage>
-  </UMain>
-  <AppFooter />
+          <UModal
+            title="Move Entry"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          >
+            <UButton label="Move Entry" />
+            <template #body>
+              <RLPlaceholder class="h-48 m-4" />
+            </template>
+            <template #footer="{ close }">
+              <UButton label="Cancel" color="neutral" variant="outline" @click="close" />
+              <UButton label="Submit" color="neutral" />
+            </template>
+          </UModal>
+
+          <UModal
+            title="Convert Entry"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          >
+            <UButton label="Convert Entry" />
+            <template #body>
+              <RLPlaceholder class="h-48 m-4" />
+            </template>
+            <template #footer="{ close }">
+              <UButton label="Cancel" color="neutral" variant="outline" @click="close" />
+              <UButton label="Submit" color="neutral" />
+            </template>
+          </UModal>
+
+          <UModal
+            title="New Entry"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          >
+            <UButton label="New Entry" />
+            <template #body>
+              <RLPlaceholder class="h-48 m-4" />
+            </template>
+            <template #footer="{ close }">
+              <UButton label="Cancel" color="neutral" variant="outline" @click="close" />
+              <UButton label="Submit" color="neutral" />
+            </template>
+          </UModal>
+
+          <UModal
+            title="Edit Categories"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          >
+            <UButton label="Edit Categories" />
+            <template #body>
+              <RLPlaceholder class="h-48 m-4" />
+            </template>
+            <template #footer="{ close }">
+              <UButton label="Cancel" color="neutral" variant="outline" @click="close" />
+              <UButton label="Submit" color="neutral" />
+            </template>
+          </UModal>
+
+          <UModal
+            title="Place Block"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          >
+            <UButton label="Place Block" />
+            <template #body>
+              <RLPlaceholder class="h-48 m-4" />
+            </template>
+            <template #footer="{ close }">
+              <UButton label="Cancel" color="neutral" variant="outline" @click="close" />
+              <UButton label="Submit" color="neutral" />
+            </template>
+          </UModal>
+        </UFieldGroup>
+        <UFieldGroup>
+
+        </UFieldGroup>
+
+        <template #left>
+
+        </template>
+        <UBreadcrumb :items="items">
+          <template #separator>
+            <span class="mx-2 text-muted">/</span>
+          </template>
+        </UBreadcrumb>
+        <UPageBody>
+          <RLLayoutBox
+            direction="vertical"
+            gap="md"
+          >
+            <UPageHeader
+              :title="page.title"
+              :description="page.description"
+              :headline="page.type"
+              :links="page.links"
+            />
+            <RLLayoutBox
+              direction="horizontal"
+              gap="sm"
+            >
+              <UBadge v-for="tag in page.tags" :key="tag" variant="soft" :label="tag" />
+              <UModal
+                title="Edit Tags"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              >
+                <UButton variant="ghost" icon="lucide:plus" />
+                <template #body>
+                  <RLPlaceholder class="h-48 m-4" />
+                </template>
+                <template #footer="{ close }">
+                  <UButton label="Cancel" color="neutral" variant="outline" @click="close" />
+                  <UButton label="Submit" color="neutral" />
+                </template>
+              </UModal>
+            </RLLayoutBox>
+
+            <span>Last modified: {{ page.lastModified }}</span>
+          </RLLayoutBox>
+          <ContentRenderer
+            v-if="page.body"
+            :value="page"
+          />
+          <USeparator v-if="surround?.length" />
+          <UContentSurround :surround="surround" />
+        </UPageBody>
+        <template v-if="page?.body?.toc?.links?.length" #right>
+          <UContentToc title="Table of Contents" :links="page.body.toc.links" highlight />
+        </template>
+      </UPage>
+    </UMain>
+    <AppFooter />
+  </div>
 </template>
 
 <style scoped>

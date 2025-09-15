@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { defineEventHandler, readValidatedBody, createError } from 'h3'
 import { eq } from 'drizzle-orm'
 import { useDb } from '~~/server/utils/drizzle'
-import { users } from '~~/server/database/neon/schema'
+import { users } from '~~/server/database/schema'
 
 export const loginSchema = z.object({
   email: z.string().email(),
@@ -12,9 +12,9 @@ export const loginSchema = z.object({
 export default defineEventHandler(async (event) => {
   const body = await readValidatedBody(event, loginSchema.parse)
 
-  const { neonDb } = useDb()
+  const db = useDb()
 
-  const user = await neonDb
+  const user = await db
     .select()
     .from(users)
     .where(eq(users.email, body.email))
@@ -36,7 +36,8 @@ export default defineEventHandler(async (event) => {
       email: user.email,
       username: user.username,
       firstName: user.first_name,
-      lastName: user.last_name
+      lastName: user.last_name,
+      role: user.role
     },
     lastLoggedIn: new Date(),
   })
