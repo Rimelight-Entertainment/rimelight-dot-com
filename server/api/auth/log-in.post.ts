@@ -25,7 +25,7 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
   }
 
-  const ok = await verifyPassword(user.passwordHash, body.password)
+  const ok = await verifyPassword(user.password_hash, body.password)
   if (!ok) {
     throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
   }
@@ -35,8 +35,8 @@ export default defineEventHandler(async (event) => {
       id: user.id,
       email: user.email,
       username: user.username,
-      firstName: user.firstName,
-      lastName: user.lastName
+      firstName: user.first_name,
+      lastName: user.last_name
     },
     lastLoggedIn: new Date(),
   })
