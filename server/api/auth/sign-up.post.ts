@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { H3Event, defineEventHandler, createError } from 'h3'
 import { useDb } from '~~/server/utils/drizzle'
-import { users, userRole } from '~~/server/database/schema'
+import { users, UserRole } from '~~/server/database/neon/schema'
 
 const signUpSchema = z.object({
   first_name: z.string().min(2).max(24),
@@ -25,13 +25,13 @@ export default defineEventHandler(async (event) => {
     const body = await getRequestBody(event)
     const hashedPassword = await hashPassword(body.password)
 
-    const { db } = useDb()
+    const { neonDb } = useDb()
 
     const userRole: UserRole = body.email.endsWith('@rimelight.com')
       ? 'employee'
       : 'user';
 
-    const [user] = await db
+    const [user] = await neonDb
       .insert(users)
       .values({
         first_name: body.first_name,
