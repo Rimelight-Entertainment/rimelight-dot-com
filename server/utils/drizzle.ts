@@ -2,8 +2,8 @@ import { drizzle as drizzleNeon, type NeonClient } from 'drizzle-orm/neon-server
 import { drizzle as drizzleD1 } from 'drizzle-orm/d1'
 import { neon } from '@neondatabase/serverless'
 
-import * as neonSchema from './neon/schema'
-import * as d1Schema from './d1/schema'
+import * as neonSchema from '../database/neon/schema'
+import * as d1Schema from '../database/d1/schema'
 
 export { sql, eq, and, or } from 'drizzle-orm'
 export const neonTables = neonSchema
