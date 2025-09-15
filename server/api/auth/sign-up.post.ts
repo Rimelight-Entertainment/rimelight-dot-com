@@ -27,9 +27,9 @@ export default defineEventHandler(async (event) => {
 
     const { neonDb } = useDb()
 
-    const userRole: UserRole = body.email.endsWith('@rimelight.com')
+    const userRole = body.email.endsWith('@rimelight.com')
       ? 'employee'
-      : 'user';
+      : 'user'
 
     const [user] = await neonDb
       .insert(users)
