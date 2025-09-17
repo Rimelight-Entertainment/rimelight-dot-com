@@ -29,6 +29,20 @@
       "when": 1758036084986,
       "tag": "0003_romantic_black_knight",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1758131943620,
+      "tag": "0004_breezy_tempest",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1758132785357,
+      "tag": "0005_icy_iron_fist",
+      "breakpoints": true
     }
   ]
 }
