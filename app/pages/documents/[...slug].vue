@@ -29,6 +29,24 @@ const breadcrumb = computed(() =>
   ).map(({ icon, ...link }) => link),
 )
 
+const pageLinks = [
+  {
+    label: 'Home',
+    to: '/',
+    icon: 'i-heroicons-home'
+  },
+  {
+    label: 'Documents',
+    to: '/documents',
+    icon: 'i-heroicons-document'
+  },
+  {
+    label: 'API',
+    to: '/api',
+    icon: 'i-heroicons-code-bracket'
+  }
+];
+
 const lastModified = useDateFormat(page.value.lastModified, 'DD/MM/YYYY')
 </script>
 
@@ -51,8 +69,7 @@ const lastModified = useDateFormat(page.value.lastModified, 'DD/MM/YYYY')
         :links="page.links"
       />
       <UPageBody>
-          <UBadge v-if="page.tags" v-for="tag in page.tags" :key="tag" variant="soft" :label="tag" />
-          <span class="text-muted">Last modified: {{ lastModified }}</span>
+        <UBadge v-if="page.tags" v-for="tag in page.tags" :key="tag" variant="soft" :label="tag" />
         <ContentRenderer
           v-if="page.body"
           :value="page"
@@ -61,7 +78,13 @@ const lastModified = useDateFormat(page.value.lastModified, 'DD/MM/YYYY')
         <UContentSurround :surround="surround" />
       </UPageBody>
       <template v-if="page?.body?.toc?.links?.length" #right>
-        <UContentToc title="Table of Contents" :links="page.body.toc.links" highlight />
+        <UContentToc title="Table of Contents" :links="page.body.toc.links" highlight>
+          <template #bottom>
+            <USeparator />
+            <UPageLinks title="Links" :links="pageLinks"/>
+            <span class="text-muted text-sm">Last Modified: <time :datetime="page.lastModified">{{ lastModified }}</time></span>
+          </template>
+        </UContentToc>
       </template>
     </UPage>
   </UContainer>
