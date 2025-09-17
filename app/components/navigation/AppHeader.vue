@@ -104,7 +104,7 @@ const items = computed<NavigationMenuItem[]>(() => {
 const accountMenuItems = ref<DropdownMenuItem[][]>([
   [
     {
-      label: 'Benjamin',
+      label: apiUser?.username,
       avatar: {
         src: 'https://github.com/benjamincanac.png'
       },
@@ -220,7 +220,7 @@ defineShortcuts(extractShortcuts(accountMenuItems.value))
         <AuthState v-slot="{ loggedIn, clear }">
           <template v-if="loggedIn">
             <UDropdownMenu :items="accountMenuItems" :ui="{ content: 'w-48' }">
-              <UButton variant="link" color="neutral" :label="apiUser?.username" />
+              <UAvatar size="xl" src="https://github.com/benjamincanac.png" />
             </UDropdownMenu>
           </template>
 

@@ -23,7 +23,7 @@ export default defineContentConfig({
       schema: z.object({
         title: z.string().nonempty(),
         description: z.string().nonempty(),
-        type: z.enum(['Policy']),
+        type: z.enum(['Policy', 'Document']),
         tags: z.array(z.string()),
         lastModified: z.date(),
         links: z.array(createLinkSchema())

@@ -3,6 +3,20 @@ import { pgEnum, pgTable, serial, uuid, varchar, text, timestamp, jsonb } from '
 
 export const userRoleEnum = pgEnum('user_role', ['user', 'employee'] as const);
 
+export const articleTypeEnum = pgEnum('article_type', [
+  'Default',
+  'Species',
+  'Character',
+  'Group',
+  'Item',
+  'Skill',
+  'Tale',
+  'Hero',
+  'Champion',
+  'Card',
+  'Series',
+  'Episode'
+]);
 
 export const users = pgTable('users', {
   id: serial('id').primaryKey(),
@@ -18,7 +32,11 @@ export const users = pgTable('users', {
 export const articles = pgTable('articles', {
   id: uuid('id').primaryKey().notNull(),
   slug: text('slug').unique().notNull(),
-  content: jsonb('content').notNull(),
+  title: text('title').notNull(),
+  type: articleTypeEnum('type').default('Default').notNull(),
+  tags: jsonb('tags').$type<string[]>().default([]),
+  properties: jsonb('properties'),
+  blocks: jsonb('blocks'),
   createdAt: timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at').defaultNow().notNull(),
 });

@@ -10,7 +10,8 @@
     "postinstall": "nuxt prepare",
     "db:generate": "drizzle-kit generate",
     "db:push": "drizzle-kit push",
-    "db:migrate": "drizzle-kit migrate"
+    "db:migrate": "drizzle-kit migrate",
+    "db:migratejson": "tsx scripts/migratejson.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.0.1",
@@ -48,5 +49,9 @@
   },
   "overrides": {
     "vite": "npm:rolldown-vite@latest"
+  },
+  "devDependencies": {
+    "dotenv": "^17.2.2",
+    "tsx": "^4.20.5"
   }
 }
