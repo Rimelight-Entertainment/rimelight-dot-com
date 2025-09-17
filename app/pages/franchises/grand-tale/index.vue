@@ -4,7 +4,7 @@
 
 <template>
   <UPage>
-    <UPageHero title="Grand Tale" />
+    <UPageHero headline="May the story never end!" title="Grand Tale" />
     <UPageSection title="What is Grand Tale?" description="In the game, players control a character called “Ori”, with which they
 must gather resources, upgrade their estate, learn about the world
 around them, and optionally engage in various Tales, which are sub-games

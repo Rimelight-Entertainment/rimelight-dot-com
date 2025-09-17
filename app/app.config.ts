@@ -7,6 +7,8 @@ export default defineAppConfig({
       close: 'lucide:x',
       chevronLeft: 'lucide:chevron-left',
       chevronRight: 'lucide:chevron-right',
+      folder: 'lucide:folder',
+      folderOpen: 'lucide:folder-open',
     },
     banner: {
       slots: {
