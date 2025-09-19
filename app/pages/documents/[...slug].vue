@@ -70,6 +70,10 @@ const lastModified = useDateFormat(page.value.lastModified, 'DD/MM/YYYY')
       />
       <UPageBody>
         <UBadge v-if="page.tags" v-for="tag in page.tags" :key="tag" variant="soft" :label="tag" />
+        <ContentRenderer
+          v-if="page.body"
+          :value="page"
+        />
       </UPageBody>
       <template v-if="page?.body?.toc?.links?.length" #right>
         <UContentToc title="Table of Contents" :links="page.body.toc.links" highlight>

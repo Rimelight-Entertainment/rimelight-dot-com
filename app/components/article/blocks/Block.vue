@@ -1,0 +1,116 @@
+<script setup lang="ts">
+import type {BlockData, BlockTypes} from '~/types/blocks';
+import type { DropdownMenuItem } from '@nuxt/ui'
+
+interface BlockProps {
+  isEditable?: boolean
+  id: string;
+  type: BlockTypes['type'];
+  icon: string;
+  name: string;
+  description: string;
+  category: string;
+  attrs?: Record<string, unknown>;
+  slots?: Record<string, BlockData[]>;
+  allowedChildren?: BlockTypes[];
+  isTemplated?: boolean;
+  isNestable?: boolean;
+  isDraggable?: boolean;
+}
+
+const {
+  isEditable = false,
+  id = '',
+  type = '',
+  icon = '',
+  name = '',
+  description = '',
+  category = '',
+  attrs = {},
+  slots = {},
+  allowedChildren = [],
+  isTemplated = false,
+  isNestable = false,
+  isDraggable = false,
+} = defineProps<BlockProps>();
+
+const emit = defineEmits<{
+  insertBlockAbove: [id: string]
+  insertBlockBelow: [id: string]
+  duplicate: [id: string]
+  delete: [id: string]
+}>()
+
+const allowDragging = computed(() => !isTemplated && isEditable && isDraggable)
+
+const menuItems = computed<DropdownMenuItem[][]>(() => {
+  const items: DropdownMenuItem[][] = [
+    [
+      {
+        icon: icon,
+        label: name,
+        type: 'label'
+      }
+    ],
+    [
+      {
+        label: 'Insert Block Above',
+        kbds: ['PageUp'],
+        onSelect: () => emit('insertBlockAbove', id),
+      },
+      {
+        label: 'Insert Block Below',
+        kbds: ['PageDown'],
+        onSelect: () => emit('insertBlockBelow', id),
+      }
+    ]
+  ];
+
+  const editItems: DropdownMenuItem[] = !isTemplated ? [
+    {
+      label: 'Duplicate Block',
+      kbds: ['Insert'],
+      onSelect: () => emit('duplicate', id),
+    },
+    {
+      color: 'error',
+      label: 'Delete Block',
+      kbds: ['Delete'],
+      onSelect: () => emit('delete', id),
+    },
+  ] : [];
+
+  if (editItems.length) {
+    items.push(editItems);
+  }
+
+  return items;
+});
+
+defineShortcuts(extractShortcuts(menuItems.value))
+</script>
+
+<template>
+  <RLLayoutBox
+    direction="vertical"
+    gap="md"
+  >
+    <slot name="actions" v-if="isEditable" />
+    <RLLayoutBox
+      direction="horizontal"
+      gap="xs"
+      align-items="start"
+    >
+      <UDropdownMenu :items="menuItems">
+        <UTooltip :text="name">
+          <UButton v-if="isEditable" variant="ghost" color="neutral" trailingIcon="lucide:grip-vertical" size="sm" />
+        </UTooltip>
+      </UDropdownMenu>
+      <slot />
+    </RLLayoutBox>
+  </RLLayoutBox>
+</template>
+
+<style scoped>
+
+</style>

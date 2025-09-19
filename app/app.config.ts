@@ -2,6 +2,9 @@ export default defineAppConfig({
   ui: {
     colors: {
       primary: 'blue',
+      commentary: 'fuchsia',
+      ideation: 'violet',
+      creator: 'teal'
     },
     icons: {
       close: 'lucide:x',
@@ -38,6 +41,11 @@ export default defineAppConfig({
         highlightColor: 'primary'
       }
     },
+    popover: {
+      defaultVariants: {
+        arrow: true
+      }
+    },
     tooltip: {
       defaultVariants: {
         arrow: true
@@ -56,6 +64,11 @@ export default defineAppConfig({
       defaultVariants: {
         resizable: true,
         collapsible: true,
+      }
+    },
+    prose: {
+      p: {
+        base: 'my-0 mt-2'
       }
     }
   }

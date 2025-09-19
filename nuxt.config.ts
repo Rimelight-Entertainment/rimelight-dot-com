@@ -44,6 +44,9 @@ export default defineNuxtConfig({
                 'success',
                 'warning',
                 'error',
+                'commentary',
+                'ideation',
+                'creator',
                 'neutral',
             ]
         }

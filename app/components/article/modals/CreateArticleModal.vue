@@ -4,6 +4,10 @@ import { articleTypeEnum } from '~~/server/database/schema';
 import { UForm } from '#components';
 import type { FormSubmitEvent } from '@nuxt/ui';
 
+const open = ref(false)
+
+const formRef = useTemplateRef('formRef')
+
 type TagItem = {
   label: string;
   value: string;
@@ -74,11 +78,12 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     });
 
     toast.add({
-      title: 'Success 🎉',
+      title: 'Success',
       description: 'The article was created successfully.',
       color: 'success',
       icon: 'lucide:circle-check',
     });
+    await navigateTo(`/${state.slug}`)
   } catch (error) {
     console.error('Failed to create article:', error);
     toast.add({
@@ -97,56 +102,55 @@ function onCreateTag(tag: string) {
     icon: 'lucide:tag',
   });
 }
-
-const emit = defineEmits<{ close: [boolean] }>()
 </script>
 
 <template>
   <UModal
-    title="New Article"
+    v-model:open="open"
+    title="Create Article"
     description="Create a new article with a title, slug, type, and tags."
+    :ui="{ footer: 'justify-between' }"
   >
     <template #body>
-      <UForm ref="formRef" :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
-        <UFormField label="Title" name="title" required>
-          <UInput v-model="state.title" placeholder="New Page"/>
-        </UFormField>
-        <UFormField label="Slug" name="slug" required>
-          <UInput v-model="state.slug" placeholder="franchises/grand-tale/"/>
-        </UFormField>
-        <UFormField label="Type" name="type" required>
-          <USelect
-            v-model="state.type"
-            :items="articleTypeEnum.enumValues"
-            placeholder="Select a type"
-            class="w-48"
-          />
-        </UFormField>
-        <UFormField label="Tags" name="tags" required>
-          <UInputMenu
-            v-model="state.tags"
-            :loading="pendingTags"
-            :items="formattedTags"
-            multiple
-            create-item
-            placeholder="Select tags"
-            @create="onCreateTag"
-          />
-        </UFormField>
+      <UForm ref="formRef" :schema="schema" :state="state" @submit="onSubmit">
+        <RLLayoutBox
+          direction="vertical"
+          gap="md"
+        >
+          <UFormField label="Title" name="title" required>
+            <UInput v-model="state.title" placeholder="New Page" class="w-48"/>
+          </UFormField>
+          <UFormField label="Slug" name="slug" required>
+            <UInput v-model="state.slug" placeholder="franchises/grand-tale/" class="w-48"/>
+          </UFormField>
+          <UFormField label="Type" name="type">
+            <USelect
+              v-model="state.type"
+              :items="articleTypeEnum.enumValues"
+              placeholder="Select a type"
+              class="w-48"
+            />
+          </UFormField>
+          <UFormField label="Tags" name="tags">
+            <UInputMenu
+              v-model="state.tags"
+              :loading="pendingTags"
+              :items="formattedTags"
+              multiple
+              create-item
+              placeholder="Select tags"
+              @create="onCreateTag"
+              class="w-48"
+            />
+          </UFormField>
+        </RLLayoutBox>
       </UForm>
     </template>
-    <template #footer>
-      <RLLayoutBox
-        direction="horizontal"
-        justify-content="between"
-      >
-        <UButton color="error" label="Cancel" @click="emit('close', true)" />
-        <RLLayoutBox>
-          <UButton type="submit" block>Create Article</UButton>
-        </RLLayoutBox>
-      </RLLayoutBox>
+    <template #footer="{ close }">
+      <UButton color="error" label="Cancel" @click="close"/>
+      <UButton type="submit" @click="formRef?.submit() && close">Create Article</UButton>
     </template>
-    <UButton variant="ghost" leading-icon="lucide:file-plus" label="New Article"/>
+    <UButton variant="ghost" leading-icon="lucide:file-plus" label="Create Article"/>
   </UModal>
 </template>
 

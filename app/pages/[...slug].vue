@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { mapContentNavigation } from '@nuxt/ui/utils/content'
 import { findPageBreadcrumb } from '@nuxt/content/utils'
-import ArticleNavigation from "~/components/entry/ArticleNavigation.vue";
+import type {SectionBlockData} from "~/types/blocks";
 
 definePageMeta({
   layout: 'article'
@@ -23,15 +23,14 @@ if (error.value) {
   })
 }
 
-const title = article.title
-const description = article.value.description
-
 useSeoMeta({
-  title,
-  ogTitle: title,
-  description,
-  ogDescription: description
+  title: article.title,
+  ogTitle: article.title,
+  description: article.description,
+  ogDescription: article.description
 })
+
+const isEditable = computed(() => route.query.mode === 'editor')
 
 const normalizePathPart = (str: string): string => {
   return str
@@ -54,6 +53,20 @@ const breadcrumb = computed(() => {
 })
 
 const lastModified = useDateFormat(article.updated_at, 'DD/MM/YYYY')
+
+const sectionBlock: SectionBlockData = {
+  id: 'some-unique-id-123',
+  name: 'Section Block',
+  type: 'section',
+  icon: 'lucide:layout-template',
+  description: 'A block to organize content into sections.',
+  category: 'Layout',
+  attrs: {
+    title: 'My First Section',
+    mainArticleSlug: null,
+  },
+  isTemplated: false,
+};
 </script>
 
 <template>
@@ -70,11 +83,15 @@ const lastModified = useDateFormat(article.updated_at, 'DD/MM/YYYY')
           :headline="article.type"
           :links="article.links"
         />
+        <BlockRenderer :is-editable="isEditable" />
+        <UploadImageModal>
+          <UButton label="Upload Image"/>
+        </UploadImageModal>
       </UPageBody>
       <template #right>
         <UContentToc title="Table of Contents" highlight>
           <template #top>
-            <ArticleNavigation :slug="article.slug"/>
+            <ArticleNavigation :slug="article.slug" :title="article.title"/>
           </template>
           <template #bottom>
             <USeparator />
