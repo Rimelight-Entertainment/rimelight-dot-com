@@ -1,27 +1,27 @@
-import { drizzle as drizzleNeonHttp } from 'drizzle-orm/neon-http'
-import { neon, neonConfig } from '@neondatabase/serverless'
-import * as neonSchema from '../database/schema'
-import { pgTable, serial, varchar, text, timestamp, pgEnum } from 'drizzle-orm/pg-core'
-import { sql, eq, and, or } from 'drizzle-orm'
+import { drizzle as drizzleNeonServerless } from 'drizzle-orm/neon-serverless';
+import { Pool, neonConfig } from '@neondatabase/serverless';
+import * as neonSchema from '../database/schema';
 
-export { sql, eq, and, or, pgTable, serial, varchar, text, timestamp, pgEnum }
-export * from '../database/schema'
+neonConfig.fetchConnectionCache = true;
 
-neonConfig.fetchConnectionCache = true
+let pool: Pool;
+let db: ReturnType<typeof drizzleNeonServerless<typeof neonSchema>>;
 
 /**
- * Creates and returns a Drizzle ORM instance for the Neon database.
- * This is used for managing user data and other critical application data.
+ * Creates and returns a Drizzle ORM instance for the Neon database using a connection pool.
  * @returns The Drizzle Neon DB instance.
  */
 export function useDb() {
-  const url = process.env.NUXT_POSTGRES_URL
-  if (!url) {
-    throw new Error('Missing `NUXT_POSTGRES_URL` environment variable.')
+  if (!db) {
+    const url = process.env.NUXT_POSTGRES_URL;
+    if (!url) {
+      throw new Error('Missing `NUXT_POSTGRES_URL` environment variable.');
+    }
+
+    pool = new Pool({ connectionString: url });
+    // Pass the schema object to the drizzle function.
+    db = drizzleNeonServerless(pool, { schema: neonSchema });
   }
 
-  const sql = neon(url)
-  const db = drizzleNeonHttp(sql, { schema: neonSchema })
-
-  return db
+  return db;
 }
