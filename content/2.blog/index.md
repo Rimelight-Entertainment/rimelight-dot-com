@@ -8,6 +8,7 @@ lastModified: 2025-09-01
 Testing the callout
 ::
 
+Adding text below it
 
 ::callout{variant="tip"}
 Testing the callout

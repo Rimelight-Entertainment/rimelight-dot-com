@@ -7,11 +7,13 @@ interface CalloutBlockProps {
   isEditable?: boolean
   to?: string
   variant?: CalloutVariant
+  adjustMargin?: boolean
 }
 
 const props = withDefaults(defineProps<CalloutBlockProps>(), {
   isEditable: false,
   variant: 'note',
+  adjustMargin: true
 });
 
 const emit = defineEmits(['update:variant']);
@@ -40,8 +42,12 @@ const handleSelect = (selectedItem: any) => {
   open.value = false
 }
 
+const calloutBaseClass = computed(() => {
+  return props.adjustMargin ? "rounded-md border w-full my-4" : "rounded-md border w-full";
+});
+
 const callout = tv({
-  base: "rounded-md border w-full my-4",
+  base: calloutBaseClass.value,
   variants: {
     variant: {
       note: "bg-info-500/10 border-info-500/30",

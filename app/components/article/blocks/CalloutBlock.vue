@@ -20,11 +20,11 @@ const maxLength = 512;
 </script>
 
 <template>
-  <ProseCallout v-if="!isEditable" :is-editable="isEditable" :variant="variant">
+  <ProseCallout v-if="!isEditable" :is-editable="isEditable" :variant="variant" :adjust-margin="false">
     <p>{{ localText }}</p>
   </ProseCallout>
   <Block v-else :is-editable="isEditable">
-    <ProseCallout v-if="isEditable" :is-editable="isEditable" :variant="variant" class="my-4">
+    <ProseCallout v-if="isEditable" :is-editable="isEditable" :variant="variant" :adjust-margin="false">
       <UTextarea
         v-model.trim="localText"
         autoresize
