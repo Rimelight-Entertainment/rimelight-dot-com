@@ -102,10 +102,6 @@ export default defineNuxtConfig({
     blob: true,
     database: true
   },
-  eslint: {
-    config: {
-    }
-  },
   i18n: {
     defaultLocale: `en`,
     locales: [
