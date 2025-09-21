@@ -1,5 +1,5 @@
-import { createBaseBlock } from "./createBaseBlock";
-import type { SectionBlockData } from "@/types/blocks";
+import { createBaseBlock } from "./createBaseBlock"
+import type { SectionBlockData } from "@/types/blocks"
 
 /**
  * Helper function to create a new Section Block with default data.
@@ -7,16 +7,16 @@ import type { SectionBlockData } from "@/types/blocks";
  * @returns A new SectionBlockData object.
  */
 export const createSectionBlock = (
-    initialData?: Partial<SectionBlockData>,
+  initialData?: Partial<SectionBlockData>
 ): SectionBlockData => {
-    return createBaseBlock<SectionBlockData>("section", {
-        attrs: {
-            title: initialData?.attrs?.title || "",
-            ...initialData?.attrs,
-        },
-        slots: {
-            default: initialData?.slots?.default || [],
-            ...initialData?.slots,
-        },
-    });
-};
+  return createBaseBlock<SectionBlockData>(`section`, {
+    attrs: {
+      title: initialData?.attrs?.title || ``,
+      ...initialData?.attrs
+    },
+    slots: {
+      default: initialData?.slots?.default || [],
+      ...initialData?.slots
+    }
+  })
+}

@@ -1,139 +1,144 @@
 export default defineNuxtConfig({
-    compatibilityDate: '2025-07-15',
-    devtools: { enabled: true },
-    modules: [
-      '@nuxt/ui',
-      '@nuxtjs/i18n',
-      '@nuxt/content',
-      '@nuxt/image',
-      'nuxt-og-image',
-      '@vueuse/nuxt',
-      '@nuxthub/core',
-      '@nuxt/scripts',
-      '@nuxtjs/turnstile',
-      'nuxt-auth-utils',
-      '@nuxtjs/sitemap',
-      '@nuxtjs/robots'
-    ],
-    hub: {
-      blob: true,
-      database: true,
+
+  modules: [
+    `@nuxt/ui`,
+    `@nuxtjs/i18n`,
+    `@nuxt/content`,
+    `@nuxt/image`,
+    `nuxt-og-image`,
+    `@vueuse/nuxt`,
+    `@nuxthub/core`,
+    `@nuxt/scripts`,
+    `@nuxtjs/turnstile`,
+    `nuxt-auth-utils`,
+    `@nuxtjs/sitemap`,
+    `@nuxtjs/robots`,
+    `@nuxt/eslint`
+  ],
+  components: [
+    {
+      path: `~/components`,
+      pathPrefix: false
+    }
+  ],
+  devtools: { enabled: true },
+  app: {
+    head: {
+      title: `Rimelight Entertainment`,
+      titleTemplate: `%s | Rimelight Entertainment`,
+      meta: [
+        { name: `description`, content: `Tell your story.` },
+        { name: `author`, content: `Rimelight Entertainment` },
+        { name: `creator`, content: `Rimelight Entertainment` }
+      ],
+      link: [
+        { rel: `icon`, type: `image/svg+xml`, href: `/favicon.svg` }
+      ]
     },
-    i18n: {
-        defaultLocale: 'en',
-        locales: [
-            { code: 'ar', name: 'العربية' },
-            { code: 'en', name: 'English' },
-            { code: 'es', name: 'Español' },
-            { code: 'fr', name: 'Français' },
-            { code: 'ja', name: '日本語' },
-            { code: 'ko', name: '한국어' },
-            { code: 'pt', name: 'Português' },
-            { code: 'ro', name: 'Română' },
-            { code: 'zh_cn', name: '简体中文' },
-        ]
-    },
-    ui: {
-        prefix: 'U',
-        theme: {
-            colors: [
-                'primary',
-                'secondary',
-                'tertiary',
-                'info',
-                'success',
-                'warning',
-                'error',
-                'commentary',
-                'ideation',
-                'creator',
-                'neutral',
-            ]
-        }
-    },
-    icon: {
-        provider: 'server',
-        class: 'icon',
-        size: '24px',
-        mode: 'svg',
-        customCollections: [
-            {
-                prefix: 'first-party',
-                dir: './app/assets/icons/first-party',
-                normalizeIconName: false,
-            },
-            {
-                prefix: 'third-party',
-                dir: './app/assets/icons/third-party',
-                normalizeIconName: false,
-            }
-        ],
-    },
-    content: {
-        build: {
-            markdown: {
-                toc: {
-                    depth: 3,
-                }
-            }
-        }
-    },
-    app: {
-        head: {
-            title: 'Rimelight Entertainment',
-            titleTemplate: '%s | Rimelight Entertainment',
-            meta: [
-                { name: 'description', content: 'Tell your story.' },
-                { name: 'author', content: 'Rimelight Entertainment' },
-                { name: 'creator', content: 'Rimelight Entertainment' },
-            ],
-            link: [
-                { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-            ],
-        },
-      pageTransition: { name: 'page', mode: 'out-in' },
-      layoutTransition: { name: 'layout', mode: 'out-in' },
-    },
-  site: {
-    url: 'https://rimelight.com',
-    name: 'Rimelight Entertainment'
+    pageTransition: { name: `page`, mode: `out-in` },
+    layoutTransition: { name: `layout`, mode: `out-in` }
   },
-  css: ["./app/assets/css/main.css"],
-    nitro: {
-        prerender: {
-            crawlLinks: true,
-            routes: [
-                '/',
-            ]
+  css: [`./app/assets/css/main.css`],
+  site: {
+    url: `https://rimelight.com`,
+    name: `Rimelight Entertainment`
+  },
+  content: {
+    build: {
+      markdown: {
+        toc: {
+          depth: 3
         }
-    },
-  turnstile: {
-    siteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY,
+      }
+    }
+  },
+  ui: {
+    prefix: `U`,
+    theme: {
+      colors: [
+        `primary`,
+        `secondary`,
+        `tertiary`,
+        `info`,
+        `success`,
+        `warning`,
+        `error`,
+        `commentary`,
+        `ideation`,
+        `creator`,
+        `neutral`
+      ]
+    }
   },
   runtimeConfig: {
-      session: {
-        name: 'user-session',
-        password: '',
-        cookie: {
-          maxAge: 60 * 60 * 24 * 30
-        }
-      },
+    session: {
+      name: `user-session`,
+      password: ``,
+      cookie: {
+        maxAge: 60 * 60 * 24 * 30
+      }
+    },
     public: {
-      constructionPassword: process.env.SITE_PASSWORD || 'secret'
+      constructionPassword: process.env.SITE_PASSWORD || `secret`
     },
     turnstile: {
-      secretKey: process.env.NUXT_TURNSTILE_SECRET_KEY,
-    },
+      secretKey: process.env.NUXT_TURNSTILE_SECRET_KEY
+    }
   },
   routeRules: {
     '/api/**': {
       cors: true
     }
+  }, compatibilityDate: `2025-07-15`,
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: [
+        `/`
+      ]
+    }
   },
-    components: [
-      {
-        path: '~/components',
-        pathPrefix: false,
-      },
+  hub: {
+    blob: true,
+    database: true
+  },
+  eslint: {
+    config: {
+    }
+  },
+  i18n: {
+    defaultLocale: `en`,
+    locales: [
+      { code: `ar`, name: `العربية` },
+      { code: `en`, name: `English` },
+      { code: `es`, name: `Español` },
+      { code: `fr`, name: `Français` },
+      { code: `ja`, name: `日本語` },
+      { code: `ko`, name: `한국어` },
+      { code: `pt`, name: `Português` },
+      { code: `ro`, name: `Română` },
+      { code: `zh_cn`, name: `简体中文` }
     ]
+  },
+  icon: {
+    provider: `server`,
+    class: `icon`,
+    size: `24px`,
+    mode: `svg`,
+    customCollections: [
+      {
+        prefix: `first-party`,
+        dir: `./app/assets/icons/first-party`,
+        normalizeIconName: false
+      },
+      {
+        prefix: `third-party`,
+        dir: `./app/assets/icons/third-party`,
+        normalizeIconName: false
+      }
+    ]
+  },
+  turnstile: {
+    siteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY
+  }
 })

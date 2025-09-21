@@ -10,444 +10,444 @@ import {
   type HeroProperties,
   type CardProperties,
   type SeriesProperties,
-  type EpisodeProperties,
-} from "../../types/article/article";
-import { type BlockData, type SectionBlockData } from "../../types/blocks/index";
-import { v7 as uuidv7 } from "uuid";
+  type EpisodeProperties
+} from "../../types/article/article"
+import type { BlockData, SectionBlockData } from "../../types/blocks/index"
+import { v7 as uuidv7 } from "uuid"
 
 interface ArticleTemplate {
-  articleType: ArticleType;
-  defaultTitle: string;
-  defaultTags: string[];
-  defaultProperties: Record<string, unknown>;
-  defaultBlocks: BlockData[];
-  propertyPanelSchema?: Record<string, Record<string, PropertyPanelSchema>>;
+  articleType: ArticleType
+  defaultTitle: string
+  defaultTags: string[]
+  defaultProperties: Record<string, unknown>
+  defaultBlocks: BlockData[]
+  propertyPanelSchema?: Record<string, Record<string, PropertyPanelSchema>>
 }
 
 export const articleTemplates: Record<ArticleType, ArticleTemplate> = {
   [ArticleType.DEFAULT]: {
     articleType: ArticleType.DEFAULT,
-    defaultTitle: "New Article",
+    defaultTitle: `New Article`,
     defaultTags: [],
     defaultProperties: {},
-    defaultBlocks: [],
+    defaultBlocks: []
   },
   [ArticleType.SPECIES]: {
     articleType: ArticleType.SPECIES,
-    defaultTitle: "New Species",
+    defaultTitle: `New Species`,
     defaultTags: [],
     defaultProperties: {
-      name: "",
-      averageLifespan: "Years",
+      name: ``,
+      averageLifespan: `Years`,
       averageWeight: 0,
-      diet: "",
+      diet: ``
     } as SpeciesProperties,
     propertyPanelSchema: {
       Naming: {
         name: {
-          label: "Name",
-          type: "text",
-          order: 10,
-        },
+          label: `Name`,
+          type: `text`,
+          order: 10
+        }
       },
       Characteristics: {
         averageLifespan: {
-          label: "Average Lifespan",
-          type: "enum",
+          label: `Average Lifespan`,
+          type: `enum`,
           options: [
-            "Seconds",
-            "Minutes",
-            "Hours",
-            "Days",
-            "Months",
-            "Years",
-            "Decades",
-            "Centuries",
-            "Millennia",
+            `Seconds`,
+            `Minutes`,
+            `Hours`,
+            `Days`,
+            `Months`,
+            `Years`,
+            `Decades`,
+            `Centuries`,
+            `Millennia`
           ],
-          order: 20,
+          order: 20
         },
         averageWeight: {
-          label: "Average Weight (kg)",
-          type: "number",
-          order: 40,
+          label: `Average Weight (kg)`,
+          type: `number`,
+          order: 40
         },
         diet: {
-          label: "Diet",
-          type: "enum",
+          label: `Diet`,
+          type: `enum`,
           options: [
-            "Omnivorous",
-            "Carnivorous",
-            "Herbivorous",
-            "Fungivorous",
-            "Spritavorous",
+            `Omnivorous`,
+            `Carnivorous`,
+            `Herbivorous`,
+            `Fungivorous`,
+            `Spritavorous`
           ],
-          order: 30,
-        },
+          order: 30
+        }
       },
       _uncategorized_: {
         status: {
-          label: "Status",
-          type: "enum",
-          options: ["Extinct", "Extant"],
-          order: 50,
-        },
-      },
+          label: `Status`,
+          type: `enum`,
+          options: [`Extinct`, `Extant`],
+          order: 50
+        }
+      }
     },
     defaultBlocks: [
       {
         id: uuidv7(),
-        type: "section",
+        type: `section`,
         attrs: {
-          title: "Physiology",
+          title: `Physiology`
         },
-        isTemplated: true,
+        isTemplated: true
       } as SectionBlockData,
       {
         id: uuidv7(),
-        type: "section",
+        type: `section`,
         attrs: {
-          title: "Culture",
+          title: `Culture`
         },
-        isTemplated: true,
+        isTemplated: true
       } as SectionBlockData,
       {
         id: uuidv7(),
-        type: "section",
+        type: `section`,
         attrs: {
-          title: "Trivia",
+          title: `Trivia`
         },
-        isTemplated: true,
-      } as SectionBlockData,
-    ],
+        isTemplated: true
+      } as SectionBlockData
+    ]
   },
   [ArticleType.CHARACTER]: {
     articleType: ArticleType.CHARACTER,
-    defaultTitle: "New Character",
-    defaultTags: ["character"],
+    defaultTitle: `New Character`,
+    defaultTags: [`character`],
     defaultProperties: {
-      name: "",
-      title: "",
+      name: ``,
+      title: ``,
       aliases: [],
-      flavourText: "",
-      species: "",
-      sex: "",
-      pronouns: "",
+      flavourText: ``,
+      species: ``,
+      sex: ``,
+      pronouns: ``,
       height: 0,
       weight: 0,
-      dateOfBirth: "",
-      dateOfDeath: "",
-      placeOfBirth: "",
-      placeOfDeath: "",
+      dateOfBirth: ``,
+      dateOfDeath: ``,
+      placeOfBirth: ``,
+      placeOfDeath: ``,
       formerAffiliations: [],
       currentAffiliations: [],
       equipment: [],
       pets: [],
       mounts: [],
-      favouriteFood: "",
+      favouriteFood: ``
     } as CharacterProperties,
     propertyPanelSchema: {
       Naming: {
         name: {
-          label: "Name",
-          type: "text",
-          order: 10,
+          label: `Name`,
+          type: `text`,
+          order: 10
         },
         pronouns: {
-          label: "Pronouns",
-          type: "enum",
-          options: ["He / Him", "She / Her", "They / Them"],
-          order: 20,
+          label: `Pronouns`,
+          type: `enum`,
+          options: [`He / Him`, `She / Her`, `They / Them`],
+          order: 20
         },
         title: {
-          label: "Title",
-          type: "text",
-          order: 30,
+          label: `Title`,
+          type: `text`,
+          order: 30
         },
         aliases: {
-          label: "Aliases",
-          type: "text-array",
-          order: 40,
+          label: `Aliases`,
+          type: `text-array`,
+          order: 40
         },
         flavourText: {
-          label: "Flavour Text",
-          type: "text",
-          order: 50,
-        },
+          label: `Flavour Text`,
+          type: `text`,
+          order: 50
+        }
       },
       Characteristics: {
         species: {
-          label: "Species",
-          type: "article",
+          label: `Species`,
+          type: `article`,
           allowedArticleTypes: [ArticleType.SPECIES],
-          order: 60,
+          order: 60
         },
         sex: {
-          label: "Sex",
-          type: "enum",
-          options: ["Male", "Female", "None"],
-          order: 70,
+          label: `Sex`,
+          type: `enum`,
+          options: [`Male`, `Female`, `None`],
+          order: 70
         },
         height: {
-          label: "Height (cm)",
-          type: "number",
-          order: 80,
+          label: `Height (cm)`,
+          type: `number`,
+          order: 80
         },
         weight: {
-          label: "Weight (kg)",
-          type: "number",
-          order: 90,
-        },
+          label: `Weight (kg)`,
+          type: `number`,
+          order: 90
+        }
       },
       Timeline: {
         dateOfBirth: {
-          label: "Date of Birth",
-          type: "text",
-          order: 100,
+          label: `Date of Birth`,
+          type: `text`,
+          order: 100
         },
         dateOfDeath: {
-          label: "Date of Death",
-          type: "text",
-          order: 110,
+          label: `Date of Death`,
+          type: `text`,
+          order: 110
         },
         placeOfBirth: {
-          label: "Place of Birth",
-          type: "text",
-          order: 120,
+          label: `Place of Birth`,
+          type: `text`,
+          order: 120
         },
         placeOfDeath: {
-          label: "Place of Death",
-          type: "text",
-          order: 130,
-        },
+          label: `Place of Death`,
+          type: `text`,
+          order: 130
+        }
       },
       Affiliations: {
         formerAffiliations: {
-          label: "Former Affiliations",
-          type: "text-array",
-          order: 130,
+          label: `Former Affiliations`,
+          type: `text-array`,
+          order: 130
         },
         currentAffiliations: {
-          label: "Current Affiliations",
-          type: "text-array",
-          order: 140,
-        },
+          label: `Current Affiliations`,
+          type: `text-array`,
+          order: 140
+        }
       },
       _uncategorized_: {
         equipment: {
-          label: "Equipment",
-          type: "text-array",
-          order: 150,
+          label: `Equipment`,
+          type: `text-array`,
+          order: 150
         },
         pets: {
-          label: "Pets",
-          type: "article-array",
+          label: `Pets`,
+          type: `article-array`,
           allowedArticleTypes: [ArticleType.CHARACTER],
-          order: 160,
+          order: 160
         },
         mounts: {
-          label: "Mounts",
-          type: "text-array",
-          order: 170,
+          label: `Mounts`,
+          type: `text-array`,
+          order: 170
         },
         favouriteFood: {
-          label: "Favourite Food",
-          type: "article",
+          label: `Favourite Food`,
+          type: `article`,
           allowedArticleTypes: [ArticleType.SPECIES],
-          order: 180,
-        },
-      },
+          order: 180
+        }
+      }
     },
     defaultBlocks: [
       {
         id: uuidv7(),
-        type: "section",
+        type: `section`,
         attrs: {
-          title: "Appearance",
+          title: `Appearance`
         },
-        isTemplated: true,
+        isTemplated: true
       } as SectionBlockData,
       {
         id: uuidv7(),
-        type: "section",
+        type: `section`,
         attrs: {
-          title: "Personality",
+          title: `Personality`
         },
-        isTemplated: true,
+        isTemplated: true
       } as SectionBlockData,
       {
         id: uuidv7(),
-        type: "section",
+        type: `section`,
         attrs: {
-          title: "Abilities",
+          title: `Abilities`
         },
-        isTemplated: true,
+        isTemplated: true
       } as SectionBlockData,
       {
         id: uuidv7(),
-        type: "section",
+        type: `section`,
         attrs: {
-          title: "Biography",
+          title: `Biography`
         },
-        isTemplated: true,
+        isTemplated: true
       } as SectionBlockData,
       {
         id: uuidv7(),
-        type: "section",
+        type: `section`,
         attrs: {
-          title: "Relationships",
+          title: `Relationships`
         },
-        isTemplated: true,
+        isTemplated: true
       } as SectionBlockData,
       {
         id: uuidv7(),
-        type: "section",
+        type: `section`,
         attrs: {
-          title: "Trivia",
+          title: `Trivia`
         },
-        isTemplated: true,
-      } as SectionBlockData,
-    ],
+        isTemplated: true
+      } as SectionBlockData
+    ]
   },
   [ArticleType.OBJECT]: {
     articleType: ArticleType.OBJECT,
-    defaultTitle: "New Object",
+    defaultTitle: `New Object`,
     defaultTags: [],
     defaultProperties: {} as ObjectProperties,
     propertyPanelSchema: {},
     defaultBlocks: [
       {
         id: uuidv7(),
-        type: "section",
+        type: `section`,
         attrs: {
-          title: "Trivia",
+          title: `Trivia`
         },
-        isTemplated: true,
-      } as SectionBlockData,
-    ],
+        isTemplated: true
+      } as SectionBlockData
+    ]
   },
   [ArticleType.TALE]: {
     articleType: ArticleType.TALE,
-    defaultTitle: "New Tale",
+    defaultTitle: `New Tale`,
     defaultTags: [],
     defaultProperties: {} as TaleProperties,
     propertyPanelSchema: {},
     defaultBlocks: [
       {
         id: uuidv7(),
-        type: "section",
+        type: `section`,
         attrs: {
-          title: "Trivia",
+          title: `Trivia`
         },
-        isTemplated: true,
-      } as SectionBlockData,
-    ],
+        isTemplated: true
+      } as SectionBlockData
+    ]
   },
   [ArticleType.ITEM]: {
     articleType: ArticleType.ITEM,
-    defaultTitle: "New Item",
+    defaultTitle: `New Item`,
     defaultTags: [],
     defaultProperties: {} as ItemProperties,
     propertyPanelSchema: {},
     defaultBlocks: [
       {
         id: uuidv7(),
-        type: "section",
+        type: `section`,
         attrs: {
-          title: "Trivia",
+          title: `Trivia`
         },
-        isTemplated: true,
-      } as SectionBlockData,
-    ],
+        isTemplated: true
+      } as SectionBlockData
+    ]
   },
   [ArticleType.SKILL]: {
     articleType: ArticleType.SKILL,
-    defaultTitle: "New Skill",
+    defaultTitle: `New Skill`,
     defaultTags: [],
     defaultProperties: {} as SkillProperties,
     propertyPanelSchema: {},
     defaultBlocks: [
       {
         id: uuidv7(),
-        type: "section",
+        type: `section`,
         attrs: {
-          title: "Trivia",
+          title: `Trivia`
         },
-        isTemplated: true,
-      } as SectionBlockData,
-    ],
+        isTemplated: true
+      } as SectionBlockData
+    ]
   },
   [ArticleType.HERO]: {
     articleType: ArticleType.HERO,
-    defaultTitle: "New Hero",
+    defaultTitle: `New Hero`,
     defaultTags: [],
     defaultProperties: {} as HeroProperties,
     propertyPanelSchema: {},
     defaultBlocks: [
       {
         id: uuidv7(),
-        type: "section",
+        type: `section`,
         attrs: {
-          title: "Trivia",
+          title: `Trivia`
         },
-        isTemplated: true,
-      } as SectionBlockData,
-    ],
+        isTemplated: true
+      } as SectionBlockData
+    ]
   },
   [ArticleType.CARD]: {
     articleType: ArticleType.CARD,
-    defaultTitle: "New Card",
+    defaultTitle: `New Card`,
     defaultTags: [],
     defaultProperties: {
-      name: "",
-      alignment: "",
-      type: "",
-      flavourText: "",
+      name: ``,
+      alignment: ``,
+      type: ``,
+      flavourText: ``
     } as CardProperties,
     propertyPanelSchema: {},
     defaultBlocks: [
       {
         id: uuidv7(),
-        type: "section",
+        type: `section`,
         attrs: {
-          title: "Trivia",
+          title: `Trivia`
         },
-        isTemplated: true,
-      } as SectionBlockData,
-    ],
+        isTemplated: true
+      } as SectionBlockData
+    ]
   },
   [ArticleType.SERIES]: {
     articleType: ArticleType.SERIES,
-    defaultTitle: "New Series",
+    defaultTitle: `New Series`,
     defaultTags: [],
     defaultProperties: {} as SeriesProperties,
     propertyPanelSchema: {},
     defaultBlocks: [
       {
         id: uuidv7(),
-        type: "section",
+        type: `section`,
         attrs: {
-          title: "Trivia",
+          title: `Trivia`
         },
-        isTemplated: true,
-      } as SectionBlockData,
-    ],
+        isTemplated: true
+      } as SectionBlockData
+    ]
   },
   [ArticleType.EPISODE]: {
     articleType: ArticleType.EPISODE,
-    defaultTitle: "New Episode",
+    defaultTitle: `New Episode`,
     defaultTags: [],
     defaultProperties: {} as EpisodeProperties,
     propertyPanelSchema: {},
     defaultBlocks: [
       {
         id: uuidv7(),
-        type: "section",
+        type: `section`,
         attrs: {
-          title: "Trivia",
+          title: `Trivia`
         },
-        isTemplated: true,
-      } as SectionBlockData,
-    ],
-  },
-};
+        isTemplated: true
+      } as SectionBlockData
+    ]
+  }
+}

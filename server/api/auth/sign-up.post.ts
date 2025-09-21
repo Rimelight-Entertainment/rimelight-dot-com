@@ -1,5 +1,6 @@
 import { z } from 'zod'
-import { H3Event, defineEventHandler, createError } from 'h3'
+import type { H3Event } from 'h3'
+import { defineEventHandler, createError } from 'h3'
 import { useDb } from '~~/server/utils/drizzle'
 import { users } from '~~/server/database/schema'
 
@@ -9,11 +10,11 @@ const signUpSchema = z.object({
   username: z.string().min(2).max(24),
   email: z.string().email(),
   password: z.string().min(8).max(24),
-  password_confirmation: z.string().min(8).max(24),
-}).refine(d => d.password === d.password_confirmation, {
-  message: 'Passwords do not match',
-  path: ['password_confirmation'],
-});
+  password_confirmation: z.string().min(8).max(24)
+}).refine((d) => d.password === d.password_confirmation, {
+  message: `Passwords do not match`,
+  path: [`password_confirmation`]
+})
 
 async function getRequestBody(event: H3Event) {
   const body = await readBody(event)
@@ -27,7 +28,7 @@ export default defineEventHandler(async (event) => {
 
     const db = useDb()
 
-    const userRole = body.email.endsWith('@rimelight.com') ? 'employee' : 'user';
+    const userRole = body.email.endsWith(`@rimelight.com`) ? `employee` : `user`
 
     const [user] = await db
       .insert(users)
@@ -42,7 +43,7 @@ export default defineEventHandler(async (event) => {
       .returning()
 
     if (!user) {
-      throw createError({ statusCode: 500, statusMessage: 'Failed to create user' })
+      throw createError({ statusCode: 500, statusMessage: `Failed to create user` })
     }
 
     await setUserSession(event, {
@@ -51,34 +52,34 @@ export default defineEventHandler(async (event) => {
         username: user.username,
         role: user.role
       },
-      lastLoggedIn: new Date(),
+      lastLoggedIn: new Date()
     })
 
     return { success: true }
   } catch (error: any) {
-    if (error.code === '23505') {
-      if (error.constraint === 'users_email_unique') {
-        throw createError({ statusCode: 409, statusMessage: 'Email already in use' })
+    if (error.code === `23505`) {
+      if (error.constraint === `users_email_unique`) {
+        throw createError({ statusCode: 409, statusMessage: `Email already in use` })
       }
-      if (error.constraint === 'users_username_unique') {
-        throw createError({ statusCode: 409, statusMessage: 'Username already taken' })
+      if (error.constraint === `users_username_unique`) {
+        throw createError({ statusCode: 409, statusMessage: `Username already taken` })
       }
-      throw createError({ statusCode: 409, statusMessage: 'Duplicate value' })
+      throw createError({ statusCode: 409, statusMessage: `Duplicate value` })
     }
 
     // If it's a Zod error, return validation error
     if (error.errors) {
       throw createError({
         statusCode: 400,
-        statusMessage: 'Validation failed',
+        statusMessage: `Validation failed`,
         data: error.errors
       })
     }
 
-    console.error('Sign‑up error:', error)
+    console.error(`Sign‑up error:`, error)
     throw createError({
       statusCode: 500,
-      statusMessage: 'An unexpected error occurred',
+      statusMessage: `An unexpected error occurred`
     })
   }
 })

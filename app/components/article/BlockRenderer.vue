@@ -1,13 +1,11 @@
 <script setup lang="ts">
-import { type CalloutVariant } from "~/types/blocks"
-
 interface BlockRendererProps {
-  isEditable: boolean
+  isEditable?: boolean
 }
 
 const {
-  isEditable = true,
-} = defineProps<BlockRendererProps>();
+  isEditable = true
+} = defineProps<BlockRendererProps>()
 </script>
 
 <template>
@@ -15,8 +13,25 @@ const {
     direction="vertical"
     gap="md"
   >
-    <Block id="some-unique-id-123" name="Block" type="section" icon="lucide:x" description="A block to organize content into sections." category="layout" :is-editable="isEditable" />
-    <ParagraphBlock id="some-unique-id-123" text="asdasd" name="Block" type="section" icon="lucide:x" description="A block to organize content into sections." category="layout" :is-editable="isEditable" />
+    <Block
+      id="some-unique-id-123"
+      name="Block"
+      type="section"
+      icon="lucide:x"
+      description="A block to organize content into sections."
+      category="layout"
+      :is-editable="isEditable"
+    />
+    <ParagraphBlock
+      id="some-unique-id-123"
+      text="asdasd"
+      name="Block"
+      type="section"
+      icon="lucide:x"
+      description="A block to organize content into sections."
+      category="layout"
+      :is-editable="isEditable"
+    />
     <CalloutBlock :is-editable="isEditable" :variant="'note'" text="Lorem ipsum dolor sit amet." />
     <CalloutBlock :is-editable="isEditable" :variant="'tip'" text="Lorem ipsum dolor sit amet." />
     <CalloutBlock :is-editable="isEditable" :variant="'warning'" text="Lorem ipsum dolor sit amet." />

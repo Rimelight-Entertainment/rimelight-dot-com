@@ -1,6 +1,6 @@
 declare module '#auth-utils' {
 
-  type UserRole = 'user' | 'employee';
+  type UserRole = `user` | `employee`
 
   interface User {
     id: number
@@ -8,7 +8,7 @@ declare module '#auth-utils' {
     username: string
     first_name?: string
     last_name?: string
-    role: UserRole;
+    role: UserRole
   }
 }
 

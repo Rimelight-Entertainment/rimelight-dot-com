@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from 'vue'
 
 interface ParagraphBlockProps {
   isEditable?: boolean
@@ -7,12 +7,12 @@ interface ParagraphBlockProps {
 }
 
 const props = withDefaults(defineProps<ParagraphBlockProps>(), {
-  isEditable: false,
-});
+  isEditable: false
+})
 
-const localText = ref(props.text);
+const localText = ref(props.text)
 
-const maxLength = 512;
+const maxLength = 512
 </script>
 
 <template>
@@ -27,7 +27,7 @@ const maxLength = 512;
       variant="ghost"
       placeholder="Enter text..."
       class="w-full"
-      :ui="{ trailing: 'pointer-events-none', base: 'pr-16'}"
+      :ui="{ trailing: 'pointer-events-none', base: 'pr-16' }"
       @keydown.prevent.enter
     >
       <template #trailing>

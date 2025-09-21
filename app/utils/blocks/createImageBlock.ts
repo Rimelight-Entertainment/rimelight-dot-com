@@ -1,5 +1,5 @@
-import { createBaseBlock } from "./createBaseBlock";
-import type { ImageBlockData } from "@/types/blocks";
+import { createBaseBlock } from "./createBaseBlock"
+import type { ImageBlockData } from "@/types/blocks"
 
 /**
  * Creates a new Image Block data object.
@@ -7,14 +7,14 @@ import type { ImageBlockData } from "@/types/blocks";
  * @returns A new ImageBlockData object.
  */
 export const createImageBlock = (
-    initialData?: Partial<ImageBlockData>,
+  initialData?: Partial<ImageBlockData>
 ): ImageBlockData => {
-    return createBaseBlock<ImageBlockData>("image", {
-        attrs: {
-            src: "",
-            alt: "",
-            fileName: "",
-            ...initialData?.attrs,
-        },
-    });
-};
+  return createBaseBlock<ImageBlockData>(`image`, {
+    attrs: {
+      src: ``,
+      alt: ``,
+      fileName: ``,
+      ...initialData?.attrs
+    }
+  })
+}

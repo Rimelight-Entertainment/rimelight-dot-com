@@ -5,50 +5,49 @@ import type { FormSubmitEvent } from '@nuxt/ui'
 const toast = useToast()
 
 const fields = [{
-  name: 'email',
-  type: 'text' as const,
-  label: 'Email',
-  placeholder: 'Enter your email',
+  name: `email`,
+  type: `text` as const,
+  label: `Email`,
+  placeholder: `Enter your email`,
   required: true
 }, {
-  name: 'password',
-  label: 'Password',
-  type: 'password' as const,
-  placeholder: 'Enter your password'
+  name: `password`,
+  label: `Password`,
+  type: `password` as const,
+  placeholder: `Enter your password`
 }, {
-  name: 'remember',
-  label: 'Remember me',
-  type: 'checkbox' as const
+  name: `remember`,
+  label: `Remember me`,
+  type: `checkbox` as const
 }]
 
 const schema = z.object({
-  email: z.string().email('Invalid email address.'),
-  password: z.string().min(8, 'Password must be at least 8 characters long.')
+  email: z.string().email(`Invalid email address.`),
+  password: z.string().min(8, `Password must be at least 8 characters long.`)
 })
 
 type Schema = z.output<typeof schema>
 
 async function onSubmit(payload: FormSubmitEvent<Schema>) {
   try {
-    const response = await $fetch('/api/auth/log-in', {
-      method: 'POST',
+    const response = await $fetch(`/api/auth/log-in`, {
+      method: `POST`,
       body: {
         email: payload.data.email,
         password: payload.data.password
       }
     })
     if (!response.success) {
-      throw new Error('Login failed.')
+      throw new Error(`Login failed.`)
     }
-    const userSession = useUserSession();
-    await userSession.fetch();
-    await navigateTo('/')
-  }
-  catch {
+    const userSession = useUserSession()
+    await userSession.fetch()
+    await navigateTo(`/`)
+  } catch {
     toast.add({
-      color: 'error',
-      title: 'Failed to log in',
-      description: 'Please check your details and try again.',
+      color: `error`,
+      title: `Failed to log in`,
+      description: `Please check your details and try again.`
     })
   }
 }
@@ -60,8 +59,8 @@ async function onSubmit(payload: FormSubmitEvent<Schema>) {
       direction="vertical"
       padding="md"
       gap="md"
-      alignItems="center"
-      justifyContent="center"
+      align-items="center"
+      justify-content="center"
       class="min-h-screen"
     >
       <UPageCard class="w-full max-w-md">
@@ -72,7 +71,7 @@ async function onSubmit(payload: FormSubmitEvent<Schema>) {
           icon="lucide:user"
           :fields="fields"
           :submit="{
-            label: 'Log In',
+            label: 'Log In'
           }"
           @submit="onSubmit"
         >

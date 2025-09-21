@@ -15,8 +15,8 @@ interface Props {
 }
 
 withDefaults(defineProps<Props>(), {
-  iconColor: 'text-primary',
-  descriptionColor: 'text-muted'
+  iconColor: `text-primary`,
+  descriptionColor: `text-muted`
 })
 </script>
 

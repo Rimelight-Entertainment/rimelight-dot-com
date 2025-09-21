@@ -2,15 +2,15 @@
 import type { TreeItem } from '@nuxt/ui'
 
 export interface ArticleTreeItem extends TreeItem {
-  slug?: string;
+  slug?: string
 }
 
 const { data: articleTree, pending, error: treeError } = await useFetch<ArticleTreeItem[]>(
-  '/api/article/tree'
-);
+  `/api/article/tree`
+)
 
 if (treeError.value) {
-  console.error('Error fetching article tree:', treeError.value);
+  console.error(`Error fetching article tree:`, treeError.value)
 }
 </script>
 
@@ -20,8 +20,12 @@ if (treeError.value) {
     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   >
     <template #body>
-      <p v-if="pending">Loading articles...</p>
-      <p v-else-if="treeError">Failed to load article tree.</p>
+      <p v-if="pending">
+        Loading articles...
+      </p>
+      <p v-else-if="treeError">
+        Failed to load article tree.
+      </p>
       <UTree
         v-else
         color="primary"
@@ -30,13 +34,20 @@ if (treeError.value) {
         :items="articleTree"
       >
         <template #item-wrapper="{ item }">
-            <span v-if="item.slug">
-                <UButton variant="ghost" color="neutral" :leading-icon="item.icon" :label="item.label" :to="item.slug" class="w-full"/>
-            </span>
+          <span v-if="item.slug">
+            <UButton
+              variant="ghost"
+              color="neutral"
+              :leading-icon="item.icon"
+              :label="item.label"
+              :to="item.slug"
+              class="w-full"
+            />
+          </span>
         </template>
       </UTree>
     </template>
-    <UButton variant="ghost" leading-icon="lucide:file-sliders" label="Convert Article"/>
+    <UButton variant="ghost" leading-icon="lucide:file-sliders" label="Convert Article" />
     <template #footer="{ close }">
       <UButton label="Cancel" color="error" variant="outline" @click="close" />
     </template>

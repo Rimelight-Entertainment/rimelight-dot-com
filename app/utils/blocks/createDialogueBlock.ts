@@ -1,5 +1,5 @@
-import { createBaseBlock } from "./createBaseBlock";
-import type { DialogueBlockData } from "@/types/blocks";
+import { createBaseBlock } from "./createBaseBlock"
+import type { DialogueBlockData } from "@/types/blocks"
 
 /**
  * Creates a new Dialogue Block data object.
@@ -7,13 +7,13 @@ import type { DialogueBlockData } from "@/types/blocks";
  * @returns A new DialogueBlockData object.
  */
 export const createDialogueBlock = (
-    initialData?: Partial<DialogueBlockData>,
+  initialData?: Partial<DialogueBlockData>
 ): DialogueBlockData => {
-    return createBaseBlock<DialogueBlockData>("dialogue", {
-        attrs: {
-            character: initialData?.attrs?.character || "",
-            parenthetical: initialData?.attrs?.parenthetical || "",
-            line: initialData?.attrs?.line || "",
-        },
-    });
-};
+  return createBaseBlock<DialogueBlockData>(`dialogue`, {
+    attrs: {
+      character: initialData?.attrs?.character || ``,
+      parenthetical: initialData?.attrs?.parenthetical || ``,
+      line: initialData?.attrs?.line || ``
+    }
+  })
+}

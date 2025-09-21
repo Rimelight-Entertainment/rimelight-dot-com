@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    <AppHeader/>
+    <AppHeader />
     <UMain>
       <slot />
     </UMain>

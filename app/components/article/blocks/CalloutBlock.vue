@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import { type CalloutVariant } from "~/types/blocks"
+import { ref } from 'vue'
+import type { CalloutVariant } from "~/types/blocks"
 
 interface CalloutBlockProps {
   isEditable?: boolean
@@ -11,12 +11,12 @@ interface CalloutBlockProps {
 
 const props = withDefaults(defineProps<CalloutBlockProps>(), {
   isEditable: false,
-  variant: 'note',
-});
+  variant: `note`
+})
 
-const localText = ref(props.text);
+const localText = ref(props.text)
 
-const maxLength = 512;
+const maxLength = 512
 </script>
 
 <template>
@@ -32,7 +32,7 @@ const maxLength = 512;
         variant="ghost"
         placeholder="Enter text..."
         class="w-full"
-        :ui="{ trailing: 'pointer-events-none', base: 'pr-16'}"
+        :ui="{ trailing: 'pointer-events-none', base: 'pr-16' }"
         @keydown.prevent.enter
       >
         <template #trailing>

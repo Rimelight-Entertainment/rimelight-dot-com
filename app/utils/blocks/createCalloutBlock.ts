@@ -1,5 +1,5 @@
-import { createBaseBlock } from "./createBaseBlock";
-import type { CalloutBlockData, TextNode } from "@/types/blocks";
+import { createBaseBlock } from "./createBaseBlock"
+import type { CalloutBlockData, TextNode } from "@/types/blocks"
 
 /**
  * Creates a new Callout Block data object.
@@ -7,14 +7,14 @@ import type { CalloutBlockData, TextNode } from "@/types/blocks";
  * @returns A new CalloutBlockData object.
  */
 export const createCalloutBlock = (
-    initialData?: Partial<CalloutBlockData>,
+  initialData?: Partial<CalloutBlockData>
 ): CalloutBlockData => {
-    return createBaseBlock<CalloutBlockData>("callout", {
-        attrs: {
-            variant: initialData?.attrs?.variant || "note",
-            text: Array.isArray(initialData?.attrs?.text)
-                ? initialData?.attrs?.text
-                : ([{ type: "text", text: String(initialData?.attrs?.text || "") }] as TextNode[]),
-        },
-    });
-};
+  return createBaseBlock<CalloutBlockData>(`callout`, {
+    attrs: {
+      variant: initialData?.attrs?.variant || `note`,
+      text: Array.isArray(initialData?.attrs?.text)
+        ? initialData?.attrs?.text
+        : ([{ type: `text`, text: String(initialData?.attrs?.text || ``) }] as TextNode[])
+    }
+  })
+}

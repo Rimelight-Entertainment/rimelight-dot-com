@@ -1,38 +1,38 @@
 <script setup lang="ts">
-import type {BlockData, BlockTypes} from '~/types/blocks';
+import type { BlockData, BlockTypes } from '~/types/blocks'
 import type { DropdownMenuItem } from '@nuxt/ui'
 
 interface BlockProps {
   isEditable?: boolean
-  id: string;
-  type: BlockTypes['type'];
-  icon: string;
-  name: string;
-  description: string;
-  category: string;
-  attrs?: Record<string, unknown>;
-  slots?: Record<string, BlockData[]>;
-  allowedChildren?: BlockTypes[];
-  isTemplated?: boolean;
-  isNestable?: boolean;
-  isDraggable?: boolean;
+  id?: string
+  type?: BlockTypes[`type`]
+  icon?: string
+  name?: string
+  description?: string
+  category?: string
+  attrs?: Record<string, unknown>
+  slots?: Record<string, BlockData[]>
+  allowedChildren?: BlockTypes[]
+  isTemplated?: boolean
+  isNestable?: boolean
+  isDraggable?: boolean
 }
 
 const {
   isEditable = false,
-  id = '',
-  type = '',
-  icon = '',
-  name = '',
-  description = '',
-  category = '',
+  id = ``,
+  type = ``,
+  icon = ``,
+  name = ``,
+  description = ``,
+  category = ``,
   attrs = {},
   slots = {},
   allowedChildren = [],
   isTemplated = false,
   isNestable = false,
-  isDraggable = false,
-} = defineProps<BlockProps>();
+  isDraggable = false
+} = defineProps<BlockProps>()
 
 const emit = defineEmits<{
   insertBlockAbove: [id: string]
@@ -49,43 +49,45 @@ const menuItems = computed<DropdownMenuItem[][]>(() => {
       {
         icon: icon,
         label: name,
-        type: 'label'
+        type: `label`
       }
     ],
     [
       {
-        label: 'Insert Block Above',
-        kbds: ['PageUp'],
-        onSelect: () => emit('insertBlockAbove', id),
+        label: `Insert Block Above`,
+        kbds: [`PageUp`],
+        onSelect: () => emit(`insertBlockAbove`, id)
       },
       {
-        label: 'Insert Block Below',
-        kbds: ['PageDown'],
-        onSelect: () => emit('insertBlockBelow', id),
+        label: `Insert Block Below`,
+        kbds: [`PageDown`],
+        onSelect: () => emit(`insertBlockBelow`, id)
       }
     ]
-  ];
+  ]
 
-  const editItems: DropdownMenuItem[] = !isTemplated ? [
-    {
-      label: 'Duplicate Block',
-      kbds: ['Insert'],
-      onSelect: () => emit('duplicate', id),
-    },
-    {
-      color: 'error',
-      label: 'Delete Block',
-      kbds: ['Delete'],
-      onSelect: () => emit('delete', id),
-    },
-  ] : [];
+  const editItems: DropdownMenuItem[] = !isTemplated
+    ? [
+        {
+          label: `Duplicate Block`,
+          kbds: [`Insert`],
+          onSelect: () => emit(`duplicate`, id)
+        },
+        {
+          color: `error`,
+          label: `Delete Block`,
+          kbds: [`Delete`],
+          onSelect: () => emit(`delete`, id)
+        }
+      ]
+    : []
 
   if (editItems.length) {
-    items.push(editItems);
+    items.push(editItems)
   }
 
-  return items;
-});
+  return items
+})
 
 defineShortcuts(extractShortcuts(menuItems.value))
 </script>
@@ -95,7 +97,7 @@ defineShortcuts(extractShortcuts(menuItems.value))
     direction="vertical"
     gap="md"
   >
-    <slot name="actions" v-if="isEditable" />
+    <slot v-if="isEditable" name="actions" />
     <RLLayoutBox
       direction="horizontal"
       gap="xs"
@@ -103,7 +105,7 @@ defineShortcuts(extractShortcuts(menuItems.value))
     >
       <UDropdownMenu :items="menuItems">
         <UTooltip :text="name">
-          <UButton v-if="isEditable" variant="ghost" color="neutral" trailingIcon="lucide:grip-vertical" size="sm" />
+          <UButton v-if="isEditable" variant="ghost" color="neutral" trailing-icon="lucide:grip-vertical" size="sm" />
         </UTooltip>
       </UDropdownMenu>
       <slot />

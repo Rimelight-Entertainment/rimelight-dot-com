@@ -1,42 +1,42 @@
 <script setup lang="ts">
-import { type BlockData, type BlockTypes, blocksRegistry } from '~/types/blocks';
+import { type BlockData, type BlockTypes, blocksRegistry } from '~/types/blocks'
 
 interface BlockSlotProps {
-  blocks: BlockData[];
-  isEditable?: boolean;
-  allowedBlocks?: BlockTypes[];
-  parentId: string;
-  parentType: BlockTypes;
-  parentNestingLevel?: number;
-  draggedBlockType?: BlockTypes;
-  slotName?: string;
+  blocks: BlockData[]
+  isEditable?: boolean
+  allowedBlocks?: BlockTypes[]
+  parentId: string
+  parentType: BlockTypes
+  parentNestingLevel?: number
+  draggedBlockType?: BlockTypes
+  slotName?: string
 }
 
 const {
   blocks,
   isEditable = false,
   parentType,
-  draggedBlockType,
-} = defineProps<BlockSlotProps>();
+  draggedBlockType
+} = defineProps<BlockSlotProps>()
 
-const showPlaceholder = computed(() => isEditable && blocks);
+const showPlaceholder = computed(() => isEditable && blocks)
 
 const isChildAllowedInSlot = computed(() => {
   if (!draggedBlockType) {
-    return false;
+    return false
   }
 
-  const parentBlockDefinition = blocksRegistry[parentType.type];
+  const parentBlockDefinition = blocksRegistry[parentType.type]
 
   // If `allowedChildren` is not defined on the parent block, all children are allowed.
   if (!parentBlockDefinition.allowedChildren) {
-    return true;
+    return true
   }
 
   // Otherwise, check if the dragged block's type is included in the allowed children array.
   return parentBlockDefinition.allowedChildren.some(
     (allowedBlock) => allowedBlock.type === draggedBlockType.type
-  );
+  )
 })
 </script>
 
@@ -47,7 +47,7 @@ const isChildAllowedInSlot = computed(() => {
     direction="horizontal"
     gap="xs"
   >
-    <slot name="actions"/>
+    <slot name="actions" />
   </RLLayoutBox>
   <component v-for="block in blocks" />
 </template>

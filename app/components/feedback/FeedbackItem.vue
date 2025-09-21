@@ -4,7 +4,7 @@ interface Props {
 }
 
 interface Emits {
-  (e: 'delete', id: number): void
+  (e: `delete`, id: number): void
 }
 
 const props = defineProps<Props>()
@@ -18,13 +18,13 @@ const rating = computed(() => getRatingFromFeedback(props.feedback))
 const isDeleting = ref(false)
 
 async function handleDelete() {
-  if (!confirm('Are you sure you want to delete this feedback?')) {
+  if (!confirm(`Are you sure you want to delete this feedback?`)) {
     return
   }
 
   isDeleting.value = true
   try {
-    emit('delete', props.feedback.id)
+    emit(`delete`, props.feedback.id)
   } finally {
     isDeleting.value = false
   }
@@ -49,12 +49,12 @@ async function handleDelete() {
             <span class="flex items-center gap-1">
               <UIcon name="i-lucide-calendar" class="size-3" />
               {{ new Date(feedback.updatedAt).toLocaleDateString('en-US', {
-              month: 'short',
-              day: 'numeric',
-              year: 'numeric',
-              hour: '2-digit',
-              minute: '2-digit'
-            }) }}
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+              }) }}
             </span>
             <span v-if="feedback.country" class="flex items-center gap-1">
               <UIcon name="i-lucide-map-pin" class="size-3" />

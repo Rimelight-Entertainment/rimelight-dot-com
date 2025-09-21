@@ -5,9 +5,9 @@ import type { FormSubmitEvent } from '@nuxt/ui'
 const fileRef = ref<HTMLInputElement>()
 
 const profileSchema = z.object({
-  name: z.string().min(2, 'Too short'),
-  email: z.string().email('Invalid email'),
-  username: z.string().min(2, 'Too short'),
+  name: z.string().min(2, `Too short`),
+  email: z.string().email(`Invalid email`),
+  username: z.string().min(2, `Too short`),
   avatar: z.string().optional(),
   bio: z.string().optional()
 })
@@ -15,19 +15,19 @@ const profileSchema = z.object({
 type ProfileSchema = z.output<typeof profileSchema>
 
 const profile = reactive<Partial<ProfileSchema>>({
-  name: 'Benjamin Canac',
-  email: 'ben@nuxtlabs.com',
-  username: 'benjamincanac',
+  name: `Benjamin Canac`,
+  email: `ben@nuxtlabs.com`,
+  username: `benjamincanac`,
   avatar: undefined,
   bio: undefined
 })
 const toast = useToast()
 async function onSubmit(event: FormSubmitEvent<ProfileSchema>) {
   toast.add({
-    title: 'Success',
-    description: 'Your settings have been updated.',
-    icon: 'i-lucide-check',
-    color: 'success'
+    title: `Success`,
+    description: `Your settings have been updated.`,
+    icon: `i-lucide-check`,
+    color: `success`
   })
   console.log(event.data)
 }

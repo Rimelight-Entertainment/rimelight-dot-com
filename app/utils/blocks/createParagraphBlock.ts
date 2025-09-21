@@ -1,5 +1,5 @@
-import { createBaseBlock } from "./createBaseBlock";
-import type { ParagraphBlockData, TextNode } from "@/types/blocks";
+import { createBaseBlock } from "./createBaseBlock"
+import type { ParagraphBlockData, TextNode } from "@/types/blocks"
 
 /**
  * Creates a new Paragraph Block data object.
@@ -7,14 +7,14 @@ import type { ParagraphBlockData, TextNode } from "@/types/blocks";
  * @returns A new ParagraphBlockData object.
  */
 export const createParagraphBlock = (
-    initialData?: Partial<ParagraphBlockData>,
+  initialData?: Partial<ParagraphBlockData>
 ): ParagraphBlockData => {
-    const mergedAttrs = {
-        text: initialData?.attrs?.text || ([{ type: "text", text: "" }] as TextNode[]),
-        ...initialData?.attrs,
-    };
+  const mergedAttrs = {
+    text: initialData?.attrs?.text || ([{ type: `text`, text: `` }] as TextNode[]),
+    ...initialData?.attrs
+  }
 
-    return createBaseBlock<ParagraphBlockData>("paragraph", {
-        attrs: mergedAttrs,
-    });
-};
+  return createBaseBlock<ParagraphBlockData>(`paragraph`, {
+    attrs: mergedAttrs
+  })
+}

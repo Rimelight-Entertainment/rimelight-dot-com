@@ -1,66 +1,65 @@
 <script setup lang="ts">
-import { z } from 'zod';
-import { articleTypeEnum } from '~~/server/database/schema';
-import { UForm } from '#components';
-import type { FormSubmitEvent } from '@nuxt/ui';
+import { z } from 'zod'
+import { articleTypeEnum } from '~~/server/database/schema'
+import { UForm } from '#components'
+import type { FormSubmitEvent } from '@nuxt/ui'
 
 const open = ref(false)
 
-const formRef = useTemplateRef('formRef')
+const formRef = useTemplateRef(`formRef`)
 
 type TagItem = {
-  label: string;
-  value: string;
-  icon: string;
-};
+  label: string
+  value: string
+  icon: string
+}
 
-const articleTypes = articleTypeEnum.enumValues;
-type ArticleType = typeof articleTypes[number];
+const articleTypes = articleTypeEnum.enumValues
+type ArticleType = typeof articleTypes[number]
 
 const {
   data: availableTags,
-  pending: pendingTags,
-  error: errorTags,
-} = await useFetch('/api/article/tags', { method: 'GET' });
+  pending: pendingTags
+} = await useFetch(`/api/article/tags`, { method: `GET` })
 
 const formattedTags = computed(() => {
   if (!availableTags.value?.tags) {
-    return [];
+    return []
   }
   return availableTags.value.tags.map((tag) => ({
     label: tag.name,
     value: tag.name,
-    icon: 'lucide:tag',
-  }));
-});
+    icon: `lucide:tag`
+  }))
+})
 
 const schema = z.object({
-  title: z.string().min(1, 'Title is required.'),
+  title: z.string().min(1, `Title is required.`),
   slug: z
     .string()
-    .min(1, 'Slug is required.')
-    .regex(/^[a-z0-9-/]+$/, 'Slug can only contain lowercase letters, numbers, and hyphens.')
-    .transform(value => value.trim().toLowerCase()),
-  type: z.enum(articleTypes as [string, ...string[]]).default('Default'),
+    .min(1, `Slug is required.`)
+    .regex(/^[a-z0-9-/]+$/, `Slug can only contain lowercase letters, numbers, and hyphens.`)
+    .transform((value) => value.trim().toLowerCase()),
+  type: z.enum(articleTypes as [string, ...string[]]).default(`Default`),
   tags: z.array(z.object({
     label: z.string(),
     value: z.string(),
-    icon: z.string(),
-  })),
-});
+    icon: z.string()
+  }))
+})
 
 type Schema = z.infer<typeof schema>
 
 const state = reactive<{
-  title: string;
-  slug: string;
-  type: ArticleType;
-  tags: TagItem[];
+  title: string
+  slug: string
+  type: ArticleType
+  tags: TagItem[]
 }>({
-  title: '',
-  slug: '',
-  type: 'Default',
-  tags: [],
+  title: ``,
+  slug: ``,
+  type: `Default`,
+  tags: []
 })
 
 const toast = useToast()
@@ -69,29 +68,29 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
   try {
     const payload = {
       ...event.data,
-      tags: event.data.tags.map(tag => tag.value),
-    };
+      tags: event.data.tags.map((tag) => tag.value)
+    }
 
-    await useFetch('/api/article/create', {
-      method: 'POST',
-      body: payload,
-    });
+    await useFetch(`/api/article/create`, {
+      method: `POST`,
+      body: payload
+    })
 
     toast.add({
-      title: 'Success',
-      description: 'The article was created successfully.',
-      color: 'success',
-      icon: 'lucide:circle-check',
-    });
+      title: `Success`,
+      description: `The article was created successfully.`,
+      color: `success`,
+      icon: `lucide:circle-check`
+    })
     await navigateTo(`/${state.slug}`)
   } catch (error) {
-    console.error('Failed to create article:', error);
+    console.error(`Failed to create article:`, error)
     toast.add({
-      title: 'Error',
-      description: 'There was an issue creating the article. Please try again.',
-      color: 'error',
-      icon: 'lucide:circle-x',
-    });
+      title: `Error`,
+      description: `There was an issue creating the article. Please try again.`,
+      color: `error`,
+      icon: `lucide:circle-x`
+    })
   }
 }
 
@@ -99,8 +98,8 @@ function onCreateTag(tag: string) {
   state.tags.push({
     label: tag,
     value: tag,
-    icon: 'lucide:tag',
-  });
+    icon: `lucide:tag`
+  })
 }
 </script>
 
@@ -118,10 +117,10 @@ function onCreateTag(tag: string) {
           gap="md"
         >
           <UFormField label="Title" name="title" required>
-            <UInput v-model="state.title" placeholder="New Page" class="w-48"/>
+            <UInput v-model="state.title" placeholder="New Page" class="w-48" />
           </UFormField>
           <UFormField label="Slug" name="slug" required>
-            <UInput v-model="state.slug" placeholder="franchises/grand-tale/" class="w-48"/>
+            <UInput v-model="state.slug" placeholder="franchises/grand-tale/" class="w-48" />
           </UFormField>
           <UFormField label="Type" name="type">
             <USelect
@@ -139,18 +138,20 @@ function onCreateTag(tag: string) {
               multiple
               create-item
               placeholder="Select tags"
-              @create="onCreateTag"
               class="w-48"
+              @create="onCreateTag"
             />
           </UFormField>
         </RLLayoutBox>
       </UForm>
     </template>
     <template #footer="{ close }">
-      <UButton color="error" label="Cancel" @click="close"/>
-      <UButton type="submit" @click="formRef?.submit() && close">Create Article</UButton>
+      <UButton color="error" label="Cancel" @click="close" />
+      <UButton type="submit" @click="formRef?.submit() && close">
+        Create Article
+      </UButton>
     </template>
-    <UButton variant="ghost" leading-icon="lucide:file-plus" label="Create Article"/>
+    <UButton variant="ghost" leading-icon="lucide:file-plus" label="Create Article" />
   </UModal>
 </template>
 

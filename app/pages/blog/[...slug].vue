@@ -3,27 +3,27 @@ import { mapContentNavigation } from '@nuxt/ui/utils/content'
 import { findPageBreadcrumb } from '@nuxt/content/utils'
 
 definePageMeta({
-  layout: 'blog'
+  layout: `blog`
 })
 
 const route = useRoute()
 
-const { data: page } = await useAsyncData(route.path, () => queryCollection('blog').path(route.path).first())
+const { data: page } = await useAsyncData(route.path, () => queryCollection(`blog`).path(route.path).first())
 if (!page.value) {
-  throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
+  throw createError({ statusCode: 404, statusMessage: `Page not found`, fatal: true })
 }
 
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
-  return queryCollectionItemSurroundings('blog', route.path, {
-    fields: ['description']
+  return queryCollectionItemSurroundings(`blog`, route.path, {
+    fields: [`description`]
   })
 })
 
-const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('blog'))
+const { data: navigation } = await useAsyncData(`navigation`, () => queryCollectionNavigation(`blog`))
 
 const breadcrumb = computed(() => mapContentNavigation(findPageBreadcrumb(navigation?.value, page.value?.path, { indexAsChild: true })).map(({ icon, ...link }) => link), { deep: 0 })
 
-const datePosted = useDateFormat(page.datePosted, 'DD/MM/YYYY')
+const datePosted = useDateFormat(page.datePosted, `DD/MM/YYYY`)
 </script>
 
 <template>
@@ -45,7 +45,7 @@ const datePosted = useDateFormat(page.datePosted, 'DD/MM/YYYY')
         :links="page.links"
       />
       <UPageBody>
-        <UBadge v-if="page.tags" v-for="tag in page.tags" :key="tag" variant="soft" :label="tag" />
+        <UBadge v-for="tag in page.tags" v-if="page.tags" :key="tag" variant="soft" :label="tag" />
         <span class="text-muted">Date posted: {{ datePosted }}</span>
         <ContentRenderer
           v-if="page.body"

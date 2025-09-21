@@ -1,7 +1,7 @@
 import type { AvatarProps } from '@nuxt/ui'
 
-export type UserStatus = 'subscribed' | 'unsubscribed' | 'bounced'
-export type SaleStatus = 'paid' | 'failed' | 'refunded'
+export type UserStatus = `subscribed` | `unsubscribed` | `bounced`
+export type SaleStatus = `paid` | `failed` | `refunded`
 
 export interface User {
   id: number
@@ -24,7 +24,7 @@ export interface Mail {
 export interface Member {
   name: string
   username: string
-  role: 'member' | 'owner'
+  role: `member` | `owner`
   avatar: Avatar
 }
 
@@ -52,7 +52,7 @@ export interface Notification {
   date: string
 }
 
-export type Period = 'daily' | 'weekly' | 'monthly'
+export type Period = `daily` | `weekly` | `monthly`
 
 export interface Range {
   start: Date

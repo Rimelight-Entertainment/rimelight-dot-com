@@ -4,24 +4,24 @@ import { breakpointsTailwind } from '@vueuse/core'
 import type { Mail } from '~/types'
 
 definePageMeta({
-  layout: 'dashboard'
+  layout: `dashboard`
 })
 
 const tabItems = [{
-  label: 'All',
-  value: 'all'
+  label: `All`,
+  value: `all`
 }, {
-  label: 'Unread',
-  value: 'unread'
+  label: `Unread`,
+  value: `unread`
 }]
-const selectedTab = ref('all')
+const selectedTab = ref(`all`)
 
-const { data: mails } = await useFetch<Mail[]>('/api/mails', { default: () => [] })
+const { data: mails } = await useFetch<Mail[]>(`/api/mails`, { default: () => [] })
 
 // Filter mails based on the selected tab
 const filteredMails = computed(() => {
-  if (selectedTab.value === 'unread') {
-    return mails.value.filter(mail => !!mail.unread)
+  if (selectedTab.value === `unread`) {
+    return mails.value.filter((mail) => !!mail.unread)
   }
 
   return mails.value
@@ -42,13 +42,13 @@ const isMailPanelOpen = computed({
 
 // Reset selected mail if it's not in the filtered mails
 watch(filteredMails, () => {
-  if (!filteredMails.value.find(mail => mail.id === selectedMail.value?.id)) {
+  if (!filteredMails.value.find((mail) => mail.id === selectedMail.value?.id)) {
     selectedMail.value = null
   }
 })
 
 const breakpoints = useBreakpoints(breakpointsTailwind)
-const isMobile = breakpoints.smaller('lg')
+const isMobile = breakpoints.smaller(`lg`)
 </script>
 
 <template>

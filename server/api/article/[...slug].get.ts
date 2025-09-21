@@ -1,17 +1,17 @@
-import { eq } from 'drizzle-orm';
-import { useDb } from '../../utils/drizzle';
-import { articles } from '../../database/schema';
+import { eq } from 'drizzle-orm'
+import { useDb } from '../../utils/drizzle'
+import { articles } from '../../database/schema'
 
 export default defineEventHandler(async (event) => {
-  const db = useDb();
+  const db = useDb()
 
-  const slug = event.context.params?.slug;
+  const slug = event.context.params?.slug
 
   if (!slug) {
     throw createError({
       statusCode: 400,
-      statusMessage: 'Slug is missing.',
-    });
+      statusMessage: `Slug is missing.`
+    })
   }
 
   try {
@@ -20,29 +20,29 @@ export default defineEventHandler(async (event) => {
       with: {
         articleTags: {
           with: {
-            tag: true,
-          },
-        },
-      },
-    });
+            tag: true
+          }
+        }
+      }
+    })
 
     if (!article) {
       throw createError({
         statusCode: 404,
-        statusMessage: 'Article not found.',
-      });
+        statusMessage: `Article not found.`
+      })
     }
 
     return {
       ...article,
-      tags: article.articleTags.map((at) => at.tag.name),
-    };
+      tags: article.articleTags.map((at) => at.tag.name)
+    }
   } catch (error) {
     // You can add more specific error handling here
-    console.error('Error fetching article:', error);
+    console.error(`Error fetching article:`, error)
     throw createError({
       statusCode: 500,
-      statusMessage: 'Internal Server Error',
-    });
+      statusMessage: `Internal Server Error`
+    })
   }
-});
+})

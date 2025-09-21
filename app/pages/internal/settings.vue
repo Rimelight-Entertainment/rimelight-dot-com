@@ -2,31 +2,31 @@
 import type { NavigationMenuItem } from '@nuxt/ui'
 
 definePageMeta({
-  layout: 'dashboard'
+  layout: `dashboard`
 })
 
 const links = [[{
-  label: 'General',
-  icon: 'i-lucide-user',
-  to: '/internal/settings',
+  label: `General`,
+  icon: `i-lucide-user`,
+  to: `/internal/settings`,
   exact: true
 }, {
-  label: 'Members',
-  icon: 'i-lucide-users',
-  to: '/internal/settings/members'
+  label: `Members`,
+  icon: `i-lucide-users`,
+  to: `/internal/settings/members`
 }, {
-  label: 'Notifications',
-  icon: 'i-lucide-bell',
-  to: '/internal/settings/notifications'
+  label: `Notifications`,
+  icon: `i-lucide-bell`,
+  to: `/internal/settings/notifications`
 }, {
-  label: 'Security',
-  icon: 'i-lucide-shield',
-  to: '/internal/settings/security'
+  label: `Security`,
+  icon: `i-lucide-shield`,
+  to: `/internal/settings/security`
 }], [{
-  label: 'Documentation',
-  icon: 'i-lucide-book-open',
-  to: 'https://ui4.nuxt.com/docs/getting-started/installation/nuxt',
-  target: '_blank'
+  label: `Documentation`,
+  icon: `i-lucide-book-open`,
+  to: `https://ui4.nuxt.com/docs/getting-started/installation/nuxt`,
+  target: `_blank`
 }]] satisfies NavigationMenuItem[][]
 </script>
 

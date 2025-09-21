@@ -1,44 +1,44 @@
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: 'blue',
-      commentary: 'fuchsia',
-      ideation: 'violet',
-      creator: 'teal'
+      primary: `blue`,
+      commentary: `fuchsia`,
+      ideation: `violet`,
+      creator: `teal`
     },
     icons: {
-      close: 'lucide:x',
-      chevronLeft: 'lucide:chevron-left',
-      chevronRight: 'lucide:chevron-right',
-      folder: 'lucide:folder',
-      folderOpen: 'lucide:folder-open',
+      close: `lucide:x`,
+      chevronLeft: `lucide:chevron-left`,
+      chevronRight: `lucide:chevron-right`,
+      folder: `lucide:folder`,
+      folderOpen: `lucide:folder-open`
     },
     banner: {
       slots: {
-        icon: 'text-highlighted',
-        title: 'text-highlighted',
-        close: 'text-highlighted'
+        icon: `text-highlighted`,
+        title: `text-highlighted`,
+        close: `text-highlighted`
       }
     },
     footer: {
       slots: {
-        root: 'py-8'
+        root: `py-8`
       }
     },
     page: {
       slots: {
-        root: 'lg:gap-6',
+        root: `lg:gap-6`
       }
     },
     pageCTA: {
       slots: {
-        root: 'rounded-none'
+        root: `rounded-none`
       }
     },
     contentToc: {
       defaultVariants: {
         highlight: true,
-        highlightColor: 'primary'
+        highlightColor: `primary`
       }
     },
     popover: {
@@ -58,17 +58,17 @@ export default defineAppConfig({
     },
     dashboardSidebar: {
       slots: {
-        header: 'border-b border-default',
-        footer: 'border-t border-default'
+        header: `border-b border-default`,
+        footer: `border-t border-default`
       },
       defaultVariants: {
         resizable: true,
-        collapsible: true,
+        collapsible: true
       }
     },
     prose: {
       p: {
-        base: 'my-0 mt-2'
+        base: `my-0 mt-2`
       }
     }
   }

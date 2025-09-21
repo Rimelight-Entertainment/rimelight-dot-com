@@ -9,13 +9,13 @@ export default defineNitroPlugin(() => {
     const db = useDb()
 
     try {
-      consola.info('Attempting to run Neon DB migrations...')
+      consola.info(`Attempting to run Neon DB migrations...`)
       await migrate(db, {
-        migrationsFolder: 'server/database/migrations',
+        migrationsFolder: `server/database/migrations`
       })
-      consola.success('✅ Neon DB migrations completed successfully.')
+      consola.success(`✅ Neon DB migrations completed successfully.`)
     } catch (err) {
-      consola.error('❌ Neon DB migrations failed:', err)
+      consola.error(`❌ Neon DB migrations failed:`, err)
       throw err
     }
   })

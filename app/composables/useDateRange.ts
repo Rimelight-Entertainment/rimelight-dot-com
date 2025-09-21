@@ -6,7 +6,7 @@ export interface DateRange {
 }
 
 export function useDateRange() {
-  const dateRange = useState<DateRange>('feedback-date-range', () => ({
+  const dateRange = useState<DateRange>(`feedback-date-range`, () => ({
     start: subDays(new Date(), 30),
     end: new Date()
   }))
@@ -18,24 +18,24 @@ export function useDateRange() {
     }
   }
 
-  const setPresetRange = (preset: 'week' | 'month' | '3months' | '6months' | 'year') => {
+  const setPresetRange = (preset: `week` | `month` | `3months` | `6months` | `year`) => {
     const end = new Date()
     let start: Date
 
     switch (preset) {
-      case 'week':
+      case `week`:
         start = subDays(end, 7)
         break
-      case 'month':
+      case `month`:
         start = subDays(end, 30)
         break
-      case '3months':
+      case `3months`:
         start = subMonths(end, 3)
         break
-      case '6months':
+      case `6months`:
         start = subMonths(end, 6)
         break
-      case 'year':
+      case `year`:
         start = subYears(end, 1)
         break
       default:
@@ -46,12 +46,12 @@ export function useDateRange() {
   }
 
   const isDateInRange = (date: Date | string) => {
-    const checkDate = typeof date === 'string' ? new Date(date) : date
+    const checkDate = typeof date === `string` ? new Date(date) : date
     return checkDate >= dateRange.value.start && checkDate <= dateRange.value.end
   }
 
   const filterFeedbackByDateRange = <T extends { createdAt: Date | string }>(feedback: T[]): T[] => {
-    return feedback.filter(item => isDateInRange(item.createdAt))
+    return feedback.filter((item) => isDateInRange(item.createdAt))
   }
 
   return {

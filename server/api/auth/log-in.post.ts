@@ -6,7 +6,7 @@ import { users } from '~~/server/database/schema'
 
 export const loginSchema = z.object({
   email: z.string().email(),
-  password: z.string(),
+  password: z.string()
 })
 
 export default defineEventHandler(async (event) => {
@@ -22,12 +22,12 @@ export default defineEventHandler(async (event) => {
     .then((rows) => rows[0])
 
   if (!user) {
-    throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
+    throw createError({ statusCode: 401, statusMessage: `Unauthorized` })
   }
 
   const ok = await verifyPassword(user.password_hash, body.password)
   if (!ok) {
-    throw createError({ statusCode: 401, statusMessage: 'Unauthorized' })
+    throw createError({ statusCode: 401, statusMessage: `Unauthorized` })
   }
 
   await setUserSession(event, {
@@ -39,7 +39,7 @@ export default defineEventHandler(async (event) => {
       lastName: user.last_name,
       role: user.role
     },
-    lastLoggedIn: new Date(),
+    lastLoggedIn: new Date()
   })
 
   return { success: true }

@@ -1,11 +1,11 @@
-import { h, type VNode } from 'vue';
-import BlockSchema from '~/types/blockSchema';
+import { h, type VNode } from 'vue'
+import BlockSchema from '~/types/blockSchema'
 import type {
   EditorCallbacks,
-  GenericBlockComponentProps,
-} from '~/types/blockSchema';
-import BlockSlot from '~/components/entry/blocks/BlockSlot.vue';
-import type { BlockData } from '~/types/blocks';
+  GenericBlockComponentProps
+} from '~/types/blockSchema'
+import BlockSlot from '~/components/entry/blocks/BlockSlot.vue'
+import type { BlockData } from '~/types/blocks'
 
 /**
  * A composable to recursively render blocks based on their schema.
@@ -23,26 +23,26 @@ export const useRenderBlocks = (
   editorCallbacks?: EditorCallbacks,
   currentNestingLevel = 0,
   draggedBlockType: string | null = null,
-  isChildAllowedInParent?: (childType: string, parentType: string) => boolean,
+  isChildAllowedInParent?: (childType: string, parentType: string) => boolean
 ): VNode[] => {
   if (!blocks) {
-    return [];
+    return []
   }
 
   return blocks
     .filter((block) => block !== null && block !== undefined)
     .map((block) => {
-      const blockSchemaEntry = BlockSchema[block.type];
+      const blockSchemaEntry = BlockSchema[block.type]
 
       if (!blockSchemaEntry) {
-        console.warn(`No schema entry found for block type: ${block.type}`);
-        return null;
+        console.warn(`No schema entry found for block type: ${block.type}`)
+        return null
       }
 
-      const BlockComponent = blockSchemaEntry.component;
+      const BlockComponent = blockSchemaEntry.component
 
-      const specificBlockComponentProps: GenericBlockComponentProps =
-        {
+      const specificBlockComponentProps: GenericBlockComponentProps
+        = {
           block: block as BlockData,
           isEditable: isEditable,
           renderBlocks: (childBlocks, isEdit, callbacks, level) =>
@@ -52,7 +52,7 @@ export const useRenderBlocks = (
               callbacks,
               level,
               draggedBlockType,
-              isChildAllowedInParent,
+              isChildAllowedInParent
             ),
           editorCallbacks: editorCallbacks,
           nestingLevel: currentNestingLevel,
@@ -60,35 +60,35 @@ export const useRenderBlocks = (
           isChildAllowedInParent: isChildAllowedInParent,
           draggable: blockSchemaEntry.draggable ?? false,
           nestable: blockSchemaEntry.nestable ?? false,
-          isTemplated: block.isTemplated ?? false,
-        };
+          isTemplated: block.isTemplated ?? false
+        }
 
-      const renderedSlots =
-        blockSchemaEntry.nestable && 'slots' in block && block.slots
+      const renderedSlots
+        = blockSchemaEntry.nestable && `slots` in block && block.slots
           ? Object.entries(block.slots).map(([slotName, slotBlocks]) =>
-            h(BlockSlot, {
-              key: `${block.id}-${slotName}`,
-              blocks: slotBlocks,
-              isEditable: isEditable,
-              editorCallbacks: editorCallbacks,
-              parentId: block.id,
-              parentBlockType: block.type,
-              renderBlocks: useRenderBlocks,
-              parentNestingLevel: currentNestingLevel,
-              draggedBlockType: draggedBlockType,
-              isChildAllowedInParent: isChildAllowedInParent || (() => true),
-              slotName: slotName,
-            }),
-          )
-          : null;
+              h(BlockSlot, {
+                key: `${block.id}-${slotName}`,
+                blocks: slotBlocks,
+                isEditable: isEditable,
+                editorCallbacks: editorCallbacks,
+                parentId: block.id,
+                parentBlockType: block.type,
+                renderBlocks: useRenderBlocks,
+                parentNestingLevel: currentNestingLevel,
+                draggedBlockType: draggedBlockType,
+                isChildAllowedInParent: isChildAllowedInParent || (() => true),
+                slotName: slotName
+              })
+            )
+          : null
       return h(
         BlockComponent,
         {
           key: block.id,
-          ...specificBlockComponentProps,
+          ...specificBlockComponentProps
         },
-        renderedSlots ? { default: () => renderedSlots } : undefined,
-      );
+        renderedSlots ? { default: () => renderedSlots } : undefined
+      )
     })
-    .filter(Boolean) as VNode[];
-};
+    .filter(Boolean) as VNode[]
+}

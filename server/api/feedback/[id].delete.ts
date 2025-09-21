@@ -20,7 +20,7 @@ export default defineEventHandler(async (event) => {
   if (result.length === 0) {
     throw createError({
       statusCode: 404,
-      statusMessage: 'Feedback not found'
+      statusMessage: `Feedback not found`
     })
   }
 

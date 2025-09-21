@@ -13,20 +13,20 @@ const days = computed(() => eachDayOfInterval(props.range))
 const periods = computed<Period[]>(() => {
   if (days.value.length <= 8) {
     return [
-      'daily'
+      `daily`
     ]
   }
 
   if (days.value.length <= 31) {
     return [
-      'daily',
-      'weekly'
+      `daily`,
+      `weekly`
     ]
   }
 
   return [
-    'weekly',
-    'monthly'
+    `weekly`,
+    `monthly`
   ]
 })
 

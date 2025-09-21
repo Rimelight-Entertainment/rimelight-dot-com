@@ -8,9 +8,9 @@ export function useFeedbackRatings() {
   })
 
   function getScoreColor(score: number): string {
-    if (score >= 4.0) return 'text-success'
-    if (score >= 3.0) return 'text-warning'
-    return 'text-error'
+    if (score >= 4.0) return `text-success`
+    if (score >= 3.0) return `text-warning`
+    return `text-error`
   }
 
   function getRatingFromFeedback(feedback: { rating: FeedbackRating }) {
@@ -19,8 +19,8 @@ export function useFeedbackRatings() {
 
   function calculateStats(feedbacks: { rating: FeedbackRating }[]) {
     const total = feedbacks.length
-    const positive = feedbacks.filter(f => ['very-helpful', 'helpful'].includes(f.rating)).length
-    const negative = feedbacks.filter(f => ['not-helpful', 'confusing'].includes(f.rating)).length
+    const positive = feedbacks.filter((f) => [`very-helpful`, `helpful`].includes(f.rating)).length
+    const negative = feedbacks.filter((f) => [`not-helpful`, `confusing`].includes(f.rating)).length
 
     const totalScore = feedbacks.reduce((sum, item) => sum + ratingConfig.value[item.rating].score, 0)
     const averageScore = total > 0 ? Number((totalScore / total).toFixed(1)) : 0
@@ -49,7 +49,7 @@ export function useFeedbackData(rawFeedback: Ref<FeedbackItem[] | null>) {
   const { filterFeedbackByDateRange } = useDateRange()
 
   const allFeedbackData = computed(() =>
-    rawFeedback.value?.map(item => ({
+    rawFeedback.value?.map((item) => ({
       ...item,
       createdAt: new Date(item.createdAt),
       updatedAt: new Date(item.updatedAt)
@@ -153,24 +153,24 @@ export function useFeedbackDelete() {
   async function deleteFeedback(id: number): Promise<boolean> {
     try {
       await $fetch(`/api/feedback/${id}`, {
-        method: 'DELETE'
+        method: `DELETE`
       })
 
       toast.add({
-        title: 'Feedback deleted',
-        description: 'The feedback has been successfully removed',
-        color: 'success',
-        icon: 'i-lucide-check'
+        title: `Feedback deleted`,
+        description: `The feedback has been successfully removed`,
+        color: `success`,
+        icon: `i-lucide-check`
       })
 
       return true
     } catch (error) {
-      console.error('Failed to delete feedback:', error)
+      console.error(`Failed to delete feedback:`, error)
       toast.add({
-        title: 'Failed to delete feedback',
-        description: 'Please try again later',
-        color: 'error',
-        icon: 'i-lucide-circle-alert'
+        title: `Failed to delete feedback`,
+        description: `Please try again later`,
+        color: `error`,
+        icon: `i-lucide-circle-alert`
       })
 
       return false
@@ -196,7 +196,7 @@ export function useFeedbackForm(options: UseFeedbackFormOptions) {
 
   const formState = reactive({
     rating: null as FeedbackRating | null,
-    feedback: ''
+    feedback: ``
   })
 
   const isExpanded = ref(false)
@@ -205,7 +205,7 @@ export function useFeedbackForm(options: UseFeedbackFormOptions) {
 
   function cancelFeedback() {
     formState.rating = null
-    formState.feedback = ''
+    formState.feedback = ``
     isExpanded.value = false
   }
 
@@ -235,19 +235,19 @@ export function useFeedbackForm(options: UseFeedbackFormOptions) {
     }
 
     try {
-      await $fetch('/api/feedback', {
-        method: 'POST',
+      await $fetch(`/api/feedback`, {
+        method: `POST`,
         body: submission
       })
 
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      await new Promise((resolve) => setTimeout(resolve, 1000))
       isSubmitted.value = true
     } catch {
       toast.add({
-        title: 'Failed to submit feedback',
-        description: 'Please try again later',
-        color: 'error',
-        icon: 'i-lucide-circle-alert'
+        title: `Failed to submit feedback`,
+        description: `Please try again later`,
+        color: `error`,
+        icon: `i-lucide-circle-alert`
       })
     } finally {
       isSubmitting.value = false
@@ -258,7 +258,7 @@ export function useFeedbackForm(options: UseFeedbackFormOptions) {
     isSubmitted.value = false
     isExpanded.value = false
     formState.rating = null
-    formState.feedback = ''
+    formState.feedback = ``
   }
 
   watch(route, resetFeedback)

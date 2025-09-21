@@ -4,26 +4,26 @@ import type { DropdownMenuItem } from '@nuxt/ui'
 import type { Period, Range } from '~/types'
 
 definePageMeta({
-  layout: 'dashboard'
+  layout: `dashboard`
 })
 
 const { isNotificationsSlideoverOpen } = useDashboard()
 
 const items = [[{
-  label: 'New mail',
-  icon: 'i-lucide-send',
-  to: '/inbox'
+  label: `New mail`,
+  icon: `i-lucide-send`,
+  to: `/inbox`
 }, {
-  label: 'New customer',
-  icon: 'i-lucide-user-plus',
-  to: '/internal/customers'
+  label: `New customer`,
+  icon: `i-lucide-user-plus`,
+  to: `/internal/customers`
 }]] satisfies DropdownMenuItem[][]
 
 const range = shallowRef<Range>({
   start: sub(new Date(), { days: 14 }),
   end: new Date()
 })
-const period = ref<Period>('daily')
+const period = ref<Period>(`daily`)
 </script>
 
 <template>

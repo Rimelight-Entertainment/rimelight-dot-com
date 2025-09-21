@@ -7,7 +7,7 @@ export default defineEventHandler(async (event) => {
   const session = await getUserSession(event)
 
   if (!session?.user) {
-    throw createError({ statusCode: 401, statusMessage: 'Unauthenticated' })
+    throw createError({ statusCode: 401, statusMessage: `Unauthenticated` })
   }
 
   const db = useDb()
@@ -28,7 +28,7 @@ export default defineEventHandler(async (event) => {
     .then((rows) => rows[0])
 
   if (!result) {
-    throw createError({ statusCode: 404, statusMessage: 'User not found' })
+    throw createError({ statusCode: 404, statusMessage: `User not found` })
   }
 
   return result

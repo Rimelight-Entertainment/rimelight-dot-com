@@ -19,23 +19,23 @@ interface Props {
 const props = defineProps<Props>()
 const { dateRange } = useDateRange()
 
-const chartType = ref<'line' | 'compare' | 'overall'>('line')
+const chartType = ref<`line` | `compare` | `overall`>(`line`)
 
 const selectedPagePaths = ref<string[]>([])
 const showPageSelector = ref(false)
-const pageSearchQuery = ref('')
+const pageSearchQuery = ref(``)
 
 const hasValidData = computed(() => {
-  return props.pageAnalytics && props.pageAnalytics.length > 0 && props.pageAnalytics.some(p => p && p.total > 0)
+  return props.pageAnalytics && props.pageAnalytics.length > 0 && props.pageAnalytics.some((p) => p && p.total > 0)
 })
 
 const availablePages = computed(() => {
   if (!props.pageAnalytics) return []
 
   const pages = props.pageAnalytics
-    .filter(p => p && p.total > 0)
+    .filter((p) => p && p.total > 0)
     .sort((a, b) => b.total - a.total)
-    .map(page => ({
+    .map((page) => ({
       path: page.path,
       title: page.lastFeedback?.title || page.path,
       total: page.total,
@@ -47,7 +47,7 @@ const availablePages = computed(() => {
   }
 
   const searchTerm = pageSearchQuery.value.toLowerCase().trim()
-  return pages.filter(page =>
+  return pages.filter((page) =>
     page.title.toLowerCase().includes(searchTerm)
     || page.path.toLowerCase().includes(searchTerm)
   )
@@ -55,12 +55,12 @@ const availablePages = computed(() => {
 
 watch(() => props.pageAnalytics, (analytics) => {
   if (selectedPagePaths.value.length === 0 && analytics && analytics.length > 0) {
-    const validAnalytics = analytics.filter(p => p && p.total > 0)
+    const validAnalytics = analytics.filter((p) => p && p.total > 0)
     if (validAnalytics.length > 0) {
       const topPages = validAnalytics
         .sort((a, b) => b.total - a.total)
         .slice(0, Math.min(5, validAnalytics.length))
-      selectedPagePaths.value = topPages.map(p => p.path)
+      selectedPagePaths.value = topPages.map((p) => p.path)
     }
   }
 }, { immediate: true })
@@ -82,12 +82,12 @@ const overallChartData = computed(() => {
         const feedbackDate = new Date(feedback.createdAt)
 
         if (feedbackDate >= startDate && feedbackDate <= endDate) {
-          const dateStr = feedbackDate.toISOString().split('T')[0]
+          const dateStr = feedbackDate.toISOString().split(`T`)[0]
           if (!dailyScores[dateStr]) {
             dailyScores[dateStr] = []
           }
 
-          const ratingScore = FEEDBACK_OPTIONS.find(opt => opt.value === feedback.rating)?.score || 0
+          const ratingScore = FEEDBACK_OPTIONS.find((opt) => opt.value === feedback.rating)?.score || 0
           dailyScores[dateStr].push(ratingScore)
         }
       })
@@ -99,11 +99,11 @@ const overallChartData = computed(() => {
   for (let i = daysDiff - 1; i >= 0; i--) {
     const date = new Date(endDate)
     date.setDate(date.getDate() - i)
-    const dateStr = date.toISOString().split('T')[0]
+    const dateStr = date.toISOString().split(`T`)[0]
 
     const entry: any = {
       date: dateStr,
-      day: date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+      day: date.toLocaleDateString(`en-US`, { month: `short`, day: `numeric` })
     }
 
     if (hasValidData.value && dailyScores[dateStr] && dailyScores[dateStr].length > 0) {
@@ -131,8 +131,8 @@ const timeBasedChartData = computed(() => {
       const date = new Date(endDate)
       date.setDate(date.getDate() - i)
       data.push({
-        date: date.toISOString().split('T')[0],
-        day: date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+        date: date.toISOString().split(`T`)[0],
+        day: date.toLocaleDateString(`en-US`, { month: `short`, day: `numeric` }),
         placeholder: 0
       })
     }
@@ -141,18 +141,18 @@ const timeBasedChartData = computed(() => {
 
   const dailyScores: Record<string, Record<string, number[]>> = {}
 
-  const selectedPages = props.pageAnalytics.filter(p => p && selectedPagePaths.value.includes(p.path))
+  const selectedPages = props.pageAnalytics.filter((p) => p && selectedPagePaths.value.includes(p.path))
 
   selectedPages.forEach((page) => {
     if (!page || !page.feedback) return
 
-    const pageKey = page.path.split('/').pop()?.replace(/[^a-z0-9]/gi, '') || 'page'
+    const pageKey = page.path.split(`/`).pop()?.replace(/[^a-z0-9]/gi, ``) || `page`
 
     page.feedback.forEach((feedback) => {
       const feedbackDate = new Date(feedback.createdAt)
 
       if (feedbackDate >= startDate && feedbackDate <= endDate) {
-        const dateStr = feedbackDate.toISOString().split('T')[0]
+        const dateStr = feedbackDate.toISOString().split(`T`)[0]
         if (!dailyScores[dateStr]) {
           dailyScores[dateStr] = {}
         }
@@ -160,7 +160,7 @@ const timeBasedChartData = computed(() => {
           dailyScores[dateStr][pageKey] = []
         }
 
-        const ratingScore = FEEDBACK_OPTIONS.find(opt => opt.value === feedback.rating)?.score || 0
+        const ratingScore = FEEDBACK_OPTIONS.find((opt) => opt.value === feedback.rating)?.score || 0
         dailyScores[dateStr][pageKey].push(ratingScore)
       }
     })
@@ -171,17 +171,17 @@ const timeBasedChartData = computed(() => {
   for (let i = daysDiff - 1; i >= 0; i--) {
     const date = new Date(endDate)
     date.setDate(date.getDate() - i)
-    const dateStr = date.toISOString().split('T')[0]
+    const dateStr = date.toISOString().split(`T`)[0]
 
     const entry: any = {
       date: dateStr,
-      day: date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+      day: date.toLocaleDateString(`en-US`, { month: `short`, day: `numeric` })
     }
 
     selectedPages.forEach((page) => {
       if (!page) return
 
-      const pageKey = page.path.split('/').pop()?.replace(/[^a-z0-9]/gi, '') || 'page'
+      const pageKey = page.path.split(`/`).pop()?.replace(/[^a-z0-9]/gi, ``) || `page`
 
       if (dailyScores[dateStr] && dailyScores[dateStr][pageKey] && dailyScores[dateStr][pageKey].length > 0) {
         const dayAverage = dailyScores[dateStr][pageKey].reduce((sum, score) => sum + score, 0) / dailyScores[dateStr][pageKey].length
@@ -199,14 +199,14 @@ const timeBasedChartData = computed(() => {
 
 const comparisonChartData = computed(() => {
   if (!hasValidData.value || selectedPagePaths.value.length === 0 || !props.pageAnalytics) {
-    return [{ page: 'No Data', positive: 0, negative: 0 }]
+    return [{ page: `No Data`, positive: 0, negative: 0 }]
   }
 
   return props.pageAnalytics
-    .filter(p => p && selectedPagePaths.value.includes(p.path))
+    .filter((p) => p && selectedPagePaths.value.includes(p.path))
     .map((page) => {
       const title = page.lastFeedback?.title || page.path
-      const shortTitle = title.length > 15 ? title.substring(0, 15) + '...' : title
+      const shortTitle = title.length > 15 ? title.substring(0, 15) + `...` : title
 
       return {
         page: shortTitle,
@@ -217,8 +217,8 @@ const comparisonChartData = computed(() => {
 })
 
 const chartData = computed(() => {
-  if (chartType.value === 'compare') return comparisonChartData.value
-  if (chartType.value === 'overall') return overallChartData.value
+  if (chartType.value === `compare`) return comparisonChartData.value
+  if (chartType.value === `overall`) return overallChartData.value
   return timeBasedChartData.value
 })
 
@@ -226,30 +226,30 @@ const chartCategories = computed(() => {
   if (!hasValidData.value) {
     return {
       placeholder: {
-        name: 'No Data Available',
-        color: '#6b7280'
+        name: `No Data Available`,
+        color: `#6b7280`
       }
     }
   }
 
-  if (chartType.value === 'compare') {
+  if (chartType.value === `compare`) {
     return {
       positive: {
-        name: 'Positive',
-        color: 'var(--ui-success)'
+        name: `Positive`,
+        color: `var(--ui-success)`
       },
       negative: {
-        name: 'Negative',
-        color: 'var(--ui-error)'
+        name: `Negative`,
+        color: `var(--ui-error)`
       }
     }
   }
 
-  if (chartType.value === 'overall') {
+  if (chartType.value === `overall`) {
     return {
       average: {
-        name: 'Overall Rating',
-        color: '#3b82f6'
+        name: `Overall Rating`,
+        color: `#3b82f6`
       }
     }
   }
@@ -257,22 +257,22 @@ const chartCategories = computed(() => {
   if (selectedPagePaths.value.length === 0 || !props.pageAnalytics) {
     return {
       placeholder: {
-        name: 'No Pages Selected',
-        color: '#6b7280'
+        name: `No Pages Selected`,
+        color: `#6b7280`
       }
     }
   }
 
-  const selectedPages = props.pageAnalytics.filter(p => p && selectedPagePaths.value.includes(p.path))
-  const colors = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4', '#84cc16', '#f97316']
+  const selectedPages = props.pageAnalytics.filter((p) => p && selectedPagePaths.value.includes(p.path))
+  const colors = [`#3b82f6`, `#10b981`, `#f59e0b`, `#ef4444`, `#8b5cf6`, `#06b6d4`, `#84cc16`, `#f97316`]
 
   return selectedPages.reduce((acc, page, index) => {
     if (!page) return acc
 
-    const key = page.path.split('/').pop()?.replace(/[^a-z0-9]/gi, '') || 'page'
+    const key = page.path.split(`/`).pop()?.replace(/[^a-z0-9]/gi, ``) || `page`
     const title = page.lastFeedback?.title || page.path
     acc[key] = {
-      name: title.length > 25 ? title.substring(0, 25) + '...' : title,
+      name: title.length > 25 ? title.substring(0, 25) + `...` : title,
       color: colors[index % colors.length]
     }
     return acc
@@ -280,24 +280,24 @@ const chartCategories = computed(() => {
 })
 
 const xFormatter = (index: number) => {
-  if (chartType.value === 'compare') {
-    return comparisonChartData.value[index]?.page || ''
+  if (chartType.value === `compare`) {
+    return comparisonChartData.value[index]?.page || ``
   }
-  if (chartType.value === 'overall') {
-    return overallChartData.value[index]?.day || ''
+  if (chartType.value === `overall`) {
+    return overallChartData.value[index]?.day || ``
   }
-  return timeBasedChartData.value[index]?.day || ''
+  return timeBasedChartData.value[index]?.day || ``
 }
 
 const yFormatter = (value: number) => {
-  if (chartType.value === 'compare') {
+  if (chartType.value === `compare`) {
     return Math.round(value).toString()
   }
-  return value === 0 ? '0' : `${Number(value).toFixed(1)}/4`
+  return value === 0 ? `0` : `${Number(value).toFixed(1)}/4`
 }
 
 const dateRangeLabel = computed(() => {
-  if (chartType.value === 'compare') {
+  if (chartType.value === `compare`) {
     return `Selected Pages (${selectedPagePaths.value.length})`
   }
 
@@ -306,52 +306,52 @@ const dateRangeLabel = computed(() => {
   if (daysDiff <= 31) return `Last ${daysDiff} days`
   if (daysDiff <= 93) return `Last ${Math.round(daysDiff / 30)} months`
   if (daysDiff <= 186) return `Last ${Math.round(daysDiff / 30)} months`
-  return `Last ${Math.round(daysDiff / 365)} year${daysDiff > 730 ? 's' : ''}`
+  return `Last ${Math.round(daysDiff / 365)} year${daysDiff > 730 ? `s` : ``}`
 })
 
 const chartTitle = computed(() => {
   switch (chartType.value) {
-    case 'line':
-      return 'Rating Evolution'
-    case 'compare':
-      return 'Page Comparison'
-    case 'overall':
-      return 'Overall Documentation Rating'
+    case `line`:
+      return `Rating Evolution`
+    case `compare`:
+      return `Page Comparison`
+    case `overall`:
+      return `Overall Documentation Rating`
     default:
-      return 'Rating Evolution'
+      return `Rating Evolution`
   }
 })
 
 const chartDescription = computed(() => {
   switch (chartType.value) {
-    case 'line':
-      return 'Track selected pages satisfaction over time'
-    case 'compare':
-      return 'Compare feedback distribution across pages'
-    case 'overall':
-      return 'Global documentation satisfaction evolution'
+    case `line`:
+      return `Track selected pages satisfaction over time`
+    case `compare`:
+      return `Compare feedback distribution across pages`
+    case `overall`:
+      return `Global documentation satisfaction evolution`
     default:
-      return 'Track selected pages satisfaction over time'
+      return `Track selected pages satisfaction over time`
   }
 })
 
 const chartIcon = computed(() => {
   switch (chartType.value) {
-    case 'line':
-      return 'i-lucide-trending-up'
-    case 'compare':
-      return 'i-lucide-bar-chart-4'
-    case 'overall':
-      return 'i-lucide-activity'
+    case `line`:
+      return `i-lucide-trending-up`
+    case `compare`:
+      return `i-lucide-bar-chart-4`
+    case `overall`:
+      return `i-lucide-activity`
     default:
-      return 'i-lucide-trending-up'
+      return `i-lucide-trending-up`
   }
 })
 
 const availableChartTypes = [
-  { value: 'line' as const, label: 'Line', icon: 'i-lucide-trending-up' },
-  { value: 'compare' as const, label: 'Compare', icon: 'i-lucide-bar-chart-4' },
-  { value: 'overall' as const, label: 'Overall', icon: 'i-lucide-activity' }
+  { value: `line` as const, label: `Line`, icon: `i-lucide-trending-up` },
+  { value: `compare` as const, label: `Compare`, icon: `i-lucide-bar-chart-4` },
+  { value: `overall` as const, label: `Overall`, icon: `i-lucide-activity` }
 ]
 
 function togglePageSelection(pagePath: string) {
@@ -367,30 +367,30 @@ function selectTopPages(count: number) {
   if (!props.pageAnalytics) return
 
   const pages = props.pageAnalytics
-    .filter(p => p && p.total > 0)
+    .filter((p) => p && p.total > 0)
     .sort((a, b) => b.total - a.total)
     .slice(0, count)
-  selectedPagePaths.value = pages.map(p => p.path)
+  selectedPagePaths.value = pages.map((p) => p.path)
 }
 
 function selectBestRatedPages(count: number) {
   if (!props.pageAnalytics) return
 
   const pages = props.pageAnalytics
-    .filter(p => p && p.total > 0)
+    .filter((p) => p && p.total > 0)
     .sort((a, b) => b.averageScore - a.averageScore)
     .slice(0, count)
-  selectedPagePaths.value = pages.map(p => p.path)
+  selectedPagePaths.value = pages.map((p) => p.path)
 }
 
 function selectWorstPages(count: number) {
   if (!props.pageAnalytics) return
 
   const pages = props.pageAnalytics
-    .filter(p => p && p.total > 0)
+    .filter((p) => p && p.total > 0)
     .sort((a, b) => a.averageScore - b.averageScore)
     .slice(0, count)
-  selectedPagePaths.value = pages.map(p => p.path)
+  selectedPagePaths.value = pages.map((p) => p.path)
 }
 </script>
 
@@ -632,7 +632,7 @@ function selectWorstPages(count: number) {
   --vis-tooltip-value-color: rgba(0, 0, 0, 1) !important;
 
   --vis-axis-grid-color: rgba(255, 255, 255, 0.1) !important;
-  --vis-axis-tick-label-color:  var(--ui-text-muted) !important;
+  --vis-axis-tick-label-color: var(--ui-text-muted) !important;
   --vis-axis-label-color: var(--ui-text-toned) !important;
   --vis-legend-label-color: var(--ui-text-muted) !important;
 

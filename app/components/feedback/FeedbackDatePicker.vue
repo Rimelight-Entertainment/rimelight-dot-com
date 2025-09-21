@@ -14,11 +14,11 @@ const formattedDateRange = computed(() => {
 })
 
 const ranges = [
-  { label: 'Last 7 days', preset: 'week' as const },
-  { label: 'Last 30 days', preset: 'month' as const },
-  { label: 'Last 3 months', preset: '3months' as const },
-  { label: 'Last 6 months', preset: '6months' as const },
-  { label: 'Last year', preset: 'year' as const }
+  { label: `Last 7 days`, preset: `week` as const },
+  { label: `Last 30 days`, preset: `month` as const },
+  { label: `Last 3 months`, preset: `3months` as const },
+  { label: `Last 6 months`, preset: `6months` as const },
+  { label: `Last year`, preset: `year` as const }
 ]
 
 const toCalendarDate = (date: Date) => {
@@ -44,26 +44,26 @@ const calendarRange = computed({
   }
 })
 
-const isRangeSelected = (preset: 'week' | 'month' | '3months' | '6months' | 'year') => {
+const isRangeSelected = (preset: `week` | `month` | `3months` | `6months` | `year`) => {
   if (!dateRange.value.start || !dateRange.value.end) return false
 
   const currentDate = today(getLocalTimeZone())
   let startDate = currentDate.copy()
 
   switch (preset) {
-    case 'week':
+    case `week`:
       startDate = startDate.subtract({ days: 7 })
       break
-    case 'month':
+    case `month`:
       startDate = startDate.subtract({ days: 30 })
       break
-    case '3months':
+    case `3months`:
       startDate = startDate.subtract({ months: 3 })
       break
-    case '6months':
+    case `6months`:
       startDate = startDate.subtract({ months: 6 })
       break
-    case 'year':
+    case `year`:
       startDate = startDate.subtract({ years: 1 })
       break
   }

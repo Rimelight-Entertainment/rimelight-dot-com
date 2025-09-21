@@ -1,14 +1,13 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from '@nuxt/ui'
-import type { DropdownMenuItem } from '@nuxt/ui'
+import type { NavigationMenuItem, DropdownMenuItem } from '@nuxt/ui'
 
-const { loggedIn  } = useUserSession()
+const { loggedIn } = useUserSession()
 
 const route = useRoute()
 
-const { data: apiUser, pending, error } = await useAsyncData(
-  'api-user',
-  () => $fetch('/api/user'),
+const { data: apiUser } = await useAsyncData(
+  `api-user`,
+  () => $fetch(`/api/user`),
   {
     lazy: true,
     server: false,
@@ -18,84 +17,84 @@ const { data: apiUser, pending, error } = await useAsyncData(
 
 watch(loggedIn, (newVal) => {
   if (newVal) {
-    refreshNuxtData('api-user')
+    refreshNuxtData(`api-user`)
   }
 })
 
 const items = computed<NavigationMenuItem[]>(() => {
   const baseItems: NavigationMenuItem[] = [
     {
-      label: 'Franchises',
-      active: route.path.startsWith('/franchises'),
-      slot: 'franchises' as const,
+      label: `Franchises`,
+      active: route.path.startsWith(`/franchises`),
+      slot: `franchises` as const,
       children: [
         {
-          label: 'Overview',
-          description: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+          label: `Overview`,
+          description: `You have nothing to do, @nuxt/icon will handle it automatically.`
         },
         {
-          label: 'Characters',
-          description: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+          label: `Characters`,
+          description: `Choose a primary and a neutral color from your Tailwind CSS theme.`
         },
         {
-          label: 'Tales',
-          description: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
+          label: `Tales`,
+          description: `You can customize components by using the \`class\` / \`ui\` props or in your app.config.ts.`
         }
       ]
     },
     {
-      label: 'Forums',
-      to: '/forums',
-      active: route.path.startsWith('/forums')
+      label: `Forums`,
+      to: `/forums`,
+      active: route.path.startsWith(`/forums`)
     },
     {
-      label: 'Events',
-      to: '/events',
-      active: route.path.startsWith('/events')
+      label: `Events`,
+      to: `/events`,
+      active: route.path.startsWith(`/events`)
     },
     {
-      label: 'Store',
-      to: '/store',
-      active: route.path.startsWith('/store')
+      label: `Store`,
+      to: `/store`,
+      active: route.path.startsWith(`/store`)
     },
     {
-      label: 'Company',
-      to: '/company',
-      active: route.path.startsWith('/company'),
+      label: `Company`,
+      to: `/company`,
+      active: route.path.startsWith(`/company`),
       children: [
         {
-          label: 'History',
-          icon: 'lucide:book',
-          description: 'Learn about our beginnings and our mission.',
-          to: '/company/history',
+          label: `History`,
+          icon: `lucide:book`,
+          description: `Learn about our beginnings and our mission.`,
+          to: `/company/history`
         },
         {
-          label: 'Jobs',
-          icon: 'lucide:briefcase',
-          description: 'Check out our currently open positions and their requirements.!',
-          to: '/company/jobs',
+          label: `Jobs`,
+          icon: `lucide:briefcase`,
+          description: `Check out our currently open positions and their requirements.!`,
+          to: `/company/jobs`
         },
         {
-          label: 'Studios',
-          icon: 'lucide:building-2',
-          description: 'Take a tour of our facilities.',
-          to: '/company/studios',
+          label: `Studios`,
+          icon: `lucide:building-2`,
+          description: `Take a tour of our facilities.`,
+          to: `/company/studios`
         },
         {
-          label: 'Benefits',
-          icon: 'lucide:hand-heart',
-          description: 'Discover what benefits and compensations are available to our employees.',
-          to: '/company/benefits',
-        },
+          label: `Benefits`,
+          icon: `lucide:hand-heart`,
+          description: `Discover what benefits and compensations are available to our employees.`,
+          to: `/company/benefits`
+        }
       ]
     }
   ]
 
-  if (apiUser.value?.role === 'employee')  {
+  if (apiUser.value?.role === `employee`) {
     baseItems.push({
-      label: 'Internal',
-      to: '/internal',
-      active: route.path.startsWith('/internal')
+      label: `Internal`,
+      to: `/internal`,
+      active: route.path.startsWith(`/internal`)
     })
   }
 
@@ -106,76 +105,76 @@ const accountMenuItems = ref<DropdownMenuItem[][]>([
     {
       label: apiUser?.username,
       avatar: {
-        src: 'https://github.com/benjamincanac.png'
+        src: `https://github.com/benjamincanac.png`
       },
-      type: 'label'
+      type: `label`
     }
   ],
   [
     {
-      label: 'Profile',
-      icon: 'i-lucide-user'
+      label: `Profile`,
+      icon: `i-lucide-user`
     },
     {
-      label: 'Billing',
-      icon: 'i-lucide-credit-card'
+      label: `Billing`,
+      icon: `i-lucide-credit-card`
     }
   ],
   [
     {
-      label: 'Team',
-      icon: 'i-lucide-users'
+      label: `Team`,
+      icon: `i-lucide-users`
     },
     {
-      label: 'Invite users',
-      icon: 'i-lucide-user-plus',
+      label: `Invite users`,
+      icon: `i-lucide-user-plus`,
       children: [
         [
           {
-            label: 'Email',
-            icon: 'i-lucide-mail'
+            label: `Email`,
+            icon: `i-lucide-mail`
           },
           {
-            label: 'Message',
-            icon: 'i-lucide-message-square'
+            label: `Message`,
+            icon: `i-lucide-message-square`
           }
         ],
         [
           {
-            label: 'More',
-            icon: 'i-lucide-circle-plus'
+            label: `More`,
+            icon: `i-lucide-circle-plus`
           }
         ]
       ]
     },
     {
-      label: 'New team',
-      icon: 'i-lucide-plus',
-      kbds: ['meta', 'n']
+      label: `New team`,
+      icon: `i-lucide-plus`,
+      kbds: [`meta`, `n`]
     }
   ],
   [
     {
-      label: 'Support',
-      icon: 'lucide:headset',
-      to: '/docs/components/dropdown-menu'
+      label: `Support`,
+      icon: `lucide:headset`,
+      to: `/docs/components/dropdown-menu`
     }
   ],
   [
     {
-      label: 'Settings',
-      icon: 'i-lucide-cog',
-      kbds: [',']
+      label: `Settings`,
+      icon: `i-lucide-cog`,
+      kbds: [`,`]
     },
     {
-      label: 'Logout',
-      icon: 'lucide:log-out',
-      kbds: ['shift', 'meta', 'q'],
+      label: `Logout`,
+      icon: `lucide:log-out`,
+      kbds: [`shift`, `meta`, `q`],
       click: async () => {
-        await $fetch('/api/logout', {
-          method: 'POST',
+        await $fetch(`/api/logout`, {
+          method: `POST`
         })
-        await navigateTo('/')
+        await navigateTo(`/`)
       }
     }
   ]
@@ -217,7 +216,7 @@ defineShortcuts(extractShortcuts(accountMenuItems.value))
         direction="horizontal"
         gap="sm"
       >
-        <AuthState v-slot="{ loggedIn, clear }">
+        <AuthState v-slot="{ loggedIn }">
           <template v-if="loggedIn">
             <UDropdownMenu :items="accountMenuItems" :ui="{ content: 'w-48' }">
               <UAvatar size="xl" src="https://github.com/benjamincanac.png" />
@@ -225,8 +224,8 @@ defineShortcuts(extractShortcuts(accountMenuItems.value))
           </template>
 
           <template v-else>
-            <UButton variant="solid"   color="primary" label="Log In"    to="/auth/log-in" />
-            <UButton variant="outline" color="primary" label="Sign Up"   to="/auth/sign-up" />
+            <UButton variant="solid" color="primary" label="Log In" to="/auth/log-in" />
+            <UButton variant="outline" color="primary" label="Sign Up" to="/auth/sign-up" />
           </template>
         </AuthState>
       </RLLayoutBox>

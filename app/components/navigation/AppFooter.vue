@@ -1,45 +1,45 @@
 <script setup lang="ts">
-import type { FooterColumn } from "@nuxt/ui";
+import type { FooterColumn } from "@nuxt/ui"
 import { ar, en, es, fr, ja, ko, pt, ro, zh_cn } from '@nuxt/ui/locale'
 
 const { locale, setLocale } = useI18n()
 
 const columns: FooterColumn[] = [
   {
-    label: 'Resources',
+    label: `Resources`,
     children: [
       {
-        label: 'Branding',
-        to: '/branding/',
+        label: `Branding`,
+        to: `/branding/`
       },
       {
-        label: 'API',
-        to: '/api/'
+        label: `API`,
+        to: `/api/`
       }
     ]
   },
   {
-    label: 'Documents',
+    label: `Documents`,
     children: [
       {
-        label: 'Privacy Policy',
-        to: '/documents/policies/privacy-policy/',
+        label: `Privacy Policy`,
+        to: `/documents/policies/privacy-policy/`
       },
       {
-        label: 'Cookie Policy',
-        to: '/documents/policies/cookie-policy/',
+        label: `Cookie Policy`,
+        to: `/documents/policies/cookie-policy/`
       },
       {
-        label: 'Terms of Service',
-        to: '/documents/policies/terms-of-service/',
+        label: `Terms of Service`,
+        to: `/documents/policies/terms-of-service/`
       },
       {
-        label: 'Code of Conduct',
-        to: '/documents/policies/code-of-conduct/',
+        label: `Code of Conduct`,
+        to: `/documents/policies/code-of-conduct/`
       },
       {
-        label: 'Other Documents',
-        to: '/documents/policies/other-documents/',
+        label: `Other Documents`,
+        to: `/documents/policies/other-documents/`
       }
     ]
   }
@@ -56,7 +56,6 @@ const columns: FooterColumn[] = [
         >
           <NewsletterSignup />
           <UFooterColumns :columns="columns" />
-
         </RLLayoutBox>
       </UContainer>
     </template>
@@ -90,8 +89,8 @@ const columns: FooterColumn[] = [
           direction="horizontal"
           gap="md"
         >
-          <UColorModeSelect class="w-48"/>
-          <ULocaleSelect v-model="locale" :locales="[ar, en, es, fr, ja, ko, pt, ro, zh_cn]" @update:model-value="setLocale($event)" color="secondary" class="w-48" />
+          <UColorModeSelect class="w-48" />
+          <ULocaleSelect v-model="locale" :locales="[ar, en, es, fr, ja, ko, pt, ro, zh_cn]" color="secondary" class="w-48" @update:model-value="setLocale($event)" />
         </RLLayoutBox>
       </RLLayoutBox>
     </template>

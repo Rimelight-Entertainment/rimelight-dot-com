@@ -3,51 +3,51 @@ import { mapContentNavigation } from '@nuxt/ui/utils/content'
 import { findPageBreadcrumb } from '@nuxt/content/utils'
 
 definePageMeta({
-  layout: 'documents'
+  layout: `documents`
 })
 
 const route = useRoute()
 
-const { data: page } = await useAsyncData(route.path, () => queryCollection('documents').path(route.path).first())
+const { data: page } = await useAsyncData(route.path, () => queryCollection(`documents`).path(route.path).first())
 if (!page.value) {
-  throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
+  throw createError({ statusCode: 404, statusMessage: `Page not found`, fatal: true })
 }
 
 const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
-  return queryCollectionItemSurroundings('documents', route.path, {
-    fields: ['description']
+  return queryCollectionItemSurroundings(`documents`, route.path, {
+    fields: [`description`]
   })
 })
 
-const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('documents'))
+const { data: navigation } = await useAsyncData(`navigation`, () => queryCollectionNavigation(`documents`))
 
 const breadcrumb = computed(() =>
   mapContentNavigation(
     findPageBreadcrumb(navigation?.value, page.value?.path, {
-      indexAsChild: true,
-    }),
-  ).map(({ icon, ...link }) => link),
+      indexAsChild: true
+    })
+  ).map(({ icon, ...link }) => link)
 )
 
 const pageLinks = [
   {
-    label: 'Home',
-    to: '/',
-    icon: 'i-heroicons-home'
+    label: `Home`,
+    to: `/`,
+    icon: `i-heroicons-home`
   },
   {
-    label: 'Documents',
-    to: '/documents',
-    icon: 'i-heroicons-document'
+    label: `Documents`,
+    to: `/documents`,
+    icon: `i-heroicons-document`
   },
   {
-    label: 'API',
-    to: '/api',
-    icon: 'i-heroicons-code-bracket'
+    label: `API`,
+    to: `/api`,
+    icon: `i-heroicons-code-bracket`
   }
-];
+]
 
-const lastModified = useDateFormat(page.value.lastModified, 'DD/MM/YYYY')
+const lastModified = useDateFormat(page.value.lastModified, `DD/MM/YYYY`)
 </script>
 
 <template>
@@ -69,7 +69,7 @@ const lastModified = useDateFormat(page.value.lastModified, 'DD/MM/YYYY')
         :links="page.links"
       />
       <UPageBody>
-        <UBadge v-if="page.tags" v-for="tag in page.tags" :key="tag" variant="soft" :label="tag" />
+        <UBadge v-for="tag in page.tags" v-if="page.tags" :key="tag" variant="soft" :label="tag" />
         <ContentRenderer
           v-if="page.body"
           :value="page"
@@ -79,7 +79,7 @@ const lastModified = useDateFormat(page.value.lastModified, 'DD/MM/YYYY')
         <UContentToc title="Table of Contents" :links="page.body.toc.links" highlight>
           <template #bottom>
             <USeparator />
-            <UPageLinks title="Links" :links="pageLinks"/>
+            <UPageLinks title="Links" :links="pageLinks" />
             <span class="text-muted text-sm">Last Modified: <time :datetime="page.lastModified">{{ lastModified }}</time></span>
           </template>
         </UContentToc>
