@@ -45,7 +45,14 @@ const datePosted = useDateFormat(page.datePosted, `DD/MM/YYYY`)
         :links="page.links"
       />
       <UPageBody>
-        <UBadge v-for="tag in page.tags" v-if="page.tags" :key="tag" variant="soft" :label="tag" />
+        <template v-if="page.tags">
+          <UBadge
+            v-for="tag in page.tags"
+            :key="tag"
+            variant="soft"
+            :label="tag"
+          />
+        </template>
         <span class="text-muted">Date posted: {{ datePosted }}</span>
         <ContentRenderer
           v-if="page.body"
