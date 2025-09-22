@@ -20,32 +20,38 @@ if (treeError.value) {
     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   >
     <template #body>
-      <p v-if="pending">
-        Loading articles...
-      </p>
-      <p v-else-if="treeError">
+      <Transition mode="out-in">
+        <Suspense>
+          <template #default>
+            <UTree
+              v-else
+              color="primary"
+              expanded-icon="lucide:folder-open"
+              collapsed-icon="lucide:folder"
+              :items="articleTree"
+            >
+              <template #item-wrapper="{ item }">
+                <span v-if="item.slug">
+                  <UButton
+                    variant="ghost"
+                    color="neutral"
+                    :leading-icon="item.icon"
+                    :label="item.label"
+                    :to="item.slug"
+                    class="w-full"
+                  />
+                </span>
+              </template>
+            </UTree>
+          </template>
+          <template #fallback>
+            Loading articles...
+          </template>
+        </Suspense>
+      </Transition>
+      <p v-if="treeError">
         Failed to load article tree.
       </p>
-      <UTree
-        v-else
-        color="primary"
-        expanded-icon="lucide:folder-open"
-        collapsed-icon="lucide:folder"
-        :items="articleTree"
-      >
-        <template #item-wrapper="{ item }">
-          <span v-if="item.slug">
-            <UButton
-              variant="ghost"
-              color="neutral"
-              :leading-icon="item.icon"
-              :label="item.label"
-              :to="item.slug"
-              class="w-full"
-            />
-          </span>
-        </template>
-      </UTree>
     </template>
     <UButton variant="ghost" leading-icon="lucide:folder-tree" label="Browse Articles" />
     <template #footer="{ close }">
