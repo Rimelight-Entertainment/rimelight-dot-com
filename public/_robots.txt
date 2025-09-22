@@ -1,1 +1,3 @@
+User-agent: *
+Disallow: /internal
 Sitemap: https://rimelight.com/sitemap.xml
