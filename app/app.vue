@@ -1,28 +1,46 @@
 <script setup lang="ts">
 import * as locales from '@nuxt/ui/locale'
-import { ULink } from "#components"
+import {
+  ULink
+} from "#components"
 
 import ConstructionBanner from "~/components/navigation/ConstructionBanner.vue"
 
-const { locale } = useI18n()
+const {
+  locale
+} = useI18n()
 
 const lang = computed(() => locales[locale.value].code)
 const dir = computed(() => locales[locale.value].dir)
 
 const colorMode = useColorMode()
 
-const color = computed(() => colorMode.value === `dark` ? `#020618` : `white`)
+const color = computed(() => {
+  return colorMode.value === `dark` ? `#020618` : `white`
+})
 
 const toast = useToast()
 
 useHead({
   meta: [
-    { charset: `utf-8` },
-    { name: `viewport`, content: `width=device-width, initial-scale=1` },
-    { key: `theme-color`, name: `theme-color`, content: color }
+    {
+      charset: `utf-8`
+    },
+    {
+      name: `viewport`,
+      content: `width=device-width, initial-scale=1`
+    },
+    {
+      key: `theme-color`,
+      name: `theme-color`,
+      content: color
+    }
   ],
   link: [
-    { rel: `icon`, href: `/favicon.svg` }
+    {
+      rel: `icon`,
+      href: `/favicon.svg`
+    }
   ],
   htmlAttrs: {
     lang,
@@ -39,10 +57,18 @@ useSeoMeta({
 
 const descriptionComponent = h(`div`, [
   `This website uses `,
-  h(ULink, { href: `https://en.wikipedia.org/wiki/HTTP_cookie`, class: `text-primary`, target: `_blank` }, `cookies`),
+  h(ULink, {
+    href: `https://en.wikipedia.org/wiki/HTTP_cookie`,
+    class: `text-primary`,
+    target: `_blank`
+  }, `cookies`),
   ` to ensure to enhance your browsing experience. `,
-  h(`br`), `By continuing to use our site, you agree to our `,
-  h(ULink, { href: `/documents/policies/cookie-policy/`, class: `text-primary` }, `Cookie Policy`),
+  h(`br`),
+  `By continuing to use our site, you agree to our `,
+  h(ULink, {
+    href: `/documents/policies/cookie-policy/`,
+    class: `text-primary`
+  }, `Cookie Policy`),
   `.`
 ])
 

@@ -40,9 +40,11 @@ export function useFeedbackExport() {
         item.rating,
         ratingOption?.score || 0,
         ratingOption?.label || `Unknown`,
-        `"${(item.feedback || ``).replace(/"/g, `""`)}"`, // Escape quotes
+        // Escape quotes
+        `"${ (item.feedback || ``).replace(/"/g, `""`) }"`,
         item.path,
-        `"${item.title.replace(/"/g, `""`)}"`, // Escape quotes
+        // Escape quotes
+        `"${ item.title.replace(/"/g, `""`) }"`,
         item.stem,
         item.country || ``,
         formatDateForCSV(item.createdAt),
@@ -50,15 +52,22 @@ export function useFeedbackExport() {
       ]
     })
 
-    const csvContent = [headers, ...rows]
-      .map((row) => row.join(`,`))
-      .join(`\n`)
+    const csvContent = [
+      headers,
+      ...rows
+    ].
+      map((row) => row.join(`,`)).
+      join(`\n`)
 
     return csvContent
   }
 
   function downloadCSV(csvContent: string, filename: string) {
-    const blob = new Blob([csvContent], { type: `text/csv;charset=utf-8;` })
+    const blob = new Blob([
+      csvContent
+    ], {
+      type: `text/csv;charset=utf-8;`
+    })
     const link = document.createElement(`a`)
 
     if (link.download !== undefined) {
@@ -76,18 +85,19 @@ export function useFeedbackExport() {
   async function exportFeedbackData(feedbackData: FeedbackItem[]) {
     try {
       const csvContent = convertToCSV(feedbackData)
-      const timestamp = new Date().toISOString().split(`T`)[0]
-      const filename = `feedback-export-${timestamp}.csv`
+      const timestamp = new Date().toISOString().
+        split(`T`)[0]
+      const filename = `feedback-export-${ timestamp }.csv`
 
       downloadCSV(csvContent, filename)
 
       toast.add({
         title: `Export successful`,
-        description: `${feedbackData.length} feedback entries exported to ${filename}`,
+        description: `${ feedbackData.length } feedback entries exported to ${ filename }`,
         color: `success`,
         icon: `i-lucide-download`
       })
-    } catch (error) {
+    } catch(error) {
       console.error(`Export failed:`, error)
       toast.add({
         title: `Export failed`,
@@ -124,7 +134,7 @@ export function useFeedbackExport() {
 
       const rows = pageAnalytics.map((page) => [
         page.path,
-        `"${page.lastFeedback.title.replace(/"/g, `""`)}"`,
+        `"${ page.lastFeedback.title.replace(/"/g, `""`) }"`,
         page.total,
         page.positive,
         page.negative,
@@ -134,22 +144,26 @@ export function useFeedbackExport() {
         formatDateForCSV(page.updatedAt)
       ])
 
-      const csvContent = [headers, ...rows]
-        .map((row) => row.join(`,`))
-        .join(`\n`)
+      const csvContent = [
+        headers,
+        ...rows
+      ].
+        map((row) => row.join(`,`)).
+        join(`\n`)
 
-      const timestamp = new Date().toISOString().split(`T`)[0]
-      const filename = `page-analytics-export-${timestamp}.csv`
+      const timestamp = new Date().toISOString().
+        split(`T`)[0]
+      const filename = `page-analytics-export-${ timestamp }.csv`
 
       downloadCSV(csvContent, filename)
 
       toast.add({
         title: `Export successful`,
-        description: `${pageAnalytics.length} page analytics exported to ${filename}`,
+        description: `${ pageAnalytics.length } page analytics exported to ${ filename }`,
         color: `success`,
         icon: `i-lucide-download`
       })
-    } catch (error) {
+    } catch(error) {
       console.error(`Export failed:`, error)
       toast.add({
         title: `Export failed`,

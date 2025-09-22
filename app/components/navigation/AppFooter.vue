@@ -1,8 +1,14 @@
 <script setup lang="ts">
-import type { FooterColumn } from "@nuxt/ui"
-import { ar, en, es, fr, ja, ko, pt, ro, zh_cn } from '@nuxt/ui/locale'
+import type {
+  FooterColumn
+} from "@nuxt/ui"
+import {
+  ar, en, es, fr, ja, ko, pt, ro, zh_cn
+} from '@nuxt/ui/locale'
 
-const { locale, setLocale } = useI18n()
+const {
+  locale, setLocale
+} = useI18n()
 
 const columns: FooterColumn[] = [
   {

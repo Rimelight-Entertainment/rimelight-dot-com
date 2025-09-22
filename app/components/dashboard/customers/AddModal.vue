@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import * as z from 'zod'
-import type { FormSubmitEvent } from '@nuxt/ui'
+import type {
+  FormSubmitEvent
+} from '@nuxt/ui'
 
 const schema = z.object({
   name: z.string().min(2, `Too short`),
@@ -17,7 +19,11 @@ const state = reactive<Partial<Schema>>({
 
 const toast = useToast()
 async function onSubmit(event: FormSubmitEvent<Schema>) {
-  toast.add({ title: `Success`, description: `New customer ${event.data.name} added`, color: `success` })
+  toast.add({
+    title: `Success`,
+    description: `New customer ${ event.data.name } added`,
+    color: `success`
+  })
   open.value = false
 }
 </script>

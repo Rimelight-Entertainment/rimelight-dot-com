@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import type { CalloutVariant } from "~/types/blocks"
+import type {
+  BlockData, BlockTypes, CalloutVariant
+} from "~/types/blocks"
 
 const {
   isEditable = false,
@@ -13,7 +15,10 @@ const {
   maxLength?: number
 }>()
 
-const text = defineModel<string>(`text`, { required: false, default: `` })
+const text = defineModel<string>(`text`, {
+  required: false,
+  default: ``
+})
 </script>
 
 <template>

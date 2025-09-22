@@ -1,5 +1,9 @@
-import { drizzle as drizzleNeonServerless } from "drizzle-orm/neon-serverless"
-import { Pool, neonConfig } from "@neondatabase/serverless"
+import {
+  drizzle as drizzleNeonServerless
+} from "drizzle-orm/neon-serverless"
+import {
+  Pool, neonConfig
+} from "@neondatabase/serverless"
 import * as Schema from "../database/schema"
 import env from "../../types/env"
 
@@ -17,9 +21,14 @@ export function useDb() {
       throw new Error(`Missing \`NUXT_POSTGRES_URL\` environment variable.`)
     }
 
-    pool = new Pool({ connectionString: url })
+    pool = new Pool({
+      connectionString: url
+    })
     // Pass the schema object to the drizzle function.
-    db = drizzleNeonServerless(pool, { schema: Schema, casing: `snake_case` })
+    db = drizzleNeonServerless(pool, {
+      schema: Schema,
+      casing: `snake_case`
+    })
   }
 
   return db

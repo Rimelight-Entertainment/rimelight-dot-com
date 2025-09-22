@@ -1,7 +1,13 @@
 <script lang="ts" setup>
-import { mapContentNavigation } from '@nuxt/ui/utils/content'
-import { findPageBreadcrumb } from '@nuxt/content/utils'
-import type { SectionBlockData } from "~/types/blocks"
+import {
+  mapContentNavigation
+} from '@nuxt/ui/utils/content'
+import {
+  findPageBreadcrumb
+} from '@nuxt/content/utils'
+import type {
+  SectionBlockData
+} from "~/types/blocks"
 
 definePageMeta({
   layout: `article`
@@ -10,10 +16,9 @@ definePageMeta({
 const route = useRoute()
 const slug = route.path.substring(1)
 
-const { data: article, error } = await useAsyncData(
-  `article-${slug}`,
-  () => $fetch(`/api/article/${slug}`)
-)
+const {
+  data: article, error
+} = await useAsyncData(`article-${ slug }`, () => $fetch(`/api/article/${ slug }`))
 
 if (error.value) {
   throw createError({
@@ -33,15 +38,16 @@ useSeoMeta({
 const isEditable = computed(() => route.query.mode === `editor`)
 
 const normalizePathPart = (str: string): string => {
-  return str
-    .split(`-`)
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(` `)
+  return str.
+    split(`-`).
+    map((word) => word.charAt(0).toUpperCase() + word.slice(1)).
+    join(` `)
 }
 
 const breadcrumb = computed(() => {
   if (!slug) {
-    return []
+    return [
+    ]
   }
   const pathSegments = slug.split(`/`)
   return pathSegments.map((segment, index) => {

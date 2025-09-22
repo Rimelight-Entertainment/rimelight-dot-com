@@ -1,8 +1,14 @@
 <script setup lang="ts">
-import { getLocalTimeZone, CalendarDate, today } from '@internationalized/date'
-import { formatDateRange } from 'little-date'
+import {
+  getLocalTimeZone, CalendarDate, today
+} from '@internationalized/date'
+import {
+  formatDateRange
+} from 'little-date'
 
-const { dateRange, setDateRange, setPresetRange } = useDateRange()
+const {
+  dateRange, setDateRange, setPresetRange
+} = useDateRange()
 
 const formattedDateRange = computed(() => {
   if (dateRange.value.start && dateRange.value.end) {
@@ -14,19 +20,30 @@ const formattedDateRange = computed(() => {
 })
 
 const ranges = [
-  { label: `Last 7 days`, preset: `week` as const },
-  { label: `Last 30 days`, preset: `month` as const },
-  { label: `Last 3 months`, preset: `3months` as const },
-  { label: `Last 6 months`, preset: `6months` as const },
-  { label: `Last year`, preset: `year` as const }
+  {
+    label: `Last 7 days`,
+    preset: `week` as const
+  },
+  {
+    label: `Last 30 days`,
+    preset: `month` as const
+  },
+  {
+    label: `Last 3 months`,
+    preset: `3months` as const
+  },
+  {
+    label: `Last 6 months`,
+    preset: `6months` as const
+  },
+  {
+    label: `Last year`,
+    preset: `year` as const
+  }
 ]
 
 const toCalendarDate = (date: Date) => {
-  return new CalendarDate(
-    date.getFullYear(),
-    date.getMonth() + 1,
-    date.getDate()
-  )
+  return new CalendarDate(date.getFullYear(), date.getMonth() + 1, date.getDate())
 }
 
 const calendarRange = computed({
@@ -34,7 +51,10 @@ const calendarRange = computed({
     start: dateRange.value.start ? toCalendarDate(dateRange.value.start) : undefined,
     end: dateRange.value.end ? toCalendarDate(dateRange.value.end) : undefined
   }),
-  set: (newValue: { start: CalendarDate | null, end: CalendarDate | null }) => {
+  set: (newValue: {
+    start: CalendarDate | null
+    end: CalendarDate | null
+  }) => {
     if (newValue.start && newValue.end) {
       setDateRange({
         start: newValue.start.toDate(getLocalTimeZone()),
@@ -45,34 +65,44 @@ const calendarRange = computed({
 })
 
 const isRangeSelected = (preset: `week` | `month` | `3months` | `6months` | `year`) => {
-  if (!dateRange.value.start || !dateRange.value.end) return false
+  if (!dateRange.value.start || !dateRange.value.end)
+    return false
 
   const currentDate = today(getLocalTimeZone())
   let startDate = currentDate.copy()
 
   switch (preset) {
     case `week`:
-      startDate = startDate.subtract({ days: 7 })
+      startDate = startDate.subtract({
+        days: 7
+      })
       break
     case `month`:
-      startDate = startDate.subtract({ days: 30 })
+      startDate = startDate.subtract({
+        days: 30
+      })
       break
     case `3months`:
-      startDate = startDate.subtract({ months: 3 })
+      startDate = startDate.subtract({
+        months: 3
+      })
       break
     case `6months`:
-      startDate = startDate.subtract({ months: 6 })
+      startDate = startDate.subtract({
+        months: 6
+      })
       break
     case `year`:
-      startDate = startDate.subtract({ years: 1 })
+      startDate = startDate.subtract({
+        years: 1
+      })
       break
   }
 
   const selectedStart = toCalendarDate(dateRange.value.start)
   const selectedEnd = toCalendarDate(dateRange.value.end)
 
-  return Math.abs(selectedStart.toDate(getLocalTimeZone()).getTime() - startDate.toDate(getLocalTimeZone()).getTime()) < 24 * 60 * 60 * 1000
-    && Math.abs(selectedEnd.toDate(getLocalTimeZone()).getTime() - currentDate.toDate(getLocalTimeZone()).getTime()) < 24 * 60 * 60 * 1000
+  return Math.abs(selectedStart.toDate(getLocalTimeZone()).getTime() - startDate.toDate(getLocalTimeZone()).getTime()) < 24 * 60 * 60 * 1000 && Math.abs(selectedEnd.toDate(getLocalTimeZone()).getTime() - currentDate.toDate(getLocalTimeZone()).getTime()) < 24 * 60 * 60 * 1000
 }
 </script>
 

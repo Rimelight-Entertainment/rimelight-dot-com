@@ -1,17 +1,25 @@
 <script setup lang="ts">
 import * as z from 'zod'
-import type { FormSubmitEvent } from '@nuxt/ui'
+import type {
+  FormSubmitEvent
+} from '@nuxt/ui'
 
 const toast = useToast()
 
 const schema = z.object({
-  first_name: z.string().min(2, `First name must be between 2 and 24 characters long.`).max(24, `First name must be between 2 and 24 characters long.`),
-  last_name: z.string().min(2, `Last name must be between 2 and 24 characters long.`).max(24, `Last name must be between 2 and 24 characters long.`),
-  username: z.string().min(2, `Username must be between 2 and 24 characters long.`).max(24, `Username must be between 2 and 24 characters long.`).transform((val) => val.trim()).refine((val) => !/\s/.test(val), {
-    message: `Username cannot contain spaces.`
-  }),
+  first_name: z.string().min(2, `First name must be between 2 and 24 characters long.`).
+    max(24, `First name must be between 2 and 24 characters long.`),
+  last_name: z.string().min(2, `Last name must be between 2 and 24 characters long.`).
+    max(24, `Last name must be between 2 and 24 characters long.`),
+  username: z.string().min(2, `Username must be between 2 and 24 characters long.`).
+    max(24, `Username must be between 2 and 24 characters long.`).
+    transform((val) => val.trim()).
+    refine((val) => !(/\s/).test(val), {
+      message: `Username cannot contain spaces.`
+    }),
   email: z.string().email(`Invalid email address.`),
-  password: z.string().min(8, `Password must between 8 and 24 characters long.`).max(24, `Password must between 8 and 24 characters long.`),
+  password: z.string().min(8, `Password must between 8 and 24 characters long.`).
+    max(24, `Password must between 8 and 24 characters long.`),
   password_confirmation: z.string(),
   terms: z.boolean().refine((val) => val === true, {
     message: `You must agree to the terms of service.`
@@ -21,7 +29,9 @@ const schema = z.object({
   if (data.password !== data.password_confirmation) {
     ctx.addIssue({
       code: z.ZodIssueCode.custom,
-      path: [`password_confirmation`],
+      path: [
+        `password_confirmation`
+      ],
       message: `Passwords do not match.`
     })
   }
@@ -29,7 +39,9 @@ const schema = z.object({
   if (data.username && data.password.includes(data.username)) {
     ctx.addIssue({
       code: z.ZodIssueCode.custom,
-      path: [`password`],
+      path: [
+        `password`
+      ],
       message: `Password should not contain the username.`
     })
   }
@@ -66,9 +78,13 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     }
     const userSession = useUserSession()
     await userSession.fetch()
-    toast.add({ title: `Success`, description: `The form has been submitted.`, color: `success` })
+    toast.add({
+      title: `Success`,
+      description: `The form has been submitted.`,
+      color: `success`
+    })
     await navigateTo(`/`)
-  } catch (error) {
+  } catch(error) {
     console.error(`Signup error:`, error)
     toast.add({
       color: `error`,
@@ -80,13 +96,28 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 
 function checkStrength(str: string) {
   const requirements = [
-    { regex: /.{8,}/, text: `At least 8 characters` },
-    { regex: /\d/, text: `At least 1 number` },
-    { regex: /[a-z]/, text: `At least 1 lowercase letter` },
-    { regex: /[A-Z]/, text: `At least 1 uppercase letter` }
+    {
+      regex: /.{8,}/,
+      text: `At least 8 characters`
+    },
+    {
+      regex: /\d/,
+      text: `At least 1 number`
+    },
+    {
+      regex: /[a-z]/,
+      text: `At least 1 lowercase letter`
+    },
+    {
+      regex: /[A-Z]/,
+      text: `At least 1 uppercase letter`
+    }
   ]
 
-  return requirements.map((req) => ({ met: req.regex.test(str), text: req.text }))
+  return requirements.map((req) => ({
+    met: req.regex.test(str),
+    text: req.text
+  }))
 }
 
 const strength = computed(() => {
@@ -96,10 +127,14 @@ const strength = computed(() => {
 const score = computed(() => strength.value.filter((req) => req.met).length)
 
 const color = computed(() => {
-  if (score.value === 0) return `neutral`
-  if (score.value <= 1) return `error`
-  if (score.value <= 2) return `warning`
-  if (score.value === 3) return `warning`
+  if (score.value === 0)
+    return `neutral`
+  if (score.value <= 1)
+    return `error`
+  if (score.value <= 2)
+    return `warning`
+  if (score.value === 3)
+    return `warning`
   return `success`
 })
 

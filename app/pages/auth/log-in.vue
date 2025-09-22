@@ -1,25 +1,31 @@
 <script setup lang="ts">
 import * as z from 'zod'
-import type { FormSubmitEvent } from '@nuxt/ui'
+import type {
+  FormSubmitEvent
+} from '@nuxt/ui'
 
 const toast = useToast()
 
-const fields = [{
-  name: `email`,
-  type: `text` as const,
-  label: `Email`,
-  placeholder: `Enter your email`,
-  required: true
-}, {
-  name: `password`,
-  label: `Password`,
-  type: `password` as const,
-  placeholder: `Enter your password`
-}, {
-  name: `remember`,
-  label: `Remember me`,
-  type: `checkbox` as const
-}]
+const fields = [
+  {
+    name: `email`,
+    type: `text` as const,
+    label: `Email`,
+    placeholder: `Enter your email`,
+    required: true
+  },
+  {
+    name: `password`,
+    label: `Password`,
+    type: `password` as const,
+    placeholder: `Enter your password`
+  },
+  {
+    name: `remember`,
+    label: `Remember me`,
+    type: `checkbox` as const
+  }
+]
 
 const schema = z.object({
   email: z.string().email(`Invalid email address.`),
@@ -71,7 +77,7 @@ async function onSubmit(payload: FormSubmitEvent<Schema>) {
           icon="lucide:user"
           :fields="fields"
           :submit="{
-            label: 'Log In'
+            label: 'Log In',
           }"
           @submit="onSubmit"
         >

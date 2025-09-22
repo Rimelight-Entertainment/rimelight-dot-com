@@ -1,7 +1,13 @@
 <script setup lang="ts">
-import { h, resolveComponent } from 'vue'
-import type { TableColumn } from '@nuxt/ui'
-import type { Period, Range, Sale } from '~/types'
+import {
+  h, resolveComponent
+} from 'vue'
+import type {
+  TableColumn
+} from '@nuxt/ui'
+import type {
+  Period, Range, Sale
+} from '~/types'
 
 const props = defineProps<{
   period: Period
@@ -18,8 +24,11 @@ const sampleEmails = [
   `ethan.harris@example.com`
 ]
 
-const { data } = await useAsyncData(`sales`, async () => {
-  const sales: Sale[] = []
+const {
+  data
+} = await useAsyncData(`sales`, async() => {
+  const sales: Sale[] = [
+  ]
   const currentDate = new Date()
 
   for (let i = 0; i < 5; i++) {
@@ -29,7 +38,11 @@ const { data } = await useAsyncData(`sales`, async () => {
     sales.push({
       id: (4600 - i).toString(),
       date: date.toISOString(),
-      status: randomFrom([`paid`, `failed`, `refunded`]),
+      status: randomFrom([
+        `paid`,
+        `failed`,
+        `refunded`
+      ]),
       email: randomFrom(sampleEmails),
       amount: randomInt(100, 1000)
     })
@@ -37,20 +50,28 @@ const { data } = await useAsyncData(`sales`, async () => {
 
   return sales.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 }, {
-  watch: [() => props.period, () => props.range],
-  default: () => []
+  watch: [
+    () => props.period,
+    () => props.range
+  ],
+  default: () => [
+  ]
 })
 
 const columns: TableColumn<Sale>[] = [
   {
     accessorKey: `id`,
     header: `ID`,
-    cell: ({ row }) => `#${row.getValue(`id`)}`
+    cell: ({
+      row
+    }) => `#${ row.getValue(`id`) }`
   },
   {
     accessorKey: `date`,
     header: `Date`,
-    cell: ({ row }) => {
+    cell: ({
+      row
+    }) => {
       return new Date(row.getValue(`date`)).toLocaleString(`en-US`, {
         day: `numeric`,
         month: `short`,
@@ -63,16 +84,20 @@ const columns: TableColumn<Sale>[] = [
   {
     accessorKey: `status`,
     header: `Status`,
-    cell: ({ row }) => {
+    cell: ({
+      row
+    }) => {
       const color = {
         paid: `success` as const,
         failed: `error` as const,
         refunded: `neutral` as const
       }[row.getValue(`status`) as string]
 
-      return h(UBadge, { class: `capitalize`, variant: `subtle`, color }, () =>
-        row.getValue(`status`)
-      )
+      return h(UBadge, {
+        class: `capitalize`,
+        variant: `subtle`,
+        color
+      }, () => row.getValue(`status`))
     }
   },
   {
@@ -81,8 +106,12 @@ const columns: TableColumn<Sale>[] = [
   },
   {
     accessorKey: `amount`,
-    header: () => h(`div`, { class: `text-right` }, `Amount`),
-    cell: ({ row }) => {
+    header: () => h(`div`, {
+      class: `text-right`
+    }, `Amount`),
+    cell: ({
+      row
+    }) => {
       const amount = Number.parseFloat(row.getValue(`amount`))
 
       const formatted = new Intl.NumberFormat(`en-US`, {
@@ -90,7 +119,9 @@ const columns: TableColumn<Sale>[] = [
         currency: `EUR`
       }).format(amount)
 
-      return h(`div`, { class: `text-right font-medium` }, formatted)
+      return h(`div`, {
+        class: `text-right font-medium`
+      }, formatted)
     }
   }
 ]
@@ -106,7 +137,7 @@ const columns: TableColumn<Sale>[] = [
       thead: '[&>tr]:bg-elevated/50 [&>tr]:after:content-none',
       tbody: '[&>tr]:last:[&>td]:border-b-0',
       th: 'first:rounded-l-lg last:rounded-r-lg border-y border-default first:border-l last:border-r',
-      td: 'border-b border-default'
+      td: 'border-b border-default',
     }"
   />
 </template>

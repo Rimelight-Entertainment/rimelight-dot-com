@@ -1,22 +1,36 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
-import { breakpointsTailwind } from '@vueuse/core'
-import type { Mail } from '~/types'
+import {
+  computed, ref, watch
+} from 'vue'
+import {
+  breakpointsTailwind
+} from '@vueuse/core'
+import type {
+  Mail
+} from '~/types'
 
 definePageMeta({
   layout: `dashboard`
 })
 
-const tabItems = [{
-  label: `All`,
-  value: `all`
-}, {
-  label: `Unread`,
-  value: `unread`
-}]
+const tabItems = [
+  {
+    label: `All`,
+    value: `all`
+  },
+  {
+    label: `Unread`,
+    value: `unread`
+  }
+]
 const selectedTab = ref(`all`)
 
-const { data: mails } = await useFetch<Mail[]>(`/api/mails`, { default: () => [] })
+const {
+  data: mails
+} = await useFetch<Mail[]>(`/api/mails`, {
+  default: () => [
+  ]
+})
 
 // Filter mails based on the selected tab
 const filteredMails = computed(() => {

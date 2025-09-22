@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { useFetch } from '#imports'
+import {
+  useFetch
+} from '#imports'
 
 const props = defineProps<{
   slug: string
@@ -26,7 +28,9 @@ defineShortcuts({
   u: () => deleteArticleModalOpen.value = !deleteArticleModalOpen.value
 })
 
-const { data: user, pending } = await useFetch(`/api/user`)
+const {
+  data: user, pending
+} = await useFetch(`/api/user`)
 </script>
 
 <template>

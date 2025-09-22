@@ -11,7 +11,9 @@ const props = defineProps<Props>()
 
 const emit = defineEmits<Emits>()
 
-const { getRatingFromFeedback, getScoreColor } = useFeedbackRatings()
+const {
+  getRatingFromFeedback, getScoreColor
+} = useFeedbackRatings()
 
 const rating = computed(() => getRatingFromFeedback(props.feedback))
 
@@ -53,7 +55,7 @@ async function handleDelete() {
                 day: 'numeric',
                 year: 'numeric',
                 hour: '2-digit',
-                minute: '2-digit'
+                minute: '2-digit',
               }) }}
             </span>
             <span v-if="feedback.country" class="flex items-center gap-1">

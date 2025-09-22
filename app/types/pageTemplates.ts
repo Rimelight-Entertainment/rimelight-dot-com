@@ -12,8 +12,12 @@ import {
   type SeriesProperties,
   type EpisodeProperties
 } from "../../types/article/article"
-import type { BlockData, SectionBlockData } from "../../types/blocks/index"
-import { v7 as uuidv7 } from "uuid"
+import type {
+  BlockData, SectionBlockData
+} from "../../types/blocks/index"
+import {
+  v7 as uuidv7
+} from "uuid"
 
 interface ArticleTemplate {
   articleType: ArticleType
@@ -28,14 +32,18 @@ export const articleTemplates: Record<ArticleType, ArticleTemplate> = {
   [ArticleType.DEFAULT]: {
     articleType: ArticleType.DEFAULT,
     defaultTitle: `New Article`,
-    defaultTags: [],
-    defaultProperties: {},
-    defaultBlocks: []
+    defaultTags: [
+    ],
+    defaultProperties: {
+    },
+    defaultBlocks: [
+    ]
   },
   [ArticleType.SPECIES]: {
     articleType: ArticleType.SPECIES,
     defaultTitle: `New Species`,
-    defaultTags: [],
+    defaultTags: [
+    ],
     defaultProperties: {
       name: ``,
       averageLifespan: `Years`,
@@ -89,7 +97,10 @@ export const articleTemplates: Record<ArticleType, ArticleTemplate> = {
         status: {
           label: `Status`,
           type: `enum`,
-          options: [`Extinct`, `Extant`],
+          options: [
+            `Extinct`,
+            `Extant`
+          ],
           order: 50
         }
       }
@@ -124,11 +135,14 @@ export const articleTemplates: Record<ArticleType, ArticleTemplate> = {
   [ArticleType.CHARACTER]: {
     articleType: ArticleType.CHARACTER,
     defaultTitle: `New Character`,
-    defaultTags: [`character`],
+    defaultTags: [
+      `character`
+    ],
     defaultProperties: {
       name: ``,
       title: ``,
-      aliases: [],
+      aliases: [
+      ],
       flavourText: ``,
       species: ``,
       sex: ``,
@@ -139,11 +153,16 @@ export const articleTemplates: Record<ArticleType, ArticleTemplate> = {
       dateOfDeath: ``,
       placeOfBirth: ``,
       placeOfDeath: ``,
-      formerAffiliations: [],
-      currentAffiliations: [],
-      equipment: [],
-      pets: [],
-      mounts: [],
+      formerAffiliations: [
+      ],
+      currentAffiliations: [
+      ],
+      equipment: [
+      ],
+      pets: [
+      ],
+      mounts: [
+      ],
       favouriteFood: ``
     } as CharacterProperties,
     propertyPanelSchema: {
@@ -156,7 +175,11 @@ export const articleTemplates: Record<ArticleType, ArticleTemplate> = {
         pronouns: {
           label: `Pronouns`,
           type: `enum`,
-          options: [`He / Him`, `She / Her`, `They / Them`],
+          options: [
+            `He / Him`,
+            `She / Her`,
+            `They / Them`
+          ],
           order: 20
         },
         title: {
@@ -179,13 +202,19 @@ export const articleTemplates: Record<ArticleType, ArticleTemplate> = {
         species: {
           label: `Species`,
           type: `article`,
-          allowedArticleTypes: [ArticleType.SPECIES],
+          allowedArticleTypes: [
+            ArticleType.SPECIES
+          ],
           order: 60
         },
         sex: {
           label: `Sex`,
           type: `enum`,
-          options: [`Male`, `Female`, `None`],
+          options: [
+            `Male`,
+            `Female`,
+            `None`
+          ],
           order: 70
         },
         height: {
@@ -242,7 +271,9 @@ export const articleTemplates: Record<ArticleType, ArticleTemplate> = {
         pets: {
           label: `Pets`,
           type: `article-array`,
-          allowedArticleTypes: [ArticleType.CHARACTER],
+          allowedArticleTypes: [
+            ArticleType.CHARACTER
+          ],
           order: 160
         },
         mounts: {
@@ -253,7 +284,9 @@ export const articleTemplates: Record<ArticleType, ArticleTemplate> = {
         favouriteFood: {
           label: `Favourite Food`,
           type: `article`,
-          allowedArticleTypes: [ArticleType.SPECIES],
+          allowedArticleTypes: [
+            ArticleType.SPECIES
+          ],
           order: 180
         }
       }
@@ -312,9 +345,12 @@ export const articleTemplates: Record<ArticleType, ArticleTemplate> = {
   [ArticleType.OBJECT]: {
     articleType: ArticleType.OBJECT,
     defaultTitle: `New Object`,
-    defaultTags: [],
-    defaultProperties: {} as ObjectProperties,
-    propertyPanelSchema: {},
+    defaultTags: [
+    ],
+    defaultProperties: {
+    } as ObjectProperties,
+    propertyPanelSchema: {
+    },
     defaultBlocks: [
       {
         id: uuidv7(),
@@ -329,9 +365,12 @@ export const articleTemplates: Record<ArticleType, ArticleTemplate> = {
   [ArticleType.TALE]: {
     articleType: ArticleType.TALE,
     defaultTitle: `New Tale`,
-    defaultTags: [],
-    defaultProperties: {} as TaleProperties,
-    propertyPanelSchema: {},
+    defaultTags: [
+    ],
+    defaultProperties: {
+    } as TaleProperties,
+    propertyPanelSchema: {
+    },
     defaultBlocks: [
       {
         id: uuidv7(),
@@ -346,9 +385,12 @@ export const articleTemplates: Record<ArticleType, ArticleTemplate> = {
   [ArticleType.ITEM]: {
     articleType: ArticleType.ITEM,
     defaultTitle: `New Item`,
-    defaultTags: [],
-    defaultProperties: {} as ItemProperties,
-    propertyPanelSchema: {},
+    defaultTags: [
+    ],
+    defaultProperties: {
+    } as ItemProperties,
+    propertyPanelSchema: {
+    },
     defaultBlocks: [
       {
         id: uuidv7(),
@@ -363,9 +405,12 @@ export const articleTemplates: Record<ArticleType, ArticleTemplate> = {
   [ArticleType.SKILL]: {
     articleType: ArticleType.SKILL,
     defaultTitle: `New Skill`,
-    defaultTags: [],
-    defaultProperties: {} as SkillProperties,
-    propertyPanelSchema: {},
+    defaultTags: [
+    ],
+    defaultProperties: {
+    } as SkillProperties,
+    propertyPanelSchema: {
+    },
     defaultBlocks: [
       {
         id: uuidv7(),
@@ -380,9 +425,12 @@ export const articleTemplates: Record<ArticleType, ArticleTemplate> = {
   [ArticleType.HERO]: {
     articleType: ArticleType.HERO,
     defaultTitle: `New Hero`,
-    defaultTags: [],
-    defaultProperties: {} as HeroProperties,
-    propertyPanelSchema: {},
+    defaultTags: [
+    ],
+    defaultProperties: {
+    } as HeroProperties,
+    propertyPanelSchema: {
+    },
     defaultBlocks: [
       {
         id: uuidv7(),
@@ -397,14 +445,16 @@ export const articleTemplates: Record<ArticleType, ArticleTemplate> = {
   [ArticleType.CARD]: {
     articleType: ArticleType.CARD,
     defaultTitle: `New Card`,
-    defaultTags: [],
+    defaultTags: [
+    ],
     defaultProperties: {
       name: ``,
       alignment: ``,
       type: ``,
       flavourText: ``
     } as CardProperties,
-    propertyPanelSchema: {},
+    propertyPanelSchema: {
+    },
     defaultBlocks: [
       {
         id: uuidv7(),
@@ -419,9 +469,12 @@ export const articleTemplates: Record<ArticleType, ArticleTemplate> = {
   [ArticleType.SERIES]: {
     articleType: ArticleType.SERIES,
     defaultTitle: `New Series`,
-    defaultTags: [],
-    defaultProperties: {} as SeriesProperties,
-    propertyPanelSchema: {},
+    defaultTags: [
+    ],
+    defaultProperties: {
+    } as SeriesProperties,
+    propertyPanelSchema: {
+    },
     defaultBlocks: [
       {
         id: uuidv7(),
@@ -436,9 +489,12 @@ export const articleTemplates: Record<ArticleType, ArticleTemplate> = {
   [ArticleType.EPISODE]: {
     articleType: ArticleType.EPISODE,
     defaultTitle: `New Episode`,
-    defaultTags: [],
-    defaultProperties: {} as EpisodeProperties,
-    propertyPanelSchema: {},
+    defaultTags: [
+    ],
+    defaultProperties: {
+    } as EpisodeProperties,
+    propertyPanelSchema: {
+    },
     defaultBlocks: [
       {
         id: uuidv7(),

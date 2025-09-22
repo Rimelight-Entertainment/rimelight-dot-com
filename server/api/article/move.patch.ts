@@ -1,18 +1,26 @@
-import { z } from 'zod'
-import { eq } from 'drizzle-orm'
-import { useDb } from '../../utils/drizzle'
-import { articles } from '../../database/schema'
+import {
+  z
+} from 'zod'
+import {
+  eq
+} from 'drizzle-orm'
+import {
+  useDb
+} from '../../utils/drizzle'
+import {
+  articles
+} from '../../database/schema'
 
 const moveArticleSchema = z.object({
   initialSlug: z.string().min(1, `Initial slug is required.`),
-  newSlug: z
-    .string()
-    .min(1, `New slug is required.`)
-    .regex(/^[a-z0-9-/]+$/, `New slug can only contain lowercase letters, numbers, and hyphens.`)
-    .transform((value) => value.trim().toLowerCase())
+  newSlug: z.
+    string().
+    min(1, `New slug is required.`).
+    regex(/^[a-z0-9-/]+$/, `New slug can only contain lowercase letters, numbers, and hyphens.`).
+    transform((value) => value.trim().toLowerCase())
 })
 
-export default defineEventHandler(async (event) => {
+export default defineEventHandler(async(event) => {
   const db = useDb()
 
   const body = await readBody(event)
@@ -26,10 +34,12 @@ export default defineEventHandler(async (event) => {
     })
   }
 
-  const { initialSlug, newSlug } = result.data
+  const {
+    initialSlug, newSlug
+  } = result.data
 
   // Use a transaction to ensure the operations are atomic
-  return db.transaction(async (tx) => {
+  return db.transaction(async(tx) => {
     // 1. Check if the initial slug exists
     const existingArticle = await tx.query.articles.findFirst({
       where: eq(articles.slug, initialSlug)
@@ -57,11 +67,15 @@ export default defineEventHandler(async (event) => {
     }
 
     // 3. Update the article's slug
-    const [updatedArticle] = await tx
-      .update(articles)
-      .set({ slug: newSlug })
-      .where(eq(articles.id, existingArticle.id))
-      .returning()
+    const [
+      updatedArticle
+    ] = await tx.
+      update(articles).
+      set({
+        slug: newSlug
+      }).
+      where(eq(articles.id, existingArticle.id)).
+      returning()
 
     if (!updatedArticle) {
       throw createError({

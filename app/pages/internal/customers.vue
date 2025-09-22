@@ -1,9 +1,19 @@
 <script setup lang="ts">
-import type { TableColumn } from '@nuxt/ui'
-import { upperFirst } from 'scule'
-import { getPaginationRowModel } from '@tanstack/table-core'
-import type { Row } from '@tanstack/table-core'
-import type { User } from '~/types'
+import type {
+  TableColumn
+} from '@nuxt/ui'
+import {
+  upperFirst
+} from 'scule'
+import {
+  getPaginationRowModel
+} from '@tanstack/table-core'
+import type {
+  Row
+} from '@tanstack/table-core'
+import type {
+  User
+} from '~/types'
 
 definePageMeta({
   layout: `dashboard`
@@ -18,14 +28,20 @@ const UCheckbox = resolveComponent(`UCheckbox`)
 const toast = useToast()
 const table = useTemplateRef(`table`)
 
-const columnFilters = ref([{
-  id: `email`,
-  value: ``
-}])
+const columnFilters = ref([
+  {
+    id: `email`,
+    value: ``
+  }
+])
 const columnVisibility = ref()
-const rowSelection = ref({ 1: true })
+const rowSelection = ref({
+  1: true
+})
 
-const { data, status } = await useFetch<User[]>(`/api/customers`, {
+const {
+  data, status
+} = await useFetch<User[]>(`/api/customers`, {
   lazy: true
 })
 
@@ -77,21 +93,20 @@ function getRowItems(row: Row<User>) {
 const columns: TableColumn<User>[] = [
   {
     id: `select`,
-    header: ({ table }) =>
-      h(UCheckbox, {
-        'modelValue': table.getIsSomePageRowsSelected()
-          ? `indeterminate`
-          : table.getIsAllPageRowsSelected(),
-        'onUpdate:modelValue': (value: boolean | `indeterminate`) =>
-          table.toggleAllPageRowsSelected(!!value),
-        'ariaLabel': `Select all`
-      }),
-    cell: ({ row }) =>
-      h(UCheckbox, {
-        'modelValue': row.getIsSelected(),
-        'onUpdate:modelValue': (value: boolean | `indeterminate`) => row.toggleSelected(!!value),
-        'ariaLabel': `Select row`
-      })
+    header: ({
+      table
+    }) => h(UCheckbox, {
+      'modelValue': table.getIsSomePageRowsSelected() ? `indeterminate` : table.getIsAllPageRowsSelected(),
+      'onUpdate:modelValue': (value: boolean | `indeterminate`) => table.toggleAllPageRowsSelected(!!value),
+      'ariaLabel': `Select all`
+    }),
+    cell: ({
+      row
+    }) => h(UCheckbox, {
+      'modelValue': row.getIsSelected(),
+      'onUpdate:modelValue': (value: boolean | `indeterminate`) => row.toggleSelected(!!value),
+      'ariaLabel': `Select row`
+    })
   },
   {
     accessorKey: `id`,
@@ -100,33 +115,39 @@ const columns: TableColumn<User>[] = [
   {
     accessorKey: `name`,
     header: `Name`,
-    cell: ({ row }) => {
-      return h(`div`, { class: `flex items-center gap-3` }, [
+    cell: ({
+      row
+    }) => {
+      return h(`div`, {
+        class: `flex items-center gap-3`
+      }, [
         h(UAvatar, {
           ...row.original.avatar,
           size: `lg`
         }),
         h(`div`, undefined, [
-          h(`p`, { class: `font-medium text-highlighted` }, row.original.name),
-          h(`p`, { class: `` }, `@${row.original.name}`)
+          h(`p`, {
+            class: `font-medium text-highlighted`
+          }, row.original.name),
+          h(`p`, {
+            class: ``
+          }, `@${ row.original.name }`)
         ])
       ])
     }
   },
   {
     accessorKey: `email`,
-    header: ({ column }) => {
+    header: ({
+      column
+    }) => {
       const isSorted = column.getIsSorted()
 
       return h(UButton, {
         color: `neutral`,
         variant: `ghost`,
         label: `Email`,
-        icon: isSorted
-          ? isSorted === `asc`
-            ? `i-lucide-arrow-up-narrow-wide`
-            : `i-lucide-arrow-down-wide-narrow`
-          : `i-lucide-arrow-up-down`,
+        icon: isSorted ? isSorted === `asc` ? `i-lucide-arrow-up-narrow-wide` : `i-lucide-arrow-down-wide-narrow` : `i-lucide-arrow-up-down`,
         class: `-mx-2.5`,
         onClick: () => column.toggleSorting(column.getIsSorted() === `asc`)
       })
@@ -135,47 +156,48 @@ const columns: TableColumn<User>[] = [
   {
     accessorKey: `location`,
     header: `Location`,
-    cell: ({ row }) => row.original.location
+    cell: ({
+      row
+    }) => row.original.location
   },
   {
     accessorKey: `status`,
     header: `Status`,
     filterFn: `equals`,
-    cell: ({ row }) => {
+    cell: ({
+      row
+    }) => {
       const color = {
         subscribed: `success` as const,
         unsubscribed: `error` as const,
         bounced: `warning` as const
       }[row.original.status]
 
-      return h(UBadge, { class: `capitalize`, variant: `subtle`, color }, () =>
-        row.original.status
-      )
+      return h(UBadge, {
+        class: `capitalize`,
+        variant: `subtle`,
+        color
+      }, () => row.original.status)
     }
   },
   {
     id: `actions`,
-    cell: ({ row }) => {
-      return h(
-        `div`,
-        { class: `text-right` },
-        h(
-          UDropdownMenu,
-          {
-            content: {
-              align: `end`
-            },
-            items: getRowItems(row)
-          },
-          () =>
-            h(UButton, {
-              icon: `i-lucide-ellipsis-vertical`,
-              color: `neutral`,
-              variant: `ghost`,
-              class: `ml-auto`
-            })
-        )
-      )
+    cell: ({
+      row
+    }) => {
+      return h(`div`, {
+        class: `text-right`
+      }, h(UDropdownMenu, {
+        content: {
+          align: `end`
+        },
+        items: getRowItems(row)
+      }, () => h(UButton, {
+        icon: `i-lucide-ellipsis-vertical`,
+        color: `neutral`,
+        variant: `ghost`,
+        class: `ml-auto`
+      })))
     }
   }
 ]
@@ -183,10 +205,12 @@ const columns: TableColumn<User>[] = [
 const statusFilter = ref(`all`)
 
 watch(() => statusFilter.value, (newVal) => {
-  if (!table?.value?.tableApi) return
+  if (!table?.value?.tableApi)
+    return
 
   const statusColumn = table.value.tableApi.getColumn(`status`)
-  if (!statusColumn) return
+  if (!statusColumn)
+    return
 
   if (newVal === `all`) {
     statusColumn.setFilterValue(undefined)
@@ -248,7 +272,7 @@ const pagination = ref({
               { label: 'All', value: 'all' },
               { label: 'Subscribed', value: 'subscribed' },
               { label: 'Unsubscribed', value: 'unsubscribed' },
-              { label: 'Bounced', value: 'bounced' }
+              { label: 'Bounced', value: 'bounced' },
             ]"
             :ui="{ trailingIcon: 'group-data-[state=open]:rotate-180 transition-transform duration-200' }"
             placeholder="Filter status"
@@ -268,7 +292,7 @@ const pagination = ref({
                   },
                   onSelect(e?: Event) {
                     e?.preventDefault()
-                  }
+                  },
                 }))
             "
             :content="{ align: 'end' }"
@@ -290,7 +314,7 @@ const pagination = ref({
         v-model:row-selection="rowSelection"
         v-model:pagination="pagination"
         :pagination-options="{
-          getPaginationRowModel: getPaginationRowModel()
+          getPaginationRowModel: getPaginationRowModel(),
         }"
         class="shrink-0"
         :data="data"
@@ -301,7 +325,7 @@ const pagination = ref({
           thead: '[&>tr]:bg-elevated/50 [&>tr]:after:content-none',
           tbody: '[&>tr]:last:[&>td]:border-b-0',
           th: 'py-2 first:rounded-l-lg last:rounded-r-lg border-y border-default first:border-l last:border-r',
-          td: 'border-b border-default'
+          td: 'border-b border-default',
         }"
       />
 

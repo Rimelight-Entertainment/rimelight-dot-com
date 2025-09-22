@@ -1,15 +1,8 @@
-import type { BlockData } from "./block"
+import type {
+  BlockData
+} from "./block"
 
-export type CalloutVariant
-  = | `note`
-    | `tip`
-    | `warning`
-    | `danger`
-    | `commentaryInternal`
-    | `commentaryExternal`
-    | `ideation`
-    | `creatorInternal`
-    | `creatorExternal`
+export type CalloutVariant = | `note` | `tip` | `warning` | `danger` | `commentaryInternal` | `commentaryExternal` | `ideation` | `creatorInternal` | `creatorExternal`
 
 export interface CalloutBlockAttrs {
   variant: CalloutVariant

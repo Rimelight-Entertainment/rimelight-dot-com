@@ -1,7 +1,13 @@
 <script setup lang="ts">
-import { z } from 'zod'
-import { UForm } from '#components'
-import type { FormSubmitEvent } from '@nuxt/ui'
+import {
+  z
+} from 'zod'
+import {
+  UForm
+} from '#components'
+import type {
+  FormSubmitEvent
+} from '@nuxt/ui'
 
 const open = ref(false)
 
@@ -32,7 +38,9 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
   try {
     await useFetch(`/api/article/delete`, {
       method: `POST`,
-      body: { slug: event.data.slug }
+      body: {
+        slug: event.data.slug
+      }
     })
 
     toast.add({
@@ -42,7 +50,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       icon: `lucide:circle-check`
     })
     await navigateTo(`/`)
-  } catch (error) {
+  } catch(error) {
     console.error(`Failed to delete article:`, error)
     toast.add({
       title: `Error`,

@@ -1,4 +1,6 @@
-import type { BlockData } from "./block"
+import type {
+  BlockData
+} from "./block"
 
 export interface ScriptBlockAttrs {
   characters: string[]

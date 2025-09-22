@@ -1,20 +1,26 @@
-import { useDb } from '../../utils/drizzle'
-import type { articles } from '../../database/schema'
+import {
+  useDb
+} from '../../utils/drizzle'
+import type {
+  articles
+} from '../../database/schema'
 
 const normalizePathPart = (str: string): string => {
-  return str
-    .split(`-`)
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(` `)
+  return str.
+    split(`-`).
+    map((word) => word.charAt(0).toUpperCase() + word.slice(1)).
+    join(` `)
 }
 
 // Utility function to build a hierarchical tree from a flat list of articles
 const buildArticleTree = (articlesList: typeof articles.$inferSelect[]) => {
-  const tree: any[] = []
+  const tree: any[] = [
+  ]
   const nodes = new Map<string, any>()
 
   for (const article of articlesList) {
-    if (!article.slug) continue
+    if (!article.slug)
+      continue
 
     const sanitizedSlug = article.slug.replace(/^\/|\/$/g, ``)
     const parts = sanitizedSlug.split(`/`)
@@ -23,7 +29,7 @@ const buildArticleTree = (articlesList: typeof articles.$inferSelect[]) => {
 
     for (let i = 0; i < parts.length; i++) {
       const part = parts[i]
-      const key = (currentPath ? `${currentPath}/` : ``) + part
+      const key = (currentPath ? `${ currentPath }/` : ``) + part
       const isLastPart = i === parts.length - 1
 
       let node = nodes.get(key)
@@ -33,8 +39,9 @@ const buildArticleTree = (articlesList: typeof articles.$inferSelect[]) => {
           label: isLastPart ? article.title : normalizePathPart(part),
           value: key,
           icon: isLastPart ? `i-lucide-file-text` : undefined,
-          children: isLastPart ? undefined : [],
-          slug: isLastPart ? `/${article.slug}` : undefined
+          children: isLastPart ? undefined : [
+          ],
+          slug: isLastPart ? `/${ article.slug }` : undefined
         }
         currentLevel.push(node)
         nodes.set(key, node)
@@ -50,7 +57,7 @@ const buildArticleTree = (articlesList: typeof articles.$inferSelect[]) => {
   return tree
 }
 
-export default defineEventHandler(async () => {
+export default defineEventHandler(async() => {
   const db = useDb()
 
   try {
@@ -62,7 +69,7 @@ export default defineEventHandler(async () => {
     })
 
     return buildArticleTree(articlesList)
-  } catch (error) {
+  } catch(error) {
     console.error(`Error fetching article tree:`, error)
     throw createError({
       statusCode: 500,

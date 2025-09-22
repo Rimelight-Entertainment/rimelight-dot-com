@@ -1,6 +1,10 @@
 <script lang="ts" setup>
-import { mapContentNavigation } from '@nuxt/ui/utils/content'
-import { findPageBreadcrumb } from '@nuxt/content/utils'
+import {
+  mapContentNavigation
+} from '@nuxt/ui/utils/content'
+import {
+  findPageBreadcrumb
+} from '@nuxt/content/utils'
 
 definePageMeta({
   layout: `documents`
@@ -8,26 +12,37 @@ definePageMeta({
 
 const route = useRoute()
 
-const { data: page } = await useAsyncData(route.path, () => queryCollection(`documents`).path(route.path).first())
+const {
+  data: page
+} = await useAsyncData(route.path, () => queryCollection(`documents`).path(route.path).
+  first())
 if (!page.value) {
-  throw createError({ statusCode: 404, statusMessage: `Page not found`, fatal: true })
+  throw createError({
+    statusCode: 404,
+    statusMessage: `Page not found`,
+    fatal: true
+  })
 }
 
-const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
+const {
+  data: surround
+} = await useAsyncData(`${ route.path }-surround`, () => {
   return queryCollectionItemSurroundings(`documents`, route.path, {
-    fields: [`description`]
+    fields: [
+      `description`
+    ]
   })
 })
 
-const { data: navigation } = await useAsyncData(`navigation`, () => queryCollectionNavigation(`documents`))
+const {
+  data: navigation
+} = await useAsyncData(`navigation`, () => queryCollectionNavigation(`documents`))
 
-const breadcrumb = computed(() =>
-  mapContentNavigation(
-    findPageBreadcrumb(navigation?.value, page.value?.path, {
-      indexAsChild: true
-    })
-  ).map(({ icon, ...link }) => link)
-)
+const breadcrumb = computed(() => mapContentNavigation(findPageBreadcrumb(navigation?.value, page.value?.path, {
+  indexAsChild: true
+})).map(({
+  icon, ...link
+}) => link))
 
 const pageLinks = [
   {

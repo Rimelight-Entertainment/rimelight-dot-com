@@ -1,4 +1,6 @@
-import type { BlockData } from "@/types/blocks"
+import type {
+  BlockData
+} from "@/types/blocks"
 
 /**
  * Interface for the data returned for each matching entry in search results.
@@ -57,11 +59,16 @@ export enum EntryCategory {
 
 // Defines the schema for how to display each property in a Property Panel
 export interface PropertyPanelSchema {
-  label: string // The human-readable label to display
-  type: `number` | `text` | `text-array` | `enum` | `entry` | `entry-array` // Type of data/renderer
-  options?: string[] // Optional: For 'enum' type, defines the available options
-  allowedEntryTypes?: EntryType[] // Required for types "entry" and "entry-array", specifies the EntryType to link to
-  order?: number // Optional display order for properties within a category
+  // The human-readable label to display
+  label: string
+  // Type of data/renderer
+  type: `number` | `text` | `text-array` | `enum` | `entry` | `entry-array`
+  // Optional: For 'enum' type, defines the available options
+  options?: string[]
+  // Required for types "entry" and "entry-array", specifies the EntryType to link to
+  allowedEntryTypes?: EntryType[]
+  // Optional display order for properties within a category
+  order?: number
 }
 
 /**
@@ -216,14 +223,4 @@ export interface EpisodeEntryTemplate extends BaseEntryTemplate {
   defaultProperties: EpisodeProperties
 }
 
-export type CombinedEntryTemplate
-  = | BaseEntryTemplate
-    | SpeciesEntryTemplate
-    | CharacterEntryTemplate
-    | TaleEntryTemplate
-    | ItemEntryTemplate
-    | SkillEntryTemplate
-    | HeroEntryTemplate
-    | CardEntryTemplate
-    | SeriesEntryTemplate
-    | EpisodeEntryTemplate
+export type CombinedEntryTemplate = | BaseEntryTemplate | SpeciesEntryTemplate | CharacterEntryTemplate | TaleEntryTemplate | ItemEntryTemplate | SkillEntryTemplate | HeroEntryTemplate | CardEntryTemplate | SeriesEntryTemplate | EpisodeEntryTemplate

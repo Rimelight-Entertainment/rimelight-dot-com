@@ -1,21 +1,27 @@
-import { eq } from 'drizzle-orm'
-import { z } from 'zod'
+import {
+  eq
+} from 'drizzle-orm'
+import {
+  z
+} from 'zod'
 
 const deleteParamsSchema = z.object({
   id: z.coerce.number()
 })
 
-export default defineEventHandler(async (event) => {
+export default defineEventHandler(async(event) => {
   await requireUserSession(event)
 
-  const { id } = await getValidatedRouterParams(event, deleteParamsSchema.parse)
+  const {
+    id
+  } = await getValidatedRouterParams(event, deleteParamsSchema.parse)
 
   const drizzle = useDrizzle()
 
-  const result = await drizzle
-    .delete(tables.feedback)
-    .where(eq(tables.feedback.id, id))
-    .returning()
+  const result = await drizzle.
+    delete(tables.feedback).
+    where(eq(tables.feedback.id, id)).
+    returning()
 
   if (result.length === 0) {
     throw createError({
@@ -24,5 +30,7 @@ export default defineEventHandler(async (event) => {
     })
   }
 
-  return { success: true }
+  return {
+    success: true
+  }
 })

@@ -1,6 +1,10 @@
 <script lang="ts" setup>
-import { mapContentNavigation } from '@nuxt/ui/utils/content'
-import { findPageBreadcrumb } from '@nuxt/content/utils'
+import {
+  mapContentNavigation
+} from '@nuxt/ui/utils/content'
+import {
+  findPageBreadcrumb
+} from '@nuxt/content/utils'
 
 definePageMeta({
   layout: `blog`
@@ -8,20 +12,39 @@ definePageMeta({
 
 const route = useRoute()
 
-const { data: page } = await useAsyncData(route.path, () => queryCollection(`blog`).path(route.path).first())
+const {
+  data: page
+} = await useAsyncData(route.path, () => queryCollection(`blog`).path(route.path).
+  first())
 if (!page.value) {
-  throw createError({ statusCode: 404, statusMessage: `Page not found`, fatal: true })
+  throw createError({
+    statusCode: 404,
+    statusMessage: `Page not found`,
+    fatal: true
+  })
 }
 
-const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
+const {
+  data: surround
+} = await useAsyncData(`${ route.path }-surround`, () => {
   return queryCollectionItemSurroundings(`blog`, route.path, {
-    fields: [`description`]
+    fields: [
+      `description`
+    ]
   })
 })
 
-const { data: navigation } = await useAsyncData(`navigation`, () => queryCollectionNavigation(`blog`))
+const {
+  data: navigation
+} = await useAsyncData(`navigation`, () => queryCollectionNavigation(`blog`))
 
-const breadcrumb = computed(() => mapContentNavigation(findPageBreadcrumb(navigation?.value, page.value?.path, { indexAsChild: true })).map(({ icon, ...link }) => link), { deep: 0 })
+const breadcrumb = computed(() => mapContentNavigation(findPageBreadcrumb(navigation?.value, page.value?.path, {
+  indexAsChild: true
+})).map(({
+  icon, ...link
+}) => link), {
+  deep: 0
+})
 
 const datePosted = useDateFormat(page.datePosted, `DD/MM/YYYY`)
 </script>

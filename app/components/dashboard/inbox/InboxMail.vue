@@ -1,26 +1,41 @@
 <script setup lang="ts">
-import { format } from 'date-fns'
-import type { Mail } from '~/types'
+import {
+  format
+} from 'date-fns'
+import type {
+  Mail
+} from '~/types'
 
 defineProps<{
   mail: Mail
 }>()
 
-const emits = defineEmits([`close`])
+const emits = defineEmits([
+  `close`
+])
 
-const dropdownItems = [[{
-  label: `Mark as unread`,
-  icon: `i-lucide-check-circle`
-}, {
-  label: `Mark as important`,
-  icon: `i-lucide-triangle-alert`
-}], [{
-  label: `Star thread`,
-  icon: `i-lucide-star`
-}, {
-  label: `Mute thread`,
-  icon: `i-lucide-circle-pause`
-}]]
+const dropdownItems = [
+  [
+    {
+      label: `Mark as unread`,
+      icon: `i-lucide-check-circle`
+    },
+    {
+      label: `Mark as important`,
+      icon: `i-lucide-triangle-alert`
+    }
+  ],
+  [
+    {
+      label: `Star thread`,
+      icon: `i-lucide-star`
+    },
+    {
+      label: `Mute thread`,
+      icon: `i-lucide-circle-pause`
+    }
+  ]
+]
 
 const toast = useToast()
 

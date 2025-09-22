@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { type BlockData, type BlockTypes, blocksRegistry } from '~/types/blocks'
+import {
+  type BlockData, type BlockTypes, blocksRegistry
+} from '~/types/blocks'
 
 interface BlockSlotProps {
   blocks: BlockData[]
@@ -34,9 +36,7 @@ const isChildAllowedInSlot = computed(() => {
   }
 
   // Otherwise, check if the dragged block's type is included in the allowed children array.
-  return parentBlockDefinition.allowedChildren.some(
-    (allowedBlock) => allowedBlock.type === draggedBlockType.type
-  )
+  return parentBlockDefinition.allowedChildren.some((allowedBlock) => allowedBlock.type === draggedBlockType.type)
 })
 </script>
 
@@ -54,7 +54,7 @@ const isChildAllowedInSlot = computed(() => {
   >
     <slot name="actions" />
   </RLLayoutBox>
-  <component v-for="block in blocks" />
+  <component v-for="block in blocks" :key="block" />
 </template>
 
 <style scoped>

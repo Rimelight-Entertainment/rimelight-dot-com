@@ -1,4 +1,6 @@
-import { z } from 'zod'
+import {
+  z
+} from 'zod'
 
 export const FEEDBACK_RATINGS = [
   `very-helpful`,
@@ -17,10 +19,30 @@ export interface FeedbackOption {
 }
 
 export const FEEDBACK_OPTIONS: FeedbackOption[] = [
-  { emoji: `🤩`, label: `Very helpful`, value: `very-helpful`, score: 4 },
-  { emoji: `🙂`, label: `Helpful`, value: `helpful`, score: 3 },
-  { emoji: `☹️`, label: `Not helpful`, value: `not-helpful`, score: 2 },
-  { emoji: `😰`, label: `Confusing`, value: `confusing`, score: 1 }
+  {
+    emoji: `🤩`,
+    label: `Very helpful`,
+    value: `very-helpful`,
+    score: 4
+  },
+  {
+    emoji: `🙂`,
+    label: `Helpful`,
+    value: `helpful`,
+    score: 3
+  },
+  {
+    emoji: `☹️`,
+    label: `Not helpful`,
+    value: `not-helpful`,
+    score: 2
+  },
+  {
+    emoji: `😰`,
+    label: `Confusing`,
+    value: `confusing`,
+    score: 1
+  }
 ]
 
 export interface FeedbackSubmission {

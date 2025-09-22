@@ -1,21 +1,53 @@
-import type { Component, VNode } from 'vue'
+import type {
+  Component, VNode
+} from 'vue'
 
-import type { BlockData } from '@/types/blocks'
-import type { SectionBlockData } from '@/types/blocks/sectionBlock'
-import type { ParagraphBlockData } from '@/types/blocks/paragraphBlock'
-import type { CalloutBlockData } from '@/types/blocks/calloutBlock'
-import type { ImageBlockData } from '@/types/blocks/imageBlock'
-import type { ScriptBlockData } from '@/types/blocks/scriptBlock'
-import type { SceneBlockData } from '@/types/blocks/sceneBlock'
-import type { DialogueBlockData } from '@/types/blocks/dialogueBlock'
+import type {
+  BlockData
+} from '@/types/blocks'
+import type {
+  SectionBlockData
+} from '@/types/blocks/sectionBlock'
+import type {
+  ParagraphBlockData
+} from '@/types/blocks/paragraphBlock'
+import type {
+  CalloutBlockData
+} from '@/types/blocks/calloutBlock'
+import type {
+  ImageBlockData
+} from '@/types/blocks/imageBlock'
+import type {
+  ScriptBlockData
+} from '@/types/blocks/scriptBlock'
+import type {
+  SceneBlockData
+} from '@/types/blocks/sceneBlock'
+import type {
+  DialogueBlockData
+} from '@/types/blocks/dialogueBlock'
 
-import { createSectionBlock } from '~/utils/blocks/createSectionBlock'
-import { createParagraphBlock } from '~/utils/blocks/createParagraphBlock'
-import { createCalloutBlock } from '~/utils/blocks/createCalloutBlock'
-import { createImageBlock } from '~/utils/blocks/createImageBlock'
-import { createScriptBlock } from '~/utils/blocks/createScriptBlock'
-import { createSceneBlock } from '~/utils/blocks/createSceneBlock'
-import { createDialogueBlock } from '~/utils/blocks/createDialogueBlock'
+import {
+  createSectionBlock
+} from '~/utils/blocks/createSectionBlock'
+import {
+  createParagraphBlock
+} from '~/utils/blocks/createParagraphBlock'
+import {
+  createCalloutBlock
+} from '~/utils/blocks/createCalloutBlock'
+import {
+  createImageBlock
+} from '~/utils/blocks/createImageBlock'
+import {
+  createScriptBlock
+} from '~/utils/blocks/createScriptBlock'
+import {
+  createSceneBlock
+} from '~/utils/blocks/createSceneBlock'
+import {
+  createDialogueBlock
+} from '~/utils/blocks/createDialogueBlock'
 
 import SectionBlock from '@/components/entry/blocks/structure/SectionBlock.vue'
 import ParagraphBlock from '@/components/entry/blocks/text/ParagraphBlock.vue'
@@ -84,7 +116,10 @@ export interface EditorCallbacks {
     blockId: string,
     file: File,
     fileName: string,
-  ) => Promise<{ url: string, fileName: string } | null>
+  ) => Promise<{
+    url: string
+    fileName: string
+  } | null>
 }
 
 export interface GenericBlockComponentProps<T extends BlockData = BlockData> {
@@ -123,17 +158,25 @@ interface BlockSchemaEntry<T extends BlockData = BlockData> {
 }
 
 export type BlockSchemaType = {
-  [K in BlockData[`type`]]: BlockSchemaEntry<Extract<BlockData, { type: K }>>;
+  [K in BlockData[`type`]]: BlockSchemaEntry<Extract<BlockData, {
+    type: K
+  }>>;
 }
 
 const BlockSchema: BlockSchemaType = {
   section: {
-    component: SectionBlock, // Reference the imported Vue component
+    component: SectionBlock,
     icon: `blocks.structure.section`,
     category: `Structure`,
     displayName: `Section`,
     tooltip: `A container for grouping related content.`,
-    allowedChildren: [`section`, `paragraph`, `callout`, `image`, `script`],
+    allowedChildren: [
+      `section`,
+      `paragraph`,
+      `callout`,
+      `image`,
+      `script`
+    ],
     draggable: true,
     selectable: true,
     nestable: true,
@@ -142,12 +185,13 @@ const BlockSchema: BlockSchemaType = {
     ) => SectionBlockData
   },
   paragraph: {
-    component: ParagraphBlock, // Reference the imported Vue component
+    component: ParagraphBlock,
     icon: `blocks.text.paragraph`,
     category: `Text`,
     displayName: `Paragraph`,
     tooltip: `A simple text block.`,
-    allowedChildren: [],
+    allowedChildren: [
+    ],
     draggable: true,
     selectable: true,
     nestable: false,
@@ -156,12 +200,13 @@ const BlockSchema: BlockSchemaType = {
     ) => ParagraphBlockData
   },
   callout: {
-    component: CalloutBlock, // Reference the imported Vue component
+    component: CalloutBlock,
     icon: `blocks.text.callout`,
     category: `Text`,
     displayName: `Callout`,
     tooltip: `Highlight important content.`,
-    allowedChildren: [],
+    allowedChildren: [
+    ],
     draggable: true,
     selectable: true,
     nestable: false,
@@ -170,12 +215,13 @@ const BlockSchema: BlockSchemaType = {
     ) => CalloutBlockData
   },
   image: {
-    component: ImageBlock, // Reference the imported Vue component
+    component: ImageBlock,
     icon: `blocks.media.image`,
     category: `Media`,
     displayName: `Image`,
     tooltip: `An image.`,
-    allowedChildren: [],
+    allowedChildren: [
+    ],
     draggable: true,
     selectable: true,
     nestable: false,
@@ -184,12 +230,14 @@ const BlockSchema: BlockSchemaType = {
     ) => ImageBlockData
   },
   script: {
-    component: ScriptBlock, // Reference the imported Vue component
+    component: ScriptBlock,
     icon: `blocks.screenwriting.script`,
     category: `Screenwriting`,
     displayName: `Script`,
     tooltip: `A script for screenwriting.`,
-    allowedChildren: [`scene`],
+    allowedChildren: [
+      `scene`
+    ],
     draggable: true,
     selectable: true,
     nestable: true,
@@ -198,12 +246,16 @@ const BlockSchema: BlockSchemaType = {
     ) => ScriptBlockData
   },
   scene: {
-    component: SceneBlock, // Reference the imported Vue component
+    component: SceneBlock,
     icon: `blocks.screenwriting.scene`,
     category: `Screenwriting`,
     displayName: `Scene`,
     tooltip: `A scene in a script.`,
-    allowedChildren: [`paragraph`, `callout`, `dialogue`],
+    allowedChildren: [
+      `paragraph`,
+      `callout`,
+      `dialogue`
+    ],
     draggable: true,
     selectable: true,
     nestable: true,
@@ -217,7 +269,8 @@ const BlockSchema: BlockSchemaType = {
     category: `Screenwriting`,
     displayName: `Dialogue`,
     tooltip: `A dialogue block with character and lines.`,
-    allowedChildren: [],
+    allowedChildren: [
+    ],
     draggable: true,
     selectable: true,
     nestable: false,

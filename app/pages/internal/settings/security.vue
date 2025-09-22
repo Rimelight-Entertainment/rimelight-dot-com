@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import * as z from 'zod'
-import type { FormError } from '@nuxt/ui'
+import type {
+  FormError
+} from '@nuxt/ui'
 
 const passwordSchema = z.object({
   current: z.string().min(8, `Must be at least 8 characters`),
@@ -15,9 +17,13 @@ const password = reactive<Partial<PasswordSchema>>({
 })
 
 const validate = (state: Partial<PasswordSchema>): FormError[] => {
-  const errors: FormError[] = []
+  const errors: FormError[] = [
+  ]
   if (state.current && state.new && state.current === state.new) {
-    errors.push({ name: `new`, message: `Passwords must be different` })
+    errors.push({
+      name: `new`,
+      message: `Passwords must be different`
+    })
   }
   return errors
 }

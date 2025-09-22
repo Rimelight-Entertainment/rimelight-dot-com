@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { tv, type VariantProps } from "tailwind-variants"
+import {
+  tv, type VariantProps
+} from "tailwind-variants"
 
 const boxVariants = tv({
   base: `flex`,
@@ -54,33 +56,40 @@ const boxVariants = tv({
 type BoxVariantsProps = VariantProps<typeof boxVariants>
 
 interface Props {
+
   /**
    * Sets the HTML tag to render the box as.
    * @default 'div'
    */
   tag?: string
+
   /**
    * Sets the positioning of the box.
    * @default 'relative'
    */
   position?: BoxVariantsProps[`position`]
+
   /**
    * Defines the flex direction of the box.
    * @default 'vertical'
    */
   direction?: BoxVariantsProps[`direction`]
+
   /**
    * Sets the padding around the content within the box.
    */
   padding?: BoxVariantsProps[`padding`]
+
   /**
    * Sets the gap between child elements within the box.
    */
   gap?: BoxVariantsProps[`gap`]
+
   /**
    * Aligns items along the cross-axis.
    */
   alignItems?: BoxVariantsProps[`alignItems`]
+
   /**
    * Justifies content along the main axis.
    */

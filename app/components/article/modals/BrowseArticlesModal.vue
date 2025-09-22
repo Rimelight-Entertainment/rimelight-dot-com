@@ -1,13 +1,15 @@
 <script setup lang="ts">
-import type { TreeItem } from '@nuxt/ui'
+import type {
+  TreeItem
+} from '@nuxt/ui'
 
 export interface ArticleTreeItem extends TreeItem {
   slug?: string
 }
 
-const { data: articleTree, pending, error: treeError } = await useFetch<ArticleTreeItem[]>(
-  `/api/article/tree`
-)
+const {
+  data: articleTree, pending, error: treeError
+} = await useFetch<ArticleTreeItem[]>(`/api/article/tree`)
 
 if (treeError.value) {
   console.error(`Error fetching article tree:`, treeError.value)

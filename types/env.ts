@@ -1,4 +1,6 @@
-import { z } from 'zod'
+import {
+  z
+} from 'zod'
 import tryParseEnv from '../utils/try-parse-env'
 
 const EnvSchema = z.object({
@@ -8,7 +10,9 @@ const EnvSchema = z.object({
   NUXT_SESSION_PASSWORD: z.string()
 })
 
+export type EnvSchema = z.infer<typeof EnvSchema>
+
 tryParseEnv(EnvSchema)
 
-export type EnvSchema = z.infer<typeof EnvSchema>
+// eslint-disable-next-line no-process-env
 export default EnvSchema.parse(process.env)

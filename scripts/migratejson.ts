@@ -1,9 +1,21 @@
-import { useDb } from '../server/utils/drizzle'
-import { articles } from '../server/database/schema'
-import { glob } from 'glob'
-import { join } from 'node:path'
-import { readFile } from 'node:fs/promises'
-import { v7 as uuidv7 } from 'uuid'
+import {
+  useDb
+} from '../server/utils/drizzle'
+import {
+  articles
+} from '../server/database/schema'
+import {
+  glob
+} from 'glob'
+import {
+  join
+} from 'node:path'
+import {
+  readFile
+} from 'node:fs/promises'
+import {
+  v7 as uuidv7
+} from 'uuid'
 import 'dotenv/config'
 
 interface PageData {
@@ -31,14 +43,16 @@ async function migratePagesToDb() {
   const db = useDb()
   try {
     const pagesDirectory = join(process.cwd(), `app/data/pages`)
-    const jsonFiles = await glob(`**/*.json`, { cwd: pagesDirectory })
+    const jsonFiles = await glob(`**/*.json`, {
+      cwd: pagesDirectory
+    })
 
     if (jsonFiles.length === 0) {
       console.log(`No JSON files found in the pages directory.`)
       return
     }
 
-    console.log(`Found ${jsonFiles.length} JSON files. Starting migration...`)
+    console.log(`Found ${ jsonFiles.length } JSON files. Starting migration...`)
 
     for (const file of jsonFiles) {
       const filePath = join(pagesDirectory, file)
@@ -47,7 +61,7 @@ async function migratePagesToDb() {
         const pageData: PageData = JSON.parse(fileContent)
 
         if (!isArticleType(pageData.type)) {
-          console.error(`Invalid article type "${pageData.type}" found in file: ${file}. Skipping.`)
+          console.error(`Invalid article type "${ pageData.type }" found in file: ${ file }. Skipping.`)
           continue
         }
 
@@ -70,15 +84,16 @@ async function migratePagesToDb() {
           blocks: newBlocks
         }
 
-        await db.insert(articles).values(transformedData).onConflictDoNothing()
+        await db.insert(articles).values(transformedData).
+          onConflictDoNothing()
 
-        console.log(`Successfully migrated article: ${pageData.title}`)
-      } catch (error) {
-        console.error(`Error processing file ${file}:`, error)
+        console.log(`Successfully migrated article: ${ pageData.title }`)
+      } catch(error) {
+        console.error(`Error processing file ${ file }:`, error)
       }
     }
     console.log(`Migration process completed.`)
-  } catch (err) {
+  } catch(err) {
     console.error(`An unexpected error occurred during migration:`, err)
   } finally {
     process.exit(0)

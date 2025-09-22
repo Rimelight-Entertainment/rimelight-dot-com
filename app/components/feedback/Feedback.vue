@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { AnimatePresence, MotionConfig, motion } from 'motion-v'
+import {
+  AnimatePresence, MotionConfig, motion
+} from 'motion-v'
 
 const props = defineProps<{
   page: {
@@ -85,7 +87,7 @@ const {
                   :class="[
                     formState.rating === option.value
                       ? 'border-primary bg-primary/20 hover:bg-primary/30 grayscale-0'
-                      : 'border-default bg-accented/20 hover:border-accented/70 hover:bg-accented/80'
+                      : 'border-default bg-accented/20 hover:border-accented/70 hover:bg-accented/80',
                   ]"
                   :aria-label="`Rate as ${option.label}`"
                   :aria-pressed="formState.rating === option.value"
@@ -155,14 +157,14 @@ const {
                               marginRight: isSubmitting ? '6px' : '0px',
                               opacity: isSubmitting ? 1 : 0,
                               scale: isSubmitting ? 1 : 0,
-                              rotate: isSubmitting ? 360 : 0
+                              rotate: isSubmitting ? 360 : 0,
                             }"
                             :transition="{
                               width: { duration: 0.2, ease: 'easeInOut' },
                               marginRight: { duration: 0.2, ease: 'easeInOut' },
                               opacity: { duration: 0.2 },
                               scale: { duration: 0.2, type: 'spring', bounce: 0.3 },
-                              rotate: { duration: 1, ease: 'linear', repeat: Infinity }
+                              rotate: { duration: 1, ease: 'linear', repeat: Infinity },
                             }"
                             class="flex items-center justify-center overflow-hidden"
                           >
@@ -170,7 +172,7 @@ const {
                           </motion.div>
                           <motion.span
                             :animate="{
-                              opacity: 1
+                              opacity: 1,
                             }"
                             :transition="{ duration: 0.2, ease: 'easeInOut' }"
                           >

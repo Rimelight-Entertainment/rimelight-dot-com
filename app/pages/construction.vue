@@ -1,6 +1,10 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useCookie, useRuntimeConfig, navigateTo } from '#imports'
+import {
+  ref
+} from 'vue'
+import {
+  useCookie, useRuntimeConfig, navigateTo
+} from '#imports'
 
 definePageMeta({
   layout: `construction`
@@ -10,18 +14,20 @@ const password = ref(``)
 const error = ref<string | null>(null)
 const config = useRuntimeConfig()
 
-const handleLogin = async () => {
+const handleLogin = async() => {
   const constructionPassword = config.public.constructionPassword
 
   if (password.value === constructionPassword) {
     const isUnlocked = useCookie<boolean>(`is-unlocked`)
-    isUnlocked.value = true // Set as boolean true instead of string 'true'
+    isUnlocked.value = true
 
     const intendedPath = useCookie(`intended-path`)
     const path = intendedPath.value || `/`
     intendedPath.value = null
 
-    navigateTo(path, { replace: true })
+    navigateTo(path, {
+      replace: true
+    })
   } else {
     error.value = `Incorrect password. Please try again.`
     password.value = ``

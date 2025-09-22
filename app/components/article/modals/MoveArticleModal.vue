@@ -1,7 +1,13 @@
 <script setup lang="ts">
-import { z } from 'zod'
-import { UForm } from '#components'
-import type { FormSubmitEvent } from '@nuxt/ui'
+import {
+  z
+} from 'zod'
+import {
+  UForm
+} from '#components'
+import type {
+  FormSubmitEvent
+} from '@nuxt/ui'
 
 const open = ref(false)
 
@@ -12,11 +18,11 @@ const props = defineProps<{
 const formRef = useTemplateRef(`formRef`)
 
 const schema = z.object({
-  slug: z
-    .string()
-    .min(1, `Slug is required.`)
-    .regex(/^[a-z0-9-/]+$/, `Slug can only contain lowercase letters, numbers, and hyphens.`)
-    .transform((value) => value.trim().toLowerCase())
+  slug: z.
+    string().
+    min(1, `Slug is required.`).
+    regex(/^[a-z0-9-/]+$/, `Slug can only contain lowercase letters, numbers, and hyphens.`).
+    transform((value) => value.trim().toLowerCase())
 })
 
 type Schema = z.infer<typeof schema>
@@ -43,8 +49,8 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       color: `success`,
       icon: `lucide:circle-check`
     })
-    await navigateTo(`/${state.slug}`)
-  } catch (error) {
+    await navigateTo(`/${ state.slug }`)
+  } catch(error) {
     console.error(`Failed to create article:`, error)
     toast.add({
       title: `Error`,

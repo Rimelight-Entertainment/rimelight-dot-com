@@ -4,23 +4,36 @@ export function useFeedbackRatings() {
     return FEEDBACK_OPTIONS.reduce((acc, option) => {
       acc[option.value] = option
       return acc
-    }, {} as Record<FeedbackRating, typeof FEEDBACK_OPTIONS[0]>)
+    }, {
+    } as Record<FeedbackRating, typeof FEEDBACK_OPTIONS[0]>)
   })
 
   function getScoreColor(score: number): string {
-    if (score >= 4.0) return `text-success`
-    if (score >= 3.0) return `text-warning`
+    if (score >= 4.0)
+      return `text-success`
+    if (score >= 3.0)
+      return `text-warning`
     return `text-error`
   }
 
-  function getRatingFromFeedback(feedback: { rating: FeedbackRating }) {
+  function getRatingFromFeedback(feedback: {
+    rating: FeedbackRating
+  }) {
     return ratingConfig.value[feedback.rating]
   }
 
-  function calculateStats(feedbacks: { rating: FeedbackRating }[]) {
+  function calculateStats(feedbacks: {
+    rating: FeedbackRating
+  }[]) {
     const total = feedbacks.length
-    const positive = feedbacks.filter((f) => [`very-helpful`, `helpful`].includes(f.rating)).length
-    const negative = feedbacks.filter((f) => [`not-helpful`, `confusing`].includes(f.rating)).length
+    const positive = feedbacks.filter((f) => [
+      `very-helpful`,
+      `helpful`
+    ].includes(f.rating)).length
+    const negative = feedbacks.filter((f) => [
+      `not-helpful`,
+      `confusing`
+    ].includes(f.rating)).length
 
     const totalScore = feedbacks.reduce((sum, item) => sum + ratingConfig.value[item.rating].score, 0)
     const averageScore = total > 0 ? Number((totalScore / total).toFixed(1)) : 0
@@ -45,20 +58,21 @@ export function useFeedbackRatings() {
 
 // === Data Analysis & Processing ===
 export function useFeedbackData(rawFeedback: Ref<FeedbackItem[] | null>) {
-  const { calculateStats } = useFeedbackRatings()
-  const { filterFeedbackByDateRange } = useDateRange()
+  const {
+    calculateStats
+  } = useFeedbackRatings()
+  const {
+    filterFeedbackByDateRange
+  } = useDateRange()
 
-  const allFeedbackData = computed(() =>
-    rawFeedback.value?.map((item) => ({
-      ...item,
-      createdAt: new Date(item.createdAt),
-      updatedAt: new Date(item.updatedAt)
-    })) || []
-  )
+  const allFeedbackData = computed(() => rawFeedback.value?.map((item) => ({
+    ...item,
+    createdAt: new Date(item.createdAt),
+    updatedAt: new Date(item.updatedAt)
+  })) || [
+  ])
 
-  const feedbackData = computed(() =>
-    filterFeedbackByDateRange(allFeedbackData.value)
-  )
+  const feedbackData = computed(() => filterFeedbackByDateRange(allFeedbackData.value))
 
   const globalStats = computed(() => calculateStats(feedbackData.value))
 
@@ -67,18 +81,27 @@ export function useFeedbackData(rawFeedback: Ref<FeedbackItem[] | null>) {
 
     const pageGroups: Record<string, FeedbackItem[]> = filteredFeedback.reduce((acc, item) => {
       if (!acc[item.path]) {
-        acc[item.path] = []
+        acc[item.path] = [
+        ]
       }
       acc[item.path].push(item)
       return acc
-    }, {} as Record<string, FeedbackItem[]>)
+    }, {
+    } as Record<string, FeedbackItem[]>)
 
-    return Object.entries(pageGroups).map(([path, feedback]) => {
+    return Object.entries(pageGroups).map(([
+      path,
+      feedback
+    ]) => {
       const stats = calculateStats(feedback)
       const sortedFeedback = feedback.sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime())
-      const oldestFeedback = feedback.reduce((oldest, current) =>
-        new Date(current.createdAt) < new Date(oldest.createdAt) ? current : oldest
-      )
+      const oldestFeedback = feedback.reduce((oldest, current) => {
+        if (new Date(current.createdAt) < new Date(oldest.createdAt)) {
+          return current
+        } else {
+          return oldest
+        }
+      })
 
       return {
         path,
@@ -88,7 +111,8 @@ export function useFeedbackData(rawFeedback: Ref<FeedbackItem[] | null>) {
         createdAt: new Date(oldestFeedback.createdAt),
         updatedAt: new Date(sortedFeedback[0].updatedAt)
       }
-    }).sort((a, b) => b.total - a.total)
+    }).
+      sort((a, b) => b.total - a.total)
   })
 
   return {
@@ -106,11 +130,13 @@ export function useFeedbackModal() {
   const itemsPerPage = 5
 
   const paginatedFeedback = computed(() => {
-    if (!selectedPage.value) return []
+    if (!selectedPage.value)
+      return [
+      ]
 
-    const sortedFeedback = [...selectedPage.value.feedback].sort((a, b) =>
-      new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime()
-    )
+    const sortedFeedback = [
+      ...selectedPage.value.feedback
+    ].sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime())
 
     const startIndex = (currentPage.value - 1) * itemsPerPage
     const endIndex = startIndex + itemsPerPage
@@ -119,7 +145,8 @@ export function useFeedbackModal() {
   })
 
   const totalPages = computed(() => {
-    if (!selectedPage.value) return 0
+    if (!selectedPage.value)
+      return 0
     return Math.ceil(selectedPage.value.feedback.length / itemsPerPage)
   })
 
@@ -152,7 +179,7 @@ export function useFeedbackDelete() {
 
   async function deleteFeedback(id: number): Promise<boolean> {
     try {
-      await $fetch(`/api/feedback/${id}`, {
+      await $fetch(`/api/feedback/${ id }`, {
         method: `DELETE`
       })
 
@@ -164,7 +191,7 @@ export function useFeedbackDelete() {
       })
 
       return true
-    } catch (error) {
+    } catch(error) {
       console.error(`Failed to delete feedback:`, error)
       toast.add({
         title: `Failed to delete feedback`,
@@ -210,7 +237,8 @@ export function useFeedbackForm(options: UseFeedbackFormOptions) {
   }
 
   function handleRatingSelect(rating: FeedbackRating) {
-    if (isSubmitted.value) return
+    if (isSubmitted.value)
+      return
 
     if (isExpanded.value && rating === formState.rating) {
       cancelFeedback()
@@ -222,7 +250,8 @@ export function useFeedbackForm(options: UseFeedbackFormOptions) {
   }
 
   async function submitFeedback() {
-    if (!formState.rating) return
+    if (!formState.rating)
+      return
 
     isSubmitting.value = true
 

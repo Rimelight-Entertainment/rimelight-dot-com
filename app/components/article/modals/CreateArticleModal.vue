@@ -1,8 +1,16 @@
 <script setup lang="ts">
-import { z } from 'zod'
-import { articleTypeEnum } from '~~/server/database/schema'
-import { UForm } from '#components'
-import type { FormSubmitEvent } from '@nuxt/ui'
+import {
+  z
+} from 'zod'
+import {
+  articleTypeEnum
+} from '~~/server/database/schema'
+import {
+  UForm
+} from '#components'
+import type {
+  FormSubmitEvent
+} from '@nuxt/ui'
 
 const open = ref(false)
 
@@ -20,11 +28,14 @@ type ArticleType = typeof articleTypes[number]
 const {
   data: availableTags,
   pending: pendingTags
-} = await useFetch(`/api/article/tags`, { method: `GET` })
+} = await useFetch(`/api/article/tags`, {
+  method: `GET`
+})
 
 const formattedTags = computed(() => {
   if (!availableTags.value?.tags) {
-    return []
+    return [
+    ]
   }
   return availableTags.value.tags.map((tag) => ({
     label: tag.name,
@@ -35,11 +46,11 @@ const formattedTags = computed(() => {
 
 const schema = z.object({
   title: z.string().min(1, `Title is required.`),
-  slug: z
-    .string()
-    .min(1, `Slug is required.`)
-    .regex(/^[a-z0-9-/]+$/, `Slug can only contain lowercase letters, numbers, and hyphens.`)
-    .transform((value) => value.trim().toLowerCase()),
+  slug: z.
+    string().
+    min(1, `Slug is required.`).
+    regex(/^[a-z0-9-/]+$/, `Slug can only contain lowercase letters, numbers, and hyphens.`).
+    transform((value) => value.trim().toLowerCase()),
   type: z.enum(articleTypes as [string, ...string[]]).default(`Default`),
   tags: z.array(z.object({
     label: z.string(),
@@ -59,7 +70,8 @@ const state = reactive<{
   title: ``,
   slug: ``,
   type: `Default`,
-  tags: []
+  tags: [
+  ]
 })
 
 const toast = useToast()
@@ -82,8 +94,8 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       color: `success`,
       icon: `lucide:circle-check`
     })
-    await navigateTo(`/${state.slug}`)
-  } catch (error) {
+    await navigateTo(`/${ state.slug }`)
+  } catch(error) {
     console.error(`Failed to create article:`, error)
     toast.add({
       title: `Error`,

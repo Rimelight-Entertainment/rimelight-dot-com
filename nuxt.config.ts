@@ -23,25 +23,48 @@ export default defineNuxtConfig({
       pathPrefix: false
     }
   ],
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true
+  },
   app: {
     head: {
       title: `Rimelight Entertainment`,
       titleTemplate: `%s | Rimelight Entertainment`,
       meta: [
-        { name: `description`, content: `Tell your story.` },
-        { name: `author`, content: `Rimelight Entertainment` },
-        { name: `creator`, content: `Rimelight Entertainment` }
+        {
+          name: `description`,
+          content: `Tell your story.`
+        },
+        {
+          name: `author`,
+          content: `Rimelight Entertainment`
+        },
+        {
+          name: `creator`,
+          content: `Rimelight Entertainment`
+        }
       ],
       link: [
-        { rel: `icon`, type: `image/svg+xml`, href: `/favicon.svg` }
+        {
+          rel: `icon`,
+          type: `image/svg+xml`,
+          href: `/favicon.svg`
+        }
       ]
     },
-    pageTransition: { name: `page`, mode: `out-in` },
-    layoutTransition: { name: `layout`, mode: `out-in` }
+    pageTransition: {
+      name: `page`,
+      mode: `out-in`
+    },
+    layoutTransition: {
+      name: `layout`,
+      mode: `out-in`
+    }
   },
 
-  css: [`./app/assets/css/main.css`],
+  css: [
+    `./app/assets/css/main.css`
+  ],
   site: {
     url: `https://rimelight.com`,
     name: `Rimelight Entertainment`,
@@ -94,7 +117,8 @@ export default defineNuxtConfig({
     '/api/**': {
       cors: true
     }
-  }, compatibilityDate: `2025-07-15`,
+  },
+  compatibilityDate: `2025-07-15`,
   nitro: {
     prerender: {
       crawlLinks: true,
@@ -107,18 +131,50 @@ export default defineNuxtConfig({
     blob: true,
     database: true
   },
+  eslint: {
+    config: {
+      stylistic: true
+    }
+  },
   i18n: {
     defaultLocale: `en`,
     locales: [
-      { code: `ar`, name: `العربية` },
-      { code: `en`, name: `English` },
-      { code: `es`, name: `Español` },
-      { code: `fr`, name: `Français` },
-      { code: `ja`, name: `日本語` },
-      { code: `ko`, name: `한국어` },
-      { code: `pt`, name: `Português` },
-      { code: `ro`, name: `Română` },
-      { code: `zh_cn`, name: `简体中文` }
+      {
+        code: `ar`,
+        name: `العربية`
+      },
+      {
+        code: `en`,
+        name: `English`
+      },
+      {
+        code: `es`,
+        name: `Español`
+      },
+      {
+        code: `fr`,
+        name: `Français`
+      },
+      {
+        code: `ja`,
+        name: `日本語`
+      },
+      {
+        code: `ko`,
+        name: `한국어`
+      },
+      {
+        code: `pt`,
+        name: `Português`
+      },
+      {
+        code: `ro`,
+        name: `Română`
+      },
+      {
+        code: `zh_cn`,
+        name: `简体中文`
+      }
     ]
   },
   icon: {
@@ -142,7 +198,9 @@ export default defineNuxtConfig({
   robots: {
     blockAiBots: false,
     blockNonSeoBots: false,
-    disallow: [`/internal`]
+    disallow: [
+      `/internal`
+    ]
   },
   turnstile: {
     siteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY

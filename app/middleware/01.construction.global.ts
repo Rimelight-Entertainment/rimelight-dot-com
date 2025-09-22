@@ -12,7 +12,9 @@ export default defineNuxtRouteMiddleware((to) => {
     if (intendedPath.value) {
       const path = intendedPath.value
       intendedPath.value = null
-      return navigateTo(path, { replace: true })
+      return navigateTo(path, {
+        replace: true
+      })
     }
     return
   }

@@ -1,6 +1,10 @@
 <script setup lang="ts">
-import type { BlockData, BlockTypes } from '~/types/blocks'
-import type { DropdownMenuItem } from '@nuxt/ui'
+import type {
+  BlockData, BlockTypes
+} from '~/types/blocks'
+import type {
+  DropdownMenuItem
+} from '@nuxt/ui'
 
 interface BlockProps {
   isEditable?: boolean
@@ -26,9 +30,12 @@ const {
   name = ``,
   description = ``,
   category = ``,
-  attrs = {},
-  slots = {},
-  allowedChildren = [],
+  attrs = {
+  },
+  slots = {
+  },
+  allowedChildren = [
+  ],
   isTemplated = false,
   isNestable = false,
   isDraggable = false
@@ -55,32 +62,39 @@ const menuItems = computed<DropdownMenuItem[][]>(() => {
     [
       {
         label: `Insert Block Above`,
-        kbds: [`PageUp`],
+        kbds: [
+          `PageUp`
+        ],
         onSelect: () => emit(`insertBlockAbove`, id)
       },
       {
         label: `Insert Block Below`,
-        kbds: [`PageDown`],
+        kbds: [
+          `PageDown`
+        ],
         onSelect: () => emit(`insertBlockBelow`, id)
       }
     ]
   ]
 
-  const editItems: DropdownMenuItem[] = !isTemplated
-    ? [
-        {
-          label: `Duplicate Block`,
-          kbds: [`Insert`],
-          onSelect: () => emit(`duplicate`, id)
-        },
-        {
-          color: `error`,
-          label: `Delete Block`,
-          kbds: [`Delete`],
-          onSelect: () => emit(`delete`, id)
-        }
-      ]
-    : []
+  const editItems: DropdownMenuItem[] = !isTemplated ? [
+    {
+      label: `Duplicate Block`,
+      kbds: [
+        `Insert`
+      ],
+      onSelect: () => emit(`duplicate`, id)
+    },
+    {
+      color: `error`,
+      label: `Delete Block`,
+      kbds: [
+        `Delete`
+      ],
+      onSelect: () => emit(`delete`, id)
+    }
+  ] : [
+  ]
 
   if (editItems.length) {
     items.push(editItems)

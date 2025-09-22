@@ -1,30 +1,37 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
-import type { CalloutVariant } from "~/types/blocks/calloutBlock"
-import { tv } from "tailwind-variants"
+import {
+  computed, ref
+} from 'vue'
+import type {
+  CalloutVariant
+} from "~/types/blocks/calloutBlock"
+import {
+  tv
+} from "tailwind-variants"
 
-interface CalloutBlockProps {
+const {
+  isEditable = false,
+  variant = `note`,
+  to = undefined,
+  adjustMargin = true
+} = defineProps<{
   isEditable?: boolean
-  to?: string
   variant?: CalloutVariant
+  to?: string
   adjustMargin?: boolean
-}
+}>()
 
-const props = withDefaults(defineProps<CalloutBlockProps>(), {
-  isEditable: false,
-  variant: `note`,
-  adjustMargin: true
-})
-
-const emit = defineEmits([`update:variant`])
+const emit = defineEmits<{
+  (e: `update:variant`, value: CalloutVariant): void
+}>()
 
 // New internal state to manage the variant
-const internalVariant = ref(props.variant)
+const internalVariant = ref(variant)
 
 const items = computed(() => {
-  return (Object.keys(headingMap) as CalloutVariant[])
-    .filter((key) => key !== internalVariant.value)
-    .map((key) => ({
+  return (Object.keys(headingMap) as CalloutVariant[]).
+    filter((key) => key !== internalVariant.value).
+    map((key) => ({
       variant: key,
       label: headingMap[key],
       icon: iconMap[key],
@@ -43,7 +50,7 @@ const handleSelect = (selectedItem: any) => {
 }
 
 const calloutBaseClass = computed(() => {
-  return props.adjustMargin ? `rounded-md border w-full my-4` : `rounded-md border w-full`
+  return adjustMargin ? `rounded-md border w-full my-4` : `rounded-md border w-full`
 })
 
 const callout = tv({
@@ -142,14 +149,19 @@ const tooltipMap = {
     <UTooltip :text="tooltipMap[internalVariant]" arrow>
       <UIcon v-if="!isEditable" :name="iconMap[internalVariant]" :class="icon({ variant: internalVariant })" />
       <UPopover v-else v-model:open="open" arrow>
-        <UButton variant="soft" size="xl" :leading-icon="iconMap[internalVariant]" :class="['w-fit h-fit', icon({ variant: internalVariant })]" />
+        <UButton
+          variant="soft"
+          size="xl"
+          :leading-icon="iconMap[internalVariant]"
+          :class="['w-fit h-fit', icon({ variant: internalVariant })]"
+        />
         <template #content>
           <RLLayoutBox
             tag="ul"
             direction="vertical"
             class="w-96 max-h-96 overflow-y-auto"
           >
-            <li v-for="item in items">
+            <li v-for="item in items" :key="item">
               <UButton
                 :key="item.variant"
                 variant="ghost"

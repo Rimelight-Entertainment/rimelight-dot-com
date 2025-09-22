@@ -1,4 +1,4 @@
-export default defineNuxtRouteMiddleware(async (to) => {
+export default defineNuxtRouteMiddleware(async(to) => {
   const session = useUserSession()
 
   if (to.path.startsWith(`/auth/log-in`) || to.path.startsWith(`/auth/sign-up`)) {
