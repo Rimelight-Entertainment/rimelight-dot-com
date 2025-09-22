@@ -21,6 +21,10 @@ export default defineNuxtConfig({
     {
       path: `~/components`,
       pathPrefix: false
+    },
+    {
+      path: `~/components/temp`,
+      pathPrefix: false
     }
   ],
   devtools: {
