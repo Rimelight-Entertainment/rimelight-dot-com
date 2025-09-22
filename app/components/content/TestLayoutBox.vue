@@ -108,8 +108,8 @@ const {
 
 <template>
   <component
-    :is="props.tag"
-    :class="boxVariants(props)"
+    :is="tag"
+    :class="boxVariants"
     v-bind="$attrs"
   >
     <slot />

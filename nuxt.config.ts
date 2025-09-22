@@ -17,16 +17,6 @@ export default defineNuxtConfig({
     `@nuxt/eslint`,
     `@pinia/nuxt`
   ],
-  components: [
-    {
-      path: `~/components`,
-      pathPrefix: false
-    },
-    {
-      path: `~/components/temp`,
-      pathPrefix: false
-    }
-  ],
   devtools: {
     enabled: true
   },
