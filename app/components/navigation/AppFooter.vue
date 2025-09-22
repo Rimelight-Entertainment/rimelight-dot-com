@@ -66,7 +66,7 @@ const columns: FooterColumn[] = [
           direction="horizontal"
           gap="lg"
         >
-          <NewsletterSignup />
+          <RLNewsletterSignup />
           <UFooterColumns :columns="columns" />
         </RLLayoutBox>
       </UContainer>

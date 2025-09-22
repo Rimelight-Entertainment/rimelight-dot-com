@@ -18,20 +18,20 @@ const {
     class="max-w-96 bg-primary-600"
   >
     <NuxtImg
-      :src="props.src"
-      :alt="props.alt"
+      :src="src"
+      :alt="alt"
     />
     <RLLayoutBox
       direction="vertical"
       gap="xs"
     >
       <h3 class="text-xl font-bold">
-        {{ props.name }}
+        {{ name }}
       </h3>
-      <label class="text-sm">{{ props.role }}</label>
+      <label class="text-sm">{{ role }}</label>
     </RLLayoutBox>
     <p class="text-md">
-      {{ props.description }}
+      {{ description }}
     </p>
     <RLLayoutBox
       direction="horizontal"

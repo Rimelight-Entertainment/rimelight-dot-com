@@ -31,7 +31,7 @@ const isEditable = inject(`isEditable`, false)
       {{ text }}
     </p>
   </ProseCallout>
-  <Block v-else :is-editable="isEditable">
+  <RLBlock v-else :is-editable="isEditable">
     <ProseCallout
       :is-editable="isEditable"
       :variant="variant"
@@ -60,5 +60,5 @@ const isEditable = inject(`isEditable`, false)
         </template>
       </UTextarea>
     </ProseCallout>
-  </Block>
+  </RLBlock>
 </template>

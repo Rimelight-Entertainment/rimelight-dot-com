@@ -45,7 +45,7 @@ const handleSelect = (selectedItem: any) => {
   // Update the internal state first
   internalVariant.value = selectedItem.variant
   // Then, notify the parent of the change
-  emits(`updateVariant`, selectedItem.variant)
+  emit(`updateVariant`, selectedItem.variant)
   open.value = false
 }
 
@@ -194,9 +194,9 @@ const tooltipMap = {
       </UPopover>
     </UTooltip>
     <RLLayoutBox direction="vertical" class="w-full">
-      <H6 :class="heading({ variant: internalVariant })">
+      <RLH6 :class="heading({ variant: internalVariant })">
         {{ headingMap[internalVariant] }}
-      </H6>
+      </RLH6>
       <slot />
     </RLLayoutBox>
   </RLLayoutBox>

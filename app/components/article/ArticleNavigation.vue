@@ -48,14 +48,14 @@ const { data: user, pending } = await useFetch(`/api/user`)
         label="View Article"
         :to="`/${slug}`"
       />
-      <PlaceBlockModal v-model:open="placeBlockModalOpen" />
-      <MoveArticleModal v-model:open="moveArticleModalOpen" :initial-slug="slug" />
-      <ConvertArticleModal v-model:open="convertArticleModalOpen" />
-      <EditTagsModal v-model:open="editTagsModalOpen" />
+      <RLPlaceBlockModal v-model:open="placeBlockModalOpen" />
+      <RLMoveArticleModal v-model:open="moveArticleModalOpen" :initial-slug="slug" />
+      <RLConvertArticleModal v-model:open="convertArticleModalOpen" />
+      <RLEditTagsModal v-model:open="editTagsModalOpen" />
       <USeparator class="py-2" />
-      <BrowseArticlesModal v-model:open="browseEntriesModalOpen" />
-      <CreateArticleModal v-model:open="createArticleModalOpen" />
-      <DeleteArticleModal v-model:open="deleteArticleModalOpen" :slug="slug" :title="title" />
+      <RLBrowseArticlesModal v-model:open="browseEntriesModalOpen" />
+      <RLCreateArticleModal v-model:open="createArticleModalOpen" />
+      <RLDeleteArticleModal v-model:open="deleteArticleModalOpen" :slug="slug" :title="title" />
     </template>
   </UPageList>
 </template>

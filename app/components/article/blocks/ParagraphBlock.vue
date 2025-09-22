@@ -17,7 +17,7 @@ const text = defineModel<string>(`text`, {
   <p v-if="!isEditable">
     {{ text }}
   </p>
-  <Block v-else :is-editable="isEditable">
+  <RLBlock v-else :is-editable="isEditable">
     <UTextarea
       v-model.trim="text"
       autoresize
@@ -39,5 +39,5 @@ const text = defineModel<string>(`text`, {
         </span>
       </template>
     </UTextarea>
-  </Block>
+  </RLBlock>
 </template>

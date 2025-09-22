@@ -24,7 +24,6 @@ if (treeError.value) {
         <Suspense>
           <template #default>
             <UTree
-              v-else
               color="primary"
               expanded-icon="lucide:folder-open"
               collapsed-icon="lucide:folder"
