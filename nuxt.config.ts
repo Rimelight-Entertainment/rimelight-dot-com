@@ -1,5 +1,6 @@
-export default defineNuxtConfig({
+import './types/env'
 
+export default defineNuxtConfig({
   modules: [
     `@nuxt/ui`,
     `@nuxtjs/i18n`,
@@ -13,7 +14,8 @@ export default defineNuxtConfig({
     `nuxt-auth-utils`,
     `@nuxtjs/sitemap`,
     `@nuxtjs/robots`,
-    `@nuxt/eslint`
+    `@nuxt/eslint`,
+    `@pinia/nuxt`
   ],
   components: [
     {
@@ -38,10 +40,13 @@ export default defineNuxtConfig({
     pageTransition: { name: `page`, mode: `out-in` },
     layoutTransition: { name: `layout`, mode: `out-in` }
   },
+
   css: [`./app/assets/css/main.css`],
   site: {
     url: `https://rimelight.com`,
-    name: `Rimelight Entertainment`
+    name: `Rimelight Entertainment`,
+    // Should be changed to true upon release to the public.
+    indexable: false
   },
   content: {
     build: {
@@ -133,6 +138,11 @@ export default defineNuxtConfig({
         normalizeIconName: false
       }
     ]
+  },
+  robots: {
+    blockAiBots: false,
+    blockNonSeoBots: false,
+    disallow: [`/internal`]
   },
   turnstile: {
     siteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY
