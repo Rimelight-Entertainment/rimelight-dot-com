@@ -6,7 +6,6 @@ import {
 } from '~/types/blocks'
 
 const {
-  isEditable = false,
   parentType,
   parentNestingLevel = 0,
   allowedBlocks = [
@@ -16,7 +15,6 @@ const {
   blocks = [
   ]
 } = defineProps<{
-  isEditable?: boolean
   parentId: string
   parentType: BlockTypes
   parentNestingLevel?: number
@@ -25,6 +23,8 @@ const {
   slotName?: string
   blocks?: BlockData[]
 }>()
+
+const isEditable = inject(`isEditable`, false)
 
 const showPlaceholder = computed(() => isEditable && blocks)
 

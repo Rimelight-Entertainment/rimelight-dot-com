@@ -35,8 +35,6 @@ useSeoMeta({
   ogDescription: article.description
 })
 
-const isEditable = computed(() => route.query.mode === `editor`)
-
 const normalizePathPart = (str: string): string => {
   return str.
     split(`-`).
@@ -73,6 +71,10 @@ const sectionBlock: SectionBlockData = {
   },
   isTemplated: false
 }
+
+const isEditable = computed(() => route.query.mode === `editor`)
+
+provide(`isEditable`, readonly(isEditable))
 </script>
 
 <template>

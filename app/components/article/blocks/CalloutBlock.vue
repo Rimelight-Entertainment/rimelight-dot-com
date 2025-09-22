@@ -2,12 +2,10 @@
 import type { CalloutVariant } from "~/types/blocks"
 
 const {
-  isEditable = false,
   variant = `note`,
   to = undefined,
   maxLength = 512
 } = defineProps<{
-  isEditable?: boolean
   variant?: CalloutVariant
   to?: string
   maxLength?: number
@@ -17,6 +15,8 @@ const text = defineModel<string>(`text`, {
   required: false,
   default: ``
 })
+
+const isEditable = inject(`isEditable`, false)
 </script>
 
 <template>

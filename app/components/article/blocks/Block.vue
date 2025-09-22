@@ -5,12 +5,10 @@ import type {
 } from '@nuxt/ui'
 
 const {
-  isEditable = false,
   isTemplated = false,
   isDraggable = true,
   isNestable = true
 } = defineProps<{
-  isEditable?: boolean
   id?: string
   type: BlockTypes
   icon: string
@@ -31,6 +29,8 @@ const emit = defineEmits<{
   duplicate: [id: string]
   delete: [id: string]
 }>()
+
+const isEditable = inject(`isEditable`, false)
 
 const allowDragging = computed(() => !isTemplated && isEditable && isDraggable)
 

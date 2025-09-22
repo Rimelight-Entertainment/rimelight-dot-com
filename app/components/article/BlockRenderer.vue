@@ -1,10 +1,4 @@
 <script setup lang="ts">
-const {
-  isEditable = false
-} = defineProps<{
-  isEditable?: boolean
-}>()
-
 const text = ref(``)
 </script>
 
@@ -13,15 +7,15 @@ const text = ref(``)
     direction="vertical"
     gap="md"
   >
-    <CalloutBlock v-model="text" :is-editable="isEditable" :variant="'note'" />
-    <CalloutBlock v-model="text" :is-editable="isEditable" :variant="'tip'" />
-    <CalloutBlock v-model="text" :is-editable="isEditable" :variant="'warning'" />
-    <CalloutBlock v-model="text" :is-editable="isEditable" :variant="'danger'" />
-    <CalloutBlock v-model="text" :is-editable="isEditable" :variant="'commentaryExternal'" />
-    <CalloutBlock v-model="text" :is-editable="isEditable" :variant="'commentaryInternal'" />
-    <CalloutBlock v-model="text" :is-editable="isEditable" :variant="'ideation'" />
-    <CalloutBlock v-model="text" :is-editable="isEditable" :variant="'creatorExternal'" />
-    <CalloutBlock v-model="text" :is-editable="isEditable" :variant="'creatorInternal'" />
+    <CalloutBlock v-model="text" :variant="'note'" />
+    <CalloutBlock v-model="text" :variant="'tip'" />
+    <CalloutBlock v-model="text" :variant="'warning'" />
+    <CalloutBlock v-model="text" :variant="'danger'" />
+    <CalloutBlock v-model="text" :variant="'commentaryExternal'" />
+    <CalloutBlock v-model="text" :variant="'commentaryInternal'" />
+    <CalloutBlock v-model="text" :variant="'ideation'" />
+    <CalloutBlock v-model="text" :variant="'creatorExternal'" />
+    <CalloutBlock v-model="text" :variant="'creatorInternal'" />
   </RLLayoutBox>
 </template>
 

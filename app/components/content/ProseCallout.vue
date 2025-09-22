@@ -10,12 +10,10 @@ import {
 } from "tailwind-variants"
 
 const {
-  isEditable = false,
   variant = `note`,
   to = undefined,
   adjustMargin = true
 } = defineProps<{
-  isEditable?: boolean
   variant?: CalloutVariant
   to?: string
   adjustMargin?: boolean
@@ -24,6 +22,8 @@ const {
 const emit = defineEmits<{
   updateVariant: [id: CalloutVariant]
 }>()
+
+const isEditable = inject(`isEditable`, false)
 
 // New internal state to manage the variant
 const internalVariant = ref(variant)
