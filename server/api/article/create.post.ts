@@ -21,6 +21,7 @@ export default defineEventHandler(async (event) => {
   const db = useDb()
 
   // Validate the incoming request body
+  // TODO Should this be readValidatedBody? (event, Schmea.safeParse)
   const body = await readBody(event)
   const result = createArticleSchema.safeParse(body)
 
@@ -31,6 +32,12 @@ export default defineEventHandler(async (event) => {
       data: result.error.issues
     })
   }
+  // TODO Should we use this variant instead?
+  // return sendError(event, createError({
+  //  statusCode: 400,
+  //  statusMessage: `Validation failed.`,
+  //  data: result.error.issues
+  // }))
 
   const { title, slug, type, tags: tagNames } = result.data
 
