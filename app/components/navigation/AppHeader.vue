@@ -209,7 +209,12 @@ defineShortcuts(extractShortcuts(accountMenuItems.value))
       </template>
     </UNavigationMenu>
     <template #body>
-      <UNavigationMenu :items="items" variant="link" orientation="vertical" class="-mx-2.5" />
+      <UNavigationMenu
+        :items="items"
+        variant="link"
+        orientation="vertical"
+        class="-mx-2.5"
+      />
     </template>
     <template #right>
       <RLLayoutBox
@@ -224,8 +229,18 @@ defineShortcuts(extractShortcuts(accountMenuItems.value))
           </template>
 
           <template v-else>
-            <UButton variant="solid" color="primary" label="Log In" to="/auth/log-in" />
-            <UButton variant="outline" color="primary" label="Sign Up" to="/auth/sign-up" />
+            <UButton
+              variant="solid"
+              color="primary"
+              label="Log In"
+              to="/auth/log-in"
+            />
+            <UButton
+              variant="outline"
+              color="primary"
+              label="Sign Up"
+              to="/auth/sign-up"
+            />
           </template>
         </AuthState>
       </RLLayoutBox>

@@ -1,6 +1,7 @@
 import { createConfigForNuxt } from '@nuxt/eslint-config/flat'
 
 export default createConfigForNuxt({
+  ignores: [`**/drizzle/*`],
   features: {
     tooling: true,
     formatters: true,
@@ -82,8 +83,9 @@ export default createConfigForNuxt({
     }
   }
 }).overrideRules({
+  'no-process-env': [`error`],
   'vue/multi-word-component-names': `off`,
-  'vue/max-attributes-per-line': [`error`, { singleline: 5 }],
+  'vue/max-attributes-per-line': [`error`, { singleline: { max: 3 }, multiline: { max: 1 } }],
   '@typescript-eslint/no-empty-object-type': `off`,
   '@stylistic/member-delimiter-style': [
     `error`,

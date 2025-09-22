@@ -79,18 +79,54 @@ const columns: FooterColumn[] = [
           direction="horizontal"
           gap="sm"
         >
-          <UButton size="xl" variant="ghost" color="neutral" icon="mdi:instagram" to="https://www.instagram.com/idantity.me" />
-          <UButton size="xl" variant="ghost" color="neutral" icon="ic:baseline-discord" to="https://discord.com/users/682049695173836979" />
-          <UButton size="xl" variant="ghost" color="neutral" icon="mdi:spotify" to="https://open.spotify.com/user/v5m4qoc9j35ccc6nbzqcookvj?si=d795f9bc1cb34222" />
-          <UButton size="xl" variant="ghost" color="neutral" icon="mdi:github" to="https://www.github.com/idantitydotme" />
-          <UButton size="xl" variant="ghost" color="neutral" icon="mdi:linkedin" to="https://www.linkedin.com/daniel-marchi" />
+          <UButton
+            size="xl"
+            variant="ghost"
+            color="neutral"
+            icon="mdi:instagram"
+            to="https://www.instagram.com/idantity.me"
+          />
+          <UButton
+            size="xl"
+            variant="ghost"
+            color="neutral"
+            icon="ic:baseline-discord"
+            to="https://discord.com/users/682049695173836979"
+          />
+          <UButton
+            size="xl"
+            variant="ghost"
+            color="neutral"
+            icon="mdi:spotify"
+            to="https://open.spotify.com/user/v5m4qoc9j35ccc6nbzqcookvj?si=d795f9bc1cb34222"
+          />
+          <UButton
+            size="xl"
+            variant="ghost"
+            color="neutral"
+            icon="mdi:github"
+            to="https://www.github.com/idantitydotme"
+          />
+          <UButton
+            size="xl"
+            variant="ghost"
+            color="neutral"
+            icon="mdi:linkedin"
+            to="https://www.linkedin.com/daniel-marchi"
+          />
         </RLLayoutBox>
         <RLLayoutBox
           direction="horizontal"
           gap="md"
         >
           <UColorModeSelect class="w-48" />
-          <ULocaleSelect v-model="locale" :locales="[ar, en, es, fr, ja, ko, pt, ro, zh_cn]" color="secondary" class="w-48" @update:model-value="setLocale($event)" />
+          <ULocaleSelect
+            v-model="locale"
+            :locales="[ar, en, es, fr, ja, ko, pt, ro, zh_cn]"
+            color="secondary"
+            class="w-48"
+            @update:model-value="setLocale($event)"
+          />
         </RLLayoutBox>
       </RLLayoutBox>
     </template>

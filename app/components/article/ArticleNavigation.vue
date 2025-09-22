@@ -32,10 +32,20 @@ const { data: user, pending } = await useFetch(`/api/user`)
 <template>
   <UPageList as="nav">
     <template v-if="!pending && user && user.role === 'employee' && route.query.mode !== 'editor'">
-      <UButton variant="ghost" leading-icon="lucide:file-edit" label="Edit Article" :to="`/${props.slug}?mode=editor`" />
+      <UButton
+        variant="ghost"
+        leading-icon="lucide:file-edit"
+        label="Edit Article"
+        :to="`/${props.slug}?mode=editor`"
+      />
     </template>
     <template v-if="!pending && user && user.role === 'employee' && route.query.mode === 'editor'">
-      <UButton variant="ghost" leading-icon="lucide:glasses" label="View Article" :to="`/${props.slug}`" />
+      <UButton
+        variant="ghost"
+        leading-icon="lucide:glasses"
+        label="View Article"
+        :to="`/${props.slug}`"
+      />
       <PlaceBlockModal v-model:open="placeBlockModalOpen" />
       <MoveArticleModal v-model:open="moveArticleModalOpen" :initial-slug="props.slug" />
       <ConvertArticleModal v-model:open="convertArticleModalOpen" />

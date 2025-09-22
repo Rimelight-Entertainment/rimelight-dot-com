@@ -41,7 +41,12 @@ const isChildAllowedInSlot = computed(() => {
 </script>
 
 <template>
-  <UButton v-if="showPlaceholder" variant="outline" color="success" label="Drag and drop blocks here or click to add a block" />
+  <UButton
+    v-if="showPlaceholder"
+    variant="outline"
+    color="success"
+    label="Drag and drop blocks here or click to add a block"
+  />
   <RLLayoutBox
     v-if="isEditable"
     direction="horizontal"

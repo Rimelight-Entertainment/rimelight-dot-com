@@ -1,32 +1,42 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import type { CalloutVariant } from "~/types/blocks"
 
-interface CalloutBlockProps {
+const {
+  isEditable = false,
+  variant = `note`,
+  to = undefined,
+  maxLength = 512
+} = defineProps<{
   isEditable?: boolean
-  to?: string
-  text: string
   variant?: CalloutVariant
-}
+  to?: string
+  maxLength?: number
+}>()
 
-const props = withDefaults(defineProps<CalloutBlockProps>(), {
-  isEditable: false,
-  variant: `note`
-})
-
-const localText = ref(props.text)
-
-const maxLength = 512
+const text = defineModel<string>(`text`, { required: false, default: `` })
 </script>
 
 <template>
-  <ProseCallout v-if="!isEditable" :is-editable="isEditable" :variant="variant" :adjust-margin="false">
-    <p>{{ localText }}</p>
+  <ProseCallout
+    v-if="!isEditable"
+    :is-editable="isEditable"
+    :variant="variant"
+    :to="to"
+    :adjust-margin="false"
+  >
+    <p class="wrap-anywhere">
+      {{ text }}
+    </p>
   </ProseCallout>
   <Block v-else :is-editable="isEditable">
-    <ProseCallout v-if="isEditable" :is-editable="isEditable" :variant="variant" :adjust-margin="false">
+    <ProseCallout
+      :is-editable="isEditable"
+      :variant="variant"
+      :to="to"
+      :adjust-margin="false"
+    >
       <UTextarea
-        v-model.trim="localText"
+        v-model.trim="text"
         autoresize
         :maxlength="maxLength"
         variant="ghost"
@@ -42,7 +52,7 @@ const maxLength = 512
             aria-live="polite"
             role="status"
           >
-            {{ localText.length }}/{{ maxLength }}
+            {{ text.length }}/{{ maxLength }}
           </span>
         </template>
       </UTextarea>

@@ -64,12 +64,22 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     :ui="{ footer: 'justify-between' }"
   >
     <template #body>
-      <UForm ref="formRef" :schema="schema" :state="state" @submit="onSubmit">
+      <UForm
+        ref="formRef"
+        :schema="schema"
+        :state="state"
+        @submit="onSubmit"
+      >
         <RLLayoutBox
           direction="vertical"
           gap="md"
         >
-          <UFormField label="Slug" name="slug" description="The new location the article will be moved to." required>
+          <UFormField
+            label="Slug"
+            name="slug"
+            description="The new location the article will be moved to."
+            required
+          >
             <UInput v-model="state.slug" placeholder="franchises/grand-tale/" class="w-48" />
           </UFormField>
         </RLLayoutBox>

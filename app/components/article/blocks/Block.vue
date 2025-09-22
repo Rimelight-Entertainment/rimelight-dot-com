@@ -105,7 +105,13 @@ defineShortcuts(extractShortcuts(menuItems.value))
     >
       <UDropdownMenu :items="menuItems">
         <UTooltip :text="name">
-          <UButton v-if="isEditable" variant="ghost" color="neutral" trailing-icon="lucide:grip-vertical" size="sm" />
+          <UButton
+            v-if="isEditable"
+            variant="ghost"
+            color="neutral"
+            trailing-icon="lucide:grip-vertical"
+            size="sm"
+          />
         </UTooltip>
       </UDropdownMenu>
       <slot />

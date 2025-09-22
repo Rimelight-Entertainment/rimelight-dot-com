@@ -52,6 +52,14 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     })
   }
 }
+
+onBeforeRouteLeave(() => {
+  const confirm = window.confirm(`Are you sure you want to leave?`)
+  if (!confirm) {
+    return false
+  }
+  return true
+})
 </script>
 
 <template>
@@ -62,19 +70,39 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     :ui="{ footer: 'justify-between' }"
   >
     <template #body>
-      <UForm ref="formRef" :schema="schema" :state="state" @submit="onSubmit">
-        <UFormField name="title" label="Are you sure?" :description="`Please enter the article's title, '${props.title}', to continue.`" required>
+      <UForm
+        ref="formRef"
+        :schema="schema"
+        :state="state"
+        @submit="onSubmit"
+      >
+        <UFormField
+          name="title"
+          label="Are you sure?"
+          :description="`Please enter the article's title, '${props.title}', to continue.`"
+          required
+        >
           <UInput v-model="state.title" :placeholder="props.title" class="w-48" />
         </UFormField>
       </UForm>
     </template>
     <template #footer="{ close }">
       <UButton color="error" label="Cancel" @click="close" />
-      <UButton type="submit" color="error" variant="outline" @click="formRef?.submit() && close">
+      <UButton
+        type="submit"
+        color="error"
+        variant="outline"
+        @click="formRef?.submit() && close"
+      >
         Delete Article
       </UButton>
     </template>
-    <UButton variant="ghost" color="error" leading-icon="lucide:file-x" label="Delete Article" />
+    <UButton
+      variant="ghost"
+      color="error"
+      leading-icon="lucide:file-x"
+      label="Delete Article"
+    />
   </UModal>
 </template>
 

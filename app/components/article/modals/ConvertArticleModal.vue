@@ -49,7 +49,12 @@ if (treeError.value) {
     </template>
     <UButton variant="ghost" leading-icon="lucide:file-sliders" label="Convert Article" />
     <template #footer="{ close }">
-      <UButton label="Cancel" color="error" variant="outline" @click="close" />
+      <UButton
+        label="Cancel"
+        color="error"
+        variant="outline"
+        @click="close"
+      />
     </template>
   </UModal>
 </template>

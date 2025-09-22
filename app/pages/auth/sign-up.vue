@@ -118,7 +118,12 @@ const showPasswordConfirmation = ref(false)
         justify-content="center"
       >
         <UPageCard class="w-full max-w-md">
-          <UForm title="Sign Up" :schema="schema" :state="state" @submit="onSubmit">
+          <UForm
+            title="Sign Up"
+            :schema="schema"
+            :state="state"
+            @submit="onSubmit"
+          >
             <RLLayoutBox
               direction="vertical"
               gap="lg"
@@ -142,7 +147,12 @@ const showPasswordConfirmation = ref(false)
                   direction="horizontal"
                   gap="md"
                 >
-                  <UFormField label="First Name" name="first_name" description="Enter your first name." required>
+                  <UFormField
+                    label="First Name"
+                    name="first_name"
+                    description="Enter your first name."
+                    required
+                  >
                     <UInput v-model="state.first_name" placeholder="John">
                       <template v-if="state.first_name?.length" #trailing>
                         <UButton
@@ -156,7 +166,12 @@ const showPasswordConfirmation = ref(false)
                       </template>
                     </UInput>
                   </UFormField>
-                  <UFormField label="Last Name" name="last_name" description="Enter your last name." required>
+                  <UFormField
+                    label="Last Name"
+                    name="last_name"
+                    description="Enter your last name."
+                    required
+                  >
                     <UInput v-model="state.last_name" placeholder="Doe">
                       <template v-if="state.last_name?.length" #trailing>
                         <UButton
@@ -171,7 +186,12 @@ const showPasswordConfirmation = ref(false)
                     </UInput>
                   </UFormField>
                 </RLLayoutBox>
-                <UFormField label="Username" name="username" description="Enter a username." required>
+                <UFormField
+                  label="Username"
+                  name="username"
+                  description="Enter a username."
+                  required
+                >
                   <UInput v-model="state.username" placeholder="Johndoe123" class="w-full">
                     <template v-if="state.username?.length" #trailing>
                       <UButton
@@ -185,8 +205,18 @@ const showPasswordConfirmation = ref(false)
                     </template>
                   </UInput>
                 </UFormField>
-                <UFormField label="Email" name="email" description="Enter an email address." required>
-                  <UInput v-model="state.email" type="email" placeholder="johndoe@mail.com" class="w-full">
+                <UFormField
+                  label="Email"
+                  name="email"
+                  description="Enter an email address."
+                  required
+                >
+                  <UInput
+                    v-model="state.email"
+                    type="email"
+                    placeholder="johndoe@mail.com"
+                    class="w-full"
+                  >
                     <template v-if="state.email?.length" #trailing>
                       <UButton
                         color="neutral"
@@ -199,12 +229,22 @@ const showPasswordConfirmation = ref(false)
                     </template>
                   </UInput>
                 </UFormField>
-                <UFormField label="Password" name="password" description="Enter a password." required>
+                <UFormField
+                  label="Password"
+                  name="password"
+                  description="Enter a password."
+                  required
+                >
                   <RLLayoutBox
                     direction="vertical"
                     gap="sm"
                   >
-                    <UInput v-model="state.password" :type="showPassword ? 'text' : 'password'" placeholder="••••••••••••••••" class="w-full">
+                    <UInput
+                      v-model="state.password"
+                      :type="showPassword ? 'text' : 'password'"
+                      placeholder="••••••••••••••••"
+                      class="w-full"
+                    >
                       <template #trailing>
                         <UButton
                           color="neutral"
@@ -248,8 +288,18 @@ const showPasswordConfirmation = ref(false)
                     </ul>
                   </RLLayoutBox>
                 </UFormField>
-                <UFormField label="Password Confirmation" name="password_confirmation" description="Please repeat your password." required>
-                  <UInput v-model="state.password_confirmation" :type="showPasswordConfirmation ? 'text' : 'password'" placeholder="••••••••••••••••" class="w-full">
+                <UFormField
+                  label="Password Confirmation"
+                  name="password_confirmation"
+                  description="Please repeat your password."
+                  required
+                >
+                  <UInput
+                    v-model="state.password_confirmation"
+                    :type="showPasswordConfirmation ? 'text' : 'password'"
+                    placeholder="••••••••••••••••"
+                    class="w-full"
+                  >
                     <template #trailing>
                       <UButton
                         color="neutral"
@@ -269,8 +319,18 @@ const showPasswordConfirmation = ref(false)
                     I have read and agree to the <ULink to="/documents/terms-of-service" class="text-primary font-medium">Terms of Service</ULink>.
                   </template>
                 </UCheckbox>
-                <UCheckbox v-model="state.newsletter" name="newsletter" label="Subscribe to the Rimelight Entertainment Newsletter." description="Unsubscribe at any time." />
-                <UButton type="submit" label="Sign Up" color="primary" block />
+                <UCheckbox
+                  v-model="state.newsletter"
+                  name="newsletter"
+                  label="Subscribe to the Rimelight Entertainment Newsletter."
+                  description="Unsubscribe at any time."
+                />
+                <UButton
+                  type="submit"
+                  label="Sign Up"
+                  color="primary"
+                  block
+                />
                 <span class="text-sm text-center">All these details may be changed later in your account settings.</span>
               </RLLayoutBox>
             </RLLayoutBox>

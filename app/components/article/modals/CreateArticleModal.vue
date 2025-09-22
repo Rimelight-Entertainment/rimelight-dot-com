@@ -111,7 +111,12 @@ function onCreateTag(tag: string) {
     :ui="{ footer: 'justify-between' }"
   >
     <template #body>
-      <UForm ref="formRef" :schema="schema" :state="state" @submit="onSubmit">
+      <UForm
+        ref="formRef"
+        :schema="schema"
+        :state="state"
+        @submit="onSubmit"
+      >
         <RLLayoutBox
           direction="vertical"
           gap="md"

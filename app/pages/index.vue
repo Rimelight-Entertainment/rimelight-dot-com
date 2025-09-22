@@ -62,7 +62,13 @@ const musicLinks = ref([
 
 <template>
   <UPage>
-    <UPageHero title="Rimelight Entertainment" description="Welcome to Rimelight Entertainment." headline="Tell your story." orientation="horizontal" reverse>
+    <UPageHero
+      title="Rimelight Entertainment"
+      description="Welcome to Rimelight Entertainment."
+      headline="Tell your story."
+      orientation="horizontal"
+      reverse
+    >
       <NuxtImg src="https://cdn.idantity.me/images/logos/logomark-white.webp" alt="idantity.me" />
     </UPageHero>
     <UPageSection

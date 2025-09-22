@@ -95,7 +95,12 @@ async function onSubmit(event: FormSubmitEvent<schema>) {
             class="w-96"
           />
         </UFormField>
-        <UFormField name="name" label="File Name" description="Optional: Customize the file name on the server." hint="Lorem">
+        <UFormField
+          name="name"
+          label="File Name"
+          description="Optional: Customize the file name on the server."
+          hint="Lorem"
+        >
           <UInput type="url" :placeholder="fileToUpload?.name.split('.')[0]" error="Please enter a valid URL." />
         </UFormField>
         <UButton type="submit" :label="isReplacingImage ? 'Replace' : 'Upload'" @click="onUpload" />
