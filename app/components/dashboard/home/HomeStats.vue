@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import type {
-  Period, Range, Stat
+  Period,
+  Range,
+  Stat
 } from '~/types'
 
-const props = defineProps<{
+const {
+
+} = defineProps<{
   period: Period
   range: Range
 }>()

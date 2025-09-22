@@ -1,11 +1,9 @@
 <script setup lang="ts">
-interface BlockRendererProps {
-  isEditable?: boolean
-}
-
 const {
-  isEditable = true
-} = defineProps<BlockRendererProps>()
+  isEditable = false
+} = defineProps<{
+  isEditable?: boolean
+}>()
 
 const text = ref(``)
 </script>

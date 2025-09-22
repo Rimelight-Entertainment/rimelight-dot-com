@@ -3,23 +3,26 @@ import {
   type BlockData, type BlockTypes, blocksRegistry
 } from '~/types/blocks'
 
-interface BlockSlotProps {
-  blocks: BlockData[]
+const {
+  isEditable = false,
+  parentType,
+  parentNestingLevel = 0,
+  allowedBlocks = [
+  ],
+  draggedBlockType = undefined,
+  slotName = undefined,
+  blocks = [
+  ]
+} = defineProps<{
   isEditable?: boolean
-  allowedBlocks?: BlockTypes[]
   parentId: string
   parentType: BlockTypes
   parentNestingLevel?: number
+  allowedBlocks?: BlockTypes[]
   draggedBlockType?: BlockTypes
   slotName?: string
-}
-
-const {
-  blocks,
-  isEditable = false,
-  parentType,
-  draggedBlockType
-} = defineProps<BlockSlotProps>()
+  blocks?: BlockData[]
+}>()
 
 const showPlaceholder = computed(() => isEditable && blocks)
 

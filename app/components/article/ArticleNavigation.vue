@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import {
-  useFetch
-} from '#imports'
+import { useFetch } from '#imports'
 
-const props = defineProps<{
+const {
+
+} = defineProps<{
   slug: string
   title: string
 }>()
@@ -28,9 +28,7 @@ defineShortcuts({
   u: () => deleteArticleModalOpen.value = !deleteArticleModalOpen.value
 })
 
-const {
-  data: user, pending
-} = await useFetch(`/api/user`)
+const { data: user, pending } = await useFetch(`/api/user`)
 </script>
 
 <template>
@@ -40,7 +38,7 @@ const {
         variant="ghost"
         leading-icon="lucide:file-edit"
         label="Edit Article"
-        :to="`/${props.slug}?mode=editor`"
+        :to="`/${slug}?mode=editor`"
       />
     </template>
     <template v-if="!pending && user && user.role === 'employee' && route.query.mode === 'editor'">
@@ -48,16 +46,16 @@ const {
         variant="ghost"
         leading-icon="lucide:glasses"
         label="View Article"
-        :to="`/${props.slug}`"
+        :to="`/${slug}`"
       />
       <PlaceBlockModal v-model:open="placeBlockModalOpen" />
-      <MoveArticleModal v-model:open="moveArticleModalOpen" :initial-slug="props.slug" />
+      <MoveArticleModal v-model:open="moveArticleModalOpen" :initial-slug="slug" />
       <ConvertArticleModal v-model:open="convertArticleModalOpen" />
       <EditTagsModal v-model:open="editTagsModalOpen" />
       <USeparator class="py-2" />
       <BrowseArticlesModal v-model:open="browseEntriesModalOpen" />
       <CreateArticleModal v-model:open="createArticleModalOpen" />
-      <DeleteArticleModal v-model:open="deleteArticleModalOpen" :slug="props.slug" :title="props.title" />
+      <DeleteArticleModal v-model:open="deleteArticleModalOpen" :slug="slug" :title="title" />
     </template>
   </UPageList>
 </template>

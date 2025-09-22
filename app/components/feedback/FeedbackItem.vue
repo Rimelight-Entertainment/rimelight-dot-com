@@ -1,13 +1,13 @@
 <script setup lang="ts">
-interface Props {
+const {
+
+} = defineProps<{
   feedback: FeedbackItem
-}
+}>()
 
 interface Emits {
   (e: `delete`, id: number): void
 }
-
-const props = defineProps<Props>()
 
 const emit = defineEmits<Emits>()
 

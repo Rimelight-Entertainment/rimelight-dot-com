@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import {
-  getLocalTimeZone, CalendarDate, today
+  getLocalTimeZone,
+  CalendarDate,
+  today
 } from '@internationalized/date'
-import {
-  formatDateRange
-} from 'little-date'
+import { formatDateRange } from 'little-date'
 
 const {
   dateRange, setDateRange, setPresetRange

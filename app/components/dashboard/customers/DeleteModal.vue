@@ -1,9 +1,9 @@
 <script setup lang="ts">
-withDefaults(defineProps<{
+const {
+  count = 0
+} = defineProps<{
   count?: number
-}>(), {
-  count: 0
-})
+}>()
 
 const open = ref(false)
 

@@ -12,11 +12,12 @@ type PageAnalytic = {
   updatedAt: Date
 }
 
-interface Props {
-  pageAnalytics: PageAnalytic[]
-}
+const {
 
-const props = defineProps<Props>()
+} = defineProps<{
+  pageAnalytics: PageAnalytic[]
+}>()
+
 const {
   dateRange
 } = useDateRange()

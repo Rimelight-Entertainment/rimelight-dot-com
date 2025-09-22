@@ -1,16 +1,17 @@
 <script setup lang="ts">
-import {
-  eachDayOfInterval
-} from 'date-fns'
+import { eachDayOfInterval } from 'date-fns'
 import type {
-  Period, Range
+  Period,
+  Range
 } from '~/types'
 
 const model = defineModel<Period>({
   required: true
 })
 
-const props = defineProps<{
+const {
+
+} = defineProps<{
   range: Range
 }>()
 

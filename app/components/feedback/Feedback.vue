@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import {
-  AnimatePresence, MotionConfig, motion
-} from 'motion-v'
+import { AnimatePresence, MotionConfig, motion } from 'motion-v'
 
-const props = defineProps<{
+const {
+
+} = defineProps<{
   page: {
     title: string
     stem: string

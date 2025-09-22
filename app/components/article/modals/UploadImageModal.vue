@@ -1,16 +1,12 @@
 <script setup lang="ts">
-import * as z from 'zod'
-import type {
-  FormSubmitEvent
-} from '@nuxt/ui'
-
-interface UploadImageModalProps {
-  initialFile?: File | null
-}
+import { z } from 'zod'
+import type { FormSubmitEvent } from '@nuxt/ui'
 
 const {
   initialFile = null
-} = defineProps<UploadImageModalProps>()
+} = defineProps<{
+  initialFile?: File | null
+}>()
 
 const emit = defineEmits<{
   upload: [id: string]

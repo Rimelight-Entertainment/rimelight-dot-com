@@ -1,45 +1,31 @@
 <script setup lang="ts">
 import type {
-  BlockData, BlockTypes
+  BlockData, BlockTypes, CalloutVariant
 } from '~/types/blocks'
 import type {
   DropdownMenuItem
 } from '@nuxt/ui'
 
-interface BlockProps {
-  isEditable?: boolean
-  id?: string
-  type?: BlockTypes[`type`]
-  icon?: string
-  name?: string
-  description?: string
-  category?: string
-  attrs?: Record<string, unknown>
-  slots?: Record<string, BlockData[]>
-  allowedChildren?: BlockTypes[]
-  isTemplated?: boolean
-  isNestable?: boolean
-  isDraggable?: boolean
-}
-
 const {
   isEditable = false,
-  id = ``,
-  type = ``,
-  icon = ``,
-  name = ``,
-  description = ``,
-  category = ``,
-  attrs = {
-  },
-  slots = {
-  },
-  allowedChildren = [
-  ],
   isTemplated = false,
-  isNestable = false,
-  isDraggable = false
-} = defineProps<BlockProps>()
+  isDraggable = true,
+  isNestable = true
+} = defineProps<{
+  isEditable?: boolean
+  id?: string
+  type: BlockTypes
+  icon: string
+  name: string
+  description: string
+  category: string
+  attrs: Record<string, unknown>
+  slots: Record<string, unknown>
+  allowedChildren: BlockTypes[]
+  isTemplated?: boolean
+  isDraggable?: boolean
+  isNestable?: boolean
+}>()
 
 const emit = defineEmits<{
   insertBlockAbove: [id: string]

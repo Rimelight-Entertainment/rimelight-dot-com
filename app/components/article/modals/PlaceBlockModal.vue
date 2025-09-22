@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import type {
-  TreeItem
-} from '@nuxt/ui'
+import type { TreeItem } from '@nuxt/ui'
 
 export interface ArticleTreeItem extends TreeItem {
   slug?: string

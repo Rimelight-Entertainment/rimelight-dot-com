@@ -1,13 +1,13 @@
 <script setup lang="ts">
-interface TeamCardProps {
+const {
+
+} = defineProps<{
   src: string
   alt: string
   name: string
   role: string
   description: string
-}
-
-const props = defineProps<TeamCardProps>()
+}>()
 </script>
 
 <template>

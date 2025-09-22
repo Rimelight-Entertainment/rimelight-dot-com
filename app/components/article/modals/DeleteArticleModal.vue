@@ -1,25 +1,22 @@
 <script setup lang="ts">
-import {
-  z
-} from 'zod'
-import {
-  UForm
-} from '#components'
-import type {
-  FormSubmitEvent
-} from '@nuxt/ui'
+import { z } from 'zod'
+import { UForm } from '#components'
+import type { FormSubmitEvent } from '@nuxt/ui'
+
+const {
+  slug = ``,
+  title = ``
+} = defineProps<{
+  slug: string
+  title: string
+}>()
 
 const open = ref(false)
-
-const props = defineProps<{
-  title: string
-  slug: string
-}>()
 
 const formRef = useTemplateRef(`formRef`)
 
 const schema = z.object({
-  title: z.string().refine((val) => val === props.title, {
+  title: z.string().refine((val) => val === title, {
     message: `The title does not match.`
   }),
   slug: z.string()
@@ -29,7 +26,7 @@ type Schema = z.infer<typeof schema>
 
 const state = reactive({
   title: ``,
-  slug: props.slug
+  slug: slug
 })
 
 const toast = useToast()
@@ -87,10 +84,10 @@ onBeforeRouteLeave(() => {
         <UFormField
           name="title"
           label="Are you sure?"
-          :description="`Please enter the article's title, '${props.title}', to continue.`"
+          :description="`Please enter the article's title, '${title}', to continue.`"
           required
         >
-          <UInput v-model="state.title" :placeholder="props.title" class="w-48" />
+          <UInput v-model="state.title" :placeholder="title" class="w-48" />
         </UFormField>
       </UForm>
     </template>

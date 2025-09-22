@@ -1,16 +1,8 @@
 <script setup lang="ts">
-import {
-  z
-} from 'zod'
-import {
-  articleTypeEnum
-} from '~~/server/database/schema'
-import {
-  UForm
-} from '#components'
-import type {
-  FormSubmitEvent
-} from '@nuxt/ui'
+import { z } from 'zod'
+import { articleTypeEnum } from '~~/server/database/schema'
+import { UForm } from '#components'
+import type { FormSubmitEvent } from '@nuxt/ui'
 
 const open = ref(false)
 

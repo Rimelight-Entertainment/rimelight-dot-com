@@ -1,5 +1,8 @@
 <script setup lang="ts">
-interface Props {
+const {
+  iconColor = `text-primary`,
+  descriptionColor = `text-muted`
+} = defineProps<{
   icon: string
   iconColor?: string
   value: number | string
@@ -12,12 +15,7 @@ interface Props {
     lastPeriod?: string
     details?: string
   }
-}
-
-withDefaults(defineProps<Props>(), {
-  iconColor: `text-primary`,
-  descriptionColor: `text-muted`
-})
+}>()
 </script>
 
 <template>

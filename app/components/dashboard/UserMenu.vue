@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type {
-  DropdownMenuItem
-} from '@nuxt/ui'
+import type { DropdownMenuItem } from '@nuxt/ui'
 
-defineProps<{
+const {
+
+} = defineProps<{
   collapsed?: boolean
 }>()
 

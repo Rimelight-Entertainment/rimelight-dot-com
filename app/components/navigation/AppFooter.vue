@@ -1,9 +1,15 @@
 <script setup lang="ts">
-import type {
-  FooterColumn
-} from "@nuxt/ui"
+import type { FooterColumn } from "@nuxt/ui"
 import {
-  ar, en, es, fr, ja, ko, pt, ro, zh_cn
+  ar,
+  en,
+  es,
+  fr,
+  ja,
+  ko,
+  pt,
+  ro,
+  zh_cn
 } from '@nuxt/ui/locale'
 
 const {

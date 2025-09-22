@@ -15,6 +15,7 @@ export default withNuxt({
   rules: {
     'rimelight/no-runtime-props-declaration': `error`,
     'no-process-env': `error`,
+    'no-empty-pattern': `off`,
     '@stylistic/array-bracket-newline': [
       `error`,
       `always`

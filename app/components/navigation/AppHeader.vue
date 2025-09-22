@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type {
-  NavigationMenuItem, DropdownMenuItem
+  NavigationMenuItem,
+  DropdownMenuItem
 } from '@nuxt/ui'
 
 const {

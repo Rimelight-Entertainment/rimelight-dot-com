@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import {
-  format, isToday
+  format,
+  isToday
 } from 'date-fns'
-import type {
-  Mail
-} from '~/types'
+import type { Mail } from '~/types'
 
-const props = defineProps<{
+const {
+
+} = defineProps<{
   mails: Mail[]
 }>()
 

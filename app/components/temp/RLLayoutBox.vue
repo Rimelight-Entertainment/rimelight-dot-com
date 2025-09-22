@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import {
-  tv, type VariantProps
+  tv,
+  type VariantProps
 } from "tailwind-variants"
 
 const boxVariants = tv({
@@ -55,7 +56,15 @@ const boxVariants = tv({
 
 type BoxVariantsProps = VariantProps<typeof boxVariants>
 
-interface Props {
+const {
+  tag = `div`,
+  position = `relative`,
+  direction = `vertical`,
+  padding = undefined,
+  gap = undefined,
+  alignItems = undefined,
+  justifyContent = undefined
+} = defineProps<{
 
   /**
    * Sets the HTML tag to render the box as.
@@ -94,17 +103,7 @@ interface Props {
    * Justifies content along the main axis.
    */
   justifyContent?: BoxVariantsProps[`justifyContent`]
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  tag: `div`,
-  position: `relative`,
-  direction: `vertical`,
-  padding: undefined,
-  gap: undefined,
-  alignItems: undefined,
-  justifyContent: undefined
-})
+}>()
 </script>
 
 <template>

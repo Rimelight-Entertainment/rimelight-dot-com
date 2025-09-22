@@ -1,29 +1,25 @@
 <script setup lang="ts">
-import {
-  ref
-} from 'vue'
-
-interface ParagraphBlockProps {
+const {
+  isEditable = false,
+  maxLength = 512
+} = defineProps<{
   isEditable?: boolean
-  text: string
-}
+  maxLength?: number
+}>()
 
-const props = withDefaults(defineProps<ParagraphBlockProps>(), {
-  isEditable: false
+const text = defineModel<string>(`text`, {
+  required: false,
+  default: ``
 })
-
-const localText = ref(props.text)
-
-const maxLength = 512
 </script>
 
 <template>
   <p v-if="!isEditable">
-    {{ localText }}
+    {{ text }}
   </p>
   <Block v-else :is-editable="isEditable">
     <UTextarea
-      v-model.trim="localText"
+      v-model.trim="text"
       autoresize
       :maxlength="maxLength"
       variant="ghost"
@@ -39,7 +35,7 @@ const maxLength = 512
           aria-live="polite"
           role="status"
         >
-          {{ localText.length }}/{{ maxLength }}
+          {{ text.length }}/{{ maxLength }}
         </span>
       </template>
     </UTextarea>

@@ -1,19 +1,15 @@
 <script setup lang="ts">
-import {
-  z
-} from 'zod'
-import {
-  UForm
-} from '#components'
-import type {
-  FormSubmitEvent
-} from '@nuxt/ui'
+import { z } from 'zod'
+import { UForm } from '#components'
+import type { FormSubmitEvent } from '@nuxt/ui'
 
-const open = ref(false)
+const {
 
-const props = defineProps<{
+} = defineProps<{
   initialSlug: string
 }>()
+
+const open = ref(false)
 
 const formRef = useTemplateRef(`formRef`)
 
@@ -38,7 +34,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     await useFetch(`/api/article/move`, {
       method: `PATCH`,
       body: {
-        initialSlug: props.initialSlug,
+        initialSlug: initialSlug,
         newSlug: event.data.slug
       }
     })
