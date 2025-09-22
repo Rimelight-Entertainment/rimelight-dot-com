@@ -5,6 +5,7 @@ import {
 import {
   findPageBreadcrumb
 } from '@nuxt/content/utils'
+import type { PageLink } from "#ui/components/PageLinks.vue"
 
 definePageMeta({
   layout: `blog`
@@ -47,6 +48,43 @@ const breadcrumb = computed(() => mapContentNavigation(findPageBreadcrumb(naviga
 })
 
 const datePosted = useDateFormat(page.datePosted, `DD/MM/YYYY`)
+
+useSeoMeta({
+  title: page.title,
+  ogTitle: page.title,
+  description: page.description,
+  ogDescription: page.description
+})
+
+const share = () => {
+  if (navigator.share) {
+    navigator.share({
+      title: page.title,
+      text: page.description,
+      url: `${ route.path }`
+    })
+  } else {
+
+  }
+}
+
+const pageLinks = ref<PageLink[]>([
+  {
+    label: `Share Post`,
+    icon: `lucide:send`,
+    to: `https://github.com/nuxt/ui/blob/v4/docs/content/3.components/page-links.md`
+  },
+  {
+    label: `Star on GitHub`,
+    icon: `i-lucide-star`,
+    to: `https://github.com/nuxt/ui`
+  },
+  {
+    label: `Releases`,
+    icon: `i-lucide-rocket`,
+    to: `https://github.com/nuxt/ui/releases`
+  }
+])
 </script>
 
 <template>
