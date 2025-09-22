@@ -1,11 +1,8 @@
 import {
   drizzle as drizzleNeonServerless
 } from "drizzle-orm/neon-serverless"
-import {
-  Pool, neonConfig
-} from "@neondatabase/serverless"
+import { Pool } from "@neondatabase/serverless"
 import * as Schema from "../database/schema"
-import env from "../../types/env"
 
 let pool: Pool
 let db: ReturnType<typeof drizzleNeonServerless<typeof Schema>>
@@ -16,7 +13,7 @@ let db: ReturnType<typeof drizzleNeonServerless<typeof Schema>>
  */
 export function useDb() {
   if (!db) {
-    const url = env.NODE_ENV === `development` ? env.NUXT_POSTGRES_DEVELOPMENT_URL : env.NUXT_POSTGRES_URL
+    const url = process.env.NODE_ENV === `development` ? process.env.NUXT_POSTGRES_DEVELOPMENT_URL : process.env.NUXT_POSTGRES_URL
     if (!url) {
       throw new Error(`Missing \`NUXT_POSTGRES_URL\` environment variable.`)
     }

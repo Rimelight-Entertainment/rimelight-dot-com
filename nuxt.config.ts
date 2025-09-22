@@ -1,5 +1,3 @@
-import env from './types/env'
-
 export default defineNuxtConfig({
   modules: [
     `@nuxt/ui`,
@@ -108,10 +106,10 @@ export default defineNuxtConfig({
       }
     },
     public: {
-      constructionPassword: env.SITE_PASSWORD || `secret`
+      constructionPassword: process.env.SITE_PASSWORD || `secret`
     },
     turnstile: {
-      secretKey: env.NUXT_TURNSTILE_SECRET_KEY
+      secretKey: process.env.NUXT_TURNSTILE_SECRET_KEY
     }
   },
   routeRules: {
@@ -204,6 +202,6 @@ export default defineNuxtConfig({
     ]
   },
   turnstile: {
-    siteKey: env.NUXT_PUBLIC_TURNSTILE_SITE_KEY
+    siteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY
   }
 })
