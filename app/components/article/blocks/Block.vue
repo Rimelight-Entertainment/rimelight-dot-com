@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import type {
-  BlockData, BlockTypes, CalloutVariant
-} from '~/types/blocks'
+import type { BlockTypes } from '~/types/blocks'
 import type {
   DropdownMenuItem
 } from '@nuxt/ui'

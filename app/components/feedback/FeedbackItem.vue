@@ -5,11 +5,9 @@ const {
   feedback: FeedbackItem
 }>()
 
-interface Emits {
-  (e: `delete`, id: number): void
-}
-
-const emit = defineEmits<Emits>()
+const emit = defineEmits<{
+  delete: [id: number]
+}>()
 
 const {
   getRatingFromFeedback, getScoreColor

@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import {
-  type BlockData, type BlockTypes, blocksRegistry
+  type BlockData,
+  type BlockTypes,
+  blocksRegistry
 } from '~/types/blocks'
 
 const {

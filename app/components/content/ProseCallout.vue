@@ -22,7 +22,7 @@ const {
 }>()
 
 const emit = defineEmits<{
-  (e: `update:variant`, value: CalloutVariant): void
+  updateVariant: [id: CalloutVariant]
 }>()
 
 // New internal state to manage the variant
@@ -45,7 +45,7 @@ const handleSelect = (selectedItem: any) => {
   // Update the internal state first
   internalVariant.value = selectedItem.variant
   // Then, notify the parent of the change
-  emit(`update:variant`, selectedItem.variant)
+  emits(`updateVariant`, selectedItem.variant)
   open.value = false
 }
 

@@ -8,9 +8,9 @@ const {
   mail: Mail
 }>()
 
-const emits = defineEmits([
-  `close`
-])
+const emit = defineEmits<{
+  close: []
+}>()
 
 const dropdownItems = [
   [
