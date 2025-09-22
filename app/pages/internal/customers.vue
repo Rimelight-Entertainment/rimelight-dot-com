@@ -234,7 +234,7 @@ const pagination = ref({
         </template>
 
         <template #right>
-          <AddModal />
+          <RLAddModal />
         </template>
       </UDashboardNavbar>
     </template>
@@ -250,7 +250,7 @@ const pagination = ref({
         />
 
         <div class="flex flex-wrap items-center gap-1.5">
-          <DeleteModal :count="table?.tableApi?.getFilteredSelectedRowModel().rows.length">
+          <RLDeleteModal :count="table?.tableApi?.getFilteredSelectedRowModel().rows.length">
             <UButton
               v-if="table?.tableApi?.getFilteredSelectedRowModel().rows.length"
               label="Delete"
@@ -264,7 +264,7 @@ const pagination = ref({
                 </UKbd>
               </template>
             </UButton>
-          </DeleteModal>
+          </RLDeleteModal>
 
           <USelect
             v-model="statusFilter"

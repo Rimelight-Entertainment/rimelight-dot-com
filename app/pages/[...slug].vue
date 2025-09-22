@@ -91,15 +91,15 @@ provide(`isEditable`, readonly(isEditable))
           :headline="article.type"
           :links="article.links"
         />
-        <BlockRenderer :is-editable="isEditable" />
-        <UploadImageModal>
+        <RLBlockRenderer :is-editable="isEditable" />
+        <RLUploadImageModal>
           <UButton label="Upload Image" />
-        </UploadImageModal>
+        </RLUploadImageModal>
       </UPageBody>
       <template #right>
         <UContentToc title="Table of Contents" highlight>
           <template #top>
-            <ArticleNavigation :slug="article.slug" :title="article.title" />
+            <RLArticleNavigation :slug="article.slug" :title="article.title" />
           </template>
           <template #bottom>
             <USeparator />

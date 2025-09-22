@@ -116,7 +116,7 @@ const groups = computed(() => [
     <UDashboardGroup>
       <UDashboardSidebar id="default" v-model:open="open">
         <template #header="{ collapsed }">
-          <TeamsMenu :collapsed="collapsed" />
+          <RLTeamsMenu :collapsed="collapsed" />
         </template>
 
         <template #default="{ collapsed }">
@@ -139,12 +139,12 @@ const groups = computed(() => [
         </template>
 
         <template #footer="{ collapsed }">
-          <UserMenu :collapsed="collapsed" />
+          <RLUserMenu :collapsed="collapsed" />
         </template>
       </UDashboardSidebar>
       <UDashboardSearch :groups="groups" />
       <slot />
-      <NotificationsSlideover />
+      <RLNotificationsSlideover />
     </UDashboardGroup>
   </UMain>
 </template>

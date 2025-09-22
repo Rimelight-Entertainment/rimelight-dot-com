@@ -4,11 +4,11 @@
 
 <template>
   <div>
-    <AppHeader />
+    <RLAppHeader />
     <UMain>
       <slot />
     </UMain>
-    <AppFooter />
+    <RLAppFooter />
   </div>
 </template>
 
