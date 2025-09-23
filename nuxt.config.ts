@@ -17,8 +17,42 @@ export default defineNuxtConfig({
   ],
   components: [
     {
-      path: `~/components`,
+      path: `~/components/article`,
       pathPrefix: false,
+      prefix: `RL`
+    },
+    {
+      path: `~/components/content`,
+      pathPrefix: false,
+      prefix: `RL`
+    },
+    {
+      path: `~/components/dashboard`,
+      pathPrefix: false,
+      prefix: `RL`
+    },
+    {
+      path: `~/components/feedback`,
+      pathPrefix: false,
+      prefix: `RL`
+    },
+    {
+      path: `~/components/headings`,
+      pathPrefix: false,
+      prefix: `RL`
+    },
+    {
+      path: `~/components/navigation`,
+      pathPrefix: false,
+      prefix: `RL`
+    },
+    {
+      path: `~/components/temp`,
+      pathPrefix: false,
+      prefix: `RL`
+    },
+    {
+      path: `~/components`,
       prefix: `RL`
     }
   ],
