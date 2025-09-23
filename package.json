@@ -36,6 +36,7 @@
     "date-fns": "^4.1.0",
     "drizzle-kit": "^0.31.4",
     "drizzle-orm": "^0.44.5",
+    "magic-regexp": "^0.10.0",
     "motion-v": "^1.7.1",
     "nuxt": "^4.1.0",
     "nuxt-auth-utils": "^0.5.24",

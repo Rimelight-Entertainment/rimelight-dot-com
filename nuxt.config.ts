@@ -13,7 +13,8 @@ export default defineNuxtConfig({
     `@nuxtjs/sitemap`,
     `@nuxtjs/robots`,
     `@nuxt/eslint`,
-    `@pinia/nuxt`
+    `@pinia/nuxt`,
+    `magic-regexp/nuxt`
   ],
   components: [
     {
