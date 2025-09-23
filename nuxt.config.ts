@@ -94,7 +94,6 @@ export default defineNuxtConfig({
       mode: `out-in`
     }
   },
-
   css: [
     `./app/assets/css/main.css`
   ],
@@ -168,6 +167,39 @@ export default defineNuxtConfig({
     config: {
       stylistic: true
     }
+  },
+  fonts: {
+    defaults: {
+      weights: [
+        // Thin
+        100,
+        // ExtraLight
+        200,
+        // Light
+        300,
+        // Regular
+        400,
+        // Medium
+        500,
+        // SemiBold
+        600,
+        // Bold
+        700,
+        // Extra Bold
+        800
+      ],
+      styles: [
+        `normal`,
+        `italic`
+      ]
+    },
+    families: [
+      {
+        name: `JetBrains Mono`,
+        global: true,
+        provider: `local`
+      }
+    ]
   },
   i18n: {
     defaultLocale: `en`,
