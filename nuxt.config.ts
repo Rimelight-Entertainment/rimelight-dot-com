@@ -159,11 +159,6 @@ export default defineNuxtConfig({
     blob: true,
     database: true
   },
-  eslint: {
-    config: {
-      stylistic: true
-    }
-  },
   fonts: {
     defaults: {
       weights: [

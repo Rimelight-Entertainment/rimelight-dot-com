@@ -4,6 +4,14 @@ import { ar, en, es, fr, ja, ko, pt, ro, zh_cn } from "@nuxt/ui/locale"
 
 const { locale, setLocale } = useI18n()
 
+type Locale = "ar" | "en" | "es" | "fr" | "ja" | "ko" | "pt" | "ro" | "zh_cn"
+
+function onLocaleUpdate(newLocale: string | undefined) {
+  if (typeof newLocale === "string") {
+    setLocale(newLocale as Locale)
+  }
+}
+
 const columns: FooterColumn[] = [
   {
     label: `Resources`,
@@ -50,17 +58,26 @@ const columns: FooterColumn[] = [
   <UFooter>
     <template #top>
       <UContainer>
-        <RLLayoutBox direction="horizontal" gap="lg">
+        <RLLayoutBox
+          direction="vertical"
+          gap="lg"
+          class="md:flex-row md:items-start"
+        >
           <RLNewsletterSignup
             label="Subscribe to the Rimelight Entertainment Newsletter"
             description="Stay updated on new blog posts and company updates. Unsubscribe at any time."
           />
-          <UFooterColumns :columns="columns" />
+          <UFooterColumns :columns="columns" class="flex-1" />
         </RLLayoutBox>
       </UContainer>
     </template>
     <template #left>
-      <RLLayoutBox direction="vertical" gap="sm">
+      <RLLayoutBox
+        direction="vertical"
+        gap="sm"
+        align-items="center"
+        class="md:items-start"
+      >
         <NuxtLink to="/">
           <UIcon
             name="first-party:logotype-white"
@@ -74,8 +91,18 @@ const columns: FooterColumn[] = [
       </RLLayoutBox>
     </template>
     <template #right>
-      <RLLayoutBox direction="vertical" gap="md" align-items="end">
-        <RLLayoutBox direction="horizontal" gap="sm">
+      <RLLayoutBox
+        direction="vertical"
+        gap="md"
+        align-items="center"
+        class="md:items-end"
+      >
+        <RLLayoutBox
+          direction="horizontal"
+          gap="sm"
+          justify-content="center"
+          class="md:justify-end"
+        >
           <UButton
             size="xl"
             variant="ghost"
@@ -112,14 +139,19 @@ const columns: FooterColumn[] = [
             to="https://www.linkedin.com/daniel-marchi"
           />
         </RLLayoutBox>
-        <RLLayoutBox direction="horizontal" gap="md">
+        <RLLayoutBox
+          direction="vertical"
+          gap="md"
+          align-items="center"
+          class="md:items-end md:flex-row"
+        >
           <UColorModeSelect class="w-48" />
           <ULocaleSelect
             v-model="locale"
             :locales="[ar, en, es, fr, ja, ko, pt, ro, zh_cn]"
             color="secondary"
             class="w-48"
-            @update:model-value="setLocale($event)"
+            @update:model-value="onLocaleUpdate($event)"
           />
         </RLLayoutBox>
       </RLLayoutBox>
