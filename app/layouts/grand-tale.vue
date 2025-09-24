@@ -3,7 +3,7 @@
 <template>
   <div>
     <RLAppHeader />
-    <UMain>
+    <UMain class="bg-[url('/placeholders/grand-tale-background.webp')]">
       <slot />
     </UMain>
     <RLAppFooter />

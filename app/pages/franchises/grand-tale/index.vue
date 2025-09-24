@@ -1,8 +1,35 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+definePageMeta({
+  layout: "grand-tale"
+})
+
+const heroLinks = ref([
+  {
+    label: "Play Now",
+    to: ""
+  },
+  {
+    variant: "outline",
+    color: "neutral",
+    icon: "lucide:square-play",
+    label: "Watch Trailer",
+    to: "/franchises/grand-tale/about"
+  }
+])
+</script>
 
 <template>
   <UPage>
-    <UPageHero headline="May the story never end!" title="Grand Tale" />
+    <UPageHero
+      title="May the story never end!"
+      :links="heroLinks"
+      reverse
+      class="bg-cover bg-[url('/placeholders/grand-tale-hero-background2.webp')]"
+    >
+      <div class="flex justify-center">
+        <img src="/placeholders/grand-tale-logo.webp" />
+      </div>
+    </UPageHero>
     <UPageSection
       title="What is Grand Tale?"
       description="In the game, players control a character called “Ori”, with which they
