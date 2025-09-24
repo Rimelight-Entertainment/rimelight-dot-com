@@ -1,7 +1,5 @@
 <script setup lang="ts">
-const {
-
-} = defineProps<{
+const {} = defineProps<{
   label: string
   description: string
 }>()
@@ -21,6 +19,4 @@ const {
   </UFormField>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

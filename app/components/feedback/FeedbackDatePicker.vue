@@ -1,14 +1,8 @@
 <script setup lang="ts">
-import {
-  getLocalTimeZone,
-  CalendarDate,
-  today
-} from '@internationalized/date'
-import { formatDateRange } from 'little-date'
+import { getLocalTimeZone, CalendarDate, today } from "@internationalized/date"
+import { formatDateRange } from "little-date"
 
-const {
-  dateRange, setDateRange, setPresetRange
-} = useDateRange()
+const { dateRange, setDateRange, setPresetRange } = useDateRange()
 
 const formattedDateRange = computed(() => {
   if (dateRange.value.start && dateRange.value.end) {
@@ -43,18 +37,21 @@ const ranges = [
 ]
 
 const toCalendarDate = (date: Date) => {
-  return new CalendarDate(date.getFullYear(), date.getMonth() + 1, date.getDate())
+  return new CalendarDate(
+    date.getFullYear(),
+    date.getMonth() + 1,
+    date.getDate()
+  )
 }
 
 const calendarRange = computed({
   get: () => ({
-    start: dateRange.value.start ? toCalendarDate(dateRange.value.start) : undefined,
+    start: dateRange.value.start
+      ? toCalendarDate(dateRange.value.start)
+      : undefined,
     end: dateRange.value.end ? toCalendarDate(dateRange.value.end) : undefined
   }),
-  set: (newValue: {
-    start: CalendarDate | null
-    end: CalendarDate | null
-  }) => {
+  set: (newValue: { start: CalendarDate | null; end: CalendarDate | null }) => {
     if (newValue.start && newValue.end) {
       setDateRange({
         start: newValue.start.toDate(getLocalTimeZone()),
@@ -64,9 +61,10 @@ const calendarRange = computed({
   }
 })
 
-const isRangeSelected = (preset: `week` | `month` | `3months` | `6months` | `year`) => {
-  if (!dateRange.value.start || !dateRange.value.end)
-    return false
+const isRangeSelected = (
+  preset: `week` | `month` | `3months` | `6months` | `year`
+) => {
+  if (!dateRange.value.start || !dateRange.value.end) return false
 
   const currentDate = today(getLocalTimeZone())
   let startDate = currentDate.copy()
@@ -102,7 +100,18 @@ const isRangeSelected = (preset: `week` | `month` | `3months` | `6months` | `yea
   const selectedStart = toCalendarDate(dateRange.value.start)
   const selectedEnd = toCalendarDate(dateRange.value.end)
 
-  return Math.abs(selectedStart.toDate(getLocalTimeZone()).getTime() - startDate.toDate(getLocalTimeZone()).getTime()) < 24 * 60 * 60 * 1000 && Math.abs(selectedEnd.toDate(getLocalTimeZone()).getTime() - currentDate.toDate(getLocalTimeZone()).getTime()) < 24 * 60 * 60 * 1000
+  return (
+    Math.abs(
+      selectedStart.toDate(getLocalTimeZone()).getTime() -
+        startDate.toDate(getLocalTimeZone()).getTime()
+    ) <
+      24 * 60 * 60 * 1000 &&
+    Math.abs(
+      selectedEnd.toDate(getLocalTimeZone()).getTime() -
+        currentDate.toDate(getLocalTimeZone()).getTime()
+    ) <
+      24 * 60 * 60 * 1000
+  )
 }
 </script>
 
@@ -119,13 +128,14 @@ const isRangeSelected = (preset: `week` | `month` | `3months` | `6months` | `yea
           <template v-if="formattedDateRange">
             {{ formattedDateRange }}
           </template>
-          <template v-else>
-            Pick a date range
-          </template>
+          <template v-else> Pick a date range </template>
         </span>
 
         <template #trailing>
-          <UIcon name="i-lucide-chevron-down" class="shrink-0 text-dimmed size-5 group-data-[state=open]:rotate-180 transition-transform duration-200" />
+          <UIcon
+            name="i-lucide-chevron-down"
+            class="shrink-0 text-dimmed size-5 group-data-[state=open]:rotate-180 transition-transform duration-200"
+          />
         </template>
       </UButton>
 
@@ -139,7 +149,11 @@ const isRangeSelected = (preset: `week` | `month` | `3months` | `6months` | `yea
               color="neutral"
               variant="ghost"
               class="rounded-none px-4 justify-start"
-              :class="[isRangeSelected(range.preset) ? 'bg-elevated' : 'hover:bg-elevated/50']"
+              :class="[
+                isRangeSelected(range.preset)
+                  ? 'bg-elevated'
+                  : 'hover:bg-elevated/50'
+              ]"
               truncate
               @click="setPresetRange(range.preset)"
             />

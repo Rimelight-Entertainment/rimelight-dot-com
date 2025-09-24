@@ -1,13 +1,7 @@
 <script setup lang="ts">
-import {
-  computed, ref
-} from 'vue'
-import type {
-  CalloutVariant
-} from "~/types/blocks/calloutBlock"
-import {
-  tv
-} from "tailwind-variants"
+import { computed, ref } from "vue"
+import type { CalloutVariant } from "~/types/blocks/calloutBlock"
+import { tv } from "tailwind-variants"
 
 const {
   variant = `note`,
@@ -29,9 +23,9 @@ const isEditable = inject(`isEditable`, false)
 const internalVariant = ref(variant)
 
 const items = computed(() => {
-  return (Object.keys(headingMap) as CalloutVariant[]).
-    filter((key) => key !== internalVariant.value).
-    map((key) => ({
+  return (Object.keys(headingMap) as CalloutVariant[])
+    .filter((key) => key !== internalVariant.value)
+    .map((key) => ({
       variant: key,
       label: headingMap[key],
       icon: iconMap[key],
@@ -50,7 +44,9 @@ const handleSelect = (selectedItem: any) => {
 }
 
 const calloutBaseClass = computed(() => {
-  return adjustMargin ? `rounded-md border w-full my-4` : `rounded-md border w-full`
+  return adjustMargin
+    ? `rounded-md border w-full my-4`
+    : `rounded-md border w-full`
 })
 
 const callout = tv({
@@ -147,7 +143,11 @@ const tooltipMap = {
     :class="callout({ variant: internalVariant })"
   >
     <UTooltip :text="tooltipMap[internalVariant]" arrow>
-      <UIcon v-if="!isEditable" :name="iconMap[internalVariant]" :class="icon({ variant: internalVariant })" />
+      <UIcon
+        v-if="!isEditable"
+        :name="iconMap[internalVariant]"
+        :class="icon({ variant: internalVariant })"
+      />
       <UPopover v-else v-model:open="open" arrow>
         <UButton
           variant="soft"
@@ -169,16 +169,15 @@ const tooltipMap = {
                 class="rounded-none w-full"
                 @click="handleSelect(item)"
               >
-                <RLLayoutBox
-                  direction="horizontal"
-                  padding="xs"
-                  gap="sm"
-                >
-                  <UIcon :name="item.icon" :class="[icon({ variant: item.variant }), 'h-4 w-4  flex-shrink-0']" />
-                  <RLLayoutBox
-                    direction="vertical"
-                    gap="xs"
-                  >
+                <RLLayoutBox direction="horizontal" padding="xs" gap="sm">
+                  <UIcon
+                    :name="item.icon"
+                    :class="[
+                      icon({ variant: item.variant }),
+                      'h-4 w-4  flex-shrink-0'
+                    ]"
+                  />
+                  <RLLayoutBox direction="vertical" gap="xs">
                     <h6 class="font-bold text-sm text-start">
                       {{ item.label }}
                     </h6>
@@ -202,6 +201,4 @@ const tooltipMap = {
   </RLLayoutBox>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

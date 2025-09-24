@@ -1,6 +1,4 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <h3 class="font-bold text-2xl text-highlighted">
@@ -8,6 +6,4 @@
   </h3>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

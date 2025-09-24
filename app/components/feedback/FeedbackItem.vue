@@ -1,7 +1,5 @@
 <script setup lang="ts">
-const {
-
-} = defineProps<{
+const {} = defineProps<{
   feedback: FeedbackItem
 }>()
 
@@ -9,9 +7,7 @@ const emit = defineEmits<{
   delete: [id: number]
 }>()
 
-const {
-  getRatingFromFeedback, getScoreColor
-} = useFeedbackRatings()
+const { getRatingFromFeedback, getScoreColor } = useFeedbackRatings()
 
 const rating = computed(() => getRatingFromFeedback(props.feedback))
 
@@ -48,13 +44,15 @@ async function handleDelete() {
           <div class="flex items-center gap-3 text-xs text-muted">
             <span class="flex items-center gap-1">
               <UIcon name="i-lucide-calendar" class="size-3" />
-              {{ new Date(feedback.updatedAt).toLocaleDateString('en-US', {
-                month: 'short',
-                day: 'numeric',
-                year: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit',
-              }) }}
+              {{
+                new Date(feedback.updatedAt).toLocaleDateString("en-US", {
+                  month: "short",
+                  day: "numeric",
+                  year: "numeric",
+                  hour: "2-digit",
+                  minute: "2-digit"
+                })
+              }}
             </span>
             <span v-if="feedback.country" class="flex items-center gap-1">
               <UIcon name="i-lucide-map-pin" class="size-3" />
@@ -74,7 +72,10 @@ async function handleDelete() {
       />
     </div>
 
-    <div v-if="feedback.feedback" class="text-sm leading-relaxed bg-muted/30 rounded p-3">
+    <div
+      v-if="feedback.feedback"
+      class="text-sm leading-relaxed bg-muted/30 rounded p-3"
+    >
       "{{ feedback.feedback }}"
     </div>
     <div v-else class="text-sm text-muted italic">

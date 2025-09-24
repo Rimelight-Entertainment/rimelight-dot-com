@@ -1,6 +1,4 @@
-import {
-  defineContentConfig, defineCollection, z
-} from '@nuxt/content'
+import { defineContentConfig, defineCollection, z } from "@nuxt/content"
 
 const variantEnum = z.enum([
   `solid`,
@@ -52,10 +50,7 @@ export default defineContentConfig({
       schema: z.object({
         title: z.string().nonempty(),
         description: z.string().nonempty(),
-        type: z.enum([
-          `Policy`,
-          `Document`
-        ]),
+        type: z.enum([`Policy`, `Document`]),
         tags: z.array(z.string()),
         lastModified: z.date(),
         links: z.array(Link).optional()
@@ -67,9 +62,7 @@ export default defineContentConfig({
       schema: z.object({
         title: z.string().nonempty(),
         description: z.string().nonempty(),
-        category: z.enum([
-          `Blog Post`
-        ]),
+        category: z.enum([`Blog Post`]),
         image: Image.optional(),
         datePosted: z.date(),
         links: z.array(Link).optional(),

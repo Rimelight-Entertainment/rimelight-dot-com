@@ -89,6 +89,6 @@ const members = [
   }
 ]
 
-export default eventHandler(async() => {
+export default eventHandler(async () => {
   return members
 })

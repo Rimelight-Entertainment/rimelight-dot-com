@@ -1,22 +1,19 @@
 <script setup lang="ts">
-import type {
-  NavigationMenuItem,
-  DropdownMenuItem
-} from '@nuxt/ui'
+import type { NavigationMenuItem, DropdownMenuItem } from "@nuxt/ui"
 
-const {
-  loggedIn
-} = useUserSession()
+const { loggedIn } = useUserSession()
 
 const route = useRoute()
 
-const {
-  data: apiUser
-} = await useAsyncData(`api-user`, () => $fetch(`/api/user`), {
-  lazy: true,
-  server: false,
-  immediate: loggedIn.value
-})
+const { data: apiUser } = await useAsyncData(
+  `api-user`,
+  () => $fetch(`/api/user`),
+  {
+    lazy: true,
+    server: false,
+    immediate: loggedIn.value
+  }
+)
 
 watch(loggedIn, (newVal) => {
   if (newVal) {
@@ -153,10 +150,7 @@ const accountMenuItems = ref<DropdownMenuItem[][]>([
     {
       label: `New team`,
       icon: `i-lucide-plus`,
-      kbds: [
-        `meta`,
-        `n`
-      ]
+      kbds: [`meta`, `n`]
     }
   ],
   [
@@ -170,19 +164,13 @@ const accountMenuItems = ref<DropdownMenuItem[][]>([
     {
       label: `Settings`,
       icon: `i-lucide-cog`,
-      kbds: [
-        `,`
-      ]
+      kbds: [`,`]
     },
     {
       label: `Logout`,
       icon: `lucide:log-out`,
-      kbds: [
-        `shift`,
-        `meta`,
-        `q`
-      ],
-      click: async() => {
+      kbds: [`shift`, `meta`, `q`],
+      click: async () => {
         await $fetch(`/api/logout`, {
           method: `POST`
         })
@@ -198,17 +186,25 @@ defineShortcuts(extractShortcuts(accountMenuItems.value))
 <template>
   <UHeader mode="slideover" toggle-side="left" to="/">
     <template #title>
-      <UIcon name="first-party:logomark-white" color="primary" class="h-12 text-neutral fill-neutral" />
+      <UIcon
+        name="first-party:logomark-white"
+        color="primary"
+        class="h-12 text-neutral fill-neutral"
+      />
     </template>
     <UNavigationMenu :items="items" variant="link">
       <template #franchises-content="{ item }">
-        <ul class="grid gap-2 p-4 lg:w-[500px] lg:grid-cols-[minmax(0,.75fr)_minmax(0,1fr)]">
+        <ul
+          class="grid gap-2 p-4 lg:w-[500px] lg:grid-cols-[minmax(0,.75fr)_minmax(0,1fr)]"
+        >
           <li class="row-span-3">
             <RLPlaceholder class="size-full min-h-48" />
           </li>
 
           <li v-for="child in item.children" :key="child.label">
-            <ULink class="text-sm text-left rounded-md p-3 transition-colors hover:bg-elevated/50">
+            <ULink
+              class="text-sm text-left rounded-md p-3 transition-colors hover:bg-elevated/50"
+            >
               <p class="font-medium text-highlighted">
                 {{ child.label }}
               </p>
@@ -229,10 +225,7 @@ defineShortcuts(extractShortcuts(accountMenuItems.value))
       />
     </template>
     <template #right>
-      <RLLayoutBox
-        direction="horizontal"
-        gap="sm"
-      >
+      <RLLayoutBox direction="horizontal" gap="sm">
         <AuthState v-slot="{ loggedIn }">
           <template v-if="loggedIn">
             <UDropdownMenu :items="accountMenuItems" :ui="{ content: 'w-48' }">
@@ -260,6 +253,4 @@ defineShortcuts(extractShortcuts(accountMenuItems.value))
   </UHeader>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

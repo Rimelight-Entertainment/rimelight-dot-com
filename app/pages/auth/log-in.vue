@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import * as z from 'zod'
-import type {
-  FormSubmitEvent
-} from '@nuxt/ui'
+import * as z from "zod"
+import type { FormSubmitEvent } from "@nuxt/ui"
 
 const toast = useToast()
 
@@ -77,21 +75,33 @@ async function onSubmit(payload: FormSubmitEvent<Schema>) {
           icon="lucide:user"
           :fields="fields"
           :submit="{
-            label: 'Log In',
+            label: 'Log In'
           }"
           @submit="onSubmit"
         >
           <template #description>
-            Don't have an account? <ULink to="/auth/sign-up" class="text-primary font-medium">Sign up</ULink>.
+            Don't have an account?
+            <ULink to="/auth/sign-up" class="text-primary font-medium"
+              >Sign up</ULink
+            >.
           </template>
           <template #email-hint>
-            <ULink to="#" class="text-primary font-medium" tabindex="-1">Forgot email?</ULink>
+            <ULink to="#" class="text-primary font-medium" tabindex="-1"
+              >Forgot email?</ULink
+            >
           </template>
           <template #password-hint>
-            <ULink to="#" class="text-primary font-medium" tabindex="-1">Forgot password?</ULink>
+            <ULink to="#" class="text-primary font-medium" tabindex="-1"
+              >Forgot password?</ULink
+            >
           </template>
           <template #footer>
-            By logging in, you agree to our <ULink to="/documents/terms-of-service" class="text-primary font-medium">Terms of Service</ULink>.
+            By logging in, you agree to our
+            <ULink
+              to="/documents/terms-of-service"
+              class="text-primary font-medium"
+              >Terms of Service</ULink
+            >.
           </template>
         </UAuthForm>
       </UPageCard>

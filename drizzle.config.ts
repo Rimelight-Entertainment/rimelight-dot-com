@@ -1,7 +1,5 @@
-import {
-  defineConfig
-} from 'drizzle-kit'
-import env from './types/env'
+import { defineConfig } from "drizzle-kit"
+import env from "./types/env"
 
 export default defineConfig({
   dialect: `postgresql`,
@@ -9,6 +7,9 @@ export default defineConfig({
   casing: `snake_case`,
   out: `server/database/drizzle`,
   dbCredentials: {
-    url: env.NODE_ENV === `development` ? env.NUXT_POSTGRES_DEVELOPMENT_URL : env.NUXT_POSTGRES_URL
+    url:
+      env.NODE_ENV === `development`
+        ? env.NUXT_POSTGRES_DEVELOPMENT_URL
+        : env.NUXT_POSTGRES_URL
   }
 })

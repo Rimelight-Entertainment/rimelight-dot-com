@@ -12,36 +12,33 @@ type PageAnalytic = {
   updatedAt: Date
 }
 
-const {
-
-} = defineProps<{
+const {} = defineProps<{
   pageAnalytics: PageAnalytic[]
 }>()
 
-const {
-  dateRange
-} = useDateRange()
+const { dateRange } = useDateRange()
 
 const chartType = ref<`line` | `compare` | `overall`>(`line`)
 
-const selectedPagePaths = ref<string[]>([
-])
+const selectedPagePaths = ref<string[]>([])
 const showPageSelector = ref(false)
 const pageSearchQuery = ref(``)
 
 const hasValidData = computed(() => {
-  return props.pageAnalytics && props.pageAnalytics.length > 0 && props.pageAnalytics.some((p) => p && p.total > 0)
+  return (
+    props.pageAnalytics &&
+    props.pageAnalytics.length > 0 &&
+    props.pageAnalytics.some((p) => p && p.total > 0)
+  )
 })
 
 const availablePages = computed(() => {
-  if (!props.pageAnalytics)
-    return [
-    ]
+  if (!props.pageAnalytics) return []
 
-  const pages = props.pageAnalytics.
-    filter((p) => p && p.total > 0).
-    sort((a, b) => b.total - a.total).
-    map((page) => ({
+  const pages = props.pageAnalytics
+    .filter((p) => p && p.total > 0)
+    .sort((a, b) => b.total - a.total)
+    .map((page) => ({
       path: page.path,
       title: page.lastFeedback?.title || page.path,
       total: page.total,
@@ -53,38 +50,49 @@ const availablePages = computed(() => {
   }
 
   const searchTerm = pageSearchQuery.value.toLowerCase().trim()
-  return pages.filter((page) => page.title.toLowerCase().includes(searchTerm) || page.path.toLowerCase().includes(searchTerm))
+  return pages.filter(
+    (page) =>
+      page.title.toLowerCase().includes(searchTerm) ||
+      page.path.toLowerCase().includes(searchTerm)
+  )
 })
 
-watch(() => props.pageAnalytics, (analytics) => {
-  if (selectedPagePaths.value.length === 0 && analytics && analytics.length > 0) {
-    const validAnalytics = analytics.filter((p) => p && p.total > 0)
-    if (validAnalytics.length > 0) {
-      const topPages = validAnalytics.
-        sort((a, b) => b.total - a.total).
-        slice(0, Math.min(5, validAnalytics.length))
-      selectedPagePaths.value = topPages.map((p) => p.path)
+watch(
+  () => props.pageAnalytics,
+  (analytics) => {
+    if (
+      selectedPagePaths.value.length === 0 &&
+      analytics &&
+      analytics.length > 0
+    ) {
+      const validAnalytics = analytics.filter((p) => p && p.total > 0)
+      if (validAnalytics.length > 0) {
+        const topPages = validAnalytics
+          .sort((a, b) => b.total - a.total)
+          .slice(0, Math.min(5, validAnalytics.length))
+        selectedPagePaths.value = topPages.map((p) => p.path)
+      }
     }
+  },
+  {
+    immediate: true
   }
-}, {
-  immediate: true
-})
+)
 
 const overallChartData = computed(() => {
-  const data: any[] = [
-  ]
+  const data: any[] = []
   const endDate = dateRange.value.end
   const startDate = dateRange.value.start
 
-  const daysDiff = Math.ceil((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24))
+  const daysDiff = Math.ceil(
+    (endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)
+  )
 
-  const dailyScores: Record<string, number[]> = {
-  }
+  const dailyScores: Record<string, number[]> = {}
 
   if (hasValidData.value && props.pageAnalytics) {
     props.pageAnalytics.forEach((page) => {
-      if (!page || !page.feedback)
-        return
+      if (!page || !page.feedback) return
 
       page.feedback.forEach((feedback) => {
         const feedbackDate = new Date(feedback.createdAt)
@@ -92,11 +100,12 @@ const overallChartData = computed(() => {
         if (feedbackDate >= startDate && feedbackDate <= endDate) {
           const dateStr = feedbackDate.toISOString().split(`T`)[0]
           if (!dailyScores[dateStr]) {
-            dailyScores[dateStr] = [
-            ]
+            dailyScores[dateStr] = []
           }
 
-          const ratingScore = FEEDBACK_OPTIONS.find((opt) => opt.value === feedback.rating)?.score || 0
+          const ratingScore =
+            FEEDBACK_OPTIONS.find((opt) => opt.value === feedback.rating)
+              ?.score || 0
           dailyScores[dateStr].push(ratingScore)
         }
       })
@@ -118,8 +127,14 @@ const overallChartData = computed(() => {
       })
     }
 
-    if (hasValidData.value && dailyScores[dateStr] && dailyScores[dateStr].length > 0) {
-      const dayAverage = dailyScores[dateStr].reduce((sum, score) => sum + score, 0) / dailyScores[dateStr].length
+    if (
+      hasValidData.value &&
+      dailyScores[dateStr] &&
+      dailyScores[dateStr].length > 0
+    ) {
+      const dayAverage =
+        dailyScores[dateStr].reduce((sum, score) => sum + score, 0) /
+        dailyScores[dateStr].length
       lastKnownValue = Math.min(4.0, Number(dayAverage.toFixed(2)))
     }
 
@@ -132,14 +147,19 @@ const overallChartData = computed(() => {
 })
 
 const timeBasedChartData = computed(() => {
-  const data: any[] = [
-  ]
+  const data: any[] = []
   const endDate = dateRange.value.end
   const startDate = dateRange.value.start
 
-  const daysDiff = Math.ceil((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24))
+  const daysDiff = Math.ceil(
+    (endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)
+  )
 
-  if (!hasValidData.value || selectedPagePaths.value.length === 0 || !props.pageAnalytics) {
+  if (
+    !hasValidData.value ||
+    selectedPagePaths.value.length === 0 ||
+    !props.pageAnalytics
+  ) {
     for (let i = daysDiff - 1; i >= 0; i--) {
       const date = new Date(endDate)
       date.setDate(date.getDate() - i)
@@ -155,17 +175,20 @@ const timeBasedChartData = computed(() => {
     return data
   }
 
-  const dailyScores: Record<string, Record<string, number[]>> = {
-  }
+  const dailyScores: Record<string, Record<string, number[]>> = {}
 
-  const selectedPages = props.pageAnalytics.filter((p) => p && selectedPagePaths.value.includes(p.path))
+  const selectedPages = props.pageAnalytics.filter(
+    (p) => p && selectedPagePaths.value.includes(p.path)
+  )
 
   selectedPages.forEach((page) => {
-    if (!page || !page.feedback)
-      return
+    if (!page || !page.feedback) return
 
-    const pageKey = page.path.split(`/`).pop()?.
-      replace(/[^a-z0-9]/gi, ``) || `page`
+    const pageKey =
+      page.path
+        .split(`/`)
+        .pop()
+        ?.replace(/[^a-z0-9]/gi, ``) || `page`
 
     page.feedback.forEach((feedback) => {
       const feedbackDate = new Date(feedback.createdAt)
@@ -173,22 +196,21 @@ const timeBasedChartData = computed(() => {
       if (feedbackDate >= startDate && feedbackDate <= endDate) {
         const dateStr = feedbackDate.toISOString().split(`T`)[0]
         if (!dailyScores[dateStr]) {
-          dailyScores[dateStr] = {
-          }
+          dailyScores[dateStr] = {}
         }
         if (!dailyScores[dateStr][pageKey]) {
-          dailyScores[dateStr][pageKey] = [
-          ]
+          dailyScores[dateStr][pageKey] = []
         }
 
-        const ratingScore = FEEDBACK_OPTIONS.find((opt) => opt.value === feedback.rating)?.score || 0
+        const ratingScore =
+          FEEDBACK_OPTIONS.find((opt) => opt.value === feedback.rating)
+            ?.score || 0
         dailyScores[dateStr][pageKey].push(ratingScore)
       }
     })
   })
 
-  const lastKnownValues: Record<string, number> = {
-  }
+  const lastKnownValues: Record<string, number> = {}
 
   for (let i = daysDiff - 1; i >= 0; i--) {
     const date = new Date(endDate)
@@ -204,14 +226,22 @@ const timeBasedChartData = computed(() => {
     }
 
     selectedPages.forEach((page) => {
-      if (!page)
-        return
+      if (!page) return
 
-      const pageKey = page.path.split(`/`).pop()?.
-        replace(/[^a-z0-9]/gi, ``) || `page`
+      const pageKey =
+        page.path
+          .split(`/`)
+          .pop()
+          ?.replace(/[^a-z0-9]/gi, ``) || `page`
 
-      if (dailyScores[dateStr] && dailyScores[dateStr][pageKey] && dailyScores[dateStr][pageKey].length > 0) {
-        const dayAverage = dailyScores[dateStr][pageKey].reduce((sum, score) => sum + score, 0) / dailyScores[dateStr][pageKey].length
+      if (
+        dailyScores[dateStr] &&
+        dailyScores[dateStr][pageKey] &&
+        dailyScores[dateStr][pageKey].length > 0
+      ) {
+        const dayAverage =
+          dailyScores[dateStr][pageKey].reduce((sum, score) => sum + score, 0) /
+          dailyScores[dateStr][pageKey].length
         lastKnownValues[pageKey] = Math.min(4.0, Number(dayAverage.toFixed(2)))
       }
 
@@ -225,7 +255,11 @@ const timeBasedChartData = computed(() => {
 })
 
 const comparisonChartData = computed(() => {
-  if (!hasValidData.value || selectedPagePaths.value.length === 0 || !props.pageAnalytics) {
+  if (
+    !hasValidData.value ||
+    selectedPagePaths.value.length === 0 ||
+    !props.pageAnalytics
+  ) {
     return [
       {
         page: `No Data`,
@@ -235,11 +269,12 @@ const comparisonChartData = computed(() => {
     ]
   }
 
-  return props.pageAnalytics.
-    filter((p) => p && selectedPagePaths.value.includes(p.path)).
-    map((page) => {
+  return props.pageAnalytics
+    .filter((p) => p && selectedPagePaths.value.includes(p.path))
+    .map((page) => {
       const title = page.lastFeedback?.title || page.path
-      const shortTitle = title.length > 15 ? title.substring(0, 15) + `...` : title
+      const shortTitle =
+        title.length > 15 ? title.substring(0, 15) + `...` : title
 
       return {
         page: shortTitle,
@@ -250,10 +285,8 @@ const comparisonChartData = computed(() => {
 })
 
 const chartData = computed(() => {
-  if (chartType.value === `compare`)
-    return comparisonChartData.value
-  if (chartType.value === `overall`)
-    return overallChartData.value
+  if (chartType.value === `compare`) return comparisonChartData.value
+  if (chartType.value === `overall`) return overallChartData.value
   return timeBasedChartData.value
 })
 
@@ -298,7 +331,9 @@ const chartCategories = computed(() => {
     }
   }
 
-  const selectedPages = props.pageAnalytics.filter((p) => p && selectedPagePaths.value.includes(p.path))
+  const selectedPages = props.pageAnalytics.filter(
+    (p) => p && selectedPagePaths.value.includes(p.path)
+  )
   const colors = [
     `#3b82f6`,
     `#10b981`,
@@ -310,23 +345,30 @@ const chartCategories = computed(() => {
     `#f97316`
   ]
 
-  return selectedPages.reduce((acc, page, index) => {
-    if (!page)
-      return acc
+  return selectedPages.reduce(
+    (acc, page, index) => {
+      if (!page) return acc
 
-    const key = page.path.split(`/`).pop()?.
-      replace(/[^a-z0-9]/gi, ``) || `page`
-    const title = page.lastFeedback?.title || page.path
-    acc[key] = {
-      name: title.length > 25 ? title.substring(0, 25) + `...` : title,
-      color: colors[index % colors.length]
-    }
-    return acc
-  }, {
-  } as Record<string, {
-    name: string
-    color: string
-  }>)
+      const key =
+        page.path
+          .split(`/`)
+          .pop()
+          ?.replace(/[^a-z0-9]/gi, ``) || `page`
+      const title = page.lastFeedback?.title || page.path
+      acc[key] = {
+        name: title.length > 25 ? title.substring(0, 25) + `...` : title,
+        color: colors[index % colors.length]
+      }
+      return acc
+    },
+    {} as Record<
+      string,
+      {
+        name: string
+        color: string
+      }
+    >
+  )
 })
 
 const xFormatter = (index: number) => {
@@ -343,24 +385,23 @@ const yFormatter = (value: number) => {
   if (chartType.value === `compare`) {
     return Math.round(value).toString()
   }
-  return value === 0 ? `0` : `${ Number(value).toFixed(1) }/4`
+  return value === 0 ? `0` : `${Number(value).toFixed(1)}/4`
 }
 
 const dateRangeLabel = computed(() => {
   if (chartType.value === `compare`) {
-    return `Selected Pages (${ selectedPagePaths.value.length })`
+    return `Selected Pages (${selectedPagePaths.value.length})`
   }
 
-  const daysDiff = Math.ceil((dateRange.value.end.getTime() - dateRange.value.start.getTime()) / (1000 * 60 * 60 * 24))
-  if (daysDiff <= 7)
-    return `Last ${ daysDiff } days`
-  if (daysDiff <= 31)
-    return `Last ${ daysDiff } days`
-  if (daysDiff <= 93)
-    return `Last ${ Math.round(daysDiff / 30) } months`
-  if (daysDiff <= 186)
-    return `Last ${ Math.round(daysDiff / 30) } months`
-  return `Last ${ Math.round(daysDiff / 365) } year${ daysDiff > 730 ? `s` : `` }`
+  const daysDiff = Math.ceil(
+    (dateRange.value.end.getTime() - dateRange.value.start.getTime()) /
+      (1000 * 60 * 60 * 24)
+  )
+  if (daysDiff <= 7) return `Last ${daysDiff} days`
+  if (daysDiff <= 31) return `Last ${daysDiff} days`
+  if (daysDiff <= 93) return `Last ${Math.round(daysDiff / 30)} months`
+  if (daysDiff <= 186) return `Last ${Math.round(daysDiff / 30)} months`
+  return `Last ${Math.round(daysDiff / 365)} year${daysDiff > 730 ? `s` : ``}`
 })
 
 const chartTitle = computed(() => {
@@ -430,42 +471,41 @@ function togglePageSelection(pagePath: string) {
 }
 
 function selectTopPages(count: number) {
-  if (!props.pageAnalytics)
-    return
+  if (!props.pageAnalytics) return
 
-  const pages = props.pageAnalytics.
-    filter((p) => p && p.total > 0).
-    sort((a, b) => b.total - a.total).
-    slice(0, count)
+  const pages = props.pageAnalytics
+    .filter((p) => p && p.total > 0)
+    .sort((a, b) => b.total - a.total)
+    .slice(0, count)
   selectedPagePaths.value = pages.map((p) => p.path)
 }
 
 function selectBestRatedPages(count: number) {
-  if (!props.pageAnalytics)
-    return
+  if (!props.pageAnalytics) return
 
-  const pages = props.pageAnalytics.
-    filter((p) => p && p.total > 0).
-    sort((a, b) => b.averageScore - a.averageScore).
-    slice(0, count)
+  const pages = props.pageAnalytics
+    .filter((p) => p && p.total > 0)
+    .sort((a, b) => b.averageScore - a.averageScore)
+    .slice(0, count)
   selectedPagePaths.value = pages.map((p) => p.path)
 }
 
 function selectWorstPages(count: number) {
-  if (!props.pageAnalytics)
-    return
+  if (!props.pageAnalytics) return
 
-  const pages = props.pageAnalytics.
-    filter((p) => p && p.total > 0).
-    sort((a, b) => a.averageScore - b.averageScore).
-    slice(0, count)
+  const pages = props.pageAnalytics
+    .filter((p) => p && p.total > 0)
+    .sort((a, b) => a.averageScore - b.averageScore)
+    .slice(0, count)
   selectedPagePaths.value = pages.map((p) => p.path)
 }
 </script>
 
 <template>
   <div class="space-y-6">
-    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+    <div
+      class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4"
+    >
       <Motion
         :key="`header-${chartType}`"
         :initial="{ opacity: 0, y: 10 }"
@@ -473,7 +513,10 @@ function selectWorstPages(count: number) {
         :transition="{ duration: 0.4, ease: 'easeInOut' }"
         class="flex items-center gap-3"
       >
-        <UIcon :name="chartIcon" class="size-6 sm:size-5 text-primary shrink-0" />
+        <UIcon
+          :name="chartIcon"
+          class="size-6 sm:size-5 text-primary shrink-0"
+        />
         <div class="min-w-0">
           <h3 class="text-lg font-semibold truncate">
             {{ chartTitle }}
@@ -484,7 +527,9 @@ function selectWorstPages(count: number) {
         </div>
       </Motion>
 
-      <div class="flex items-center max-sm:flex-row-reverse max-sm:justify-end gap-2 flex-wrap">
+      <div
+        class="flex items-center max-sm:flex-row-reverse max-sm:justify-end gap-2 flex-wrap"
+      >
         <AnimatePresence mode="wait">
           <Motion
             v-if="chartType !== 'overall'"
@@ -504,7 +549,9 @@ function selectWorstPages(count: number) {
           </Motion>
         </AnimatePresence>
 
-        <div class="flex items-center gap-1 border border-default rounded-lg p-1">
+        <div
+          class="flex items-center gap-1 border border-default rounded-lg p-1"
+        >
           <UButton
             v-for="type in availableChartTypes"
             :key="type.value"
@@ -564,7 +611,8 @@ function selectWorstPages(count: number) {
 
     <div v-if="!hasValidData" class="text-center py-4">
       <p class="text-sm text-muted">
-        Chart shows no data - will display real trends once feedback is collected
+        Chart shows no data - will display real trends once feedback is
+        collected
       </p>
     </div>
 
@@ -582,10 +630,12 @@ function selectWorstPages(count: number) {
             />
             <div class="space-y-3">
               <h3 class="text-lg font-semibold">
-                Select Pages to {{ chartType === 'line' ? 'Track' : 'Compare' }}
+                Select Pages to {{ chartType === "line" ? "Track" : "Compare" }}
               </h3>
               <div class="flex items-center gap-2 flex-wrap">
-                <span class="text-sm text-muted font-medium">Quick select:</span>
+                <span class="text-sm text-muted font-medium"
+                  >Quick select:</span
+                >
                 <UButton
                   size="sm"
                   variant="soft"
@@ -644,7 +694,10 @@ function selectWorstPages(count: number) {
               v-for="page in availablePages"
               :key="page.path"
               class="flex items-center justify-between p-3 border border-default rounded-lg hover:bg-muted/50 cursor-pointer transition-colors"
-              :class="{ 'bg-primary/5 border-primary/20 hover:bg-primary/10': selectedPagePaths.includes(page.path) }"
+              :class="{
+                'bg-primary/5 border-primary/20 hover:bg-primary/10':
+                  selectedPagePaths.includes(page.path)
+              }"
               @click="togglePageSelection(page.path)"
             >
               <div class="flex items-center gap-3 flex-1 min-w-0">
@@ -656,7 +709,9 @@ function selectWorstPages(count: number) {
                   <div class="font-medium text-sm truncate">
                     {{ page.title }}
                   </div>
-                  <code class="text-xs text-muted truncate block">{{ page.path }}</code>
+                  <code class="text-xs text-muted truncate block">{{
+                    page.path
+                  }}</code>
                 </div>
               </div>
               <div class="flex items-center gap-2 sm:gap-4 text-sm shrink-0">
@@ -664,23 +719,31 @@ function selectWorstPages(count: number) {
                   <div class="font-semibold">
                     {{ page.total }}
                   </div>
-                  <div class="text-muted text-xs">
-                    resp.
-                  </div>
+                  <div class="text-muted text-xs">resp.</div>
                 </div>
                 <div class="text-center">
-                  <div class="font-semibold" :class="page.score >= 3.5 ? 'text-success' : page.score >= 3.0 ? 'text-warning' : 'text-error'">
+                  <div
+                    class="font-semibold"
+                    :class="
+                      page.score >= 3.5
+                        ? 'text-success'
+                        : page.score >= 3.0
+                          ? 'text-warning'
+                          : 'text-error'
+                    "
+                  >
                     {{ page.score.toFixed(1) }}/4
                   </div>
-                  <div class="text-muted text-xs">
-                    score
-                  </div>
+                  <div class="text-muted text-xs">score</div>
                 </div>
               </div>
             </div>
 
             <div v-if="availablePages.length === 0" class="text-center py-8">
-              <UIcon name="i-lucide-search-x" class="size-8 text-muted mx-auto mb-2" />
+              <UIcon
+                name="i-lucide-search-x"
+                class="size-8 text-muted mx-auto mb-2"
+              />
               <p class="text-sm text-muted">
                 No pages found matching your search
               </p>
@@ -721,11 +784,18 @@ function selectWorstPages(count: number) {
 .dot-pattern {
   position: absolute;
 
-  background-image: radial-gradient(var(--dot-pattern-color) 1px, transparent 1px);
+  background-image: radial-gradient(
+    var(--dot-pattern-color) 1px,
+    transparent 1px
+  );
   background-size: 7px 7px;
   background-position: -8.5px -8.5px;
   opacity: 20%;
 
-  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1), transparent 75%);
+  mask-image: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 1),
+    transparent 75%
+  );
 }
 </style>

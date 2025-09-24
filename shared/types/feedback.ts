@@ -1,6 +1,4 @@
-import {
-  z
-} from 'zod'
+import { z } from "zod"
 
 export const FEEDBACK_RATINGS = [
   `very-helpful`,
@@ -9,7 +7,7 @@ export const FEEDBACK_RATINGS = [
   `confusing`
 ] as const
 
-export type FeedbackRating = typeof FEEDBACK_RATINGS[number]
+export type FeedbackRating = (typeof FEEDBACK_RATINGS)[number]
 
 export interface FeedbackOption {
   emoji: string
@@ -83,12 +81,15 @@ export const feedbackSchema = z.object({
 
 export const feedbackFormSchema = z.object({
   rating: z.enum(FEEDBACK_RATINGS).nullable(),
-  feedback: z.string().refine((val) => {
-    const trimmed = val.trim()
-    return trimmed === `` || trimmed.length >= 10
-  }, {
-    message: `Please provide at least 10 characters or leave the field empty`
-  })
+  feedback: z.string().refine(
+    (val) => {
+      const trimmed = val.trim()
+      return trimmed === `` || trimmed.length >= 10
+    },
+    {
+      message: `Please provide at least 10 characters or leave the field empty`
+    }
+  )
 })
 
 export type FeedbackInput = z.infer<typeof feedbackSchema>

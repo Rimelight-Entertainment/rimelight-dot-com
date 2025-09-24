@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import type { BlockTypes } from '~/types/blocks'
-import type {
-  DropdownMenuItem
-} from '@nuxt/ui'
+import type { BlockTypes } from "~/types/blocks"
+import type { DropdownMenuItem } from "@nuxt/ui"
 
 const {
   isTemplated = false,
@@ -46,39 +44,32 @@ const menuItems = computed<DropdownMenuItem[][]>(() => {
     [
       {
         label: `Insert Block Above`,
-        kbds: [
-          `PageUp`
-        ],
+        kbds: [`PageUp`],
         onSelect: () => emit(`insertBlockAbove`, id)
       },
       {
         label: `Insert Block Below`,
-        kbds: [
-          `PageDown`
-        ],
+        kbds: [`PageDown`],
         onSelect: () => emit(`insertBlockBelow`, id)
       }
     ]
   ]
 
-  const editItems: DropdownMenuItem[] = !isTemplated ? [
-    {
-      label: `Duplicate Block`,
-      kbds: [
-        `Insert`
-      ],
-      onSelect: () => emit(`duplicate`, id)
-    },
-    {
-      color: `error`,
-      label: `Delete Block`,
-      kbds: [
-        `Delete`
-      ],
-      onSelect: () => emit(`delete`, id)
-    }
-  ] : [
-  ]
+  const editItems: DropdownMenuItem[] = !isTemplated
+    ? [
+        {
+          label: `Duplicate Block`,
+          kbds: [`Insert`],
+          onSelect: () => emit(`duplicate`, id)
+        },
+        {
+          color: `error`,
+          label: `Delete Block`,
+          kbds: [`Delete`],
+          onSelect: () => emit(`delete`, id)
+        }
+      ]
+    : []
 
   if (editItems.length) {
     items.push(editItems)
@@ -91,16 +82,9 @@ defineShortcuts(extractShortcuts(menuItems.value))
 </script>
 
 <template>
-  <RLLayoutBox
-    direction="vertical"
-    gap="md"
-  >
+  <RLLayoutBox direction="vertical" gap="md">
     <slot v-if="isEditable" name="actions" />
-    <RLLayoutBox
-      direction="horizontal"
-      gap="xs"
-      align-items="start"
-    >
+    <RLLayoutBox direction="horizontal" gap="xs" align-items="start">
       <UDropdownMenu :items="menuItems">
         <UTooltip :text="name">
           <UButton
@@ -117,6 +101,4 @@ defineShortcuts(extractShortcuts(menuItems.value))
   </RLLayoutBox>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

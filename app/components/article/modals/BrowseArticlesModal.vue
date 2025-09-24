@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import type { TreeItem } from '@nuxt/ui'
+import type { TreeItem } from "@nuxt/ui"
 
 export interface ArticleTreeItem extends TreeItem {
   slug?: string
 }
 
 const {
-  data: articleTree, pending, error: treeError
+  data: articleTree,
+  pending,
+  error: treeError
 } = await useFetch<ArticleTreeItem[]>(`/api/article/tree`)
 
 if (treeError.value) {
@@ -43,27 +45,20 @@ if (treeError.value) {
               </template>
             </UTree>
           </template>
-          <template #fallback>
-            Loading articles...
-          </template>
+          <template #fallback> Loading articles... </template>
         </Suspense>
       </Transition>
-      <p v-if="treeError">
-        Failed to load article tree.
-      </p>
+      <p v-if="treeError">Failed to load article tree.</p>
     </template>
-    <UButton variant="ghost" leading-icon="lucide:folder-tree" label="Browse Articles" />
+    <UButton
+      variant="ghost"
+      leading-icon="lucide:folder-tree"
+      label="Browse Articles"
+    />
     <template #footer="{ close }">
-      <UButton
-        label="Cancel"
-        color="error"
-        variant="outline"
-        @click="close"
-      />
+      <UButton label="Cancel" color="error" variant="outline" @click="close" />
     </template>
   </UModal>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

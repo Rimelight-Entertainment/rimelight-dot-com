@@ -1,20 +1,8 @@
 <script setup lang="ts">
 import type { FooterColumn } from "@nuxt/ui"
-import {
-  ar,
-  en,
-  es,
-  fr,
-  ja,
-  ko,
-  pt,
-  ro,
-  zh_cn
-} from '@nuxt/ui/locale'
+import { ar, en, es, fr, ja, ko, pt, ro, zh_cn } from "@nuxt/ui/locale"
 
-const {
-  locale, setLocale
-} = useI18n()
+const { locale, setLocale } = useI18n()
 
 const columns: FooterColumn[] = [
   {
@@ -62,10 +50,7 @@ const columns: FooterColumn[] = [
   <UFooter>
     <template #top>
       <UContainer>
-        <RLLayoutBox
-          direction="horizontal"
-          gap="lg"
-        >
+        <RLLayoutBox direction="horizontal" gap="lg">
           <RLNewsletterSignup
             label="Subscribe to the Rimelight Entertainment Newsletter"
             description="Stay updated on new blog posts and company updates. Unsubscribe at any time."
@@ -77,7 +62,11 @@ const columns: FooterColumn[] = [
     <template #left>
       <RLLayoutBox direction="vertical" gap="sm">
         <NuxtLink to="/">
-          <UIcon name="first-party:logotype-white" color="primary" class="h-12 text-neutral fill-neutral" />
+          <UIcon
+            name="first-party:logotype-white"
+            color="primary"
+            class="h-12 text-neutral fill-neutral"
+          />
         </NuxtLink>
         <p class="text-muted text-sm">
           © {{ new Date().getFullYear() }} Rimelight Entertainment
@@ -85,15 +74,8 @@ const columns: FooterColumn[] = [
       </RLLayoutBox>
     </template>
     <template #right>
-      <RLLayoutBox
-        direction="vertical"
-        gap="md"
-        align-items="end"
-      >
-        <RLLayoutBox
-          direction="horizontal"
-          gap="sm"
-        >
+      <RLLayoutBox direction="vertical" gap="md" align-items="end">
+        <RLLayoutBox direction="horizontal" gap="sm">
           <UButton
             size="xl"
             variant="ghost"
@@ -130,10 +112,7 @@ const columns: FooterColumn[] = [
             to="https://www.linkedin.com/daniel-marchi"
           />
         </RLLayoutBox>
-        <RLLayoutBox
-          direction="horizontal"
-          gap="md"
-        >
+        <RLLayoutBox direction="horizontal" gap="md">
           <UColorModeSelect class="w-48" />
           <ULocaleSelect
             v-model="locale"
@@ -148,6 +127,4 @@ const columns: FooterColumn[] = [
   </UFooter>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

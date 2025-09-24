@@ -1,7 +1,7 @@
-import noRuntimePropsDeclaration from './no-runtime-props-declaration.ts'
+import noRuntimePropsDeclaration from "./no-runtime-props-declaration.ts"
 
 export default {
   rules: {
-    'no-runtime-props-declaration': noRuntimePropsDeclaration
+    "no-runtime-props-declaration": noRuntimePropsDeclaration
   }
 }

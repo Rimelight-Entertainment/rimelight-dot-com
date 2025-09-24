@@ -1,19 +1,16 @@
-import {
-  createBaseBlock
-} from "./createBaseBlock"
-import type {
-  ScriptBlockAttrs, ScriptBlockData
-} from "@/types/blocks"
+import { createBaseBlock } from "./createBaseBlock"
+import type { ScriptBlockAttrs, ScriptBlockData } from "@/types/blocks"
 
 /**
  * Creates a new Script Block data object.
  * @param initialData Optional initial data to pre-fill the block attributes.
  * @returns A new ScriptBlockData object.
  */
-export const createScriptBlock = (initialData?: Partial<ScriptBlockData>): ScriptBlockData => {
+export const createScriptBlock = (
+  initialData?: Partial<ScriptBlockData>
+): ScriptBlockData => {
   const defaultAttrs: ScriptBlockAttrs = {
-    characters: [
-    ],
+    characters: [],
     aPlot: [
       {
         type: `text`,
@@ -58,12 +55,9 @@ export const createScriptBlock = (initialData?: Partial<ScriptBlockData>): Scrip
   }
 
   const defaultSlots = {
-    act1: [
-    ],
-    act2: [
-    ],
-    act3: [
-    ]
+    act1: [],
+    act2: [],
+    act3: []
   }
   const mergedSlots = {
     ...defaultSlots,

@@ -1,44 +1,29 @@
-import {
-  z
-} from 'zod'
-import type {
-  H3Event
-} from 'h3'
-import {
-  defineEventHandler, createError
-} from 'h3'
-import {
-  useDb
-} from '~~/server/utils/drizzle'
-import {
-  users
-} from '~~/server/database/schema'
+import { z } from "zod"
+import type { H3Event } from "h3"
+import { defineEventHandler, createError } from "h3"
+import { useDb } from "~~/server/utils/drizzle"
+import { users } from "~~/server/database/schema"
 
-const signUpSchema = z.object({
-  first_name: z.string().min(2).
-    max(24),
-  last_name: z.string().min(2).
-    max(24),
-  username: z.string().min(2).
-    max(24),
-  email: z.string().email(),
-  password: z.string().min(8).
-    max(24),
-  password_confirmation: z.string().min(8).
-    max(24)
-}).refine((d) => d.password === d.password_confirmation, {
-  message: `Passwords do not match`,
-  path: [
-    `password_confirmation`
-  ]
-})
+const signUpSchema = z
+  .object({
+    first_name: z.string().min(2).max(24),
+    last_name: z.string().min(2).max(24),
+    username: z.string().min(2).max(24),
+    email: z.string().email(),
+    password: z.string().min(8).max(24),
+    password_confirmation: z.string().min(8).max(24)
+  })
+  .refine((d) => d.password === d.password_confirmation, {
+    message: `Passwords do not match`,
+    path: [`password_confirmation`]
+  })
 
 async function getRequestBody(event: H3Event) {
   const body = await readBody(event)
   return signUpSchema.parse(body)
 }
 
-export default defineEventHandler(async(event) => {
+export default defineEventHandler(async (event) => {
   try {
     const body = await getRequestBody(event)
     const hashedPassword = await hashPassword(body.password)
@@ -47,19 +32,17 @@ export default defineEventHandler(async(event) => {
 
     const userRole = body.email.endsWith(`@rimelight.com`) ? `employee` : `user`
 
-    const [
-      user
-    ] = await db.
-      insert(users).
-      values({
+    const [user] = await db
+      .insert(users)
+      .values({
         first_name: body.first_name,
         last_name: body.last_name,
         email: body.email,
         username: body.username,
         password_hash: hashedPassword,
         role: userRole
-      }).
-      returning()
+      })
+      .returning()
 
     if (!user) {
       throw createError({
@@ -80,7 +63,7 @@ export default defineEventHandler(async(event) => {
     return {
       success: true
     }
-  } catch(error: any) {
+  } catch (error: any) {
     if (error.code === `23505`) {
       if (error.constraint === `users_email_unique`) {
         throw createError({

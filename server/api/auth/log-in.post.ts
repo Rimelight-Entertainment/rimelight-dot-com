@@ -1,35 +1,25 @@
-import {
-  z
-} from 'zod'
-import {
-  defineEventHandler, readValidatedBody, createError
-} from 'h3'
-import {
-  eq
-} from 'drizzle-orm'
-import {
-  useDb
-} from '~~/server/utils/drizzle'
-import {
-  users
-} from '~~/server/database/schema'
+import { z } from "zod"
+import { defineEventHandler, readValidatedBody, createError } from "h3"
+import { eq } from "drizzle-orm"
+import { useDb } from "~~/server/utils/drizzle"
+import { users } from "~~/server/database/schema"
 
 export const loginSchema = z.object({
   email: z.string().email(),
   password: z.string()
 })
 
-export default defineEventHandler(async(event) => {
+export default defineEventHandler(async (event) => {
   const body = await readValidatedBody(event, loginSchema.parse)
 
   const db = useDb()
 
-  const user = await db.
-    select().
-    from(users).
-    where(eq(users.email, body.email)).
-    limit(1).
-    then((rows) => rows[0])
+  const user = await db
+    .select()
+    .from(users)
+    .where(eq(users.email, body.email))
+    .limit(1)
+    .then((rows) => rows[0])
 
   if (!user) {
     throw createError({

@@ -1,10 +1,6 @@
 <script lang="ts" setup>
-import {
-  mapContentNavigation
-} from '@nuxt/ui/utils/content'
-import {
-  findPageBreadcrumb
-} from '@nuxt/content/utils'
+import { mapContentNavigation } from "@nuxt/ui/utils/content"
+import { findPageBreadcrumb } from "@nuxt/content/utils"
 
 definePageMeta({
   layout: `documents`
@@ -12,10 +8,9 @@ definePageMeta({
 
 const route = useRoute()
 
-const {
-  data: page
-} = await useAsyncData(route.path, () => queryCollection(`documents`).path(route.path).
-  first())
+const { data: page } = await useAsyncData(route.path, () =>
+  queryCollection(`documents`).path(route.path).first()
+)
 if (!page.value) {
   throw createError({
     statusCode: 404,
@@ -24,25 +19,23 @@ if (!page.value) {
   })
 }
 
-const {
-  data: surround
-} = await useAsyncData(`${ route.path }-surround`, () => {
+const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
   return queryCollectionItemSurroundings(`documents`, route.path, {
-    fields: [
-      `description`
-    ]
+    fields: [`description`]
   })
 })
 
-const {
-  data: navigation
-} = await useAsyncData(`navigation`, () => queryCollectionNavigation(`documents`))
+const { data: navigation } = await useAsyncData(`navigation`, () =>
+  queryCollectionNavigation(`documents`)
+)
 
-const breadcrumb = computed(() => mapContentNavigation(findPageBreadcrumb(navigation?.value, page.value?.path, {
-  indexAsChild: true
-})).map(({
-  icon, ...link
-}) => link))
+const breadcrumb = computed(() =>
+  mapContentNavigation(
+    findPageBreadcrumb(navigation?.value, page.value?.path, {
+      indexAsChild: true
+    })
+  ).map(({ icon, ...link }) => link)
+)
 
 const pageLinks = [
   {
@@ -92,17 +85,23 @@ const lastModified = useDateFormat(page.value.lastModified, `DD/MM/YYYY`)
             :label="tag"
           />
         </template>
-        <ContentRenderer
-          v-if="page.body"
-          :value="page"
-        />
+        <ContentRenderer v-if="page.body" :value="page" />
       </UPageBody>
       <template v-if="page?.body?.toc?.links?.length" #right>
-        <UContentToc title="Table of Contents" :links="page.body.toc.links" highlight>
+        <UContentToc
+          title="Table of Contents"
+          :links="page.body.toc.links"
+          highlight
+        >
           <template #bottom>
             <USeparator />
             <UPageLinks title="Links" :links="pageLinks" />
-            <span class="text-muted text-sm">Last Modified: <time :datetime="page.lastModified">{{ lastModified }}</time></span>
+            <span class="text-muted text-sm"
+              >Last Modified:
+              <time :datetime="page.lastModified">{{
+                lastModified
+              }}</time></span
+            >
           </template>
         </UContentToc>
       </template>
@@ -110,6 +109,4 @@ const lastModified = useDateFormat(page.value.lastModified, `DD/MM/YYYY`)
   </UContainer>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

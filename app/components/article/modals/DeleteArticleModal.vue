@@ -1,12 +1,9 @@
 <script setup lang="ts">
-import { z } from 'zod'
-import { UForm } from '#components'
-import type { FormSubmitEvent } from '@nuxt/ui'
+import { z } from "zod"
+import { UForm } from "#components"
+import type { FormSubmitEvent } from "@nuxt/ui"
 
-const {
-  slug = ``,
-  title = ``
-} = defineProps<{
+const { slug = ``, title = `` } = defineProps<{
   slug: string
   title: string
 }>()
@@ -47,7 +44,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       icon: `lucide:circle-check`
     })
     await navigateTo(`/`)
-  } catch(error) {
+  } catch (error) {
     console.error(`Failed to delete article:`, error)
     toast.add({
       title: `Error`,
@@ -60,10 +57,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 
 onBeforeRouteLeave(() => {
   const confirm = window.confirm(`Are you sure you want to leave?`)
-  if (!confirm) {
-    return false
-  }
-  return true
+  return confirm
 })
 </script>
 
@@ -75,12 +69,7 @@ onBeforeRouteLeave(() => {
     :ui="{ footer: 'justify-between' }"
   >
     <template #body>
-      <UForm
-        ref="formRef"
-        :schema="schema"
-        :state="state"
-        @submit="onSubmit"
-      >
+      <UForm ref="formRef" :schema="schema" :state="state" @submit="onSubmit">
         <UFormField
           name="title"
           label="Are you sure?"
@@ -111,6 +100,4 @@ onBeforeRouteLeave(() => {
   </UModal>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

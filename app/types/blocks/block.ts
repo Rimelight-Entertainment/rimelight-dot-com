@@ -1,9 +1,5 @@
-import type {
-  BlockTypes
-} from "./index"
-import {
-  blocksRegistry
-} from './index'
+import type { BlockTypes } from "./index"
+import { blocksRegistry } from "./index"
 
 export interface BlockData {
   id: string

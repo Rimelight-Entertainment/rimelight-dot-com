@@ -1,6 +1,4 @@
-import type {
-  BlockData
-} from "./block"
+import type { BlockData } from "./block"
 
 export interface ImageBlockAttrs {
   fileName: string

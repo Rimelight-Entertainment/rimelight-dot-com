@@ -1,13 +1,7 @@
 <script setup lang="ts">
-import {
-  computed, ref, watch
-} from 'vue'
-import {
-  breakpointsTailwind
-} from '@vueuse/core'
-import type {
-  Mail
-} from '~/types'
+import { computed, ref, watch } from "vue"
+import { breakpointsTailwind } from "@vueuse/core"
+import type { Mail } from "~/types"
 
 definePageMeta({
   layout: `dashboard`
@@ -25,11 +19,8 @@ const tabItems = [
 ]
 const selectedTab = ref(`all`)
 
-const {
-  data: mails
-} = await useFetch<Mail[]>(`/api/mails`, {
-  default: () => [
-  ]
+const { data: mails } = await useFetch<Mail[]>(`/api/mails`, {
+  default: () => []
 })
 
 // Filter mails based on the selected tab
@@ -93,7 +84,11 @@ const isMobile = breakpoints.smaller(`lg`)
     <RLInboxList v-model="selectedMail" :mails="filteredMails" />
   </UDashboardPanel>
 
-  <RLInboxMail v-if="selectedMail" :mail="selectedMail" @close="selectedMail = null" />
+  <RLInboxMail
+    v-if="selectedMail"
+    :mail="selectedMail"
+    @close="selectedMail = null"
+  />
   <div v-else class="hidden lg:flex flex-1 items-center justify-center">
     <UIcon name="i-lucide-inbox" class="size-32 text-dimmed" />
   </div>
@@ -101,7 +96,11 @@ const isMobile = breakpoints.smaller(`lg`)
   <ClientOnly>
     <USlideover v-if="isMobile" v-model:open="isMailPanelOpen">
       <template #content>
-        <RLInboxMail v-if="selectedMail" :mail="selectedMail" @close="selectedMail = null" />
+        <RLInboxMail
+          v-if="selectedMail"
+          :mail="selectedMail"
+          @close="selectedMail = null"
+        />
       </template>
     </USlideover>
   </ClientOnly>

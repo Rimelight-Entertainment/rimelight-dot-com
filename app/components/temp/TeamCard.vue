@@ -1,7 +1,5 @@
 <script setup lang="ts">
-const {
-
-} = defineProps<{
+const {} = defineProps<{
   src: string
   alt: string
   name: string
@@ -17,14 +15,8 @@ const {
     gap="md"
     class="max-w-96 bg-primary-600"
   >
-    <NuxtImg
-      :src="src"
-      :alt="alt"
-    />
-    <RLLayoutBox
-      direction="vertical"
-      gap="xs"
-    >
+    <NuxtImg :src="src" :alt="alt" />
+    <RLLayoutBox direction="vertical" gap="xs">
       <h3 class="text-xl font-bold">
         {{ name }}
       </h3>
@@ -33,15 +25,10 @@ const {
     <p class="text-md">
       {{ description }}
     </p>
-    <RLLayoutBox
-      direction="horizontal"
-      gap="md"
-    >
+    <RLLayoutBox direction="horizontal" gap="md">
       <slot name="buttons" />
     </RLLayoutBox>
   </RLLayoutBox>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

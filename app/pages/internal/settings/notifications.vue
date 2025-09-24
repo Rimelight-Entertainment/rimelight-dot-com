@@ -73,10 +73,7 @@ async function onChange() {
         :description="field.description"
         class="flex items-center justify-between not-last:pb-4 gap-2"
       >
-        <USwitch
-          v-model="state[field.name]"
-          @update:model-value="onChange"
-        />
+        <USwitch v-model="state[field.name]" @update:model-value="onChange" />
       </UFormField>
     </UPageCard>
   </div>

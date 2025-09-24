@@ -4,8 +4,8 @@ import {
   getLocalTimeZone,
   CalendarDate,
   today
-} from '@internationalized/date'
-import type { Range } from '~/types'
+} from "@internationalized/date"
+import type { Range } from "~/types"
 
 const df = new DateFormatter(`en-US`, {
   dateStyle: `medium`
@@ -43,20 +43,25 @@ const ranges = [
 ]
 
 const toCalendarDate = (date: Date) => {
-  return new CalendarDate(date.getFullYear(), date.getMonth() + 1, date.getDate())
+  return new CalendarDate(
+    date.getFullYear(),
+    date.getMonth() + 1,
+    date.getDate()
+  )
 }
 
 const calendarRange = computed({
   get: () => ({
-    start: selected.value.start ? toCalendarDate(selected.value.start) : undefined,
+    start: selected.value.start
+      ? toCalendarDate(selected.value.start)
+      : undefined,
     end: selected.value.end ? toCalendarDate(selected.value.end) : undefined
   }),
-  set: (newValue: {
-    start: CalendarDate | null
-    end: CalendarDate | null
-  }) => {
+  set: (newValue: { start: CalendarDate | null; end: CalendarDate | null }) => {
     selected.value = {
-      start: newValue.start ? newValue.start.toDate(getLocalTimeZone()) : new Date(),
+      start: newValue.start
+        ? newValue.start.toDate(getLocalTimeZone())
+        : new Date(),
       end: newValue.end ? newValue.end.toDate(getLocalTimeZone()) : new Date()
     }
   }
@@ -67,8 +72,7 @@ const isRangeSelected = (range: {
   months?: number
   years?: number
 }) => {
-  if (!selected.value.start || !selected.value.end)
-    return false
+  if (!selected.value.start || !selected.value.end) return false
 
   const currentDate = today(getLocalTimeZone())
   let startDate = currentDate.copy()
@@ -90,7 +94,10 @@ const isRangeSelected = (range: {
   const selectedStart = toCalendarDate(selected.value.start)
   const selectedEnd = toCalendarDate(selected.value.end)
 
-  return selectedStart.compare(startDate) === 0 && selectedEnd.compare(currentDate) === 0
+  return (
+    selectedStart.compare(startDate) === 0 &&
+    selectedEnd.compare(currentDate) === 0
+  )
 }
 
 const selectRange = (range: {
@@ -139,13 +146,14 @@ const selectRange = (range: {
             {{ df.format(selected.start) }}
           </template>
         </template>
-        <template v-else>
-          Pick a date
-        </template>
+        <template v-else> Pick a date </template>
       </span>
 
       <template #trailing>
-        <UIcon name="i-lucide-chevron-down" class="shrink-0 text-dimmed size-5 group-data-[state=open]:rotate-180 transition-transform duration-200" />
+        <UIcon
+          name="i-lucide-chevron-down"
+          class="shrink-0 text-dimmed size-5 group-data-[state=open]:rotate-180 transition-transform duration-200"
+        />
       </template>
     </UButton>
 
@@ -159,7 +167,9 @@ const selectRange = (range: {
             color="neutral"
             variant="ghost"
             class="rounded-none px-4"
-            :class="[isRangeSelected(range) ? 'bg-elevated' : 'hover:bg-elevated/50']"
+            :class="[
+              isRangeSelected(range) ? 'bg-elevated' : 'hover:bg-elevated/50'
+            ]"
             truncate
             @click="selectRange(range)"
           />

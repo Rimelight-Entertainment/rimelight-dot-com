@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import {
-  tv,
-  type VariantProps
-} from "tailwind-variants"
+import { tv, type VariantProps } from "tailwind-variants"
 
 const boxVariants = tv({
   base: `flex`,
@@ -65,7 +62,6 @@ const {
   alignItems = undefined,
   justifyContent = undefined
 } = defineProps<{
-
   /**
    * Sets the HTML tag to render the box as.
    * @default 'div'
@@ -105,26 +101,22 @@ const {
   justifyContent?: BoxVariantsProps[`justifyContent`]
 }>()
 
-const boxClass = computed(() => boxVariants({
-  position: position,
-  direction: direction,
-  padding: padding,
-  gap: gap,
-  alignItems: alignItems,
-  justifyContent: justifyContent
-}))
+const boxClass = computed(() =>
+  boxVariants({
+    position: position,
+    direction: direction,
+    padding: padding,
+    gap: gap,
+    alignItems: alignItems,
+    justifyContent: justifyContent
+  })
+)
 </script>
 
 <template>
-  <component
-    :is="tag"
-    :class="boxClass"
-    v-bind="$attrs"
-  >
+  <component :is="tag" :class="boxClass" v-bind="$attrs">
     <slot />
   </component>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

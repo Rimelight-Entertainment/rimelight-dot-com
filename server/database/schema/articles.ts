@@ -1,12 +1,13 @@
 import {
-  jsonb, pgEnum, pgTable, text, timestamp, uuid
+  jsonb,
+  pgEnum,
+  pgTable,
+  text,
+  timestamp,
+  uuid
 } from "drizzle-orm/pg-core"
-import {
-  relations
-} from "drizzle-orm"
-import {
-  articleTags
-} from "./index"
+import { relations } from "drizzle-orm"
+import { articleTags } from "./index"
 
 export const articleTypeEnum = pgEnum(`article_type`, [
   `Default`,
@@ -27,23 +28,16 @@ export const articleTypeEnum = pgEnum(`article_type`, [
 ])
 
 export const articles = pgTable(`articles`, {
-  id: uuid(`id`).primaryKey().
-    notNull(),
-  slug: text(`slug`).unique().
-    notNull(),
+  id: uuid(`id`).primaryKey().notNull(),
+  slug: text(`slug`).unique().notNull(),
   title: text(`title`).notNull(),
-  type: articleTypeEnum(`type`).default(`Default`).
-    notNull(),
+  type: articleTypeEnum(`type`).default(`Default`).notNull(),
   properties: jsonb(`properties`),
   blocks: jsonb(`blocks`),
-  createdAt: timestamp(`created_at`).defaultNow().
-    notNull(),
-  updatedAt: timestamp(`updated_at`).defaultNow().
-    notNull()
+  createdAt: timestamp(`created_at`).defaultNow().notNull(),
+  updatedAt: timestamp(`updated_at`).defaultNow().notNull()
 })
 
-export const articleRelations = relations(articles, ({
-  many
-}) => ({
+export const articleRelations = relations(articles, ({ many }) => ({
   articleTags: many(articleTags)
 }))

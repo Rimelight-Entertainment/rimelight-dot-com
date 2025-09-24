@@ -3,10 +3,7 @@ const text = ref(``)
 </script>
 
 <template>
-  <RLLayoutBox
-    direction="vertical"
-    gap="md"
-  >
+  <RLLayoutBox direction="vertical" gap="md">
     <RLCalloutBlock v-model="text" :variant="'note'" />
     <RLCalloutBlock v-model="text" :variant="'tip'" />
     <RLCalloutBlock v-model="text" :variant="'warning'" />
@@ -19,6 +16,4 @@ const text = ref(``)
   </RLLayoutBox>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

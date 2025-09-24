@@ -1,7 +1,5 @@
 <script setup lang="ts">
-const {
-  count = 0
-} = defineProps<{
+const { count = 0 } = defineProps<{
   count?: number
 }>()
 

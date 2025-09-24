@@ -1,10 +1,6 @@
 <script lang="ts" setup>
-import {
-  mapContentNavigation
-} from '@nuxt/ui/utils/content'
-import {
-  findPageBreadcrumb
-} from '@nuxt/content/utils'
+import { mapContentNavigation } from "@nuxt/ui/utils/content"
+import { findPageBreadcrumb } from "@nuxt/content/utils"
 import type { PageLink } from "#ui/components/PageLinks.vue"
 
 definePageMeta({
@@ -13,10 +9,9 @@ definePageMeta({
 
 const route = useRoute()
 
-const {
-  data: page
-} = await useAsyncData(route.path, () => queryCollection(`blog`).path(route.path).
-  first())
+const { data: page } = await useAsyncData(route.path, () =>
+  queryCollection(`blog`).path(route.path).first()
+)
 if (!page.value) {
   throw createError({
     statusCode: 404,
@@ -25,27 +20,27 @@ if (!page.value) {
   })
 }
 
-const {
-  data: surround
-} = await useAsyncData(`${ route.path }-surround`, () => {
+const { data: surround } = await useAsyncData(`${route.path}-surround`, () => {
   return queryCollectionItemSurroundings(`blog`, route.path, {
-    fields: [
-      `description`
-    ]
+    fields: [`description`]
   })
 })
 
-const {
-  data: navigation
-} = await useAsyncData(`navigation`, () => queryCollectionNavigation(`blog`))
+const { data: navigation } = await useAsyncData(`navigation`, () =>
+  queryCollectionNavigation(`blog`)
+)
 
-const breadcrumb = computed(() => mapContentNavigation(findPageBreadcrumb(navigation?.value, page.value?.path, {
-  indexAsChild: true
-})).map(({
-  icon, ...link
-}) => link), {
-  deep: 0
-})
+const breadcrumb = computed(
+  () =>
+    mapContentNavigation(
+      findPageBreadcrumb(navigation?.value, page.value?.path, {
+        indexAsChild: true
+      })
+    ).map(({ icon, ...link }) => link),
+  {
+    deep: 0
+  }
+)
 
 useSeoMeta({
   title: page.title,
@@ -59,10 +54,9 @@ const share = () => {
     navigator.share({
       title: page.title,
       text: page.description,
-      url: `${ route.path }`
+      url: `${route.path}`
     })
   } else {
-
   }
 }
 
@@ -112,30 +106,31 @@ const pageLinks = ref<PageLink[]>([
             :label="tag"
           />
         </template>
-        <span class="text-muted">Date posted: <NuxtTime
-          :datetime="page.datePosted"
-          year="numeric"
-          month="short"
-          day="numeric"
-          hour="numeric"
-          minute="numeric"
-          second="numeric"
-          time-zone-name="short"
+        <span class="text-muted"
+          >Date posted:
+          <NuxtTime
+            :datetime="page.datePosted"
+            year="numeric"
+            month="short"
+            day="numeric"
+            hour="numeric"
+            minute="numeric"
+            second="numeric"
+            time-zone-name="short"
         /></span>
-        <ContentRenderer
-          v-if="page.body"
-          :value="page"
-        />
+        <ContentRenderer v-if="page.body" :value="page" />
         <USeparator v-if="surround?.length" />
         <UContentSurround :surround="surround" />
       </UPageBody>
       <template v-if="page?.body?.toc?.links?.length" #right>
-        <UContentToc title="Table of Contents" :links="page.body.toc.links" highlight />
+        <UContentToc
+          title="Table of Contents"
+          :links="page.body.toc.links"
+          highlight
+        />
       </template>
     </UPage>
   </UContainer>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

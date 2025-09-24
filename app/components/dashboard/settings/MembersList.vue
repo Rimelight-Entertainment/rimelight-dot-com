@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import type { DropdownMenuItem } from '@nuxt/ui'
-import type { Member } from '~/types'
+import type { DropdownMenuItem } from "@nuxt/ui"
+import type { Member } from "~/types"
 
-const {
-
-} = defineProps<{
+const {} = defineProps<{
   members: Member[]
 }>()
 
@@ -29,10 +27,7 @@ const items = [
       class="flex items-center justify-between gap-3 py-3 px-4 sm:px-6"
     >
       <div class="flex items-center gap-3 min-w-0">
-        <UAvatar
-          v-bind="member.avatar"
-          size="md"
-        />
+        <UAvatar v-bind="member.avatar" size="md" />
 
         <div class="text-sm min-w-0">
           <p class="text-highlighted font-medium truncate">

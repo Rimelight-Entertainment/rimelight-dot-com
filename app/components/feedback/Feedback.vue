@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import { AnimatePresence, MotionConfig, motion } from 'motion-v'
+import { AnimatePresence, MotionConfig, motion } from "motion-v"
 
-const {
-
-} = defineProps<{
+const {} = defineProps<{
   page: {
     title: string
     stem: string
@@ -24,10 +22,7 @@ const {
   <MotionConfig
     :transition="{ type: 'spring', visualDuration: 0.25, bounce: 0 }"
   >
-    <motion.div
-      layout
-      class="rounded-lg max-w-md"
-    >
+    <motion.div layout class="rounded-lg max-w-md">
       <AnimatePresence mode="wait">
         <!-- Success State -->
         <motion.div
@@ -64,13 +59,14 @@ const {
           </motion.div>
         </motion.div>
 
-        <motion.div
-          v-else
-          key="feedback"
-        >
+        <motion.div v-else key="feedback">
           <fieldset>
             <motion.div layout class="flex items-center gap-3">
-              <motion.legend id="feedback-legend" layout class="text-sm font-medium text-highlighted whitespace-nowrap">
+              <motion.legend
+                id="feedback-legend"
+                layout
+                class="text-sm font-medium text-highlighted whitespace-nowrap"
+              >
                 Was this helpful?
               </motion.legend>
 
@@ -87,7 +83,7 @@ const {
                   :class="[
                     formState.rating === option.value
                       ? 'border-primary bg-primary/20 hover:bg-primary/30 grayscale-0'
-                      : 'border-default bg-accented/20 hover:border-accented/70 hover:bg-accented/80',
+                      : 'border-default bg-accented/20 hover:border-accented/70 hover:bg-accented/80'
                   ]"
                   :aria-label="`Rate as ${option.label}`"
                   :aria-pressed="formState.rating === option.value"
@@ -119,7 +115,11 @@ const {
                 :transition="{ delay: 0.15, duration: 0.2 }"
                 class="space-y-1"
               >
-                <UForm :state="formState" :schema="feedbackFormSchema" @submit="submitFeedback">
+                <UForm
+                  :state="formState"
+                  :schema="feedbackFormSchema"
+                  @submit="submitFeedback"
+                >
                   <UFormField name="feedback">
                     <label for="feedback-textarea" class="sr-only">
                       Additional feedback (optional)
@@ -135,7 +135,8 @@ const {
                       aria-describedby="feedback-help"
                     />
                     <div id="feedback-help" class="sr-only">
-                      Provide additional details about your experience with this page
+                      Provide additional details about your experience with this
+                      page
                     </div>
                   </UFormField>
                   <div class="flex items-center mt-2">
@@ -145,7 +146,9 @@ const {
                         :disabled="isSubmitting"
                         type="submit"
                         class="focus:outline-0"
-                        :aria-label="isSubmitting ? 'Sending feedback...' : 'Send feedback'"
+                        :aria-label="
+                          isSubmitting ? 'Sending feedback...' : 'Send feedback'
+                        "
                       >
                         <motion.span
                           class="flex items-center"
@@ -157,26 +160,37 @@ const {
                               marginRight: isSubmitting ? '6px' : '0px',
                               opacity: isSubmitting ? 1 : 0,
                               scale: isSubmitting ? 1 : 0,
-                              rotate: isSubmitting ? 360 : 0,
+                              rotate: isSubmitting ? 360 : 0
                             }"
                             :transition="{
                               width: { duration: 0.2, ease: 'easeInOut' },
                               marginRight: { duration: 0.2, ease: 'easeInOut' },
                               opacity: { duration: 0.2 },
-                              scale: { duration: 0.2, type: 'spring', bounce: 0.3 },
-                              rotate: { duration: 1, ease: 'linear', repeat: Infinity },
+                              scale: {
+                                duration: 0.2,
+                                type: 'spring',
+                                bounce: 0.3
+                              },
+                              rotate: {
+                                duration: 1,
+                                ease: 'linear',
+                                repeat: Infinity
+                              }
                             }"
                             class="flex items-center justify-center overflow-hidden"
                           >
-                            <Icon name="mdi:loading" class="size-3.5 shrink-0" />
+                            <Icon
+                              name="mdi:loading"
+                              class="size-3.5 shrink-0"
+                            />
                           </motion.div>
                           <motion.span
                             :animate="{
-                              opacity: 1,
+                              opacity: 1
                             }"
                             :transition="{ duration: 0.2, ease: 'easeInOut' }"
                           >
-                            {{ isSubmitting ? 'Sending...' : 'Send' }}
+                            {{ isSubmitting ? "Sending..." : "Send" }}
                           </motion.span>
                         </motion.span>
                       </UButton>
@@ -189,10 +203,7 @@ const {
         </motion.div>
       </AnimatePresence>
 
-      <div
-        aria-live="polite"
-        class="sr-only"
-      >
+      <div aria-live="polite" class="sr-only">
         <span v-if="isSubmitting">Sending your feedback...</span>
         <span v-else-if="isExpanded && formState.rating">
           Feedback form expanded. You can now add additional comments.

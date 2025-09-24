@@ -1,6 +1,6 @@
 ---
 title: Blog
-description: 
+description:
 lastModified: 2025-09-01
 ---
 
@@ -13,7 +13,6 @@ Adding text below it
 ::callout{variant="tip"}
 Testing the callout
 ::
-
 
 ::callout{variant="danger"}
 Testing the callout

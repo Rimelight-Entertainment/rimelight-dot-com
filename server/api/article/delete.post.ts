@@ -1,24 +1,14 @@
-import {
-  z
-} from 'zod'
-import {
-  eq
-} from 'drizzle-orm'
-import {
-  useDb
-} from '../../utils/drizzle'
-import {
-  articles, articleTags
-} from '../../database/schema'
-import {
-  createError, defineEventHandler, readBody
-} from 'h3'
+import { z } from "zod"
+import { eq } from "drizzle-orm"
+import { useDb } from "../../utils/drizzle"
+import { articles, articleTags } from "../../database/schema"
+import { createError, defineEventHandler, readBody } from "h3"
 
 const deleteArticleSchema = z.object({
   slug: z.string().min(1, `Slug is required.`)
 })
 
-export default defineEventHandler(async(event) => {
+export default defineEventHandler(async (event) => {
   const db = useDb()
 
   // Validate the incoming request body
@@ -32,11 +22,9 @@ export default defineEventHandler(async(event) => {
     })
   }
 
-  const {
-    slug
-  } = result.data
+  const { slug } = result.data
 
-  return db.transaction(async(tx) => {
+  return db.transaction(async (tx) => {
     // Find the article by its slug to get the ID for deletion
     const article = await tx.query.articles.findFirst({
       where: eq(articles.slug, slug),
@@ -49,7 +37,7 @@ export default defineEventHandler(async(event) => {
     if (!article) {
       throw createError({
         statusCode: 404,
-        statusMessage: `Article with slug "${ slug }" not found.`
+        statusMessage: `Article with slug "${slug}" not found.`
       })
     }
 
@@ -61,7 +49,7 @@ export default defineEventHandler(async(event) => {
 
     return {
       success: true,
-      message: `Article with slug "${ slug }" and all its tags have been successfully deleted.`
+      message: `Article with slug "${slug}" and all its tags have been successfully deleted.`
     }
   })
 })

@@ -1,4 +1,4 @@
-import { AST_NODE_TYPES } from '@typescript-eslint/utils'
+import { AST_NODE_TYPES } from "@typescript-eslint/utils"
 
 export default {
   meta: {
@@ -8,23 +8,23 @@ export default {
       recommended: true,
       url: `https://eslint.org/docs/latest/extend/custom-rules#rule-basics`
     },
-    schema: [
-    ]
+    schema: []
   },
   create(context) {
     return {
       // Handles the case with `withDefaults(defineProps<Props>(), { ... })`
       'CallExpression[callee.name="withDefaults"]'(node) {
         const withDefaultsArgs = node.arguments
-        if (withDefaultsArgs.length !== 2)
-          return
+        if (withDefaultsArgs.length !== 2) return
 
         const definePropsCall = withDefaultsArgs[0]
         const defaultsObject = withDefaultsArgs[1]
 
         // Ensure the first argument is a defineProps call and the second is a default object
         if (
-          definePropsCall.type === AST_NODE_TYPES.CallExpression && definePropsCall.callee.name === `defineProps` && defaultsObject.type === AST_NODE_TYPES.ObjectExpression
+          definePropsCall.type === AST_NODE_TYPES.CallExpression &&
+          definePropsCall.callee.name === `defineProps` &&
+          defaultsObject.type === AST_NODE_TYPES.ObjectExpression
         ) {
           context.report({
             node,
@@ -34,8 +34,11 @@ export default {
       },
 
       // Handles the case with `const props = defineProps<Props>()` and `interface`
-      'VariableDeclarator'(node) {
-        if (node.init?.type !== AST_NODE_TYPES.CallExpression || node.init.callee?.name !== `defineProps`) {
+      VariableDeclarator(node) {
+        if (
+          node.init?.type !== AST_NODE_TYPES.CallExpression ||
+          node.init.callee?.name !== `defineProps`
+        ) {
           return
         }
 
@@ -44,8 +47,10 @@ export default {
         const hasDestructuring = node.id.type === AST_NODE_TYPES.ObjectPattern
 
         // Check if props are defined with a runtime object or a separate interface
-        const isRuntimeObject = callArgument?.type === AST_NODE_TYPES.ObjectExpression
-        const isExternalInterface = callArgument?.type === AST_NODE_TYPES.TSTypeReference
+        const isRuntimeObject =
+          callArgument?.type === AST_NODE_TYPES.ObjectExpression
+        const isExternalInterface =
+          callArgument?.type === AST_NODE_TYPES.TSTypeReference
 
         if (isRuntimeObject) {
           // Case 1: defineProps({...}) with runtime object
@@ -60,15 +65,20 @@ export default {
           const references = scope.set.get(variableName)?.references
           const defaultsCall = references?.find((ref) => {
             const parent = ref.identifier.parent
-            return parent.type === AST_NODE_TYPES.CallExpression && parent.callee.name === `withDefaults`
+            return (
+              parent.type === AST_NODE_TYPES.CallExpression &&
+              parent.callee.name === `withDefaults`
+            )
           })
 
           // If the props variable is not used in a withDefaults call, do nothing for now
-          if (!defaultsCall)
-            return
+          if (!defaultsCall) return
 
           const defaultsObject = defaultsCall.identifier.parent.arguments[1]
-          if (!defaultsObject || defaultsObject.type !== AST_NODE_TYPES.ObjectExpression)
+          if (
+            !defaultsObject ||
+            defaultsObject.type !== AST_NODE_TYPES.ObjectExpression
+          )
             return
 
           context.report({

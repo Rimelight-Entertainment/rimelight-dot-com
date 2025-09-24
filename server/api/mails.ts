@@ -1,6 +1,4 @@
-import {
-  sub
-} from 'date-fns'
+import { sub } from "date-fns"
 
 const mails = [
   {
@@ -751,6 +749,6 @@ Emergency: (555) 987-6544`,
   }
 ]
 
-export default eventHandler(async() => {
+export default eventHandler(async () => {
   return mails
 })

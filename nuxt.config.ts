@@ -12,7 +12,6 @@ export default defineNuxtConfig({
     `nuxt-auth-utils`,
     `@nuxtjs/sitemap`,
     `@nuxtjs/robots`,
-    `@nuxt/eslint`,
     `@pinia/nuxt`,
     `magic-regexp/nuxt`
   ],
@@ -95,9 +94,7 @@ export default defineNuxtConfig({
       mode: `out-in`
     }
   },
-  css: [
-    `./app/assets/css/main.css`
-  ],
+  css: [`./app/assets/css/main.css`],
   site: {
     url: `https://rimelight.com`,
     name: `Rimelight Entertainment`,
@@ -147,7 +144,7 @@ export default defineNuxtConfig({
     }
   },
   routeRules: {
-    '/api/**': {
+    "/api/**": {
       cors: true
     }
   },
@@ -155,9 +152,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: [
-        `/`
-      ]
+      routes: [`/`]
     }
   },
   hub: {
@@ -189,10 +184,7 @@ export default defineNuxtConfig({
         // Extra Bold
         800
       ],
-      styles: [
-        `normal`,
-        `italic`
-      ]
+      styles: [`normal`, `italic`]
     },
     families: [
       {
@@ -264,9 +256,7 @@ export default defineNuxtConfig({
   robots: {
     blockAiBots: false,
     blockNonSeoBots: false,
-    disallow: [
-      `/internal`
-    ]
+    disallow: [`/internal`]
   },
   turnstile: {
     siteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY

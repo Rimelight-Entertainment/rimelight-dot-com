@@ -1,8 +1,5 @@
 <script setup lang="ts">
-const {
-  isEditable = false,
-  maxLength = 512
-} = defineProps<{
+const { isEditable = false, maxLength = 512 } = defineProps<{
   isEditable?: boolean
   maxLength?: number
 }>()

@@ -1,6 +1,4 @@
-import {
-  subDays, subMonths, subYears, startOfDay, endOfDay
-} from 'date-fns'
+import { subDays, subMonths, subYears, startOfDay, endOfDay } from "date-fns"
 
 export interface DateRange {
   start: Date
@@ -20,7 +18,9 @@ export function useDateRange() {
     }
   }
 
-  const setPresetRange = (preset: `week` | `month` | `3months` | `6months` | `year`) => {
+  const setPresetRange = (
+    preset: `week` | `month` | `3months` | `6months` | `year`
+  ) => {
     const end = new Date()
     let start: Date
 
@@ -52,12 +52,18 @@ export function useDateRange() {
 
   const isDateInRange = (date: Date | string) => {
     const checkDate = typeof date === `string` ? new Date(date) : date
-    return checkDate >= dateRange.value.start && checkDate <= dateRange.value.end
+    return (
+      checkDate >= dateRange.value.start && checkDate <= dateRange.value.end
+    )
   }
 
-  const filterFeedbackByDateRange = <T extends {
-    createdAt: Date | string
-  }>(feedback: T[]): T[] => {
+  const filterFeedbackByDateRange = <
+    T extends {
+      createdAt: Date | string
+    }
+  >(
+    feedback: T[]
+  ): T[] => {
     return feedback.filter((item) => isDateInRange(item.createdAt))
   }
 

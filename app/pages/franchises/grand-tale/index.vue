@@ -1,6 +1,4 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <UPage>
@@ -26,6 +24,4 @@ powerful magical artifact called the 'Ohrn' whilst on a hike. Upon its
   </UPage>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

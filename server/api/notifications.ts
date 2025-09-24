@@ -1,6 +1,4 @@
-import {
-  sub
-} from 'date-fns'
+import { sub } from "date-fns"
 
 const notifications = [
   {
@@ -337,6 +335,6 @@ const notifications = [
   }
 ]
 
-export default eventHandler(async() => {
+export default eventHandler(async () => {
   return notifications
 })

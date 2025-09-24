@@ -1,33 +1,33 @@
+import { v7 as uuidv7 } from "uuid"
+import { z } from "zod"
+import { eq, inArray } from "drizzle-orm"
+import { useDb } from "../../utils/drizzle"
 import {
-  v7 as uuidv7
-} from 'uuid'
-import {
-  z
-} from 'zod'
-import {
-  eq, inArray
-} from 'drizzle-orm'
-import {
-  useDb
-} from '../../utils/drizzle'
-import {
-  articles, articleTags, tags, articleTypeEnum
-} from '../../database/schema'
+  articles,
+  articleTags,
+  tags,
+  articleTypeEnum
+} from "../../database/schema"
 
-type ArticleType = typeof articleTypeEnum.enumValues[number]
+type ArticleType = (typeof articleTypeEnum.enumValues)[number]
 
 const createArticleSchema = z.object({
   title: z.string().min(1, `Title is required.`),
-  slug: z.
-    string().
-    min(1, `Slug is required.`).
-    regex(/^[a-z0-9-/]+$/, `Slug can only contain lowercase letters, numbers, and hyphens.`).
-    transform((value) => value.trim().toLowerCase()),
-  type: z.enum(articleTypeEnum.enumValues as [string, ...string[]]).default(`Default`),
+  slug: z
+    .string()
+    .min(1, `Slug is required.`)
+    .regex(
+      /^[a-z0-9-/]+$/,
+      `Slug can only contain lowercase letters, numbers, and hyphens.`
+    )
+    .transform((value) => value.trim().toLowerCase()),
+  type: z
+    .enum(articleTypeEnum.enumValues as [string, ...string[]])
+    .default(`Default`),
   tags: z.string().array()
 })
 
-export default defineEventHandler(async(event) => {
+export default defineEventHandler(async (event) => {
   const db = useDb()
 
   /*
@@ -54,11 +54,9 @@ export default defineEventHandler(async(event) => {
    * }))
    */
 
-  const {
-    title, slug, type, tags: tagNames
-  } = result.data
+  const { title, slug, type, tags: tagNames } = result.data
 
-  return db.transaction(async(tx) => {
+  return db.transaction(async (tx) => {
     // 1. Check if the slug already exists to avoid duplicates
     const existingArticle = await tx.query.articles.findFirst({
       where: eq(articles.slug, slug)
@@ -73,25 +71,20 @@ export default defineEventHandler(async(event) => {
 
     // 2. Create the new article
     const articleId = uuidv7()
-    const [
-      newArticle
-    ] = await tx.
-      insert(articles).
-      values({
+    const [newArticle] = await tx
+      .insert(articles)
+      .values({
         id: articleId,
         title,
         slug,
         type: type as ArticleType,
-        properties: {
-        },
-        blocks: [
-        ]
-      }).
-      returning()
+        properties: {},
+        blocks: []
+      })
+      .returning()
 
     // 3. Handle tags
-    const tagIds = [
-    ]
+    const tagIds = []
     if (tagNames && tagNames.length > 0) {
       // Find all existing tags from the provided list
       const existingTags = await tx.query.tags.findMany({
@@ -106,13 +99,15 @@ export default defineEventHandler(async(event) => {
 
       // Insert all new tags in a single batch insert
       if (newTagNames.length > 0) {
-        const newTags = await tx.
-          insert(tags).
-          values(newTagNames.map((name) => ({
-            id: uuidv7(),
-            name
-          }))).
-          returning()
+        const newTags = await tx
+          .insert(tags)
+          .values(
+            newTagNames.map((name) => ({
+              id: uuidv7(),
+              name
+            }))
+          )
+          .returning()
         tagIds.push(...newTags.map((tag) => tag.id))
       }
 

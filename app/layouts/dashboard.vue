@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import type {
-  NavigationMenuItem
-} from '@nuxt/ui'
+import type { NavigationMenuItem } from "@nuxt/ui"
 
 const route = useRoute()
 
@@ -103,7 +101,7 @@ const groups = computed(() => [
         id: `source`,
         label: `View page source`,
         icon: `i-simple-icons-github`,
-        to: `https://github.com/nuxt-ui-templates/dashboard/blob/main/app/pages${ route.path === `/` ? `/index` : route.path }.vue`,
+        to: `https://github.com/nuxt-ui-templates/dashboard/blob/main/app/pages${route.path === `/` ? `/index` : route.path}.vue`,
         target: `_blank`
       }
     ]
@@ -149,6 +147,4 @@ const groups = computed(() => [
   </UMain>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

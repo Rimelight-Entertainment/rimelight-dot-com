@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import { format } from 'date-fns'
-import type { Mail } from '~/types'
+import { format } from "date-fns"
+import type { Mail } from "~/types"
 
-const {
-
-} = defineProps<{
+const {} = defineProps<{
   mail: Mail
 }>()
 
@@ -73,11 +71,7 @@ function onSubmit() {
 
       <template #right>
         <UTooltip text="Archive">
-          <UButton
-            icon="i-lucide-inbox"
-            color="neutral"
-            variant="ghost"
-          />
+          <UButton icon="i-lucide-inbox" color="neutral" variant="ghost" />
         </UTooltip>
 
         <UTooltip text="Reply">
@@ -94,13 +88,11 @@ function onSubmit() {
       </template>
     </UDashboardNavbar>
 
-    <div class="flex flex-col sm:flex-row justify-between gap-1 p-4 sm:px-6 border-b border-default">
+    <div
+      class="flex flex-col sm:flex-row justify-between gap-1 p-4 sm:px-6 border-b border-default"
+    >
       <div class="flex items-start gap-4 sm:my-1.5">
-        <UAvatar
-          v-bind="mail.from.avatar"
-          :alt="mail.from.name"
-          size="3xl"
-        />
+        <UAvatar v-bind="mail.from.avatar" :alt="mail.from.name" size="3xl" />
 
         <div class="min-w-0">
           <p class="font-semibold text-highlighted">
@@ -113,7 +105,7 @@ function onSubmit() {
       </div>
 
       <p class="max-sm:pl-16 text-muted text-sm sm:mt-2">
-        {{ format(new Date(mail.date), 'dd MMM HH:mm') }}
+        {{ format(new Date(mail.date), "dd MMM HH:mm") }}
       </p>
     </div>
 
@@ -124,7 +116,11 @@ function onSubmit() {
     </div>
 
     <div class="pb-4 px-4 sm:px-6 shrink-0">
-      <UCard variant="subtle" class="mt-auto" :ui="{ header: 'flex items-center gap-1.5 text-dimmed' }">
+      <UCard
+        variant="subtle"
+        class="mt-auto"
+        :ui="{ header: 'flex items-center gap-1.5 text-dimmed' }"
+      >
         <template #header>
           <UIcon name="i-lucide-reply" class="size-5" />
 
@@ -157,11 +153,7 @@ function onSubmit() {
             </UTooltip>
 
             <div class="flex items-center justify-end gap-2">
-              <UButton
-                color="neutral"
-                variant="ghost"
-                label="Save draft"
-              />
+              <UButton color="neutral" variant="ghost" label="Save draft" />
               <UButton
                 type="submit"
                 color="neutral"

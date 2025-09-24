@@ -1,6 +1,4 @@
-import type {
-  BlockData
-} from "@/types/blocks"
+import type { BlockData } from "@/types/blocks"
 
 /**
  * Interface for the data returned for each matching entry in search results.
@@ -223,4 +221,14 @@ export interface EpisodeEntryTemplate extends BaseEntryTemplate {
   defaultProperties: EpisodeProperties
 }
 
-export type CombinedEntryTemplate = | BaseEntryTemplate | SpeciesEntryTemplate | CharacterEntryTemplate | TaleEntryTemplate | ItemEntryTemplate | SkillEntryTemplate | HeroEntryTemplate | CardEntryTemplate | SeriesEntryTemplate | EpisodeEntryTemplate
+export type CombinedEntryTemplate =
+  | BaseEntryTemplate
+  | SpeciesEntryTemplate
+  | CharacterEntryTemplate
+  | TaleEntryTemplate
+  | ItemEntryTemplate
+  | SkillEntryTemplate
+  | HeroEntryTemplate
+  | CardEntryTemplate
+  | SeriesEntryTemplate
+  | EpisodeEntryTemplate

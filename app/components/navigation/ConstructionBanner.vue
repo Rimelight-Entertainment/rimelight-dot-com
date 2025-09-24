@@ -20,6 +20,4 @@ const actions = ref([
   />
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

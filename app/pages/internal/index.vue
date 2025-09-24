@@ -1,21 +1,13 @@
 <script setup lang="ts">
-import {
-  sub
-} from 'date-fns'
-import type {
-  DropdownMenuItem
-} from '@nuxt/ui'
-import type {
-  Period, Range
-} from '~/types'
+import { sub } from "date-fns"
+import type { DropdownMenuItem } from "@nuxt/ui"
+import type { Period, Range } from "~/types"
 
 definePageMeta({
   layout: `dashboard`
 })
 
-const {
-  isNotificationsSlideoverOpen
-} = useDashboard()
+const { isNotificationsSlideoverOpen } = useDashboard()
 
 const items = [
   [

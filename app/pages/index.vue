@@ -69,7 +69,10 @@ const musicLinks = ref([
       orientation="horizontal"
       reverse
     >
-      <NuxtImg src="https://cdn.idantity.me/images/logos/logomark-white.webp" alt="idantity.me" />
+      <NuxtImg
+        src="https://cdn.idantity.me/images/logos/logomark-white.webp"
+        alt="idantity.me"
+      />
     </UPageHero>
     <UPageSection
       variant="outline"
@@ -99,6 +102,4 @@ const musicLinks = ref([
   </UPage>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

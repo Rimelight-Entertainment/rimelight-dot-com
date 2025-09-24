@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import type { DropdownMenuItem } from '@nuxt/ui'
+import type { DropdownMenuItem } from "@nuxt/ui"
 
-const {
-
-} = defineProps<{
+const {} = defineProps<{
   collapsed?: boolean
 }>()
 
@@ -29,13 +27,7 @@ const colors = [
   `pink`,
   `rose`
 ]
-const neutrals = [
-  `slate`,
-  `gray`,
-  `zinc`,
-  `neutral`,
-  `stone`
-]
+const neutrals = [`slate`, `gray`, `zinc`, `neutral`, `stone`]
 
 const user = ref({
   name: `Daniel Marchi`,
@@ -97,7 +89,10 @@ const items = computed<DropdownMenuItem[][]>(() => [
         {
           label: `Neutral`,
           slot: `chip`,
-          chip: appConfig.ui.colors.neutral === `neutral` ? `old-neutral` : appConfig.ui.colors.neutral,
+          chip:
+            appConfig.ui.colors.neutral === `neutral`
+              ? `old-neutral`
+              : appConfig.ui.colors.neutral,
           content: {
             align: `end`,
             collisionPadding: 16
@@ -217,13 +212,15 @@ const items = computed<DropdownMenuItem[][]>(() => [
   <UDropdownMenu
     :items="items"
     :content="{ align: 'center', collisionPadding: 12 }"
-    :ui="{ content: collapsed ? 'w-48' : 'w-(--reka-dropdown-menu-trigger-width)' }"
+    :ui="{
+      content: collapsed ? 'w-48' : 'w-(--reka-dropdown-menu-trigger-width)'
+    }"
   >
     <UButton
       v-bind="{
         ...user,
         label: collapsed ? undefined : user?.name,
-        trailingIcon: collapsed ? undefined : 'i-lucide-chevrons-up-down',
+        trailingIcon: collapsed ? undefined : 'i-lucide-chevrons-up-down'
       }"
       color="neutral"
       variant="ghost"
@@ -231,7 +228,7 @@ const items = computed<DropdownMenuItem[][]>(() => [
       :square="collapsed"
       class="data-[state=open]:bg-elevated"
       :ui="{
-        trailingIcon: 'text-dimmed',
+        trailingIcon: 'text-dimmed'
       }"
     />
 
@@ -239,7 +236,7 @@ const items = computed<DropdownMenuItem[][]>(() => [
       <span
         :style="{
           '--chip-light': `var(--color-${(item as any).chip}-500)`,
-          '--chip-dark': `var(--color-${(item as any).chip}-400)`,
+          '--chip-dark': `var(--color-${(item as any).chip}-400)`
         }"
         class="ms-0.5 size-2 rounded-full bg-(--chip-light) dark:bg-(--chip-dark)"
       />

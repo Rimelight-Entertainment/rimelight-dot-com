@@ -1,5 +1,4 @@
-declare module '#auth-utils' {
-
+declare module "#auth-utils" {
   type UserRole = `user` | `employee`
 
   interface User {

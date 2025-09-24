@@ -1,9 +1,9 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <div class="relative overflow-hidden rounded-sm border border-dashed border-accented opacity-75 px-4 flex items-center justify-center">
+  <div
+    class="relative overflow-hidden rounded-sm border border-dashed border-accented opacity-75 px-4 flex items-center justify-center"
+  >
     <svg class="absolute inset-0 h-full w-full stroke-inverted/10">
       <defs>
         <pattern

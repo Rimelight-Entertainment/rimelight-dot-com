@@ -1,10 +1,6 @@
 <script setup lang="ts">
-import {
-  ref
-} from 'vue'
-import {
-  useCookie, useRuntimeConfig, navigateTo
-} from '#imports'
+import { ref } from "vue"
+import { useCookie, useRuntimeConfig, navigateTo } from "#imports"
 
 definePageMeta({
   layout: `construction`
@@ -14,7 +10,7 @@ const password = ref(``)
 const error = ref<string | null>(null)
 const config = useRuntimeConfig()
 
-const handleLogin = async() => {
+const handleLogin = async () => {
   const constructionPassword = config.public.constructionPassword
 
   if (password.value === constructionPassword) {
@@ -47,26 +43,24 @@ const handleLogin = async() => {
     >
       <UCard class="w-full max-w-sm">
         <template #header>
-          <RLLayoutBox
-            direction="vertical"
-            gap="md"
-            align-items="center"
-          >
-            <UIcon name="material-symbols:construction" class="text-6xl text-primary" />
-            <h1 class="text-2xl font-bold">
-              Under Construction
-            </h1>
+          <RLLayoutBox direction="vertical" gap="md" align-items="center">
+            <UIcon
+              name="material-symbols:construction"
+              class="text-6xl text-primary"
+            />
+            <h1 class="text-2xl font-bold">Under Construction</h1>
           </RLLayoutBox>
         </template>
-        <RLLayoutBox
-          direction="vertical"
-          gap="md"
-          align-items="center"
-        >
+        <RLLayoutBox direction="vertical" gap="md" align-items="center">
           <p class="text-center text-muted">
-            This website is currently under construction. Please enter the password to view.
+            This website is currently under construction. Please enter the
+            password to view.
           </p>
-          <UFormField label="Password" :error="error ? 'Incorrect password' : false" class="w-full">
+          <UFormField
+            label="Password"
+            :error="error ? 'Incorrect password' : false"
+            class="w-full"
+          >
             <UInput
               v-model="password"
               type="password"

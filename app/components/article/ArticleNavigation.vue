@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import { useFetch } from '#imports'
+import { useFetch } from "#imports"
 
-const {
-
-} = defineProps<{
+const {} = defineProps<{
   slug: string
   title: string
 }>()
@@ -19,13 +17,13 @@ const createArticleModalOpen = ref(false)
 const deleteArticleModalOpen = ref(false)
 
 defineShortcuts({
-  o: () => placeBlockModalOpen.value = !placeBlockModalOpen.value,
-  p: () => moveArticleModalOpen.value = !moveArticleModalOpen.value,
-  q: () => convertArticleModalOpen.value = !convertArticleModalOpen.value,
-  r: () => editTagsModalOpen.value = !editTagsModalOpen.value,
-  s: () => browseEntriesModalOpen.value = !browseEntriesModalOpen.value,
-  t: () => createArticleModalOpen.value = !createArticleModalOpen.value,
-  u: () => deleteArticleModalOpen.value = !deleteArticleModalOpen.value
+  o: () => (placeBlockModalOpen.value = !placeBlockModalOpen.value),
+  p: () => (moveArticleModalOpen.value = !moveArticleModalOpen.value),
+  q: () => (convertArticleModalOpen.value = !convertArticleModalOpen.value),
+  r: () => (editTagsModalOpen.value = !editTagsModalOpen.value),
+  s: () => (browseEntriesModalOpen.value = !browseEntriesModalOpen.value),
+  t: () => (createArticleModalOpen.value = !createArticleModalOpen.value),
+  u: () => (deleteArticleModalOpen.value = !deleteArticleModalOpen.value)
 })
 
 const { data: user, pending } = await useFetch(`/api/user`)
@@ -33,7 +31,14 @@ const { data: user, pending } = await useFetch(`/api/user`)
 
 <template>
   <UPageList as="nav">
-    <template v-if="!pending && user && user.role === 'employee' && route.query.mode !== 'editor'">
+    <template
+      v-if="
+        !pending &&
+        user &&
+        user.role === 'employee' &&
+        route.query.mode !== 'editor'
+      "
+    >
       <UButton
         variant="ghost"
         leading-icon="lucide:file-edit"
@@ -41,7 +46,14 @@ const { data: user, pending } = await useFetch(`/api/user`)
         :to="`/${slug}?mode=editor`"
       />
     </template>
-    <template v-if="!pending && user && user.role === 'employee' && route.query.mode === 'editor'">
+    <template
+      v-if="
+        !pending &&
+        user &&
+        user.role === 'employee' &&
+        route.query.mode === 'editor'
+      "
+    >
       <UButton
         variant="ghost"
         leading-icon="lucide:glasses"
@@ -49,17 +61,22 @@ const { data: user, pending } = await useFetch(`/api/user`)
         :to="`/${slug}`"
       />
       <RLPlaceBlockModal v-model:open="placeBlockModalOpen" />
-      <RLMoveArticleModal v-model:open="moveArticleModalOpen" :initial-slug="slug" />
+      <RLMoveArticleModal
+        v-model:open="moveArticleModalOpen"
+        :initial-slug="slug"
+      />
       <RLConvertArticleModal v-model:open="convertArticleModalOpen" />
       <RLEditTagsModal v-model:open="editTagsModalOpen" />
       <USeparator class="py-2" />
       <RLBrowseArticlesModal v-model:open="browseEntriesModalOpen" />
       <RLCreateArticleModal v-model:open="createArticleModalOpen" />
-      <RLDeleteArticleModal v-model:open="deleteArticleModalOpen" :slug="slug" :title="title" />
+      <RLDeleteArticleModal
+        v-model:open="deleteArticleModalOpen"
+        :slug="slug"
+        :title="title"
+      />
     </template>
   </UPageList>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
