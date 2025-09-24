@@ -66,7 +66,10 @@ const columns: FooterColumn[] = [
           direction="horizontal"
           gap="lg"
         >
-          <RLNewsletterSignup />
+          <RLNewsletterSignup
+            label="Subscribe to the Rimelight Entertainment Newsletter"
+            description="Stay updated on new blog posts and company updates. Unsubscribe at any time."
+          />
           <UFooterColumns :columns="columns" />
         </RLLayoutBox>
       </UContainer>

@@ -10,6 +10,7 @@ const variantEnum = z.enum([
   `ghost`,
   `link`
 ])
+
 const colorEnum = z.enum([
   `primary`,
   `secondary`,
@@ -19,26 +20,28 @@ const colorEnum = z.enum([
   `success`,
   `info`
 ])
-const sizeEnum = z.enum([
-  `xs`,
-  `sm`,
-  `md`,
-  `lg`,
-  `xl`
-])
 
-const createLinkSchema = () => z.object({
-  label: z.string().nonempty(),
-  to: z.string().nonempty(),
-  icon: z.string().optional().
-    editor({
-      input: `icon`
-    }),
-  size: sizeEnum.optional(),
+const Image = z.object({
+  src: z.string(),
+  alt: z.string(),
+  width: z.number().optional(),
+  height: z.number().optional()
+})
+
+const Link = z.object({
+  label: z.string(),
+  to: z.string(),
+  icon: z.string().optional(),
   trailing: z.boolean().optional(),
-  target: z.string().optional(),
   color: colorEnum.optional(),
   variant: variantEnum.optional()
+})
+
+const Author = z.object({
+  avatar: Image.optional(),
+  name: z.string(),
+  username: z.string().optional(),
+  to: z.string().optional()
 })
 
 export default defineContentConfig({
@@ -55,36 +58,22 @@ export default defineContentConfig({
         ]),
         tags: z.array(z.string()),
         lastModified: z.date(),
-        links: z.array(createLinkSchema())
+        links: z.array(Link).optional()
       })
     }),
     blog: defineCollection({
       type: `page`,
-      source: `2.blog/*.md`,
+      source: `2.blog/**/*.md`,
       schema: z.object({
         title: z.string().nonempty(),
         description: z.string().nonempty(),
-        type: z.enum([
-          `Article`
+        category: z.enum([
+          `Blog Post`
         ]),
-        tags: z.array(z.string()),
-        image: z.string(),
+        image: Image.optional(),
         datePosted: z.date(),
-        links: z.array(createLinkSchema())
-      })
-    }),
-    entry: defineCollection({
-      type: `page`,
-      source: `3.entry/**/*.md`,
-      schema: z.object({
-        title: z.string().nonempty(),
-        description: z.string().nonempty(),
-        type: z.enum([
-          `Character`
-        ]),
-        tags: z.array(z.string()),
-        lastModified: z.date(),
-        links: z.array(createLinkSchema())
+        links: z.array(Link).optional(),
+        authors: z.array(Author).optional()
       })
     })
   }

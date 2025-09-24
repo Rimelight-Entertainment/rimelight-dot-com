@@ -47,8 +47,6 @@ const breadcrumb = computed(() => mapContentNavigation(findPageBreadcrumb(naviga
   deep: 0
 })
 
-const datePosted = useDateFormat(page.datePosted, `DD/MM/YYYY`)
-
 useSeoMeta({
   title: page.title,
   ogTitle: page.title,
@@ -114,7 +112,16 @@ const pageLinks = ref<PageLink[]>([
             :label="tag"
           />
         </template>
-        <span class="text-muted">Date posted: {{ datePosted }}</span>
+        <span class="text-muted">Date posted: <NuxtTime
+          :datetime="page.datePosted"
+          year="numeric"
+          month="short"
+          day="numeric"
+          hour="numeric"
+          minute="numeric"
+          second="numeric"
+          time-zone-name="short"
+        /></span>
         <ContentRenderer
           v-if="page.body"
           :value="page"

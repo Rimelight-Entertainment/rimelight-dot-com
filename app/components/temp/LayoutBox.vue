@@ -104,12 +104,21 @@ const {
    */
   justifyContent?: BoxVariantsProps[`justifyContent`]
 }>()
+
+const boxClass = computed(() => boxVariants({
+  position: position,
+  direction: direction,
+  padding: padding,
+  gap: gap,
+  alignItems: alignItems,
+  justifyContent: justifyContent
+}))
 </script>
 
 <template>
   <component
     :is="tag"
-    :class="boxVariants"
+    :class="boxClass"
     v-bind="$attrs"
   >
     <slot />
