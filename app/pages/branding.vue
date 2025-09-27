@@ -84,8 +84,8 @@ useHead({
           <RLH3>Monospace</RLH3>
           <p>
             Any monospaced sections such as code blocks are rendered using the
-            <a href="https://jetbrains.com/lp/mono" class="font-mono"
-              >JetBrains Mono</a
+            <NuxtLink href="https://jetbrains.com/lp/mono" class="font-mono"
+              >[JetBrains Mono]</NuxtLink
             >
             font.
           </p>

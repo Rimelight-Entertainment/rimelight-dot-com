@@ -184,7 +184,7 @@ defineShortcuts(extractShortcuts(accountMenuItems.value))
 </script>
 
 <template>
-  <UHeader mode="slideover" toggle-side="left" to="/">
+  <UHeader mode="slideover" toggle-side="left" to="/" class="bg-offblack">
     <template #title>
       <UIcon
         name="first-party:logomark-white"

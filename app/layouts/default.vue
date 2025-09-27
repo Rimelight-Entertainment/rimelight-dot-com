@@ -3,7 +3,7 @@
 <template>
   <div>
     <RLAppHeader />
-    <UMain>
+    <UMain class="bg-offwhite">
       <slot />
     </UMain>
     <RLAppFooter />

@@ -55,9 +55,7 @@ const columns: FooterColumn[] = [
 </script>
 
 <template>
-  <UFooter
-    class="bg-center bg-cover bg-[url('/placeholders/rimelight-entertainment-footer.webp')]"
-  >
+  <UFooter class="bg-offblack light:bg-old-neutral-800">
     <template #top>
       <UContainer>
         <RLLayoutBox

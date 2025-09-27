@@ -2,9 +2,11 @@ export default defineAppConfig({
   ui: {
     colors: {
       primary: `blue`,
+      info: `blue`,
       commentary: `fuchsia`,
       ideation: `violet`,
-      creator: `teal`
+      creator: `teal`,
+      neutral: `neutral`
     },
     icons: {
       close: `lucide:x`,

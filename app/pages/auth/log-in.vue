@@ -20,7 +20,7 @@ const fields = [
   },
   {
     name: `remember`,
-    label: `Remember me`,
+    label: `Stay signed in`,
     type: `checkbox` as const
   }
 ]
